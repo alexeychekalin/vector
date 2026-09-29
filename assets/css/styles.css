@@ -744,11 +744,15 @@ h1,h2,h3,h4,.font-display { font-family: 'Evolventa','Nunito',sans-serif; }
 .pm-about p{ color:var(--muted); font-size:.95rem; line-height:1.65; margin-bottom:.9rem; }
 .pm-about p:last-child{ margin-bottom:0; }
 .pm-about strong{ color:var(--berry); font-weight:700; }
+.pm-cta{ padding:0 1.75rem 1.75rem; }
+.pm-cta .pm-book{ width:100%; min-height:52px; justify-content:center; gap:.55rem; }
+.pm-cta .pm-book .icon{ fill:#fff; }
 @media (max-width:640px){
   .pm-overlay{ padding:2vh 3vw; }
   .pm-head{ grid-template-columns:1fr; gap:1rem; padding:1.5rem 1.25rem 1.1rem; }
   .pm-photo{ max-width:180px; }
   .pm-body{ padding:1.25rem; }
+  .pm-cta{ padding:0 1.25rem 1.25rem; }
 }
 @media (prefers-reduced-motion: reduce){
   .pm-overlay, .pm-overlay.is-open .pm-panel{ transition:none; animation:none; }
