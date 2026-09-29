@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Золотой Вектор — премиальный центр развития речи и мозга в Москве</title>
+  <meta name="description" content="Премиальный центр развития речи и мозга «Золотой Вектор» на Волгоградском проспекте. Логопеды, нейропсихологи, дефектологи. Диагностика, запуск речи, коррекция звукопроизношения, подготовка к школе." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://zolotoy-vektor.ru/" />
+
+  <meta property="og:title" content="Золотой Вектор — центр развития речи и мозга" />
+  <meta property="og:description" content="Тёплая, безопасная и вдохновляющая среда для развития речи вашего ребёнка. Москва, Волгоградский проспект, 1с1." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://zolotoy-vektor.ru/" />
+  <meta property="og:site_name" content="Золотой Вектор" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:image" content="https://zolotoy-vektor.ru/assets/brand/mascot/hedgehog-hi.png" />
+  <meta property="og:image:alt" content="Золотой Вектор — центр развития речи и мозга" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Золотой Вектор — центр развития речи и мозга" />
+  <meta name="twitter:description" content="Центр развития речи и мозга в Москве. Диагностика, логопедия, нейропсихология и подготовка к школе." />
+  <meta name="twitter:image" content="https://zolotoy-vektor.ru/assets/brand/mascot/hedgehog-hi.png" />
+
+  <script>document.documentElement.classList.remove('no-js');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Фирменный шрифт заголовков: Evolventa -->
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource/evolventa@5.0.13/index.min.css" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            berry:'#973568','berry-dark':'#7A2B54','berry-deep':'#5C2040','berry-light':'#AC5D86',
+            sky:'#9B89C0','sky-soft':'#C3B8D9', lavender:'#9B89C0','lavender-soft':'#D7D0E6',
+            rose:'#D3A3C4','rose-soft':'#E5C8DC', pink:'#D3A3C4','pink-bright':'#F5ACCC',
+            sage:'#AABDA1','sage-soft':'#CCD7C7','sage-tint':'#EEF2EC',
+            beige:'#CEABB1','beige-soft':'#E2CDD0','beige-tint':'#F5EEEF',
+            indigo:'#4B4A7E',
+            gold:'#E0A97C','gold-2':'#FFD7A8','gold-hi':'#FFE7C9',
+            cream:'#F5EEEF', bg:'#FBF9F7', ink:'#34303F', muted:'#6E6980',
+          },
+          fontFamily:{ display:['Evolventa','Nunito','sans-serif'], body:['Nunito','sans-serif'] },
+          borderRadius:{ '2xl':'1.5rem','3xl':'2rem' },
+          maxWidth:{ content:'1200px' },
+        },
+      },
+    };
+  </script>
+
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="font-body">
+
+  <!-- Живой фон -->
+  <div class="aurora" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Прогресс чтения -->
+  <div id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Кастомный курсор -->
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <!-- ==================== SVG-СПРАЙТ (Phosphor) ==================== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-chat" viewBox="0 0 256 256"><path d="M140,128a12,12,0,1,1-12-12A12,12,0,0,1,140,128ZM84,116a12,12,0,1,0,12,12A12,12,0,0,0,84,116Zm88,0a12,12,0,1,0,12,12A12,12,0,0,0,172,116Zm60,12A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-16,0A88,88,0,1,0,51.81,172.06a8,8,0,0,1,.66,6.54L40,216,77.4,203.53a7.85,7.85,0,0,1,2.53-.42,8,8,0,0,1,4,1.08A88,88,0,0,0,216,128Z"/></symbol>
+      <symbol id="i-calendar" viewBox="0 0 256 256"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Zm-38.34-85.66a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L116,164.69l42.34-42.35A8,8,0,0,1,169.66,122.34Z"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 256 256"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></symbol>
+      <symbol id="i-star" viewBox="0 0 256 256"><path d="M239.18,97.26A16.38,16.38,0,0,0,224.92,86l-59-4.76L143.14,26.15a16.36,16.36,0,0,0-30.27,0L90.11,81.23,31.08,86a16.46,16.46,0,0,0-9.37,28.86l45,38.83L53,211.75a16.38,16.38,0,0,0,24.5,17.82L128,198.49l50.53,31.08A16.4,16.4,0,0,0,203,211.75l-13.76-58.07,45-38.83A16.43,16.43,0,0,0,239.18,97.26Z"/></symbol>
+      <symbol id="i-heart" viewBox="0 0 256 256"><path d="M178,40c-20.65,0-38.73,8.88-50,23.89C116.73,48.88,98.65,40,78,40a62.07,62.07,0,0,0-62,62c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,228.66,240,172,240,102A62.07,62.07,0,0,0,178,40ZM128,214.8C109.74,204.16,32,155.69,32,102A46.06,46.06,0,0,1,78,56c19.45,0,35.78,10.36,42.6,27a8,8,0,0,0,14.8,0c6.82-16.67,23.15-27,42.6-27a46.06,46.06,0,0,1,46,46C224,155.61,146.24,204.15,128,214.8Z"/></symbol>
+      <symbol id="i-check" viewBox="0 0 256 256"><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 256 256"><path d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"/></symbol>
+      <symbol id="i-brain" viewBox="0 0 256 256"><path d="M248,124a56.11,56.11,0,0,0-32-50.61V72a48,48,0,0,0-88-26.49A48,48,0,0,0,40,72v1.39a56,56,0,0,0,0,101.2V176a48,48,0,0,0,88,26.49A48,48,0,0,0,216,176v-1.41A56.09,56.09,0,0,0,248,124ZM88,208a32,32,0,0,1-31.81-28.56A55.87,55.87,0,0,0,64,180h8a8,8,0,0,0,0-16H64A40,40,0,0,1,50.67,86.27,8,8,0,0,0,56,78.73V72a32,32,0,0,1,64,0v68.26A47.8,47.8,0,0,0,88,128a8,8,0,0,0,0,16,32,32,0,0,1,0,64Zm104-44h-8a8,8,0,0,0,0,16h8a55.87,55.87,0,0,0,7.81-.56A32,32,0,1,1,168,144a8,8,0,0,0,0-16,47.8,47.8,0,0,0-32,12.26V72a32,32,0,0,1,64,0v6.73a8,8,0,0,0,5.33,7.54A40,40,0,0,1,192,164Z"/></symbol>
+      <symbol id="i-baby" viewBox="0 0 256 256"><path d="M92,140a12,12,0,1,1,12-12A12,12,0,0,1,92,140Zm72-24a12,12,0,1,0,12,12A12,12,0,0,0,164,116Zm-12.27,45.23a45,45,0,0,1-47.46,0,8,8,0,0,0-8.54,13.54,61,61,0,0,0,64.54,0,8,8,0,0,0-8.54-13.54ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88.11,88.11,0,0,0-84.09-87.91C120.32,56.38,120,71.88,120,72a8,8,0,0,0,16,0,8,8,0,0,1,16,0,24,24,0,0,1-48,0c0-.73.13-14.3,8.46-30.63A88,88,0,1,0,216,128Z"/></symbol>
+      <symbol id="i-cap" viewBox="0 0 256 256"><path d="M251.76,88.94l-120-64a8,8,0,0,0-7.52,0l-120,64a8,8,0,0,0,0,14.12L32,117.87v48.42a15.91,15.91,0,0,0,4.06,10.65C49.16,191.53,78.51,216,128,216a130,130,0,0,0,48-8.76V240a8,8,0,0,0,16,0V199.51a115.63,115.63,0,0,0,27.94-22.57A15.91,15.91,0,0,0,224,166.29V117.87l27.76-14.81a8,8,0,0,0,0-14.12ZM128,200c-43.27,0-68.72-21.14-80-33.71V126.4l76.24,40.66a8,8,0,0,0,7.52,0L176,143.47v46.34C163.4,195.69,147.52,200,128,200Zm80-33.75a97.83,97.83,0,0,1-16,14.25V134.93l16-8.53ZM188,118.94l-.22-.13-56-29.87a8,8,0,0,0-7.52,14.12L171,128l-43,22.93L25,96,128,41.07,231,96Z"/></symbol>
+      <symbol id="i-sparkle" viewBox="0 0 256 256"><path d="M197.58,129.06,146,110l-19-51.62a15.92,15.92,0,0,0-29.88,0L78,110l-51.62,19a15.92,15.92,0,0,0,0,29.88L78,178l19,51.62a15.92,15.92,0,0,0,29.88,0L146,178l51.62-19a15.92,15.92,0,0,0,0-29.88ZM137,164.22a8,8,0,0,0-4.74,4.74L112,223.85,91.78,169A8,8,0,0,0,87,164.22L32.15,144,87,123.78A8,8,0,0,0,91.78,119L112,64.15,132.22,119a8,8,0,0,0,4.74,4.74L191.85,144Z"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></symbol>
+      <symbol id="i-telegram" viewBox="0 0 256 256"><path d="M228.88,26.19a9,9,0,0,0-9.16-1.57L17.06,103.93a14.22,14.22,0,0,0,2.43,27.21L72,141.45V200a15.92,15.92,0,0,0,10,14.83,15.91,15.91,0,0,0,17.51-3.73l25.32-26.26L165,220a15.88,15.88,0,0,0,10.51,4,16.3,16.3,0,0,0,5-.79,15.85,15.85,0,0,0,10.67-11.63L231.77,35A9,9,0,0,0,228.88,26.19Zm-61.14,36L78.15,126.35l-49.6-9.73ZM88,200V152.52l24.79,21.74Zm87.53,8L92.85,135.5l119-85.29Z"/></symbol>
+      <symbol id="i-list" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/></symbol>
+      <symbol id="i-x" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></symbol>
+      <symbol id="i-caret-down" viewBox="0 0 256 256"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></symbol>
+      <symbol id="i-caret-left" viewBox="0 0 256 256"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></symbol>
+      <symbol id="i-caret-right" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></symbol>
+      <symbol id="i-quotes" viewBox="0 0 256 256"><path d="M100,56H40A16,16,0,0,0,24,72v64a16,16,0,0,0,16,16h60v8a32,32,0,0,1-32,32,8,8,0,0,0,0,16,48.05,48.05,0,0,0,48-48V72A16,16,0,0,0,100,56Zm0,80H40V72h60ZM216,56H156a16,16,0,0,0-16,16v64a16,16,0,0,0,16,16h60v8a32,32,0,0,1-32,32,8,8,0,0,0,0,16,48.05,48.05,0,0,0,48-48V72A16,16,0,0,0,216,56Zm0,80H156V72h60Z"/></symbol>
+      <symbol id="i-medal" viewBox="0 0 256 256"><path d="M216,96A88,88,0,1,0,72,163.83V240a8,8,0,0,0,11.58,7.16L128,225l44.43,22.21A8.07,8.07,0,0,0,176,248a8,8,0,0,0,8-8V163.83A87.85,87.85,0,0,0,216,96ZM56,96a72,72,0,1,1,72,72A72.08,72.08,0,0,1,56,96ZM168,227.06l-36.43-18.21a8,8,0,0,0-7.16,0L88,227.06V174.37a87.89,87.89,0,0,0,80,0ZM128,152A56,56,0,1,0,72,96,56.06,56.06,0,0,0,128,152Zm0-96A40,40,0,1,1,88,96,40,40,0,0,1,128,56Z"/></symbol>
+      <symbol id="i-users" viewBox="0 0 256 256"><path d="M244.8,150.4a8,8,0,0,1-11.2-1.6A51.6,51.6,0,0,0,192,128a8,8,0,0,1-7.37-4.89,8,8,0,0,1,0-6.22A8,8,0,0,1,192,112a24,24,0,1,0-23.24-30,8,8,0,1,1-15.5-4A40,40,0,1,1,219,117.51a67.94,67.94,0,0,1,27.43,21.68A8,8,0,0,1,244.8,150.4ZM190.92,212a8,8,0,1,1-13.84,8,57,57,0,0,0-98.16,0,8,8,0,1,1-13.84-8,72.06,72.06,0,0,1,33.74-29.92,48,48,0,1,1,58.36,0A72.06,72.06,0,0,1,190.92,212ZM128,176a32,32,0,1,0-32-32A32,32,0,0,0,128,176ZM72,120a8,8,0,0,0-8-8A24,24,0,1,1,87.24,82a8,8,0,1,0,15.5-4A40,40,0,1,0,37,117.51,67.94,67.94,0,0,0,9.6,139.19a8,8,0,1,0,12.8,9.61A51.6,51.6,0,0,1,64,128,8,8,0,0,0,72,120Z"/></symbol>
+      <symbol id="i-mic" viewBox="0 0 256 256"><path d="M128,176a48.05,48.05,0,0,0,48-48V64a48,48,0,0,0-96,0v64A48.05,48.05,0,0,0,128,176ZM96,64a32,32,0,0,1,64,0v64a32,32,0,0,1-64,0Zm40,143.6V240a8,8,0,0,1-16,0V207.6A80.11,80.11,0,0,1,48,128a8,8,0,0,1,16,0,64,64,0,0,0,128,0,8,8,0,0,1,16,0A80.11,80.11,0,0,1,136,207.6Z"/></symbol>
+      <symbol id="i-puzzle" viewBox="0 0 256 256"><path d="M220.27,158.54a8,8,0,0,0-7.7-.46,20,20,0,1,1,0-36.16A8,8,0,0,0,224,114.69V72a16,16,0,0,0-16-16H171.78a35.36,35.36,0,0,0,.22-4,36.11,36.11,0,0,0-11.36-26.24,36,36,0,0,0-60.55,23.62,36.56,36.56,0,0,0,.14,6.62H64A16,16,0,0,0,48,72v32.22a35.36,35.36,0,0,0-4-.22,36.12,36.12,0,0,0-26.24,11.36,35.7,35.7,0,0,0-9.69,27,36.08,36.08,0,0,0,33.31,33.6,35.68,35.68,0,0,0,6.62-.14V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V165.31A8,8,0,0,0,220.27,158.54ZM208,208H64V165.31a8,8,0,0,0-11.43-7.23,20,20,0,1,1,0-36.16A8,8,0,0,0,64,114.69V72h46.69a8,8,0,0,0,7.23-11.43,20,20,0,1,1,36.16,0A8,8,0,0,0,161.31,72H208v32.23a35.68,35.68,0,0,0-6.62-.14A36,36,0,0,0,204,176a35.36,35.36,0,0,0,4-.22Z"/></symbol>
+      <symbol id="i-hand-heart" viewBox="0 0 256 256"><path d="M230.33,141.06a24.34,24.34,0,0,0-18.61-4.77C230.5,117.33,240,98.48,240,80c0-26.47-21.29-48-47.46-48A47.58,47.58,0,0,0,156,48.75,47.58,47.58,0,0,0,119.46,32C93.29,32,72,53.53,72,80c0,11,3.24,21.69,10.06,33a31.87,31.87,0,0,0-14.75,8.4L44.69,144H16A16,16,0,0,0,0,160v40a16,16,0,0,0,16,16H120a7.93,7.93,0,0,0,1.94-.24l64-16a6.94,6.94,0,0,0,1.19-.4L226,182.82l.44-.2a24.6,24.6,0,0,0,3.93-41.56ZM16,160H40v40H16Zm203.43,8.21-38,16.18L119,200H56V155.31l22.63-22.62A15.86,15.86,0,0,1,89.94,128H140a12,12,0,0,1,0,24H112a8,8,0,0,0,0,16h32a8.32,8.32,0,0,0,1.79-.2l67-15.41.31-.08a8.6,8.6,0,0,1,6.3,15.9Z"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 256 256"><path d="M208,40H48A16,16,0,0,0,32,56v56c0,52.72,25.52,84.67,46.93,102.19,23.06,18.86,46,25.26,47,25.53a8,8,0,0,0,4.2,0c1-.27,23.91-6.67,47-25.53C198.48,196.67,224,164.72,224,112V56A16,16,0,0,0,208,40Zm0,72c0,37.07-13.66,67.16-40.6,89.42A129.3,129.3,0,0,1,128,223.62a128.25,128.25,0,0,1-38.92-21.81C61.82,179.51,48,149.3,48,112l0-56,160,0ZM82.34,141.66a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32l-56,56a8,8,0,0,1-11.32,0Z"/></symbol>
+      <symbol id="i-arrow-right" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></symbol>
+      <symbol id="i-envelope" viewBox="0 0 256 256"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"/></symbol>
+      <symbol id="i-crown" viewBox="0 0 256 256"><path d="M248,80a28,28,0,1,0-51.12,15.77l-26.79,33L146,73.4a28,28,0,1,0-36.06,0L85.91,128.74l-26.79-33a28,28,0,1,0-26.6,12L47,194.63A16,16,0,0,0,62.78,208H193.22A16,16,0,0,0,209,194.63l14.47-86.85A28,28,0,0,0,248,80ZM128,40a12,12,0,1,1-12,12A12,12,0,0,1,128,40ZM24,80A12,12,0,1,1,36,92,12,12,0,0,1,24,80ZM193.22,192H62.78L48.86,108.52,81.79,149A8,8,0,0,0,88,152a7.83,7.83,0,0,0,1.08-.07,8,8,0,0,0,6.26-4.74l29.3-67.4a27,27,0,0,0,6.72,0l29.3,67.4a8,8,0,0,0,6.26,4.74A7.83,7.83,0,0,0,168,152a8,8,0,0,0,6.21-3l32.93-40.52ZM220,92a12,12,0,1,1,12-12A12,12,0,0,1,220,92Z"/></symbol>
+      <symbol id="i-seal-check" viewBox="0 0 256 256"><path d="M225.86,102.82c-3.77-3.94-7.67-8-9.14-11.57-1.36-3.27-1.44-8.69-1.52-13.94-.15-9.76-.31-20.82-8-28.51s-18.75-7.85-28.51-8c-5.25-.08-10.67-.16-13.94-1.52-3.56-1.47-7.63-5.37-11.57-9.14C146.28,23.51,138.44,16,128,16s-18.27,7.51-25.18,14.14c-3.94,3.77-8,7.67-11.57,9.14C88,40.64,82.56,40.72,77.31,40.8c-9.76.15-20.82.31-28.51,8S41,67.55,40.8,77.31c-.08,5.25-.16,10.67-1.52,13.94-1.47,3.56-5.37,7.63-9.14,11.57C23.51,109.72,16,117.56,16,128s7.51,18.27,14.14,25.18c3.77,3.94,7.67,8,9.14,11.57,1.36,3.27,1.44,8.69,1.52,13.94.15,9.76.31,20.82,8,28.51s18.75,7.85,28.51,8c5.25.08,10.67.16,13.94,1.52,3.56,1.47,7.63,5.37,11.57,9.14C109.72,232.49,117.56,240,128,240s18.27-7.51,25.18-14.14c3.94-3.77,8-7.67,11.57-9.14,3.27-1.36,8.69-1.44,13.94-1.52,9.76-.15,20.82-.31,28.51-8s7.85-18.75,8-28.51c.08-5.25.16-10.67,1.52-13.94,1.47-3.56,5.37-7.63,9.14-11.57C232.49,146.28,240,138.44,240,128S232.49,109.73,225.86,102.82ZM173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34Z"/></symbol>
+      <symbol id="i-gift" viewBox="0 0 256 256"><path d="M216,72H180.92c.39-.33.79-.65,1.17-1A29.53,29.53,0,0,0,192,49.57,32.62,32.62,0,0,0,158.44,16,29.53,29.53,0,0,0,137,25.91a54.94,54.94,0,0,0-9,14.48,54.94,54.94,0,0,0-9-14.48A29.53,29.53,0,0,0,97.56,16,32.62,32.62,0,0,0,64,49.57,29.53,29.53,0,0,0,73.91,71c.38.33.78.65,1.17,1H40A16,16,0,0,0,24,88v32a16,16,0,0,0,16,16v64a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V136a16,16,0,0,0,16-16V88A16,16,0,0,0,216,72ZM149,36.51a13.69,13.69,0,0,1,10-4.5h.49A16.62,16.62,0,0,1,176,49.08a13.69,13.69,0,0,1-4.5,10c-9.49,8.4-25.24,11.36-35,12.4C137.7,60.89,141,45.5,149,36.51Zm-64.09.36A16.63,16.63,0,0,1,96.59,32h.49a13.69,13.69,0,0,1,10,4.5c8.39,9.48,11.35,25.2,12.39,34.92-9.72-1-25.44-4-34.92-12.39a13.69,13.69,0,0,1-4.5-10A16.6,16.6,0,0,1,84.87,36.87ZM40,88h80v32H40Zm16,48h64v64H56Zm144,64H136V136h64Zm16-80H136V88h80v32Z"/></symbol>
+      <symbol id="i-images" viewBox="0 0 256 256"><path d="M216,40H72A16,16,0,0,0,56,56V72H40A16,16,0,0,0,24,88V200a16,16,0,0,0,16,16H184a16,16,0,0,0,16-16V184h16a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40ZM72,56H216v62.75l-10.07-10.06a16,16,0,0,0-22.63,0l-20,20-44-44a16,16,0,0,0-22.62,0L72,109.37ZM184,200H40V88H56v80a16,16,0,0,0,16,16H184Zm32-32H72V132l36-36,49.66,49.66a8,8,0,0,0,11.31,0L194.63,120,216,141.38V168ZM160,84a12,12,0,1,1,12,12A12,12,0,0,1,160,84Z"/></symbol>
+      <symbol id="i-tag" viewBox="0 0 256 256"><path d="M243.31,136,144,36.69A15.86,15.86,0,0,0,132.69,32H40a8,8,0,0,0-8,8v92.69A15.86,15.86,0,0,0,36.69,144L136,243.31a16,16,0,0,0,22.63,0l84.68-84.68a16,16,0,0,0,0-22.63Zm-96,96L48,132.69V48h84.69L232,147.31ZM96,84A12,12,0,1,1,84,72,12,12,0,0,1,96,84Z"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- ==================== ХЕДЕР ==================== -->
+  <header id="siteHeader" class="fixed top-0 inset-x-0 z-50">
+    <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center gap-4 sm:gap-6 lg:gap-8 h-20">
+
+        <a href="#hero" class="flex shrink-0 items-center gap-3" aria-label="Золотой Вектор — на главную">
+          <img src="assets/brand/logo/horizontal-full.svg" width="1708" height="429" alt="Золотой Вектор — центр развития речи и мозга" class="h-12 sm:h-14 w-auto" />
+        </a>
+
+        <nav class="hidden lg:flex min-w-0 flex-1 items-center justify-center gap-x-5 xl:gap-x-7" aria-label="Основная навигация">
+          <a href="#services" class="nav-link font-600 text-ink hover:text-berry transition-colors">Услуги</a>
+          <a href="#prices"   class="nav-link font-600 text-ink hover:text-berry transition-colors">Цены</a>
+          <a href="#rooms"    class="nav-link font-600 text-ink hover:text-berry transition-colors">Зоны</a>
+          <a href="#about"    class="nav-link font-600 text-ink hover:text-berry transition-colors">О центре</a>
+          <a href="#team"     class="nav-link font-600 text-ink hover:text-berry transition-colors">Специалисты</a>
+          <a href="#reviews"  class="nav-link font-600 text-ink hover:text-berry transition-colors">Отзывы</a>
+          <a href="#faq"      class="nav-link font-600 text-ink hover:text-berry transition-colors">Вопросы</a>
+        </nav>
+
+        <div class="hidden lg:flex shrink-0 items-center gap-3">
+          <a href="tel:+79050447917" class="flex items-center gap-2 font-display font-500 text-berry hover:text-berry-dark transition-colors">
+            <svg class="icon icon-sm" aria-hidden="true"><use href="#i-phone"></use></svg>
+            +7 (905) 044-79-17
+          </a>
+          <a href="#booking" class="btn btn-primary magnetic">Записаться</a>
+        </div>
+
+        <button id="menuToggle" class="lg:hidden grid place-items-center w-12 h-12 rounded-2xl glass text-berry"
+                aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileMenu">
+          <svg class="icon" aria-hidden="true"><use href="#i-list"></use></svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="hidden-menu lg:hidden absolute inset-x-0 top-20 px-4">
+      <nav class="mobile-nav glass p-6 flex flex-col gap-2" aria-label="Мобильная навигация">
+        <a href="#services" class="mobile-link py-3 px-4 rounded-2xl font-600 text-ink hover:bg-white/60 transition-colors">Услуги</a>
+        <a href="#prices"   class="mobile-link py-3 px-4 rounded-2xl font-600 text-ink hover:bg-white/60 transition-colors">Цены</a>
+        <a href="#rooms"    class="mobile-link py-3 px-4 rounded-2xl font-600 text-ink hover:bg-white/60 transition-colors">Зоны центра</a>
+        <a href="#about"    class="mobile-link py-3 px-4 rounded-2xl font-600 text-ink hover:bg-white/60 transition-colors">О центре</a>
+        <a href="#team"     class="mobile-link py-3 px-4 rounded-2xl font-600 text-ink hover:bg-white/60 transition-colors">Специалисты</a>
+        <a href="#reviews"  class="mobile-link py-3 px-4 rounded-2xl font-600 text-ink hover:bg-white/60 transition-colors">Отзывы</a>
+        <a href="#faq"      class="mobile-link py-3 px-4 rounded-2xl font-600 text-ink hover:bg-white/60 transition-colors">Вопросы</a>
+        <a href="tel:+79050447917" class="mobile-link flex items-center gap-2 py-3 px-4 rounded-2xl font-600 text-berry hover:bg-white/60 transition-colors">
+          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-phone"></use></svg>
+          +7 (905) 044-79-17
+        </a>
+        <a href="#booking" class="mobile-link btn btn-primary mt-2">Записаться на приём</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== HERO ==================== -->
+  <section id="hero" class="relative overflow-hidden pt-32 pb-20 lg:pt-40 lg:pb-28">
+    <div class="blob w-80 h-80 bg-sage -top-10 -left-16 float-slow" data-parallax="0.15"></div>
+    <div class="blob w-96 h-96 bg-rose top-32 -right-24 float-mid" data-parallax="0.25"></div>
+    <img src="assets/brand/deco/star1-lavander.png" alt="" aria-hidden="true" class="deco absolute w-16 top-24 right-10 opacity-80 float-mid" data-parallax="0.2" />
+    <img src="assets/brand/deco/leaf-sage.png" alt="" aria-hidden="true" class="deco absolute w-20 bottom-16 left-8 opacity-70 float-slow" data-parallax="0.12" />
+
+    <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-10 items-center">
+
+        <div>
+          <span class="hero-badge inline-flex items-center gap-2 py-2 px-4 rounded-full glass text-berry font-600 text-sm mb-6">
+            <svg class="icon icon-sm" aria-hidden="true"><use href="#i-sparkle"></use></svg>
+            Центр развития речи и мозга
+          </span>
+
+          <h1 class="hero-title font-display font-600 text-4xl sm:text-5xl lg:text-[4.1rem] leading-[1.05] text-ink mb-6">
+            У каждого ребёнка —
+            <span class="text-berry relative whitespace-nowrap">свой вектор
+              <svg class="absolute -bottom-2 left-0 w-full" height="14" viewBox="0 0 300 14" fill="none" aria-hidden="true"><path d="M3 8C60 3 130 3 297 7" stroke="#E0A97C" stroke-width="5" stroke-linecap="round"/></svg>
+            </span>
+            развития
+          </h1>
+
+          <p class="hero-sub text-lg text-muted leading-relaxed mb-8 max-w-xl">
+            Мы не ускоряем детство. «Золотой Вектор» создаёт условия, в которых ребёнок растёт уверенно —
+            своим темпом, с интересом и верой в себя, а родители чувствуют спокойствие.
+          </p>
+
+          <div class="hero-cta flex flex-col sm:flex-row gap-4 mb-12">
+            <a href="#booking" class="btn btn-primary btn-lg magnetic">
+              <svg class="icon icon-sm" aria-hidden="true"><use href="#i-calendar"></use></svg>
+              Записаться на диагностику
+            </a>
+            <a href="#services" class="btn btn-glass btn-lg magnetic">
+              Наши услуги
+              <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+            </a>
+          </div>
+
+          <dl class="hero-stats grid grid-cols-3 gap-4 max-w-lg">
+            <div>
+              <dt class="sr-only">Рейтинг центра</dt>
+              <dd class="font-display font-600 text-3xl lg:text-4xl text-berry flex items-center gap-1">
+                5,0<svg class="icon icon-sm text-gold" style="margin-bottom:.35rem" aria-hidden="true"><use href="#i-star"></use></svg>
+              </dd>
+              <p class="text-sm text-muted">по отзывам родителей</p>
+            </div>
+            <div>
+              <dt class="sr-only">Специалистов в команде</dt>
+              <dd class="font-display font-600 text-3xl lg:text-4xl text-berry count" data-count="4" data-suffix="">0</dd>
+              <p class="text-sm text-muted">профильных специалиста</p>
+            </div>
+            <div>
+              <dt class="sr-only">Год открытия</dt>
+              <dd class="font-display font-600 text-3xl lg:text-4xl text-berry">2025</dd>
+              <p class="text-sm text-muted">год — открылись для вас</p>
+            </div>
+          </dl>
+          <p class="text-sm text-muted mt-4 max-w-lg leading-relaxed">
+            Мы молодой центр — и в этом наша сила: у специалистов есть время и внимание для каждого ребёнка, а работаем по современной методике «речь + развитие мозга».
+          </p>
+        </div>
+
+        <div class="hero-photo relative">
+          <div class="photo-frame aspect-[4/3] lg:aspect-[5/4]" data-parallax="-0.12">
+            <img src="assets/img/interior-1.jpg" width="1800" height="944"
+                 alt="Светлый уютный интерьер центра «Золотой Вектор»" loading="eager" fetchpriority="high" />
+          </div>
+          <!-- Маскот Ёжик Вектор -->
+          <img src="assets/brand/mascot/hedgehog-hi.png" alt="Ёжик Вектор — талисман центра" class="hero-mascot absolute -bottom-8 -right-4 sm:-right-8 w-28 sm:w-36 lg:w-44 drop-shadow-xl" data-parallax="-0.05" />
+          <div class="hero-float-card absolute -bottom-6 -left-4 sm:-left-8 glass p-4 pr-6 flex items-center gap-3 max-w-[15rem]">
+            <span class="icon-badge bg-sage-soft text-berry-deep" aria-hidden="true"><svg class="icon"><use href="#i-shield"></use></svg></span>
+            <div>
+              <p class="font-display font-600 text-ink leading-tight">Безопасная среда</p>
+              <p class="text-sm text-muted leading-tight">и внимательные педагоги</p>
+            </div>
+          </div>
+          <div class="hero-float-card absolute -top-4 -left-2 sm:-left-6 glass p-3 pr-5 flex items-center gap-3">
+            <span class="icon-badge bg-gold-2/60 text-berry-deep" aria-hidden="true"><svg class="icon"><use href="#i-star"></use></svg></span>
+            <div>
+              <p class="font-display font-600 text-ink leading-tight flex items-center gap-1">5,0<svg class="icon icon-sm text-gold" aria-hidden="true"><use href="#i-star"></use></svg></p>
+              <p class="text-sm text-muted leading-tight">оценка родителей</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MARQUEE ==================== -->
+  <div class="marquee py-5 border-y border-white/50 bg-white/40 backdrop-blur-sm" aria-hidden="true">
+    <div class="marquee-track font-display font-600 text-berry/70 text-lg items-center">
+      <span class="flex items-center gap-3"><svg class="icon icon-sm text-gold"><use href="#i-sparkle"></use></svg> Запуск речи</span>
+      <span class="flex items-center gap-3"><svg class="icon icon-sm text-gold"><use href="#i-sparkle"></use></svg> Нейрокоррекция</span>
+      <span class="flex items-center gap-3"><svg class="icon icon-sm text-gold"><use href="#i-sparkle"></use></svg> Постановка звуков</span>
+      <span class="flex items-center gap-3"><svg class="icon icon-sm text-gold"><use href="#i-sparkle"></use></svg> Подготовка к школе</span>
+      <span class="flex items-center gap-3"><svg class="icon icon-sm text-gold"><use href="#i-sparkle"></use></svg> Работа с ЗРР и ЗПРР</span>
+      <span class="flex items-center gap-3"><svg class="icon icon-sm text-gold"><use href="#i-sparkle"></use></svg> Забота о каждом ребёнке</span>
+      <!-- дубль для бесшовности -->
+      <span class="flex items-center gap-3"><svg class="icon icon-sm text-gold"><use href="#i-sparkle"></use></svg> Запуск речи</span>
+      <span class="flex items-center gap-3"><svg class="icon icon-sm text-gold"><use href="#i-sparkle"></use></svg> Нейрокоррекция</span>
+      <span class="flex items-center gap-3"><svg class="icon icon-sm text-gold"><use href="#i-sparkle"></use></svg> Постановка звуков</span>
+      <span class="flex items-center gap-3"><svg class="icon icon-sm text-gold"><use href="#i-sparkle"></use></svg> Подготовка к школе</span>
+      <span class="flex items-center gap-3"><svg class="icon icon-sm text-gold"><use href="#i-sparkle"></use></svg> Работа с ЗРР и ЗПРР</span>
+      <span class="flex items-center gap-3"><svg class="icon icon-sm text-gold"><use href="#i-sparkle"></use></svg> Забота о каждом ребёнке</span>
+    </div>
+  </div>
+
+  <!-- ==================== УСЛУГИ ==================== -->
+  <section id="services" class="py-20 lg:py-28 relative overflow-hidden has-pattern pattern-sage">
+    <div class="blob w-80 h-80 bg-lavender top-20 -right-28 opacity-30 float-mid" data-parallax="0.12"></div>
+    <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8 relative">
+
+      <div class="mb-14 reveal flex items-end justify-between gap-6">
+        <div class="max-w-2xl">
+          <span class="inline-flex items-center gap-2 py-2 px-4 rounded-full glass text-berry font-600 text-sm mb-4">
+            <svg class="icon icon-sm" aria-hidden="true"><use href="#i-sparkle"></use></svg>
+            Наши услуги
+          </span>
+          <h2 class="reveal-title font-display font-600 text-3xl sm:text-4xl lg:text-5xl text-ink leading-tight mb-4">
+            Направления, которые ведут к результату
+          </h2>
+          <p class="text-lg text-muted">
+            Начинаем с диагностики, дальше — индивидуальный маршрут именно под вашего ребёнка. Цена указана за одно занятие.
+          </p>
+        </div>
+        <img src="assets/brand/mascot/hedgehog-pencil.png" alt="" aria-hidden="true" class="hidden lg:block w-40 shrink-0 -mb-2" />
+      </div>
+
+      <div class="stagger grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <article class="card tilt magnetic-soft p-7 flex flex-col">
+          <span class="icon-badge bg-rose-soft text-berry mb-5" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-chat"></use></svg></span>
+          <h3 class="font-display font-600 text-xl text-ink mb-2">Диагностика речи и развития</h3>
+          <p class="text-muted mb-5 flex-1">Комплексная оценка речи, внимания и моторики. По итогу — понятный план работы и рекомендации.</p>
+          <div class="flex items-center justify-between pt-4 border-t border-cream">
+            <span class="font-display font-600 text-xl text-berry">3 000 ₽</span>
+            <span class="text-sm text-muted">за диагностику</span>
+          </div>
+        </article>
+
+        <article class="card tilt magnetic-soft p-7 flex flex-col">
+          <span class="icon-badge bg-sky-soft text-berry mb-5" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-mic"></use></svg></span>
+          <h3 class="font-display font-600 text-xl text-ink mb-2">Занятие с логопедом</h3>
+          <p class="text-muted mb-5 flex-1">Постановка и автоматизация «трудных» звуков, развитие связной речи — индивидуально в игровой форме.</p>
+          <div class="flex items-center justify-between pt-4 border-t border-cream">
+            <span class="font-display font-600 text-xl text-berry">от 3 050 ₽</span>
+            <span class="text-sm text-muted">за занятие</span>
+          </div>
+        </article>
+
+        <article class="card tilt magnetic-soft p-7 flex flex-col">
+          <span class="icon-badge bg-rose-soft text-berry mb-5" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-baby"></use></svg></span>
+          <h3 class="font-display font-600 text-xl text-ink mb-2">Запуск речи у неговорящих</h3>
+          <p class="text-muted mb-5 flex-1">Для малышей 2–4 лет и детей с задержкой. Пробуждаем интерес к общению и первые слова.</p>
+          <div class="flex items-center justify-between pt-4 border-t border-cream">
+            <span class="font-display font-600 text-xl text-berry">от 3 450 ₽</span>
+            <span class="text-sm text-muted">за занятие</span>
+          </div>
+        </article>
+
+        <article class="card tilt magnetic-soft p-7 flex flex-col">
+          <span class="icon-badge bg-sky-soft text-berry mb-5" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-brain"></use></svg></span>
+          <h3 class="font-display font-600 text-xl text-ink mb-2">Нейрокоррекция</h3>
+          <p class="text-muted mb-5 flex-1">Развиваем внимание, память и саморегуляцию через сенсомоторные упражнения — база для речи и учёбы.</p>
+          <div class="flex items-center justify-between pt-4 border-t border-cream">
+            <span class="font-display font-600 text-xl text-berry">от 3 600 ₽</span>
+            <span class="text-sm text-muted">за занятие</span>
+          </div>
+        </article>
+
+        <article class="card tilt magnetic-soft p-7 flex flex-col">
+          <span class="icon-badge bg-rose-soft text-berry mb-5" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-puzzle"></use></svg></span>
+          <h3 class="font-display font-600 text-xl text-ink mb-2">Занятие с дефектологом</h3>
+          <p class="text-muted mb-5 flex-1">Помощь детям с ЗРР, ЗПРР, РАС и другими особенностями развития — выход на возрастную норму.</p>
+          <div class="flex items-center justify-between pt-4 border-t border-cream">
+            <span class="font-display font-600 text-xl text-berry">от 3 700 ₽</span>
+            <span class="text-sm text-muted">за занятие</span>
+          </div>
+        </article>
+
+        <article class="card tilt magnetic-soft p-7 flex flex-col">
+          <span class="icon-badge bg-sky-soft text-berry mb-5" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-cap"></use></svg></span>
+          <h3 class="font-display font-600 text-xl text-ink mb-2">Логопедический массаж</h3>
+          <p class="text-muted mb-5 flex-1">Мягкая подготовка мышц речевого аппарата — помогает при нарушениях тонуса и запуске звуков.</p>
+          <div class="flex items-center justify-between pt-4 border-t border-cream">
+            <span class="font-display font-600 text-xl text-berry">2 240 ₽</span>
+            <span class="text-sm text-muted">за сеанс</span>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Абонемент -->
+      <div class="mt-8 p-8 sm:p-10 rounded-3xl text-white reveal ring-gold relative overflow-hidden"
+           style="background:linear-gradient(135deg,#973568 0%,#5C2040 100%)">
+        <div class="blob w-56 h-56 bg-gold-2 -top-16 -right-10 opacity-30 float-slow"></div>
+        <img src="assets/brand/mascot/hedgehog-blocks.png" alt="" aria-hidden="true" class="hidden md:block absolute right-6 bottom-0 w-32 opacity-95 pointer-events-none" />
+        <div class="relative flex flex-col md:flex-row md:items-center gap-6 justify-between md:pr-40">
+          <div class="flex items-start gap-4">
+            <span class="icon-badge bg-white/15 text-gold-2" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-star"></use></svg></span>
+            <div>
+              <h3 class="font-display font-600 text-2xl mb-1">Абонемент выгоднее разовых занятий</h3>
+              <p class="text-rose-soft">Покупая абонемент, вы фиксируете сниженную цену за занятие и закреплённого специалиста. Полные цены — в таблице ниже.</p>
+            </div>
+          </div>
+          <a href="#prices" class="btn btn-gold btn-lg magnetic whitespace-nowrap self-start md:self-auto">Смотреть цены</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== ЦЕНЫ ==================== -->
+  <section id="prices" class="py-20 lg:py-28 relative overflow-hidden">
+    <div class="blob w-96 h-96 bg-sage -top-16 -left-28 opacity-30 float-slow" data-parallax="0.12"></div>
+    <div class="blob w-80 h-80 bg-rose bottom-10 -right-28 opacity-30 float-mid" data-parallax="0.1"></div>
+    <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8 relative">
+
+      <div class="max-w-2xl mb-14 reveal">
+        <span class="inline-flex items-center gap-2 py-2 px-4 rounded-full glass text-berry font-600 text-sm mb-4">
+          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-tag"></use></svg>
+          Цены
+        </span>
+        <h2 class="font-display font-600 text-3xl sm:text-4xl lg:text-5xl text-ink leading-tight mb-4">
+          Прозрачные цены на все направления
+        </h2>
+        <p class="text-lg text-muted">
+          Чем больше абонемент — тем ниже цена за занятие. Указана стоимость по абонементу; цена со скидкой действует при покупке в день диагностики.
+        </p>
+      </div>
+
+      <!-- Баннер диагностики -->
+      <div class="diag-banner reveal ring-gold mb-10">
+        <div class="blob w-56 h-56 bg-gold-2 -top-16 -right-10 opacity-25 float-slow"></div>
+        <div class="relative grid md:grid-cols-[auto_1fr_auto] gap-6 items-center">
+          <span class="icon-badge icon-badge--lg bg-white/15 text-gold-2" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-gift"></use></svg></span>
+          <div>
+            <h3 class="font-display font-600 text-2xl text-white mb-1">Диагностика — 3 000 ₽</h3>
+            <p class="text-rose-soft/90">Комплексная оценка речи и развития с планом занятий. Купите абонемент в день диагностики — и цена за занятие будет со скидкой.</p>
+          </div>
+          <a href="#booking" class="btn btn-gold btn-lg magnetic whitespace-nowrap justify-self-start md:justify-self-end">Записаться на диагностику</a>
+        </div>
+      </div>
+
+      <!-- Модульная сетка цен с цветовым кодированием категорий -->
+      <div class="price-cats">
+      <div class="price-cat price-cat--sage reveal">
+        <div class="price-cat__label">
+          <span class="price-cat__dot" aria-hidden="true"><svg class="icon icon-sm"><use href="#i-mic"></use></svg></span>
+          <h3 class="font-display font-600 text-2xl text-ink">Логопедия</h3>
+        </div>
+        <div class="price-cat__grid">
+          <article class="price-card price-card--sage tilt">
+            <div class="price-card__head">
+              <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-mic"></use></svg></span>
+              <div>
+                <h4 class="font-display font-600 text-lg text-ink leading-tight">Занятия с логопедом</h4>
+                <p class="text-sm price-card__kruzhok">Кружок «Вектор речи»</p>
+              </div>
+            </div>
+            <p class="text-muted text-sm mb-4 min-h-[2.5rem]">Постановка и автоматизация звуков, развитие связной речи</p>
+            <div class="pkg-head"><span>Абонемент</span><span>Цена занятия</span><span>Стоимость</span></div>
+              <div class="pkg-row">
+                <span class="pkg-cnt">8 занятий</span>
+                <span class="pkg-price">3 150 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">3 500 ₽</span></span>
+                <span class="pkg-sum">25 200 ₽</span>
+              </div>
+              <div class="pkg-row">
+                <span class="pkg-cnt">12 занятий</span>
+                <span class="pkg-price">2 900 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">3 300 ₽</span></span>
+                <span class="pkg-sum">34 800 ₽</span>
+              </div>
+            <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
+          </article>
+          <article class="price-card price-card--sage tilt">
+            <div class="price-card__head">
+              <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-baby"></use></svg></span>
+              <div>
+                <h4 class="font-display font-600 text-lg text-ink leading-tight">Запуск речи · индивидуально</h4>
+                <p class="text-sm price-card__kruzhok">Кружок «Лёгкий старт»</p>
+              </div>
+            </div>
+            <p class="text-muted text-sm mb-4 min-h-[2.5rem]">Первые слова у неговорящих детей — один на один с педагогом</p>
+            <div class="pkg-head"><span>Абонемент</span><span>Цена занятия</span><span>Стоимость</span></div>
+              <div class="pkg-row">
+                <span class="pkg-cnt">8 занятий</span>
+                <span class="pkg-price">3 400 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">3 900 ₽</span></span>
+                <span class="pkg-sum">27 200 ₽</span>
+              </div>
+              <div class="pkg-row">
+                <span class="pkg-cnt">12 занятий</span>
+                <span class="pkg-price">3 100 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">3 600 ₽</span></span>
+                <span class="pkg-sum">37 200 ₽</span>
+              </div>
+            <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
+          </article>
+          <article class="price-card price-card--sage tilt">
+            <div class="price-card__head">
+              <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-users"></use></svg></span>
+              <div>
+                <h4 class="font-display font-600 text-lg text-ink leading-tight">Запуск речи · мини-группа</h4>
+                <p class="text-sm price-card__kruzhok">Кружок «Лёгкий старт в команде»</p>
+              </div>
+            </div>
+            <p class="text-muted text-sm mb-4 min-h-[2.5rem]">Запуск речи в компании сверстников</p>
+            <div class="pkg-head"><span>Абонемент</span><span>Цена занятия</span><span>Стоимость</span></div>
+              <div class="pkg-row">
+                <span class="pkg-cnt">8 занятий</span>
+                <span class="pkg-price">3 200 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">3 900 ₽</span></span>
+                <span class="pkg-sum">25 600 ₽</span>
+              </div>
+              <div class="pkg-row">
+                <span class="pkg-cnt">12 занятий</span>
+                <span class="pkg-price">2 950 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">3 600 ₽</span></span>
+                <span class="pkg-sum">35 400 ₽</span>
+              </div>
+            <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
+          </article>
+          <article class="price-card price-card--sage tilt">
+            <div class="price-card__head">
+              <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-hand-heart"></use></svg></span>
+              <div>
+                <h4 class="font-display font-600 text-lg text-ink leading-tight">Логомассаж</h4>
+                <p class="text-sm price-card__kruzhok">Кружок «Нежный звук»</p>
+              </div>
+            </div>
+            <p class="text-muted text-sm mb-4 min-h-[2.5rem]">Подготовка мышц речевого аппарата при нарушениях тонуса</p>
+            <div class="pkg-head"><span>Абонемент</span><span>Цена занятия</span><span>Стоимость</span></div>
+              <div class="pkg-row">
+                <span class="pkg-cnt">10 занятий</span>
+                <span class="pkg-price">2 200 ₽<span class="pkg-per">/занятие</span></span>
+                <span class="pkg-sum">22 000 ₽</span>
+              </div>
+              <div class="pkg-row">
+                <span class="pkg-cnt">15 занятий</span>
+                <span class="pkg-price">2 000 ₽<span class="pkg-per">/занятие</span></span>
+                <span class="pkg-sum">30 000 ₽</span>
+              </div>
+            <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
+          </article>
+        </div>
+      </div>
+      <div class="price-cat price-cat--pink reveal">
+        <div class="price-cat__label">
+          <span class="price-cat__dot" aria-hidden="true"><svg class="icon icon-sm"><use href="#i-puzzle"></use></svg></span>
+          <h3 class="font-display font-600 text-2xl text-ink">Дефектология</h3>
+        </div>
+        <div class="price-cat__grid">
+          <article class="price-card price-card--pink tilt">
+            <div class="price-card__head">
+              <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-puzzle"></use></svg></span>
+              <div>
+                <h4 class="font-display font-600 text-lg text-ink leading-tight">Занятия с дефектологом</h4>
+                <p class="text-sm price-card__kruzhok">Кружок «Вектор познания»</p>
+              </div>
+            </div>
+            <p class="text-muted text-sm mb-4 min-h-[2.5rem]">Работа с ЗРР, ЗПРР, РАС и другими особенностями развития</p>
+            <div class="pkg-head"><span>Абонемент</span><span>Цена занятия</span><span>Стоимость</span></div>
+              <div class="pkg-row">
+                <span class="pkg-cnt">8 занятий</span>
+                <span class="pkg-price">3 800 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">4 400 ₽</span></span>
+                <span class="pkg-sum">30 400 ₽</span>
+              </div>
+              <div class="pkg-row">
+                <span class="pkg-cnt">12 занятий</span>
+                <span class="pkg-price">3 400 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">4 000 ₽</span></span>
+                <span class="pkg-sum">40 800 ₽</span>
+              </div>
+            <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
+          </article>
+        </div>
+      </div>
+      <div class="price-cat price-cat--lavender reveal">
+        <div class="price-cat__label">
+          <span class="price-cat__dot" aria-hidden="true"><svg class="icon icon-sm"><use href="#i-brain"></use></svg></span>
+          <h3 class="font-display font-600 text-2xl text-ink">Нейропсихология</h3>
+        </div>
+        <div class="price-cat__grid">
+          <article class="price-card price-card--lavender tilt">
+            <div class="price-card__head">
+              <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-brain"></use></svg></span>
+              <div>
+                <h4 class="font-display font-600 text-lg text-ink leading-tight">Индивидуальные занятия</h4>
+                <p class="text-sm price-card__kruzhok">Кружок «Нейроинтеллект»</p>
+              </div>
+            </div>
+            <p class="text-muted text-sm mb-4 min-h-[2.5rem]">Внимание, память, саморегуляция — база для речи и учёбы</p>
+            <div class="pkg-head"><span>Абонемент</span><span>Цена занятия</span><span>Стоимость</span></div>
+              <div class="pkg-row">
+                <span class="pkg-cnt">4 занятия</span>
+                <span class="pkg-price">4 200 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">4 700 ₽</span></span>
+                <span class="pkg-sum">16 800 ₽</span>
+              </div>
+              <div class="pkg-row">
+                <span class="pkg-cnt">8 занятий</span>
+                <span class="pkg-price">3 800 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">4 250 ₽</span></span>
+                <span class="pkg-sum">30 400 ₽</span>
+              </div>
+              <div class="pkg-row">
+                <span class="pkg-cnt">12 занятий</span>
+                <span class="pkg-price">3 200 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">3 750 ₽</span></span>
+                <span class="pkg-sum">38 400 ₽</span>
+              </div>
+            <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
+          </article>
+          <article class="price-card price-card--lavender tilt">
+            <div class="price-card__head">
+              <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-users"></use></svg></span>
+              <div>
+                <h4 class="font-display font-600 text-lg text-ink leading-tight">Занятия в мини-группе</h4>
+                <p class="text-sm price-card__kruzhok">Кружок «Нейроинтеллект в команде»</p>
+              </div>
+            </div>
+            <p class="text-muted text-sm mb-4 min-h-[2.5rem]">Нейроразвитие в компании сверстников</p>
+            <div class="pkg-head"><span>Абонемент</span><span>Цена занятия</span><span>Стоимость</span></div>
+              <div class="pkg-row">
+                <span class="pkg-cnt">4 занятия</span>
+                <span class="pkg-price">3 100 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">3 600 ₽</span></span>
+                <span class="pkg-sum">12 400 ₽</span>
+              </div>
+              <div class="pkg-row">
+                <span class="pkg-cnt">8 занятий</span>
+                <span class="pkg-price">2 700 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">3 200 ₽</span></span>
+                <span class="pkg-sum">21 600 ₽</span>
+              </div>
+            <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
+          </article>
+        </div>
+      </div>
+      <div class="price-cat price-cat--beige reveal">
+        <div class="price-cat__label">
+          <span class="price-cat__dot" aria-hidden="true"><svg class="icon icon-sm"><use href="#i-cap"></use></svg></span>
+          <h3 class="font-display font-600 text-2xl text-ink">Подготовка к школе</h3>
+        </div>
+        <div class="price-cat__grid">
+          <article class="price-card price-card--beige tilt">
+            <div class="price-card__head">
+              <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-cap"></use></svg></span>
+              <div>
+                <h4 class="font-display font-600 text-lg text-ink leading-tight">Индивидуальные занятия</h4>
+                <p class="text-sm price-card__kruzhok">Кружок «Золотой стандарт»</p>
+              </div>
+            </div>
+            <p class="text-muted text-sm mb-4 min-h-[2.5rem]">Чтение, счёт, связная речь и усидчивость — уверенный старт в 1 классе</p>
+            <div class="pkg-head"><span>Абонемент</span><span>Цена занятия</span><span>Стоимость</span></div>
+              <div class="pkg-row">
+                <span class="pkg-cnt">8 занятий</span>
+                <span class="pkg-price">3 050 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">3 500 ₽</span></span>
+                <span class="pkg-sum">24 400 ₽</span>
+              </div>
+              <div class="pkg-row">
+                <span class="pkg-cnt">12 занятий</span>
+                <span class="pkg-price">2 800 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">3 300 ₽</span></span>
+                <span class="pkg-sum">33 600 ₽</span>
+              </div>
+            <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
+          </article>
+          <article class="price-card price-card--beige tilt">
+            <div class="price-card__head">
+              <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-users"></use></svg></span>
+              <div>
+                <h4 class="font-display font-600 text-lg text-ink leading-tight">Занятия в мини-группе (6–7 лет)</h4>
+                <p class="text-sm price-card__kruzhok">Кружок «Золотой стандарт в команде»</p>
+              </div>
+            </div>
+            <p class="text-muted text-sm mb-4 min-h-[2.5rem]">Подготовка к школе в малой группе</p>
+            <div class="pkg-head"><span>Абонемент</span><span>Цена занятия</span><span>Стоимость</span></div>
+              <div class="pkg-row">
+                <span class="pkg-cnt">8 занятий</span>
+                <span class="pkg-price">2 700 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">2 900 ₽</span></span>
+                <span class="pkg-sum">21 600 ₽</span>
+              </div>
+            <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
+          </article>
+        </div>
+      </div>
+      <div class="price-cat price-cat--berry reveal">
+        <div class="price-cat__label">
+          <span class="price-cat__dot" aria-hidden="true"><svg class="icon icon-sm"><use href="#i-sparkle"></use></svg></span>
+          <h3 class="font-display font-600 text-2xl text-ink">Комплексное развитие</h3>
+        </div>
+        <div class="price-cat__grid">
+          <article class="price-card price-card--berry tilt">
+            <div class="price-card__head">
+              <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-sparkle"></use></svg></span>
+              <div>
+                <h4 class="font-display font-600 text-lg text-ink leading-tight">Комплексное развитие 2+</h4>
+                <p class="text-sm price-card__kruzhok">Кружок «Вектор открытий»</p>
+              </div>
+            </div>
+            <p class="text-muted text-sm mb-4 min-h-[2.5rem]">Гармоничное развитие для малышей от 2 лет</p>
+            <div class="pkg-head"><span>Абонемент</span><span>Цена занятия</span><span>Стоимость</span></div>
+              <div class="pkg-row">
+                <span class="pkg-cnt">4 занятия</span>
+                <span class="pkg-price">2 000 ₽<span class="pkg-per">/занятие</span></span>
+                <span class="pkg-sum">8 000 ₽</span>
+              </div>
+              <div class="pkg-row">
+                <span class="pkg-cnt">8 занятий</span>
+                <span class="pkg-price">1 800 ₽<span class="pkg-per">/занятие</span></span>
+                <span class="pkg-sum">14 400 ₽</span>
+              </div>
+            <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
+          </article>
+        </div>
+      </div>
+      </div>
+
+      <p class="text-sm text-muted mt-8 reveal text-center">Цены указаны в рублях. Точную стоимость и удобный график уточняйте у администратора.</p>
+    </div>
+  </section>
+
+  <!-- ==================== ЗОНЫ ЦЕНТРА ==================== -->
+  <section id="rooms" class="py-20 lg:py-28 relative overflow-hidden">
+    <div class="blob w-72 h-72 bg-rose -top-10 -right-24 opacity-30 float-slow" data-parallax="0.12"></div>
+    <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="max-w-2xl mb-14 reveal">
+        <span class="inline-flex items-center gap-2 py-2 px-4 rounded-full glass text-berry font-600 text-sm mb-4">
+          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-pin"></use></svg>
+          Зоны центра
+        </span>
+        <h2 class="font-display font-600 text-3xl sm:text-4xl lg:text-5xl text-ink leading-tight mb-4">
+          Отдельное пространство для каждого направления
+        </h2>
+        <p class="text-lg text-muted">
+          Мы оборудовали центр так, чтобы каждому специалисту и ребёнку было комфортно. Нажмите на фото, чтобы рассмотреть ближе.
+        </p>
+      </div>
+
+      <div class="stagger grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <figure class="card tilt magnetic-soft overflow-hidden group">
+          <button class="lightbox-trigger block w-full text-left" data-full="assets/img/rooms/logoped-1.jpg" data-gallery="assets/img/rooms/logoped-1.jpg,assets/img/rooms/logoped-2.jpg,assets/img/rooms/logoped-3.jpg,assets/img/rooms/logoped-4.jpg" aria-label="Открыть фото: зона логопеда">
+            <span class="block aspect-[4/3] overflow-hidden relative">
+              <img src="assets/img/rooms/logoped-1.jpg" width="1200" height="798" alt="Кабинет логопеда центра «Золотой Вектор»" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <span class="room-count"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-images"></use></svg>4 фото</span>
+            </span>
+            <figcaption class="p-5">
+              <span class="flex items-center gap-2 font-display font-600 text-ink"><svg class="icon icon-sm text-berry" aria-hidden="true"><use href="#i-mic"></use></svg> Зона логопеда</span>
+              <span class="block text-sm text-muted mt-1">Индивидуальные занятия и постановка звуков</span>
+            </figcaption>
+          </button>
+        </figure>
+
+        <figure class="card tilt magnetic-soft overflow-hidden group">
+          <button class="lightbox-trigger block w-full text-left" data-full="assets/img/rooms/neuro-1.jpg" data-gallery="assets/img/rooms/neuro-1.jpg,assets/img/rooms/neuro-2.jpg,assets/img/rooms/neuro-3.jpg,assets/img/rooms/neuro-4.jpg" aria-label="Открыть фото: зона нейрокоррекции">
+            <span class="block aspect-[4/3] overflow-hidden relative">
+              <img src="assets/img/rooms/neuro-1.jpg" width="1200" height="900" alt="Зона нейрокоррекции центра «Золотой Вектор»" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <span class="room-count"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-images"></use></svg>4 фото</span>
+            </span>
+            <figcaption class="p-5">
+              <span class="flex items-center gap-2 font-display font-600 text-ink"><svg class="icon icon-sm text-berry" aria-hidden="true"><use href="#i-brain"></use></svg> Зона нейро</span>
+              <span class="block text-sm text-muted mt-1">Сенсомоторная коррекция и развитие мозга</span>
+            </figcaption>
+          </button>
+        </figure>
+
+        <figure class="card tilt magnetic-soft overflow-hidden group">
+          <button class="lightbox-trigger block w-full text-left" data-full="assets/img/rooms/logomassage-1.jpg" data-gallery="assets/img/rooms/logomassage-1.jpg,assets/img/rooms/logomassage-2.jpg,assets/img/rooms/logomassage-3.jpg,assets/img/rooms/logomassage-4.jpg" aria-label="Открыть фото: зона логопедического массажа">
+            <span class="block aspect-[4/3] overflow-hidden relative">
+              <img src="assets/img/rooms/logomassage-1.jpg" width="1200" height="900" alt="Зона логопедического массажа центра «Золотой Вектор»" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <span class="room-count"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-images"></use></svg>4 фото</span>
+            </span>
+            <figcaption class="p-5">
+              <span class="flex items-center gap-2 font-display font-600 text-ink"><svg class="icon icon-sm text-berry" aria-hidden="true"><use href="#i-hand-heart"></use></svg> Логомассаж</span>
+              <span class="block text-sm text-muted mt-1">Мягкая подготовка мышц речевого аппарата</span>
+            </figcaption>
+          </button>
+        </figure>
+
+        <figure class="card tilt magnetic-soft overflow-hidden group">
+          <button class="lightbox-trigger block w-full text-left" data-full="assets/img/rooms/sensory-1.jpg" data-gallery="assets/img/rooms/sensory-1.jpg,assets/img/rooms/sensory-2.jpg" aria-label="Открыть фото: сенсорная зона">
+            <span class="block aspect-[4/3] overflow-hidden relative">
+              <img src="assets/img/rooms/sensory-1.jpg" width="1200" height="900" alt="Сенсорная зона центра «Золотой Вектор»" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <span class="room-count"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-images"></use></svg>2 фото</span>
+            </span>
+            <figcaption class="p-5">
+              <span class="flex items-center gap-2 font-display font-600 text-ink"><svg class="icon icon-sm text-berry" aria-hidden="true"><use href="#i-puzzle"></use></svg> Сенсорная</span>
+              <span class="block text-sm text-muted mt-1">Развитие восприятия и снятие напряжения</span>
+            </figcaption>
+          </button>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== О ЦЕНТРЕ ==================== -->
+  <section id="about" class="py-20 lg:py-28 relative overflow-hidden">
+    <img src="assets/brand/deco/star2-pink.png" alt="" aria-hidden="true" class="deco absolute w-16 top-16 right-12 opacity-70 float-mid" data-parallax="0.15" />
+    <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+        <div class="reveal relative order-2 lg:order-1">
+          <div class="photo-frame aspect-[4/3]" data-parallax="-0.1">
+            <img src="assets/img/interior-2.jpg" width="1600" height="851"
+                 alt="Игровая зона центра «Золотой Вектор» в мягких тонах фирменной палитры" loading="lazy" />
+          </div>
+          <div class="hero-float-card absolute -top-5 -right-4 sm:-right-6 glass p-4 flex items-center gap-3">
+            <span class="icon-badge bg-rose-soft text-berry" aria-hidden="true"><svg class="icon"><use href="#i-star"></use></svg></span>
+            <div>
+              <p class="font-display font-600 text-2xl text-berry leading-none flex items-center gap-1">5,0<svg class="icon icon-sm text-gold" aria-hidden="true"><use href="#i-star"></use></svg></p>
+              <p class="text-sm text-muted leading-tight">рейтинг по отзывам</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal order-1 lg:order-2">
+          <span class="inline-flex items-center gap-2 py-2 px-4 rounded-full glass text-berry font-600 text-sm mb-4">
+            <svg class="icon icon-sm" aria-hidden="true"><use href="#i-pin"></use></svg>
+            О центре
+          </span>
+          <h2 class="font-display font-600 text-3xl sm:text-4xl text-ink leading-tight mb-5">
+            Пространство, где ребёнка принимают таким, какой он есть
+          </h2>
+          <p class="text-lg text-muted mb-6 leading-relaxed">
+            Мы верим, что каждый ребёнок уже обладает внутренним потенциалом — его не нужно менять
+            или подгонять под общие стандарты. Мягкие тёплые цвета, безопасные материалы и педагоги,
+            которые замечают сильные стороны ребёнка и создают условия для роста без давления и сравнения.
+          </p>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <svg class="icon text-berry mt-0.5" aria-hidden="true"><use href="#i-check"></use></svg>
+              <span class="text-ink"><span class="font-600">Уютные светлые кабинеты</span> — отдельное пространство для каждого занятия без спешки.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="icon text-berry mt-0.5" aria-hidden="true"><use href="#i-check"></use></svg>
+              <span class="text-ink"><span class="font-600">Команда логопедов, нейропсихологов и дефектологов</span> — работаем в связке.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="icon text-berry mt-0.5" aria-hidden="true"><use href="#i-check"></use></svg>
+              <span class="text-ink"><span class="font-600">Прозрачная динамика</span> — вы видите прогресс ребёнка и получаете обратную связь.</span>
+            </li>
+          </ul>
+          <a href="#booking" class="btn btn-primary btn-lg magnetic mt-8">
+            <svg class="icon icon-sm" aria-hidden="true"><use href="#i-calendar"></use></svg>
+            Записаться на первый визит
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ЭТАПЫ ==================== -->
+  <section id="process" class="py-20 lg:py-28 relative overflow-hidden has-pattern pattern-lavender">
+    <div class="blob w-72 h-72 bg-rose -top-10 -left-20 opacity-30 float-slow" data-parallax="0.12"></div>
+    <img src="assets/brand/mascot/hedgehog-compass.png" alt="" aria-hidden="true" class="section-hog hidden lg:block w-44 top-16 right-6 float-mid" data-parallax="0.08" />
+    <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="max-w-2xl mb-14 reveal">
+        <span class="inline-flex items-center gap-2 py-2 px-4 rounded-full glass text-berry font-600 text-sm mb-4">
+          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-list"></use></svg>
+          Как проходит
+        </span>
+        <h2 class="font-display font-600 text-3xl sm:text-4xl lg:text-5xl text-ink leading-tight mb-4">Четыре понятных шага</h2>
+        <p class="text-lg text-muted">От первого звонка до устойчивого результата — вы всегда знаете, что происходит.</p>
+      </div>
+
+      <ol class="stagger grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <li class="card tilt magnetic-soft p-7">
+          <span class="font-display font-600 text-4xl block mb-3" style="background:linear-gradient(135deg,#973568,#E0A97C);-webkit-background-clip:text;background-clip:text;color:transparent">01</span>
+          <h3 class="font-display font-600 text-lg text-ink mb-2">Знакомство</h3>
+          <p class="text-muted text-sm">Обсуждаем запрос по телефону или в мессенджере, подбираем удобное время.</p>
+        </li>
+        <li class="card tilt magnetic-soft p-7">
+          <span class="font-display font-600 text-4xl block mb-3" style="background:linear-gradient(135deg,#973568,#E0A97C);-webkit-background-clip:text;background-clip:text;color:transparent">02</span>
+          <h3 class="font-display font-600 text-lg text-ink mb-2">Диагностика</h3>
+          <p class="text-muted text-sm">Специалист оценивает речь и развитие, отвечает на все вопросы родителя.</p>
+        </li>
+        <li class="card tilt magnetic-soft p-7">
+          <span class="font-display font-600 text-4xl block mb-3" style="background:linear-gradient(135deg,#973568,#E0A97C);-webkit-background-clip:text;background-clip:text;color:transparent">03</span>
+          <h3 class="font-display font-600 text-lg text-ink mb-2">Программа</h3>
+          <p class="text-muted text-sm">Составляем индивидуальный маршрут занятий с понятными целями.</p>
+        </li>
+        <li class="card tilt magnetic-soft p-7">
+          <span class="font-display font-600 text-4xl block mb-3" style="background:linear-gradient(135deg,#973568,#E0A97C);-webkit-background-clip:text;background-clip:text;color:transparent">04</span>
+          <h3 class="font-display font-600 text-lg text-ink mb-2">Занятия и результат</h3>
+          <p class="text-muted text-sm">Регулярно занимаемся, отслеживаем динамику и корректируем маршрут.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ==================== СПЕЦИАЛИСТЫ ==================== -->
+  <section id="team" class="py-20 lg:py-28 relative overflow-hidden">
+    <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="max-w-2xl mb-14 reveal">
+        <span class="inline-flex items-center gap-2 py-2 px-4 rounded-full glass text-berry font-600 text-sm mb-4">
+          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-users"></use></svg>
+          Специалисты
+        </span>
+        <h2 class="font-display font-600 text-3xl sm:text-4xl lg:text-5xl text-ink leading-tight mb-4">Команда, которой доверяют родители</h2>
+        <p class="text-lg text-muted">Дипломированные специалисты с профильным образованием и искренней любовью к детям. Нажмите «Подробнее», чтобы узнать о подходе каждого.</p>
+      </div>
+
+      <div class="stagger grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+        <!-- Тютюгина Софья Евгеньевна -->
+        <article class="card tilt overflow-hidden flex flex-col">
+          <div class="aspect-[4/5] overflow-hidden bg-cream">
+            <img src="assets/img/team/tyutyugina.jpg" width="637" height="900" loading="lazy"
+                 alt="Тютюгина Софья Евгеньевна — логопед-дефектолог" class="w-full h-full object-cover object-top" />
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="font-display font-600 text-lg text-ink">Тютюгина Софья Евгеньевна</h3>
+            <p class="text-berry font-600 text-sm mb-3">Логопед-дефектолог</p>
+            <p class="text-muted text-sm mb-3">Диагностика и коррекция речи у детей разных возрастов, работа с РАС, ЗПР, ОНР и интеллектуальной недостаточностью.</p>
+            <div class="bio-panel text-sm text-muted space-y-3">
+              <p><span class="font-600 text-ink">Образование:</span> Московский государственный областной университет — специальное дефектологическое образование (дефектология); Центр непрерывного образования и инноваций — логопедия.</p>
+              <p>Учитывает индивидуальные особенности каждого ребёнка: возрастную норму, темперамент, уровень коммуникации и эмоционального интеллекта. Логопедические упражнения органично вплетаются в игровые и сюжетные формы, что делает коррекцию эффективной, комфортной и радостной.</p>
+            </div>
+            <button class="bio-toggle mt-auto pt-4 inline-flex items-center gap-1 font-600 text-berry hover:text-berry-dark transition-colors self-start" aria-expanded="false">
+              <span class="bio-label">Подробнее</span>
+              <svg class="icon icon-sm bio-caret" aria-hidden="true"><use href="#i-caret-down"></use></svg>
+            </button>
+          </div>
+        </article>
+
+        <!-- Фарафонова Екатерина Владиславовна -->
+        <article class="card tilt overflow-hidden flex flex-col">
+          <div class="aspect-[4/5] overflow-hidden bg-cream">
+            <img src="assets/img/team/farafonova.jpg" width="637" height="900" loading="lazy"
+                 alt="Фарафонова Екатерина Владиславовна — нейропсихолог, нейродефектолог" class="w-full h-full object-cover object-top" />
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="font-display font-600 text-lg text-ink">Фарафонова Екатерина Владиславовна</h3>
+            <p class="text-berry font-600 text-sm mb-3">Нейропсихолог · нейродефектолог</p>
+            <p class="text-muted text-sm mb-3">Сопровождение детей и подростков с особенностями нейроразвития: внимание, память, поведение, чтение и письмо.</p>
+            <div class="bio-panel text-sm text-muted space-y-3">
+              <p><span class="font-600 text-ink">Образование:</span> РАНХиГС — психология, клиническая психология (бакалавриат, магистратура); Кировский государственный медицинский университет — нейродефектология.</p>
+              <p>Проводит подробное нейропсихологическое обследование, выявляет сильные и слабые звенья в работе мозга и причины школьной неуспеваемости. Работает по методу замещающего онтогенеза (двигательная коррекция), развивает межполушарное взаимодействие, тренирует внимание, память и самоконтроль, помогает родителям адаптировать среду для устойчивого результата.</p>
+            </div>
+            <button class="bio-toggle mt-auto pt-4 inline-flex items-center gap-1 font-600 text-berry hover:text-berry-dark transition-colors self-start" aria-expanded="false">
+              <span class="bio-label">Подробнее</span>
+              <svg class="icon icon-sm bio-caret" aria-hidden="true"><use href="#i-caret-down"></use></svg>
+            </button>
+          </div>
+        </article>
+
+        <!-- Федорова Ксения Николаевна -->
+        <article class="card tilt overflow-hidden flex flex-col">
+          <div class="aspect-[4/5] overflow-hidden bg-cream">
+            <img src="assets/img/team/fedorova.jpg" width="637" height="900" loading="lazy"
+                 alt="Федорова Ксения Николаевна — логопед" class="w-full h-full object-cover object-top" />
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="font-display font-600 text-lg text-ink">Федорова Ксения Николаевна</h3>
+            <p class="text-berry font-600 text-sm mb-3">Логопед</p>
+            <p class="text-muted text-sm mb-3">Сопровождение детей от раннего до младшего школьного возраста, включая синдром Дауна, РАС, ЗПР и ОНР.</p>
+            <div class="bio-panel text-sm text-muted space-y-3">
+              <p><span class="font-600 text-ink">Образование:</span> Нижнетагильский государственный социально-педагогический институт — логопедия; естественные науки; Уральская государственная юридическая академия — юриспруденция.</p>
+              <p>Дифференцированный подход помогает точно выявлять зоны трудностей и находить «точки опоры» — ресурсные стороны ребёнка. Благодаря эмпатии и педагогической чуткости быстро налаживает доверительный контакт, создавая атмосферу безопасности, где можно не бояться ошибаться и раскрывать способности.</p>
+            </div>
+            <button class="bio-toggle mt-auto pt-4 inline-flex items-center gap-1 font-600 text-berry hover:text-berry-dark transition-colors self-start" aria-expanded="false">
+              <span class="bio-label">Подробнее</span>
+              <svg class="icon icon-sm bio-caret" aria-hidden="true"><use href="#i-caret-down"></use></svg>
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ОТЗЫВЫ ==================== -->
+  <section id="reviews" class="py-20 lg:py-28 relative overflow-hidden has-pattern pattern-pink">
+    <div class="blob w-80 h-80 bg-lavender top-10 -right-28 opacity-30 float-mid" data-parallax="0.12"></div>
+    <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="max-w-2xl mb-10 reveal">
+        <span class="inline-flex items-center gap-2 py-2 px-4 rounded-full glass text-berry font-600 text-sm mb-4">
+          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-quotes"></use></svg>
+          Отзывы родителей
+        </span>
+        <h2 class="font-display font-600 text-3xl sm:text-4xl lg:text-5xl text-ink leading-tight">Истории, ради которых мы работаем</h2>
+        <p class="text-lg text-muted mt-4">Настоящие отзывы родителей наших учеников. Нажмите на любой, чтобы прочитать целиком.</p>
+      </div>
+
+      <div class="relative reveal">
+        <div id="reviewsGrid" class="reviews-masonry">
+        <article class="review-card card">
+          <div class="review-card__stars text-gold" aria-label="Оценка 5 из 5"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg></div>
+          <p class="review-card__text">Замечательный новый центр в пешей доступности от метро. Очень приветливые сотрудники, светлый и просторный — видно, что создан с любовью. Были с дочкой на диагностике у Софьи Евгеньевны: к ребёнку быстро нашли подход, всё прошло в игровом формате. Дочка не хотела уходить! Выдали заключение с рекомендациями.</p>
+          <div class="review-card__foot">
+            <span class="review-card__ava" style="background:linear-gradient(145deg,#AC5D86,#973568)" aria-hidden="true">ОК</span>
+            <div>
+              <p class="review-card__name">Ольга К.</p>
+              <p class="review-card__date">6 сентября</p>
+            </div>
+          </div>
+        </article>
+        <article class="review-card card">
+          <div class="review-card__stars text-gold" aria-label="Оценка 5 из 5"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg></div>
+          <p class="review-card__text">Отличный центр, удобно добираться. Новое уютное пространство, просторные светлые кабинеты. Сотрудники приветливые, ответили на все вопросы. Логопед Софья Евгеньевна нашла подход к дочке, вовлекала в процесс. Дочка с нетерпением ждёт следующего занятия! Работники — профессионалы своего дела.</p>
+          <div class="review-card__foot">
+            <span class="review-card__ava" style="background:linear-gradient(145deg,#9B89C0,#4B4A7E)" aria-hidden="true">МР</span>
+            <div>
+              <p class="review-card__name">Мария Рошко</p>
+              <p class="review-card__date">4 сентября</p>
+            </div>
+          </div>
+        </article>
+        <article class="review-card card">
+          <div class="review-card__stars text-gold" aria-label="Оценка 5 из 5"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg></div>
+          <p class="review-card__text">Потрясающий центр. Ребёнок был в восторге от педагога. Грамотный логопед-дефектолог Ксения Николаевна смогла заинтересовать ребёнка с первых минут — он дни считал до следующей встречи. Администраторы вежливы, всё грамотно поясняют. Уютно, чисто, рядом с метро. Рекомендую от души.</p>
+          <div class="review-card__foot">
+            <span class="review-card__ava" style="background:linear-gradient(145deg,#D3A3C4,#AC5D86)" aria-hidden="true">СР</span>
+            <div>
+              <p class="review-card__name">Светлана Романова</p>
+              <p class="review-card__date">15 октября</p>
+            </div>
+          </div>
+        </article>
+        <article class="review-card card">
+          <div class="review-card__stars text-gold" aria-label="Оценка 5 из 5"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg></div>
+          <p class="review-card__text">Чудесный новый очень уютный центр. Грамотные молодые специалисты быстро находят контакт с любым ребёнком, приветливые администраторы. Сын бежит на занятия, за 2 месяца видим хороший прогресс. Будем ходить долго и рекомендуем всем друзьям!</p>
+          <div class="review-card__foot">
+            <span class="review-card__ava" style="background:linear-gradient(145deg,#E0A97C,#C08850)" aria-hidden="true">ЮМ</span>
+            <div>
+              <p class="review-card__name">Юлия М.</p>
+              <p class="review-card__date">28 октября</p>
+            </div>
+          </div>
+        </article>
+        <article class="review-card card">
+          <div class="review-card__stars text-gold" aria-label="Оценка 5 из 5"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg></div>
+          <p class="review-card__text">Ребёнку 7 лет, после смены сада заметно просел в речи. Пришли на бесплатную диагностику и остались на занятия — почти отходили абонемент, очень довольны прогрессом. Хорошее место: уютное, тихое. А девочки-администраторы такие душевные. Рекомендую!</p>
+          <div class="review-card__foot">
+            <span class="review-card__ava" style="background:linear-gradient(145deg,#AC5D86,#973568)" aria-hidden="true">НГ</span>
+            <div>
+              <p class="review-card__name">Наталья Горышкина</p>
+              <p class="review-card__date">1 октября</p>
+            </div>
+          </div>
+        </article>
+        <article class="review-card card">
+          <div class="review-card__stars text-gold" aria-label="Оценка 5 из 5"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg></div>
+          <p class="review-card__text">Были с дочкой на диагностике — так понравилось! Логопед приветливая, заинтересованная, провела шикарную диагностику по всем направлениям в игровой форме. Меняла деятельность так, что дочь даже не заметила, как всё прошло. Дала рекомендации по речи. От души рекомендую.</p>
+          <div class="review-card__foot">
+            <span class="review-card__ava" style="background:linear-gradient(145deg,#9B89C0,#4B4A7E)" aria-hidden="true">МИ</span>
+            <div>
+              <p class="review-card__name">Мила</p>
+              <p class="review-card__date">4 сентября</p>
+            </div>
+          </div>
+        </article>
+        <article class="review-card review-extra card">
+          <div class="review-card__stars text-gold" aria-label="Оценка 5 из 5"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg></div>
+          <p class="review-card__text">Отличный новый центр недалеко от метро, рядом есть парковка. Светлый, уютный, с игровой зоной. Искала специалиста для себя — готовлюсь к выступлению, важно звучать уверенно. Даже после первого занятия заметен результат. Сотрудники приветливые и внимательные.</p>
+          <div class="review-card__foot">
+            <span class="review-card__ava" style="background:linear-gradient(145deg,#D3A3C4,#AC5D86)" aria-hidden="true">НС</span>
+            <div>
+              <p class="review-card__name">Надежда Самойлова</p>
+              <p class="review-card__date">3 октября</p>
+            </div>
+          </div>
+        </article>
+        <article class="review-card review-extra card">
+          <div class="review-card__stars text-gold" aria-label="Оценка 5 из 5"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg></div>
+          <p class="review-card__text">Это не просто центр — это место, где совершаются маленькие чудеса! Пространство светлое и уютное, ребёнок бежит сюда с радостью. Специалисты — настоящие волшебники: нашли подход с первой секунды, результат уже после нескольких занятий. Теперь я спокойна за речь ребёнка.</p>
+          <div class="review-card__foot">
+            <span class="review-card__ava" style="background:linear-gradient(145deg,#E0A97C,#C08850)" aria-hidden="true">КБ</span>
+            <div>
+              <p class="review-card__name">Кристина Б.</p>
+              <p class="review-card__date">6 сентября</p>
+            </div>
+          </div>
+        </article>
+        <article class="review-card review-extra card">
+          <div class="review-card__stars text-gold" aria-label="Оценка 5 из 5"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg></div>
+          <p class="review-card__text">Центр новый, внутри очень уютно, приятный персонал. Ребёнок ходит с удовольствием. Занятие для малыша проходит в игровой форме и длится 35 минут — ребёнок не успевает устать. В зоне ожидания игрушки, есть чай, кофе и вкусняшки.</p>
+          <div class="review-card__foot">
+            <span class="review-card__ava" style="background:linear-gradient(145deg,#AC5D86,#973568)" aria-hidden="true">НА</span>
+            <div>
+              <p class="review-card__name">Наталья</p>
+              <p class="review-card__date">7 октября</p>
+            </div>
+          </div>
+        </article>
+        <article class="review-card review-extra card">
+          <div class="review-card__stars text-gold" aria-label="Оценка 5 из 5"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg></div>
+          <p class="review-card__text">Впервые посетили центр. Удобная входная группа и зона ожидания, приветливый администратор. Присутствовала на занятии с ребёнком — прошло интересно и вовлечённо. Понравилась заинтересованность специалиста и прозрачная система цен. Купили абонемент, планируем ходить дальше!</p>
+          <div class="review-card__foot">
+            <span class="review-card__ava" style="background:linear-gradient(145deg,#9B89C0,#4B4A7E)" aria-hidden="true">ДЧ</span>
+            <div>
+              <p class="review-card__name">Дана Чингариева</p>
+              <p class="review-card__date">13 ноября</p>
+            </div>
+          </div>
+        </article>
+        <article class="review-card review-extra card">
+          <div class="review-card__stars text-gold" aria-label="Оценка 5 из 5"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg></div>
+          <p class="review-card__text">Прекрасный новый центр, дочка с удовольствием ходит. Доброжелательное отношение, обратная связь от педагога после каждого занятия, лояльная система переноса занятий при пропуске. Кофе, чай, вкусняшки и мотивация для деток всегда присутствуют. Спасибо!</p>
+          <div class="review-card__foot">
+            <span class="review-card__ava" style="background:linear-gradient(145deg,#D3A3C4,#AC5D86)" aria-hidden="true">OK</span>
+            <div>
+              <p class="review-card__name">Oxana K.</p>
+              <p class="review-card__date">7 октября</p>
+            </div>
+          </div>
+        </article>
+        <article class="review-card review-extra card">
+          <div class="review-card__stars text-gold" aria-label="Оценка 5 из 5"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg></div>
+          <p class="review-card__text">Отличное место, ходим на занятия к Софье Евгеньевне с самого открытия — замечательный специалист! Очень нравится транспортная доступность центра, просторные и светлые помещения.</p>
+          <div class="review-card__foot">
+            <span class="review-card__ava" style="background:linear-gradient(145deg,#E0A97C,#C08850)" aria-hidden="true">АД</span>
+            <div>
+              <p class="review-card__name">Анастасия Даценко</p>
+              <p class="review-card__date">5 октября</p>
+            </div>
+          </div>
+        </article>
+        <article class="review-card review-extra card">
+          <div class="review-card__stars text-gold" aria-label="Оценка 5 из 5"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg></div>
+          <p class="review-card__text">Новое светлое уютное пространство, приветливый персонал, грамотные специалисты. Были у Анны Дмитриевны — порадовал разносторонний подход к занятиям. Отличие от онлайн-занятий радикальное. Уверена, что результат придёт в разы быстрее.</p>
+          <div class="review-card__foot">
+            <span class="review-card__ava" style="background:linear-gradient(145deg,#AC5D86,#973568)" aria-hidden="true">ВБ</span>
+            <div>
+              <p class="review-card__name">Вероника Быкова</p>
+              <p class="review-card__date">6 сентября</p>
+            </div>
+          </div>
+        </article>
+        <article class="review-card review-extra card">
+          <div class="review-card__stars text-gold" aria-label="Оценка 5 из 5"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg></div>
+          <p class="review-card__text">Очень рекомендую центр. Выбрала из-за удобного расположения — несколько минут от метро. Плюсом оказались отличные внимательные специалисты, хорошо настроили контакт с ребёнком. Мы довольны!</p>
+          <div class="review-card__foot">
+            <span class="review-card__ava" style="background:linear-gradient(145deg,#9B89C0,#4B4A7E)" aria-hidden="true">ЕВ</span>
+            <div>
+              <p class="review-card__name">Евгения Васина</p>
+              <p class="review-card__date">5 сентября</p>
+            </div>
+          </div>
+        </article>
+        <article class="review-card review-extra card">
+          <div class="review-card__stars text-gold" aria-label="Оценка 5 из 5"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg></div>
+          <p class="review-card__text">Замечательный центр — чистый, яркий. Доброжелательные администраторы, прихожу с двумя детьми, всегда помогут. Интересная игровая, можно попить кофе, пока ждёшь. Главное — хороший специалист-дефектолог Софья Евгеньевна. Диагностика прошла в игровой форме, сразу нашла подход. Уже 2 недели ходим — есть успехи.</p>
+          <div class="review-card__foot">
+            <span class="review-card__ava" style="background:linear-gradient(145deg,#D3A3C4,#AC5D86)" aria-hidden="true">ЕП</span>
+            <div>
+              <p class="review-card__name">Екатерина Поляновская</p>
+              <p class="review-card__date">24 октября</p>
+            </div>
+          </div>
+        </article>
+        <article class="review-card review-extra card">
+          <div class="review-card__stars text-gold" aria-label="Оценка 5 из 5"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg></div>
+          <p class="review-card__text">Очень красиво и уютно. Были на диагностике — ничего не заставляли покупать, так как оказалось, что пока ребёнку не нужны занятия. Объяснили дальнейшие действия и дали время понаблюдать. Честный подход!</p>
+          <div class="review-card__foot">
+            <span class="review-card__ava" style="background:linear-gradient(145deg,#E0A97C,#C08850)" aria-hidden="true">ЕЛ</span>
+            <div>
+              <p class="review-card__name">Екатерина Либерова</p>
+              <p class="review-card__date">12 сентября</p>
+            </div>
+          </div>
+        </article>
+        <article class="review-card review-extra card">
+          <div class="review-card__stars text-gold" aria-label="Оценка 5 из 5"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg></div>
+          <p class="review-card__text">Великолепный центр открылся рядом с нами. Хочу поблагодарить весь коллектив за профессионализм и терпение к нашим деткам. Ребёнок ходит с удовольствием, есть огромный результат. Спасибо вам и процветания!</p>
+          <div class="review-card__foot">
+            <span class="review-card__ava" style="background:linear-gradient(145deg,#AC5D86,#973568)" aria-hidden="true">ОА</span>
+            <div>
+              <p class="review-card__name">Ольга А.</p>
+              <p class="review-card__date">6 сентября</p>
+            </div>
+          </div>
+        </article>
+        <article class="review-card review-extra card">
+          <div class="review-card__stars text-gold" aria-label="Оценка 5 из 5"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg></div>
+          <p class="review-card__text">От всей души выражаю глубочайшее уважение и благодарность Софье Евгеньевне и Анне Дмитриевне за их труд, тепло и заботу. Вы не просто передаёте знания — вы учите детей мыслить, чувствовать, мечтать и верить в себя. Ваш талант — бесценный вклад в будущее наших детей!</p>
+          <div class="review-card__foot">
+            <span class="review-card__ava" style="background:linear-gradient(145deg,#9B89C0,#4B4A7E)" aria-hidden="true">ММ</span>
+            <div>
+              <p class="review-card__name">Максим Митрахович</p>
+              <p class="review-card__date">6 сентября</p>
+            </div>
+          </div>
+        </article>
+        <article class="review-card review-extra card">
+          <div class="review-card__stars text-gold" aria-label="Оценка 5 из 5"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg></div>
+          <p class="review-card__text">Замечательный логопедический центр, ребёнок с радостью идёт заниматься. Очень удобное расположение, есть парковка. Отзывчивый и приветливый администратор.</p>
+          <div class="review-card__foot">
+            <span class="review-card__ava" style="background:linear-gradient(145deg,#D3A3C4,#AC5D86)" aria-hidden="true">BC</span>
+            <div>
+              <p class="review-card__name">Beauty C.</p>
+              <p class="review-card__date">8 сентября</p>
+            </div>
+          </div>
+        </article>
+        <article class="review-card review-extra card">
+          <div class="review-card__stars text-gold" aria-label="Оценка 5 из 5"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg></div>
+          <p class="review-card__text">Был с ребёнком на диагностике. Всё понравилось. Отличные и, что немаловажно, грамотные специалисты. Приобрели абонемент.</p>
+          <div class="review-card__foot">
+            <span class="review-card__ava" style="background:linear-gradient(145deg,#E0A97C,#C08850)" aria-hidden="true">ЯР</span>
+            <div>
+              <p class="review-card__name">Ярослав</p>
+              <p class="review-card__date">9 сентября</p>
+            </div>
+          </div>
+        </article>
+        <article class="review-card review-extra card">
+          <div class="review-card__stars text-gold" aria-label="Оценка 5 из 5"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg></div>
+          <p class="review-card__text">Очень рекомендую данный центр. Комфортный, удобный центр для детей. Относятся к детям с любовью и знанием своего дела!</p>
+          <div class="review-card__foot">
+            <span class="review-card__ava" style="background:linear-gradient(145deg,#AC5D86,#973568)" aria-hidden="true">ТП</span>
+            <div>
+              <p class="review-card__name">Татьяна Перегуда</p>
+              <p class="review-card__date">6 сентября</p>
+            </div>
+          </div>
+        </article>
+        <article class="review-card review-extra card">
+          <div class="review-card__stars text-gold" aria-label="Оценка 5 из 5"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg></div>
+          <p class="review-card__text">Хорошее расположение — рядом с домом и метро. Хорошо оборудован. Отличные специалисты.</p>
+          <div class="review-card__foot">
+            <span class="review-card__ava" style="background:linear-gradient(145deg,#9B89C0,#4B4A7E)" aria-hidden="true">АР</span>
+            <div>
+              <p class="review-card__name">Андрей Романов</p>
+              <p class="review-card__date">5 декабря</p>
+            </div>
+          </div>
+        </article>
+        <article class="review-card review-extra card">
+          <div class="review-card__stars text-gold" aria-label="Оценка 5 из 5"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg></div>
+          <p class="review-card__text">Центр новый, специалисты хорошие, нам понравилось. Можно оплачивать материнским капиталом.</p>
+          <div class="review-card__foot">
+            <span class="review-card__ava" style="background:linear-gradient(145deg,#D3A3C4,#AC5D86)" aria-hidden="true">АП</span>
+            <div>
+              <p class="review-card__name">Андрей Просветов</p>
+              <p class="review-card__date">7 октября</p>
+            </div>
+          </div>
+        </article>
+        </div>
+        <div class="text-center mt-10">
+          <button id="reviewsToggle" class="btn btn-glass btn-lg magnetic" aria-expanded="false">
+            <span class="reviews-toggle-label" data-more="Показать ещё отзывы (17)">Показать ещё отзывы (17)</span>
+            <svg class="icon icon-sm reviews-toggle-caret" aria-hidden="true"><use href="#i-caret-down"></use></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FAQ ==================== -->
+  <section id="faq" class="py-20 lg:py-28 relative overflow-hidden has-pattern pattern-sage">
+    <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid lg:grid-cols-[0.9fr_1.1fr] gap-12">
+        <div class="reveal">
+          <span class="inline-flex items-center gap-2 py-2 px-4 rounded-full glass text-berry font-600 text-sm mb-4">
+            <svg class="icon icon-sm" aria-hidden="true"><use href="#i-chat"></use></svg>
+            Частые вопросы
+          </span>
+          <h2 class="font-display font-600 text-3xl sm:text-4xl text-ink leading-tight mb-4">Отвечаем на то, что волнует родителей</h2>
+          <p class="text-lg text-muted mb-6">Не нашли свой вопрос? Напишите нам — ответим в течение дня.</p>
+          <a href="#booking" class="btn btn-primary magnetic">Задать вопрос</a>
+        </div>
+
+        <div class="space-y-4" id="faqList">
+          <div class="card overflow-hidden">
+            <button class="faq-item w-full flex items-center justify-between gap-4 text-left p-6" aria-expanded="false">
+              <span class="font-display font-600 text-lg text-ink">С какого возраста стоит обращаться?</span>
+              <svg class="icon faq-caret text-berry" aria-hidden="true"><use href="#i-caret-down"></use></svg>
+            </button>
+            <div class="faq-panel"><p class="px-6 pb-6 text-muted">Мы работаем с детьми от 2 лет. Чем раньше начать, тем мягче и быстрее проходит коррекция. Если сомневаетесь — приходите на диагностику, специалист подскажет.</p></div>
+          </div>
+          <div class="card overflow-hidden">
+            <button class="faq-item w-full flex items-center justify-between gap-4 text-left p-6" aria-expanded="false">
+              <span class="font-display font-600 text-lg text-ink">Сколько занятий нужно для результата?</span>
+              <svg class="icon faq-caret text-berry" aria-hidden="true"><use href="#i-caret-down"></use></svg>
+            </button>
+            <div class="faq-panel"><p class="px-6 pb-6 text-muted">Всё индивидуально и зависит от запроса. После диагностики специалист назовёт ориентировочное количество занятий и покажет план. Первые изменения родители обычно замечают уже через 5–8 встреч.</p></div>
+          </div>
+          <div class="card overflow-hidden">
+            <button class="faq-item w-full flex items-center justify-between gap-4 text-left p-6" aria-expanded="false">
+              <span class="font-display font-600 text-lg text-ink">Можно ли присутствовать на занятии?</span>
+              <svg class="icon faq-caret text-berry" aria-hidden="true"><use href="#i-caret-down"></use></svg>
+            </button>
+            <div class="faq-panel"><p class="px-6 pb-6 text-muted">На первых встречах — да, если так спокойнее ребёнку. Дальше специалист подскажет оптимальный формат: иногда дети быстрее раскрываются один на один с педагогом.</p></div>
+          </div>
+          <div class="card overflow-hidden">
+            <button class="faq-item w-full flex items-center justify-between gap-4 text-left p-6" aria-expanded="false">
+              <span class="font-display font-600 text-lg text-ink">Что взять с собой на первый визит?</span>
+              <svg class="icon faq-caret text-berry" aria-hidden="true"><use href="#i-caret-down"></use></svg>
+            </button>
+            <div class="faq-panel"><p class="px-6 pb-6 text-muted">Достаточно хорошего настроения. Если есть заключения других специалистов (невролог, ЛОР) — возьмите их, это поможет составить полную картину.</p></div>
+          </div>
+          <div class="card overflow-hidden">
+            <button class="faq-item w-full flex items-center justify-between gap-4 text-left p-6" aria-expanded="false">
+              <span class="font-display font-600 text-lg text-ink">Как записаться и оплатить?</span>
+              <svg class="icon faq-caret text-berry" aria-hidden="true"><use href="#i-caret-down"></use></svg>
+            </button>
+            <div class="faq-panel"><p class="px-6 pb-6 text-muted">Оставьте заявку на сайте или напишите нам в Telegram либо MAX. Оплата — за занятие или абонементом, наличными и картой в центре.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ЗАПИСЬ / КОНТАКТЫ ==================== -->
+  <section id="booking" class="py-20 lg:py-28 relative overflow-hidden">
+    <div class="blob w-96 h-96 bg-rose -bottom-20 -left-24 opacity-30 float-slow" data-parallax="0.1"></div>
+    <div class="blob w-80 h-80 bg-lavender top-0 -right-28 opacity-30 float-mid" data-parallax="0.14"></div>
+    <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
+
+        <div class="glass p-7 sm:p-10 reveal ring-gold relative overflow-hidden">
+          <img src="assets/brand/mascot/hedgehog-hi.png" alt="" aria-hidden="true" class="hidden sm:block absolute -top-2 right-2 w-24 opacity-95 pointer-events-none" />
+          <h2 class="font-display font-600 text-3xl sm:text-4xl text-ink leading-tight mb-2 sm:pr-24">Записаться на диагностику</h2>
+          <p class="text-muted mb-8">Оставьте контакты — перезвоним в течение рабочего дня и подберём удобное время.</p>
+
+          <form id="bookingForm" novalidate class="space-y-5">
+            <div>
+              <label for="name" class="block font-600 text-ink mb-2">Ваше имя</label>
+              <input type="text" id="name" name="name" required autocomplete="name"
+                     class="w-full min-h-[54px] px-4 rounded-2xl bg-white/70 border-2 border-transparent focus:border-berry focus:bg-white outline-none transition-colors text-ink"
+                     placeholder="Как к вам обращаться" />
+              <p class="error-msg hidden text-sm text-berry mt-1" data-for="name">Пожалуйста, укажите имя.</p>
+            </div>
+            <div>
+              <label for="phone" class="block font-600 text-ink mb-2">Телефон</label>
+              <input type="tel" id="phone" name="phone" required autocomplete="tel" inputmode="tel" value="+7 "
+                     class="w-full min-h-[54px] px-4 rounded-2xl bg-white/70 border-2 border-transparent focus:border-berry focus:bg-white outline-none transition-colors text-ink"
+                     placeholder="+7 (___) ___-__-__" />
+              <p class="error-msg hidden text-sm text-berry mt-1" data-for="phone">Введите корректный номер телефона.</p>
+            </div>
+             <div>
+               <label for="email" class="block font-600 text-ink mb-2">Почта <span class="text-muted font-400">(необязательно)</span></label>
+               <input type="email" id="email" name="email" autocomplete="email"
+                      class="w-full min-h-[54px] px-4 rounded-2xl bg-white/70 border-2 border-transparent focus:border-berry focus:bg-white outline-none transition-colors text-ink"
+                      placeholder="you@example.com" />
+               <p class="error-msg hidden text-sm text-berry mt-1" data-for="email">Введите корректный адрес почты.</p>
+             </div>
+             <div>
+               <label for="comment" class="block font-600 text-ink mb-2">Комментарий <span class="text-muted font-400">(необязательно)</span></label>
+              <textarea id="comment" name="comment" rows="3"
+                        class="w-full px-4 py-3 rounded-2xl bg-white/70 border-2 border-transparent focus:border-berry focus:bg-white outline-none transition-colors text-ink resize-none"
+                        placeholder="Возраст ребёнка и что вас беспокоит"></textarea>
+             </div>
+             <div class="sr-only" aria-hidden="true">
+               <label for="website">Ваш сайт</label>
+               <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+             </div>
+             <button type="submit" class="btn btn-primary btn-lg w-full magnetic">
+               <svg class="icon icon-sm" aria-hidden="true"><use href="#i-calendar"></use></svg>
+               Отправить заявку
+             </button>
+            <p class="text-sm text-muted text-center">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+            <div id="formSuccess" class="hidden items-center gap-3 p-4 rounded-2xl bg-white/70 text-ink" role="status">
+              <svg class="icon text-berry" aria-hidden="true"><use href="#i-check"></use></svg>
+              <span>Спасибо! Заявка отправлена — мы скоро свяжемся с вами.</span>
+            </div>
+          </form>
+        </div>
+
+        <div class="reveal flex flex-col gap-4">
+          <div class="card p-6 flex items-start gap-4">
+            <span class="icon-badge bg-rose-soft text-berry" aria-hidden="true"><svg class="icon"><use href="#i-pin"></use></svg></span>
+            <div><p class="font-display font-600 text-ink mb-1">Адрес</p><p class="text-muted">Москва, Волгоградский проспект, дом 1, строение 1</p></div>
+          </div>
+          <div class="card p-6 flex items-start gap-4">
+            <span class="icon-badge bg-sky-soft text-berry" aria-hidden="true"><svg class="icon"><use href="#i-phone"></use></svg></span>
+            <div><p class="font-display font-600 text-ink mb-1">Телефон</p><a href="tel:+79050447917" class="text-berry font-600 hover:text-berry-dark transition-colors">+7 (905) 044-79-17</a></div>
+          </div>
+          <div class="card p-6 flex items-start gap-4">
+            <span class="icon-badge bg-rose-soft text-berry" aria-hidden="true"><svg class="icon"><use href="#i-clock"></use></svg></span>
+            <div><p class="font-display font-600 text-ink mb-1">Время работы</p><p class="text-muted">Понедельник – суббота, с 9:00 до 21:00</p></div>
+          </div>
+          <div class="card p-6 flex items-start gap-4">
+            <span class="icon-badge bg-sky-soft text-berry" aria-hidden="true"><svg class="icon"><use href="#i-chat"></use></svg></span>
+            <div class="flex-1">
+              <p class="font-display font-600 text-ink mb-2">Мессенджеры</p>
+              <div class="flex flex-wrap gap-3">
+                <a href="https://t.me/zolotoy_vector_taganka" target="_blank" rel="noopener" class="btn btn-glass magnetic-soft" style="min-height:48px">
+                  <svg class="icon icon-sm" aria-hidden="true"><use href="#i-telegram"></use></svg> Telegram
+                </a>
+                <a href="https://max.ru/u/f9LHodD0cOJpjpCtNb8X7D2pc8fsWGEnMCYsmrNIMEUuEKxbqfxdtbcECZk" class="btn btn-glass magnetic-soft" style="min-height:48px">
+                  <svg class="icon icon-sm" aria-hidden="true"><use href="#i-chat"></use></svg> MAX
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="card overflow-hidden flex-1 min-h-[220px]">
+            <iframe title="Карта: Волгоградский проспект, 1с1, Москва" class="w-full h-full min-h-[220px]" style="border:0"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              src="https://yandex.ru/map-widget/v1/?ll=37.665%2C55.735&z=15&text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D0%92%D0%BE%D0%BB%D0%B3%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%201%D1%811"></iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ФУТЕР ==================== -->
+  <footer class="text-rose-soft pt-16 pb-8 relative overflow-hidden" style="background:linear-gradient(160deg,#5C2040,#3E1530)">
+    <div class="blob w-72 h-72 bg-gold-2 -top-20 right-10 opacity-10 float-slow"></div>
+    <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid md:grid-cols-[1.4fr_1fr_1fr] gap-10 mb-10">
+        <div>
+          <img src="assets/brand/logo/horizontal-full-onecolor.svg" width="1708" height="429" alt="Золотой Вектор — центр развития речи и мозга" class="h-16 w-auto mb-4 brightness-0 invert" />
+          <p class="text-rose-soft/80 max-w-sm">Центр развития речи и мозга. Помогаем каждому ребёнку расти в своём направлении — своим темпом, с интересом и верой в себя.</p>
+        </div>
+        <nav aria-label="Разделы сайта">
+          <p class="font-display font-600 text-white mb-4">Разделы</p>
+          <ul class="space-y-2">
+            <li><a href="#services" class="foot-link text-rose-soft/80">Услуги</a></li>
+            <li><a href="#prices" class="foot-link text-rose-soft/80">Цены</a></li>
+            <li><a href="#about" class="foot-link text-rose-soft/80">О центре</a></li>
+            <li><a href="#team" class="foot-link text-rose-soft/80">Специалисты</a></li>
+            <li><a href="#reviews" class="foot-link text-rose-soft/80">Отзывы</a></li>
+            <li><a href="#faq" class="foot-link text-rose-soft/80">Вопросы</a></li>
+          </ul>
+        </nav>
+        <div>
+          <p class="font-display font-600 text-white mb-4">Контакты</p>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2"><svg class="icon icon-sm mt-0.5 text-gold-2" aria-hidden="true"><use href="#i-pin"></use></svg><span class="text-rose-soft/80">Волгоградский пр-т, 1с1, Москва</span></li>
+            <li class="flex items-center gap-2"><svg class="icon icon-sm text-gold-2" aria-hidden="true"><use href="#i-phone"></use></svg><a href="tel:+79050447917" class="foot-link text-rose-soft/80">+7 (905) 044-79-17</a></li>
+            <li class="flex items-center gap-2"><svg class="icon icon-sm text-gold-2" aria-hidden="true"><use href="#i-clock"></use></svg><span class="text-rose-soft/80">Пн–Сб, 9:00–21:00</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-rose-soft/60">
+        <p>© 2026 Центр «Золотой Вектор». Все права защищены.</p>
+        <p>Сделано с заботой о детях и их родителях.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== ПЛАВАЮЩИЕ КНОПКИ ==================== -->
+  <div class="fab" id="fab">
+    <!-- Раскрывающееся меню контактов -->
+    <div class="fab__menu" id="fabMenu" role="menu" aria-label="Способы связи">
+      <a href="tel:+79050447917" class="fab__item" role="menuitem">
+        <span class="fab__item-label">Позвонить</span>
+        <span class="fab__item-icon bg-berry" aria-hidden="true"><svg class="icon icon-sm"><use href="#i-phone"></use></svg></span>
+      </a>
+      <a href="https://t.me/zolotoy_vector_taganka" target="_blank" rel="noopener" class="fab__item" role="menuitem">
+        <span class="fab__item-label">Telegram</span>
+        <span class="fab__item-icon" style="background:#2AABEE" aria-hidden="true"><svg class="icon icon-sm"><use href="#i-telegram"></use></svg></span>
+      </a>
+      <a href="https://max.ru/u/f9LHodD0cOJpjpCtNb8X7D2pc8fsWGEnMCYsmrNIMEUuEKxbqfxdtbcECZk" class="fab__item" role="menuitem">
+        <span class="fab__item-label">MAX</span>
+        <span class="fab__item-icon bg-berry-light" aria-hidden="true"><svg class="icon icon-sm"><use href="#i-chat"></use></svg></span>
+      </a>
+    </div>
+
+    <!-- Кнопка «Связаться» (toggle) -->
+    <button type="button" class="fab__btn fab__btn--contact" id="fabContact" aria-expanded="false" aria-controls="fabMenu" aria-label="Связаться с нами">
+      <svg class="icon fab__icon-chat" aria-hidden="true"><use href="#i-chat"></use></svg>
+      <svg class="icon fab__icon-close" aria-hidden="true"><use href="#i-x"></use></svg>
+      <span class="fab__btn-label">Связаться</span>
+    </button>
+
+    <!-- Кнопка «Записаться» -->
+    <a href="#booking" class="fab__btn fab__btn--book" aria-label="Записаться на приём">
+      <svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg>
+      <span class="fab__btn-label">Записаться</span>
+    </a>
+  </div>
+
+  <!-- ==================== ЛАЙТБОКС ==================== -->
+  <div id="lightbox" class="lb-overlay" role="dialog" aria-modal="true" aria-label="Просмотр изображения" hidden>
+    <button id="lbClose" class="lb-close" aria-label="Закрыть просмотр">
+      <svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg>
+    </button>
+    <button id="lbPrev" class="lb-nav lb-prev" aria-label="Предыдущее изображение">
+      <svg class="icon icon-lg" aria-hidden="true"><use href="#i-caret-left"></use></svg>
+    </button>
+    <img id="lbImage" class="lb-image" src="" alt="" />
+    <button id="lbNext" class="lb-nav lb-next" aria-label="Следующее изображение">
+      <svg class="icon icon-lg" aria-hidden="true"><use href="#i-caret-right"></use></svg>
+    </button>
+    <div id="lbCounter" class="lb-counter" aria-live="polite"></div>
+  </div>
+
+  <script src="assets/js/lead-form.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>
