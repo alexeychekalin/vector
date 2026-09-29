@@ -591,18 +591,18 @@ h1,h2,h3,h4,.font-display { font-family: 'Evolventa','Nunito',sans-serif; }
   font-family:'Evolventa','Nunito',sans-serif; font-weight:700;
   font-size:1.7rem; line-height:1.1; color: var(--cat-color);
 }
-.pc-per{ font-size:.82rem; color:var(--muted); }
+.pc-per{ font-size:.78rem; color:var(--muted); line-height:1.45; }
 .pc-list{ list-style:none; margin:0 0 .35rem; padding:0; display:flex; flex-direction:column; gap:.4rem; }
 .pc-list li{
   display:flex; align-items:center; gap:.5rem;
   padding:.5rem .7rem; border-radius:.75rem; background:var(--cat-tint);
 }
-.pc-list__cnt{ font-weight:600; color:var(--ink); font-size:.9rem; flex:1; }
-.pc-list__sum{ font-family:'Evolventa','Nunito',sans-serif; font-weight:600; color:var(--ink); font-size:.95rem; }
+.pc-list__cnt{ font-weight:600; color:var(--ink); font-size:.82rem; flex:1; }
+.pc-list__sum{ font-family:'Evolventa','Nunito',sans-serif; font-weight:600; color:var(--ink); font-size:.9rem; }
 .pc-badge{
   display:inline-block; padding:.15rem .5rem; border-radius:999px;
   background: var(--cat-color); color:#fff;
-  font-size:.7rem; font-weight:700; letter-spacing:.02em; white-space:nowrap;
+  font-size:.68rem; font-weight:700; letter-spacing:.02em; white-space:nowrap;
 }
 /* Таблица полных цен всегда открыта (без details/summary) */
 .pc-details{ margin-bottom:.25rem; }
