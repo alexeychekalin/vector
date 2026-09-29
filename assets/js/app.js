@@ -228,6 +228,32 @@
     document.querySelectorAll('.person-more').forEach((btn) => {
       btn.addEventListener('click', () => openPersonModal(btn.dataset.person, btn));
     });
+
+    // «Записаться к этому специалисту» — предзаполняет форму брони и закрывает модалку
+    personModals.forEach((modal) => {
+      const bookBtn = modal.querySelector('.pm-book');
+      if (!bookBtn) return;
+      bookBtn.addEventListener('click', () => {
+        const comment = document.getElementById('comment');
+        if (comment) {
+          const full = bookBtn.dataset.personFull || '';
+          const role = bookBtn.dataset.personRole || '';
+          const line = `Хочу записаться к специалисту: ${full}${role ? ' (' + role + ')' : ''}.`;
+          const existing = comment.value.trim();
+          if (!existing.includes(line)) {
+            comment.value = existing ? existing + '\n' + line : line;
+          }
+        }
+        closePersonModal(modal);
+        const booking = document.getElementById('booking');
+        if (booking) booking.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
+        // фокус на имя после прокрутки (кратковременно ждём завершения smooth-scroll)
+        setTimeout(() => {
+          const name = document.getElementById('name');
+          if (name) name.focus({ preventScroll: true });
+        }, reduce ? 0 : 600);
+      });
+    });
     personModals.forEach((modal) => {
       const closeBtn = modal.querySelector('.pm-close');
       if (closeBtn) closeBtn.addEventListener('click', () => closePersonModal(modal));
