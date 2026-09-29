@@ -206,8 +206,8 @@
   if (personModals.length) {
     let pmLastFocused = null;
 
-    function openPersonModal(id, trigger) {
-      const modal = document.getElementById('person-' + id);
+    function openModalById(mid, trigger) {
+      const modal = document.getElementById(mid);
       if (!modal || !modal.hidden) return;
       pmLastFocused = trigger;
       modal.hidden = false;
@@ -226,7 +226,12 @@
     }
 
     document.querySelectorAll('.person-more').forEach((btn) => {
-      btn.addEventListener('click', () => openPersonModal(btn.dataset.person, btn));
+      btn.addEventListener('click', () => openModalById('person-' + btn.dataset.person, btn));
+    });
+
+    /* ---------- Модалки услуг (блок «Наши услуги») ---------- */
+    document.querySelectorAll('.service-more').forEach((btn) => {
+      btn.addEventListener('click', () => openModalById('service-' + btn.dataset.service, btn));
     });
 
     // «Записаться к этому специалисту» — предзаполняет форму брони и закрывает модалку
@@ -238,7 +243,10 @@
         if (comment) {
           const full = bookBtn.dataset.personFull || '';
           const role = bookBtn.dataset.personRole || '';
-          const line = `Хочу записаться к специалисту: ${full}${role ? ' (' + role + ')' : ''}.`;
+          const svc = bookBtn.dataset.serviceBook || '';
+          const line = svc
+            ? `Хочу записаться на услугу: ${svc}.`
+            : `Хочу записаться к специалисту: ${full}${role ? ' (' + role + ')' : ''}.`;
           const existing = comment.value.trim();
           if (!existing.includes(line)) {
             comment.value = existing ? existing + '\n' + line : line;

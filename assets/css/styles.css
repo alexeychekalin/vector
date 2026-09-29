@@ -855,6 +855,23 @@ h1,h2,h3,h4,.font-display { font-family: 'Evolventa','Nunito',sans-serif; }
   .pm-close:hover{ transform:none; }
 }
 
+/* ---- Модалки услуг (блок «Наши услуги») ---- */
+.pm-head--service{ grid-template-columns:auto 1fr; align-items:center; }
+.pm-tagline{ font-size:1.02rem; color:var(--berry); font-weight:500; margin-top:-.25rem; }
+.pm-price-note{
+  display:flex; align-items:center; gap:.45rem;
+  font-size:.9rem; color:var(--muted); margin-bottom:.85rem;
+}
+.pm-price-note .icon{ fill:var(--berry); flex-shrink:0; }
+
+/* Компактная кнопка «Подробнее» на карточках услуг */
+.btn-ghost{
+  color:var(--berry); background:transparent;
+  border:1.5px solid rgba(151,53,104,.35); min-height:auto; padding:0 1.1rem;
+}
+.btn-ghost:hover{ background:rgba(151,53,104,.07); border-color:var(--berry); color:var(--berry-dark); }
+.btn-sm{ font-size:.9rem; min-height:42px; }
+
 /* Белый текст бейджей/плашек на светлых пастельных --cat-color нечитабелен —
    читаемый акцент той же гаммы для текста и белых плашек */
 .price-cat--sage, .price-card--sage{ --cat-accent:#7A5060; }
