@@ -53,14 +53,34 @@ if ($submittedAt > 0 && (time() - $submittedAt) < 2) {
     respond(200, ['success' => true]);
 }
 
-$name = preg_replace('/[\x00-\x1F\x7F\r\n]+/u', ' ', $name) ?? '';
-$phone = preg_replace('/[\x00-\x1F\x7F\r\n]+/u', ' ', $phone) ?? '';
-$email = preg_replace('/[\x00-\x1F\x7F\r\n]+/u', ' ', $email) ?? '';
-$comment = preg_replace('/[\x00-\x1F\x7F]+/u', ' ', $comment) ?? '';
+$sanitizeLine = static function ($value): string {
+    $value = trim((string)$value);
+    $value = preg_replace('/[\x00-\x1F\x7F]+/u', ' ', $value) ?? '';
+    return trim(preg_replace('/\s+/u', ' ', $value) ?? '');
+};
+
+$name = $sanitizeLine($data['name'] ?? '');
+$phone = $sanitizeLine($data['phone'] ?? '');
+$email = mb_strtolower($sanitizeLine($data['email'] ?? ''));
+$comment = preg_replace('/[\x00-\x09\x0B\x0C\x0E-\x1F\x7F]+/u', ' ', trim((string)($data['comment'] ?? ''))) ?? '';
+$comment = mb_substr($comment, 0, 2000);
+
+$formId = $sanitizeLine($data['form_id'] ?? '');
+$formId = mb_substr(preg_replace('/[^\p{L}\p{N}_:.-]/u', '', $formId) ?? '', 0, 64);
+if ($formId === '') {
+    $formId = 'lead';
+}
+
+$pageUrl = mb_substr(trim((string)($data['page_url'] ?? '')), 0, 1000);
+
+$idempotencyKey = mb_substr(preg_replace('/[^A-Za-z0-9_-]/', '', (string)($data['idempotency_key'] ?? '')) ?? '', 0, 64);
 
 $trackingFields = [];
 foreach (['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'yclid', 'gclid', 'gbraid', 'wbraid', 'openstat', 'from', 'landing_page', 'referrer', 'first_utm_source', 'first_utm_medium', 'first_utm_campaign', 'last_utm_source', 'last_utm_medium', 'last_utm_campaign'] as $key) {
     $trackingFields[$key] = mb_substr(trim((string)($data[$key] ?? '')), 0, 255);
+}
+if ($trackingFields['landing_page'] === '' && $pageUrl !== '') {
+    $trackingFields['landing_page'] = $pageUrl;
 }
 
 $source = $trackingFields['last_utm_source'] !== '' ? $trackingFields['last_utm_source'] : 'website';
@@ -120,7 +140,6 @@ if ($email !== '' && (mb_strlen($email) > 254 || !filter_var($email, FILTER_VALI
 
 $source = preg_replace('/[^\p{L}\p{N}_.,:;=+&?\/-]/u', ' ', $source) ?? 'website';
 $source = mb_substr(trim($source), 0, 1000);
-$comment = mb_substr($comment, 0, 2000);
 
 $token = getenv('ALFACRM_TOKEN');
 if (!is_string($token) || $token === '') {
@@ -131,12 +150,37 @@ if (!is_string($token) || $token === '') {
     ]);
 }
 
+if ($idempotencyKey !== '') {
+    $dedupeDir = sys_get_temp_dir() . '/zv-lead-idem';
+    if (@is_dir($dedupeDir) || @mkdir($dedupeDir, 0700, true)) {
+        $dedupeFile = $dedupeDir . '/' . hash('sha256', $idempotencyKey);
+        $handle = @fopen($dedupeFile, 'c+');
+        if ($handle !== false) {
+            if (flock($handle, LOCK_EX)) {
+                $firstSeenRaw = stream_get_contents($handle);
+                $firstSeen = (int)trim(is_string($firstSeenRaw) ? $firstSeenRaw : '');
+                if ($firstSeen > 0 && $firstSeen > time() - 86400) {
+                    flock($handle, LOCK_UN);
+                    fclose($handle);
+                    respond(200, ['success' => true]);
+                }
+                ftruncate($handle, 0);
+                rewind($handle);
+                fwrite($handle, (string)time());
+                fflush($handle);
+                flock($handle, LOCK_UN);
+            }
+            fclose($handle);
+        }
+    }
+}
+
 $fields = [
     'name' => $name,
     'phone' => $phone,
     'email' => $email,
     'source' => $source !== '' ? $source : 'website',
-    'note' => trim($comment . "\n" . http_build_query($trackingFields, '', '&', PHP_QUERY_RFC3986)),
+    'note' => trim("Форма: {$formId}\n" . $comment . "\n" . http_build_query($trackingFields, '', '&', PHP_QUERY_RFC3986)),
 ];
 
 $url = 'https://zolotoyvektor.s20.online/api/1/lead/create?token=' . rawurlencode($token);
