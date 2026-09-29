@@ -113,11 +113,11 @@
 
   <!-- ==================== ХЕДЕР ==================== -->
   <header id="siteHeader" class="fixed top-0 inset-x-0 z-50">
-    <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="header-row flex items-center gap-4 sm:gap-6 lg:gap-8 h-20">
+    <div class="header-wrap max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+      <div id="headerRow" class="header-row flex items-center gap-4 sm:gap-6 lg:gap-8 h-20">
 
         <a href="#hero" class="flex shrink-0 items-center gap-3" aria-label="Золотой Вектор — на главную">
-          <img src="assets/brand/logo/horizontal-full.svg" width="1708" height="429" alt="Золотой Вектор — центр развития речи и мозга" class="h-11 sm:h-12 lg:h-12 xl:h-14 w-auto max-w-[150px] xl:max-w-[170px]" />
+          <img src="assets/brand/logo/horizontal-full.svg" width="1708" height="429" alt="Золотой Вектор — центр развития речи и мозга" class="header-logo h-11 sm:h-12 lg:h-[52px] xl:h-[56px] w-auto shrink-0" />
         </a>
 
         <nav class="site-nav hidden min-w-0 flex-1 items-center justify-center lg:flex" aria-label="Основная навигация">
@@ -130,7 +130,7 @@
           <a href="#faq"      class="nav-link font-600 text-ink hover:text-berry transition-colors">Вопросы</a>
         </nav>
 
-        <div class="hidden lg:flex shrink-0 items-center gap-2 xl:gap-3">
+        <div id="headerActions" class="hidden lg:flex shrink-0 items-center gap-2 xl:gap-3">
           <a href="tel:+79050447917" class="header-phone flex items-center gap-2 font-display font-500 text-berry hover:text-berry-dark transition-colors">
             <svg class="icon icon-sm" aria-hidden="true"><use href="#i-phone"></use></svg>
             +7 (905) 044-79-17

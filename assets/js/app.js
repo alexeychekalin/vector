@@ -442,3 +442,26 @@
   if (document.readyState === 'complete') initGSAP();
   else window.addEventListener('load', initGSAP);
 })();
+
+/* ---- headerFit: гарантируем, что блоки шапки не наезжают друг на друга ----
+   Если при десктопной ширине содержимое шапки шире контейнера —
+   включаем уплотнённый режим (CSS .header-compact), иначе снимаем его. */
+(function(){
+  const header = document.getElementById('siteHeader');
+  const row = document.getElementById('headerRow');
+  if (!header || !row) return;
+
+  function fit(){
+    if (window.innerWidth < 1024){ header.classList.remove('header-compact'); return; }
+    // scrollWidth > clientWidth => flex-содержимое не влезает
+    const overflow = row.scrollWidth - row.clientWidth > 1;
+    header.classList.toggle('header-compact', overflow);
+  }
+
+  let raf = 0;
+  const onResize = () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(fit); };
+  window.addEventListener('resize', onResize, { passive: true });
+  window.addEventListener('load', fit);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  fit();
+})();
