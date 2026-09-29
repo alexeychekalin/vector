@@ -201,6 +201,45 @@
     });
   }
 
+  /* ---------- Модалки специалистов (карточки команды) ---------- */
+  const personModals = document.querySelectorAll('.pm-overlay');
+  if (personModals.length) {
+    let pmLastFocused = null;
+
+    function openPersonModal(id, trigger) {
+      const modal = document.getElementById('person-' + id);
+      if (!modal || !modal.hidden) return;
+      pmLastFocused = trigger;
+      modal.hidden = false;
+      requestAnimationFrame(() => modal.classList.add('is-open'));
+      document.body.style.overflow = 'hidden';
+      const panel = modal.querySelector('.pm-panel');
+      if (panel) { panel.scrollTop = 0; panel.focus(); }
+    }
+    function closePersonModal(modal) {
+      if (modal.hidden) return;
+      modal.classList.remove('is-open');
+      const done = () => { modal.hidden = true; modal.removeEventListener('transitionend', done); };
+      if (reduce) done(); else modal.addEventListener('transitionend', done);
+      document.body.style.overflow = '';
+      if (pmLastFocused) pmLastFocused.focus();
+    }
+
+    document.querySelectorAll('.person-more').forEach((btn) => {
+      btn.addEventListener('click', () => openPersonModal(btn.dataset.person, btn));
+    });
+    personModals.forEach((modal) => {
+      const closeBtn = modal.querySelector('.pm-close');
+      if (closeBtn) closeBtn.addEventListener('click', () => closePersonModal(modal));
+      modal.addEventListener('click', (e) => { if (e.target === modal) closePersonModal(modal); });
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key !== 'Escape') return;
+      const open = [...personModals].find((m) => !m.hidden);
+      if (open) closePersonModal(open);
+    });
+  }
+
   /* ---------- Форма: единый обработчик в lead-form.js ---------- */
   /* Форма обрабатывается общим модулем assets/js/lead-form.js. */
 
