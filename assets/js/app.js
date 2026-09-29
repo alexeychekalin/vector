@@ -266,6 +266,40 @@
     });
   }
 
+  /* ---------- Табы категорий в блоке цен ---------- */
+  const priceTabs = document.querySelectorAll('[data-price-tab]');
+  if (priceTabs.length) {
+    const pricePanels = document.querySelectorAll('[data-price-panel]');
+    function activatePriceTab(cat, focusTab) {
+      priceTabs.forEach((t) => {
+        const active = t.dataset.priceTab === cat;
+        t.classList.toggle('is-active', active);
+        t.setAttribute('aria-selected', active ? 'true' : 'false');
+        t.tabIndex = active ? 0 : -1;
+        if (active && focusTab) t.focus();
+      });
+      pricePanels.forEach((p) => {
+        const active = p.dataset.pricePanel === cat;
+        p.hidden = !active;
+        p.classList.toggle('is-active', active);
+        // мягкое появление панели при переключении
+        if (active && !reduce && window.gsap) gsap.fromTo(p, { opacity: 0.35 }, { opacity: 1, duration: 0.3, ease: 'power2.out' });
+      });
+      if (window.ScrollTrigger) requestAnimationFrame(() => ScrollTrigger.refresh());
+    }
+    priceTabs.forEach((tab, i) => {
+      tab.addEventListener('click', () => activatePriceTab(tab.dataset.priceTab));
+      tab.addEventListener('keydown', (e) => {
+        let idx = null;
+        if (e.key === 'ArrowRight') idx = (i + 1) % priceTabs.length;
+        else if (e.key === 'ArrowLeft') idx = (i - 1 + priceTabs.length) % priceTabs.length;
+        else if (e.key === 'Home') idx = 0;
+        else if (e.key === 'End') idx = priceTabs.length - 1;
+        if (idx !== null) { e.preventDefault(); activatePriceTab(priceTabs[idx].dataset.priceTab, true); }
+      });
+    });
+  }
+
   /* ---------- Форма: единый обработчик в lead-form.js ---------- */
   /* Форма обрабатывается общим модулем assets/js/lead-form.js. */
 
@@ -305,6 +339,7 @@
 
       // Reveal блоков (once:true + clearProps — чтобы refresh не сбрасывал в начальное состояние)
       gsap.utils.toArray('.reveal').forEach((el) => {
+        if (el.hasAttribute('hidden')) return; // скрытые табами панели цен анимируем при показе
         gsap.from(el, {
           opacity: 0, y: 40, duration: 0.8, ease: 'power3.out', clearProps: 'transform',
           scrollTrigger: { trigger: el, start: 'top 85%', once: true },
