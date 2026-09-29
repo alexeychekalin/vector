@@ -604,22 +604,28 @@ h1,h2,h3,h4,.font-display { font-family: 'Evolventa','Nunito',sans-serif; }
   background: var(--cat-color); color:#fff;
   font-size:.7rem; font-weight:700; letter-spacing:.02em; white-space:nowrap;
 }
+/* Таблица полных цен всегда открыта (без details/summary) */
 .pc-details{ margin-bottom:.25rem; }
-.pc-details summary{
-  display:inline-flex; align-items:center; gap:.35rem; cursor:pointer; list-style:none;
-  min-height:36px; padding:.2rem .5rem; margin-left:-.5rem;
-  border-radius:.6rem; color:var(--cat-color); font-weight:600; font-size:.86rem;
-  user-select:none;
+.pc-details__title{
+  display:block; margin:.15rem 0 .4rem;
+  color:var(--cat-color); font-weight:600; font-size:.86rem;
 }
-.pc-details summary::-webkit-details-marker{ display:none; }
-.pc-details summary .icon{ fill:var(--cat-color); transition: transform .2s; }
-.pc-details[open] summary .icon{ transform: rotate(45deg); }
-.pc-details summary:hover{ text-decoration:underline; }
-.pc-details summary:focus-visible{ outline:3px solid var(--sky); outline-offset:2px; }
 .pc-details .pkg-head{ margin-top:.5rem; }
 @media (prefers-reduced-motion: reduce){
-  .price-tab, .pc-details summary .icon{ transition:none; }
+  .price-tab{ transition:none; }
 }
+
+/* ===== Цвета категорий по прайс-листу 29.09.2026 (RGB из брендбука) =====
+   Логопедия rgb(228,205,218) · Дефектология rgb(211,209,234)
+   Диагностика rgb(250,175,211) · Нейропсихология rgb(211,219,200)
+   Подготовка к школе rgb(252,214,233) · «Вектор открытий» rgb(227,205,218) */
+.price-cat--sage, .price-panel.price-cat--sage, .price-card--sage{ --cat-color:#E4CDCF; --cat-tint:#F7EFF0; }
+.price-cat--pink, .price-panel.price-cat--pink, .price-card--pink{ --cat-color:#D3D1EA; --cat-tint:#EFEEF7; }
+.price-cat--lavender, .price-panel.price-cat--lavender, .price-card--lavender{ --cat-color:#D3DBC8; --cat-tint:#EFF2EB; }
+.price-cat--beige, .price-panel.price-cat--beige, .price-card--beige{ --cat-color:#FCD6E9; --cat-tint:#FEF2F8; }
+.price-cat--berry, .price-panel.price-cat--berry, .price-card--berry{ --cat-color:#E3CDCB; --cat-tint:#F7EFEF; }
+/* Карточка «Диагностика» — свой цвет из прайса rgb(250,175,211) */
+.price-card--diag{ --cat-color:#FAAFD3; --cat-tint:#FDEDF5; }
 
 /* ========================================================
    ПЛАВАЮЩИЕ КНОПКИ (FAB)
@@ -833,3 +839,17 @@ h1,h2,h3,h4,.font-display { font-family: 'Evolventa','Nunito',sans-serif; }
   .pm-overlay, .pm-overlay.is-open .pm-panel{ transition:none; animation:none; }
   .pm-close:hover{ transform:none; }
 }
+
+/* Белый текст бейджей/плашек на светлых пастельных --cat-color нечитабелен —
+   читаемый акцент той же гаммы для текста и белых плашек */
+.price-cat--sage, .price-card--sage{ --cat-accent:#7A5060; }
+.price-cat--pink, .price-card--pink{ --cat-accent:#5E5B94; }
+.price-cat--lavender, .price-card--lavender{ --cat-accent:#5C6B4C; }
+.price-cat--beige, .price-card--beige{ --cat-accent:#B25C86; }
+.price-cat--berry, .price-card--berry{ --cat-accent:#845553; }
+.price-card--diag{ --cat-accent:#C24E86; }
+.pc-badge{ background: var(--cat-accent, var(--cat-color)); }
+.price-card__kruzhok{ color: var(--cat-accent, var(--cat-color)); }
+.pc-big{ color: var(--cat-accent, var(--cat-color)); }
+.price-card .pkg-price{ color: var(--cat-accent, var(--cat-color)); }
+.pc-details__title{ color: var(--cat-accent, var(--cat-color)); }
