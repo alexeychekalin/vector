@@ -675,3 +675,82 @@ h1,h2,h3,h4,.font-display { font-family: 'Evolventa','Nunito',sans-serif; }
   .fab__btn, .fab__menu, .fab__item, .fab__item-icon{ transition: none; }
   .fab__btn:hover{ transform: none; }
 }
+
+/* ========================================================
+   МОДАЛКА СПЕЦИАЛИСТА (карточки команды)
+   ======================================================== */
+.pm-overlay{
+  position:fixed; inset:0; z-index:100; display:flex; align-items:center; justify-content:center;
+  background: rgba(46,38,43,.72); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  padding: 4vh 4vw; opacity:0; transition: opacity .3s ease; overflow-y:auto;
+}
+.pm-overlay[hidden]{ display:none; }
+.pm-overlay.is-open{ opacity:1; }
+.pm-panel{
+  position:relative; width:min(860px, 100%); max-height:90vh; overflow-y:auto;
+  background:#fff; border-radius:var(--r-xl); box-shadow:0 30px 80px -20px rgba(0,0,0,.5);
+  overscroll-behavior:contain;
+}
+.pm-overlay.is-open .pm-panel{ animation: pmIn .35s cubic-bezier(.2,.7,.2,1); }
+@keyframes pmIn{ from{ transform:translateY(18px) scale(.97); opacity:0; } to{ transform:none; opacity:1; } }
+.pm-close{
+  position:absolute; top:1rem; right:1rem; z-index:2;
+  display:grid; place-items:center; width:44px; height:44px; border:none; cursor:pointer;
+  border-radius:999px; color:#fff; background:rgba(46,38,43,.45);
+  backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
+  transition: background-color .2s, transform .2s;
+}
+.pm-close:hover{ background:var(--berry); transform:rotate(90deg); }
+.pm-close:focus-visible{ outline:3px solid var(--gold-2); outline-offset:2px; }
+.pm-close .icon{ width:1.35rem; height:1.35rem; fill:#fff; }
+.pm-head{
+  display:grid; grid-template-columns:200px 1fr; gap:1.5rem;
+  padding:1.75rem 1.75rem 1.25rem;
+  background:linear-gradient(160deg, var(--cream), #fff 70%);
+  border-bottom:1px solid rgba(151,53,104,.08);
+}
+.pm-photo{
+  width:100%; aspect-ratio:4/5; object-fit:cover; object-position:top;
+  border-radius:1.25rem; box-shadow:var(--shadow-soft);
+}
+.pm-intro{ display:flex; flex-direction:column; justify-content:center; min-width:0; }
+.pm-role{
+  display:inline-flex; align-items:center; gap:.4rem;
+  color:var(--berry); font-weight:600; font-size:.9rem; margin-bottom:.4rem;
+}
+.pm-role .icon{ fill:var(--berry); }
+.pm-name{ font-size:clamp(1.35rem, 2.6vw, 1.8rem); font-weight:600; color:var(--ink); line-height:1.15; margin-bottom:.85rem; }
+.pm-tags{ display:flex; flex-wrap:wrap; gap:.45rem; }
+.pm-tag{
+  display:inline-block; padding:.32rem .75rem; border-radius:999px;
+  background:rgba(155,137,192,.14); color:var(--indigo);
+  font-size:.78rem; font-weight:600; line-height:1.2;
+}
+.pm-body{ padding:1.5rem 1.75rem 2rem; }
+.pm-section-title{
+  display:flex; align-items:center; gap:.55rem;
+  font-size:1.15rem; font-weight:600; color:var(--ink);
+  margin:1.4rem 0 .9rem;
+}
+.pm-section-title:first-child{ margin-top:0; }
+.pm-section-title .icon{ fill:var(--berry); }
+.pm-edu{ display:flex; flex-direction:column; gap:.7rem; }
+.pm-edu__item{
+  border-left:4px solid var(--lavender); border-radius:0 .9rem .9rem 0;
+  background:var(--bg); padding:.7rem 1rem;
+}
+.pm-edu__place{ font-weight:700; color:var(--ink); font-size:.92rem; line-height:1.35; }
+.pm-edu__spec{ color:var(--muted); font-size:.86rem; line-height:1.45; margin-top:.15rem; }
+.pm-about p{ color:var(--muted); font-size:.95rem; line-height:1.65; margin-bottom:.9rem; }
+.pm-about p:last-child{ margin-bottom:0; }
+.pm-about strong{ color:var(--berry); font-weight:700; }
+@media (max-width:640px){
+  .pm-overlay{ padding:2vh 3vw; }
+  .pm-head{ grid-template-columns:1fr; gap:1rem; padding:1.5rem 1.25rem 1.1rem; }
+  .pm-photo{ max-width:180px; }
+  .pm-body{ padding:1.25rem; }
+}
+@media (prefers-reduced-motion: reduce){
+  .pm-overlay, .pm-overlay.is-open .pm-panel{ transition:none; animation:none; }
+  .pm-close:hover{ transform:none; }
+}
