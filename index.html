@@ -107,6 +107,7 @@
       <symbol id="i-gift" viewBox="0 0 256 256"><path d="M216,72H180.92c.39-.33.79-.65,1.17-1A29.53,29.53,0,0,0,192,49.57,32.62,32.62,0,0,0,158.44,16,29.53,29.53,0,0,0,137,25.91a54.94,54.94,0,0,0-9,14.48,54.94,54.94,0,0,0-9-14.48A29.53,29.53,0,0,0,97.56,16,32.62,32.62,0,0,0,64,49.57,29.53,29.53,0,0,0,73.91,71c.38.33.78.65,1.17,1H40A16,16,0,0,0,24,88v32a16,16,0,0,0,16,16v64a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V136a16,16,0,0,0,16-16V88A16,16,0,0,0,216,72ZM149,36.51a13.69,13.69,0,0,1,10-4.5h.49A16.62,16.62,0,0,1,176,49.08a13.69,13.69,0,0,1-4.5,10c-9.49,8.4-25.24,11.36-35,12.4C137.7,60.89,141,45.5,149,36.51Zm-64.09.36A16.63,16.63,0,0,1,96.59,32h.49a13.69,13.69,0,0,1,10,4.5c8.39,9.48,11.35,25.2,12.39,34.92-9.72-1-25.44-4-34.92-12.39a13.69,13.69,0,0,1-4.5-10A16.6,16.6,0,0,1,84.87,36.87ZM40,88h80v32H40Zm16,48h64v64H56Zm144,64H136V136h64Zm16-80H136V88h80v32Z"/></symbol>
       <symbol id="i-images" viewBox="0 0 256 256"><path d="M216,40H72A16,16,0,0,0,56,56V72H40A16,16,0,0,0,24,88V200a16,16,0,0,0,16,16H184a16,16,0,0,0,16-16V184h16a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40ZM72,56H216v62.75l-10.07-10.06a16,16,0,0,0-22.63,0l-20,20-44-44a16,16,0,0,0-22.62,0L72,109.37ZM184,200H40V88H56v80a16,16,0,0,0,16,16H184Zm32-32H72V132l36-36,49.66,49.66a8,8,0,0,0,11.31,0L194.63,120,216,141.38V168ZM160,84a12,12,0,1,1,12,12A12,12,0,0,1,160,84Z"/></symbol>
       <symbol id="i-tag" viewBox="0 0 256 256"><path d="M243.31,136,144,36.69A15.86,15.86,0,0,0,132.69,32H40a8,8,0,0,0-8,8v92.69A15.86,15.86,0,0,0,36.69,144L136,243.31a16,16,0,0,0,22.63,0l84.68-84.68a16,16,0,0,0,0-22.63Zm-96,96L48,132.69V48h84.69L232,147.31ZM96,84A12,12,0,1,1,84,72,12,12,0,0,1,96,84Z"/></symbol>
+      <symbol id="i-plus" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></symbol>
     </defs>
   </svg>
 
@@ -409,264 +410,263 @@
         </div>
       </div>
 
-      <!-- Модульная сетка цен с цветовым кодированием категорий -->
-      <div class="price-cats">
-      <div class="price-cat price-cat--sage reveal">
-        <div class="price-cat__label">
-          <span class="price-cat__dot" aria-hidden="true"><svg class="icon icon-sm"><use href="#i-mic"></use></svg></span>
-          <h3 class="font-display font-600 text-2xl text-ink">Логопедия</h3>
-        </div>
+      <!-- Табы категорий -->
+      <div class="price-tabs reveal" role="tablist" aria-label="Категории услуг">
+        <button type="button" role="tab" id="ptab-sage" class="price-tab is-active" aria-selected="true" aria-controls="ppanel-sage" data-price-tab="sage">
+          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-mic"></use></svg>Логопедия<span class="price-tab__n">4</span>
+        </button>
+        <button type="button" role="tab" id="ptab-pink" class="price-tab" aria-selected="false" aria-controls="ppanel-pink" data-price-tab="pink" tabindex="-1">
+          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-puzzle"></use></svg>Дефектология<span class="price-tab__n">1</span>
+        </button>
+        <button type="button" role="tab" id="ptab-lavender" class="price-tab" aria-selected="false" aria-controls="ppanel-lavender" data-price-tab="lavender" tabindex="-1">
+          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-brain"></use></svg>Нейропсихология<span class="price-tab__n">2</span>
+        </button>
+        <button type="button" role="tab" id="ptab-beige" class="price-tab" aria-selected="false" aria-controls="ppanel-beige" data-price-tab="beige" tabindex="-1">
+          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-cap"></use></svg>Подготовка к школе<span class="price-tab__n">2</span>
+        </button>
+        <button type="button" role="tab" id="ptab-berry" class="price-tab" aria-selected="false" aria-controls="ppanel-berry" data-price-tab="berry" tabindex="-1">
+          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-sparkle"></use></svg>Комплексно<span class="price-tab__n">1</span>
+        </button>
+      </div>
+
+      <!-- Панели категорий: compact-карточки -->
+      <div class="price-panels">
+      <div class="price-panel price-cat--sage is-active reveal" id="ppanel-sage" role="tabpanel" aria-labelledby="ptab-sage" data-price-panel="sage">
         <div class="price-cat__grid">
-          <article class="price-card price-card--sage tilt">
-            <div class="price-card__head">
+          <article class="price-card price-card--sage pc-compact tilt">
+            <div class="pc-compact__top">
               <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-mic"></use></svg></span>
               <div>
                 <h4 class="font-display font-600 text-lg text-ink leading-tight">Занятия с логопедом</h4>
                 <p class="text-sm price-card__kruzhok">Кружок «Вектор речи»</p>
               </div>
             </div>
-            <p class="text-muted text-sm mb-4 min-h-[2.5rem]">Постановка и автоматизация звуков, развитие связной речи</p>
-            <div class="pkg-head"><span>Абонемент</span><span>Цена занятия</span><span>Стоимость</span></div>
-              <div class="pkg-row">
-                <span class="pkg-cnt">8 занятий</span>
-                <span class="pkg-price">3 150 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">3 500 ₽</span></span>
-                <span class="pkg-sum">25 200 ₽</span>
-              </div>
-              <div class="pkg-row">
-                <span class="pkg-cnt">12 занятий</span>
-                <span class="pkg-price">2 900 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">3 300 ₽</span></span>
-                <span class="pkg-sum">34 800 ₽</span>
-              </div>
+            <p class="text-muted text-sm mb-4">Постановка и автоматизация звуков, развитие связной речи</p>
+            <div class="pc-compact__price"><span class="pc-big">2 900&nbsp;₽</span><span class="pc-per">— 3 150&nbsp;₽ / занятие по абонементу</span></div>
+            <ul class="pc-list">
+              <li><span class="pc-list__cnt">8 занятий</span><span class="pc-list__sum">25 200&nbsp;₽</span><span class="pc-badge">−10%</span></li>
+              <li><span class="pc-list__cnt">12 занятий</span><span class="pc-list__sum">34 800&nbsp;₽</span><span class="pc-badge">−12%</span></li>
+            </ul>
+            <details class="pc-details">
+              <summary><svg class="icon icon-sm" aria-hidden="true"><use href="#i-plus"></use></svg>Все цены</summary>
+              <div class="pkg-head"><span>Абонемент</span><span>Цена занятия</span><span>Стоимость</span></div>
+              <div class="pkg-row"><span class="pkg-cnt">8 занятий</span><span class="pkg-price">3 150 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">3 500 ₽</span></span><span class="pkg-sum">25 200 ₽</span></div>
+              <div class="pkg-row"><span class="pkg-cnt">12 занятий</span><span class="pkg-price">2 900 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">3 300 ₽</span></span><span class="pkg-sum">34 800 ₽</span></div>
+            </details>
             <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
           </article>
-          <article class="price-card price-card--sage tilt">
-            <div class="price-card__head">
+          <article class="price-card price-card--sage pc-compact tilt">
+            <div class="pc-compact__top">
               <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-baby"></use></svg></span>
               <div>
                 <h4 class="font-display font-600 text-lg text-ink leading-tight">Запуск речи · индивидуально</h4>
                 <p class="text-sm price-card__kruzhok">Кружок «Лёгкий старт»</p>
               </div>
             </div>
-            <p class="text-muted text-sm mb-4 min-h-[2.5rem]">Первые слова у неговорящих детей — один на один с педагогом</p>
-            <div class="pkg-head"><span>Абонемент</span><span>Цена занятия</span><span>Стоимость</span></div>
-              <div class="pkg-row">
-                <span class="pkg-cnt">8 занятий</span>
-                <span class="pkg-price">3 400 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">3 900 ₽</span></span>
-                <span class="pkg-sum">27 200 ₽</span>
-              </div>
-              <div class="pkg-row">
-                <span class="pkg-cnt">12 занятий</span>
-                <span class="pkg-price">3 100 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">3 600 ₽</span></span>
-                <span class="pkg-sum">37 200 ₽</span>
-              </div>
+            <p class="text-muted text-sm mb-4">Первые слова у неговорящих детей — один на один с педагогом</p>
+            <div class="pc-compact__price"><span class="pc-big">3 100&nbsp;₽</span><span class="pc-per">— 3 400&nbsp;₽ / занятие по абонементу</span></div>
+            <ul class="pc-list">
+              <li><span class="pc-list__cnt">8 занятий</span><span class="pc-list__sum">27 200&nbsp;₽</span><span class="pc-badge">−13%</span></li>
+              <li><span class="pc-list__cnt">12 занятий</span><span class="pc-list__sum">37 200&nbsp;₽</span><span class="pc-badge">−14%</span></li>
+            </ul>
+            <details class="pc-details">
+              <summary><svg class="icon icon-sm" aria-hidden="true"><use href="#i-plus"></use></svg>Все цены</summary>
+              <div class="pkg-head"><span>Абонемент</span><span>Цена занятия</span><span>Стоимость</span></div>
+              <div class="pkg-row"><span class="pkg-cnt">8 занятий</span><span class="pkg-price">3 400 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">3 900 ₽</span></span><span class="pkg-sum">27 200 ₽</span></div>
+              <div class="pkg-row"><span class="pkg-cnt">12 занятий</span><span class="pkg-price">3 100 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">3 600 ₽</span></span><span class="pkg-sum">37 200 ₽</span></div>
+            </details>
             <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
           </article>
-          <article class="price-card price-card--sage tilt">
-            <div class="price-card__head">
+          <article class="price-card price-card--sage pc-compact tilt">
+            <div class="pc-compact__top">
               <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-users"></use></svg></span>
               <div>
                 <h4 class="font-display font-600 text-lg text-ink leading-tight">Запуск речи · мини-группа</h4>
                 <p class="text-sm price-card__kruzhok">Кружок «Лёгкий старт в команде»</p>
               </div>
             </div>
-            <p class="text-muted text-sm mb-4 min-h-[2.5rem]">Запуск речи в компании сверстников</p>
-            <div class="pkg-head"><span>Абонемент</span><span>Цена занятия</span><span>Стоимость</span></div>
-              <div class="pkg-row">
-                <span class="pkg-cnt">8 занятий</span>
-                <span class="pkg-price">3 200 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">3 900 ₽</span></span>
-                <span class="pkg-sum">25 600 ₽</span>
-              </div>
-              <div class="pkg-row">
-                <span class="pkg-cnt">12 занятий</span>
-                <span class="pkg-price">2 950 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">3 600 ₽</span></span>
-                <span class="pkg-sum">35 400 ₽</span>
-              </div>
+            <p class="text-muted text-sm mb-4">Запуск речи в компании сверстников</p>
+            <div class="pc-compact__price"><span class="pc-big">2 950&nbsp;₽</span><span class="pc-per">— 3 200&nbsp;₽ / занятие по абонементу</span></div>
+            <ul class="pc-list">
+              <li><span class="pc-list__cnt">8 занятий</span><span class="pc-list__sum">25 600&nbsp;₽</span><span class="pc-badge">−18%</span></li>
+              <li><span class="pc-list__cnt">12 занятий</span><span class="pc-list__sum">35 400&nbsp;₽</span><span class="pc-badge">−18%</span></li>
+            </ul>
+            <details class="pc-details">
+              <summary><svg class="icon icon-sm" aria-hidden="true"><use href="#i-plus"></use></svg>Все цены</summary>
+              <div class="pkg-head"><span>Абонемент</span><span>Цена занятия</span><span>Стоимость</span></div>
+              <div class="pkg-row"><span class="pkg-cnt">8 занятий</span><span class="pkg-price">3 200 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">3 900 ₽</span></span><span class="pkg-sum">25 600 ₽</span></div>
+              <div class="pkg-row"><span class="pkg-cnt">12 занятий</span><span class="pkg-price">2 950 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">3 600 ₽</span></span><span class="pkg-sum">35 400 ₽</span></div>
+            </details>
             <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
           </article>
-          <article class="price-card price-card--sage tilt">
-            <div class="price-card__head">
+          <article class="price-card price-card--sage pc-compact tilt">
+            <div class="pc-compact__top">
               <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-hand-heart"></use></svg></span>
               <div>
                 <h4 class="font-display font-600 text-lg text-ink leading-tight">Логомассаж</h4>
                 <p class="text-sm price-card__kruzhok">Кружок «Нежный звук»</p>
               </div>
             </div>
-            <p class="text-muted text-sm mb-4 min-h-[2.5rem]">Подготовка мышц речевого аппарата при нарушениях тонуса</p>
-            <div class="pkg-head"><span>Абонемент</span><span>Цена занятия</span><span>Стоимость</span></div>
-              <div class="pkg-row">
-                <span class="pkg-cnt">10 занятий</span>
-                <span class="pkg-price">2 200 ₽<span class="pkg-per">/занятие</span></span>
-                <span class="pkg-sum">22 000 ₽</span>
-              </div>
-              <div class="pkg-row">
-                <span class="pkg-cnt">15 занятий</span>
-                <span class="pkg-price">2 000 ₽<span class="pkg-per">/занятие</span></span>
-                <span class="pkg-sum">30 000 ₽</span>
-              </div>
+            <p class="text-muted text-sm mb-4">Подготовка мышц речевого аппарата при нарушениях тонуса</p>
+            <div class="pc-compact__price"><span class="pc-big">2 000&nbsp;₽</span><span class="pc-per">— 2 200&nbsp;₽ / занятие по абонементу</span></div>
+            <ul class="pc-list">
+              <li><span class="pc-list__cnt">10 занятий</span><span class="pc-list__sum">22 000&nbsp;₽</span></li>
+              <li><span class="pc-list__cnt">15 занятий</span><span class="pc-list__sum">30 000&nbsp;₽</span><span class="pc-badge">выгоднее</span></li>
+            </ul>
+            <details class="pc-details">
+              <summary><svg class="icon icon-sm" aria-hidden="true"><use href="#i-plus"></use></svg>Все цены</summary>
+              <div class="pkg-head"><span>Абонемент</span><span>Цена занятия</span><span>Стоимость</span></div>
+              <div class="pkg-row"><span class="pkg-cnt">10 занятий</span><span class="pkg-price">2 200 ₽<span class="pkg-per">/занятие</span></span><span class="pkg-sum">22 000 ₽</span></div>
+              <div class="pkg-row"><span class="pkg-cnt">15 занятий</span><span class="pkg-price">2 000 ₽<span class="pkg-per">/занятие</span></span><span class="pkg-sum">30 000 ₽</span></div>
+            </details>
             <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
           </article>
         </div>
       </div>
-      <div class="price-cat price-cat--pink reveal">
-        <div class="price-cat__label">
-          <span class="price-cat__dot" aria-hidden="true"><svg class="icon icon-sm"><use href="#i-puzzle"></use></svg></span>
-          <h3 class="font-display font-600 text-2xl text-ink">Дефектология</h3>
-        </div>
+      <div class="price-panel price-cat--pink reveal" id="ppanel-pink" role="tabpanel" aria-labelledby="ptab-pink" data-price-panel="pink" hidden>
         <div class="price-cat__grid">
-          <article class="price-card price-card--pink tilt">
-            <div class="price-card__head">
+          <article class="price-card price-card--pink pc-compact tilt">
+            <div class="pc-compact__top">
               <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-puzzle"></use></svg></span>
               <div>
                 <h4 class="font-display font-600 text-lg text-ink leading-tight">Занятия с дефектологом</h4>
                 <p class="text-sm price-card__kruzhok">Кружок «Вектор познания»</p>
               </div>
             </div>
-            <p class="text-muted text-sm mb-4 min-h-[2.5rem]">Работа с ЗРР, ЗПРР, РАС и другими особенностями развития</p>
-            <div class="pkg-head"><span>Абонемент</span><span>Цена занятия</span><span>Стоимость</span></div>
-              <div class="pkg-row">
-                <span class="pkg-cnt">8 занятий</span>
-                <span class="pkg-price">3 800 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">4 400 ₽</span></span>
-                <span class="pkg-sum">30 400 ₽</span>
-              </div>
-              <div class="pkg-row">
-                <span class="pkg-cnt">12 занятий</span>
-                <span class="pkg-price">3 400 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">4 000 ₽</span></span>
-                <span class="pkg-sum">40 800 ₽</span>
-              </div>
+            <p class="text-muted text-sm mb-4">Работа с ЗРР, ЗПРР, РАС и другими особенностями развития</p>
+            <div class="pc-compact__price"><span class="pc-big">3 400&nbsp;₽</span><span class="pc-per">— 3 800&nbsp;₽ / занятие по абонементу</span></div>
+            <ul class="pc-list">
+              <li><span class="pc-list__cnt">8 занятий</span><span class="pc-list__sum">30 400&nbsp;₽</span><span class="pc-badge">−14%</span></li>
+              <li><span class="pc-list__cnt">12 занятий</span><span class="pc-list__sum">40 800&nbsp;₽</span><span class="pc-badge">−15%</span></li>
+            </ul>
+            <details class="pc-details">
+              <summary><svg class="icon icon-sm" aria-hidden="true"><use href="#i-plus"></use></svg>Все цены</summary>
+              <div class="pkg-head"><span>Абонемент</span><span>Цена занятия</span><span>Стоимость</span></div>
+              <div class="pkg-row"><span class="pkg-cnt">8 занятий</span><span class="pkg-price">3 800 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">4 400 ₽</span></span><span class="pkg-sum">30 400 ₽</span></div>
+              <div class="pkg-row"><span class="pkg-cnt">12 занятий</span><span class="pkg-price">3 400 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">4 000 ₽</span></span><span class="pkg-sum">40 800 ₽</span></div>
+            </details>
             <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
           </article>
         </div>
       </div>
-      <div class="price-cat price-cat--lavender reveal">
-        <div class="price-cat__label">
-          <span class="price-cat__dot" aria-hidden="true"><svg class="icon icon-sm"><use href="#i-brain"></use></svg></span>
-          <h3 class="font-display font-600 text-2xl text-ink">Нейропсихология</h3>
-        </div>
+      <div class="price-panel price-cat--lavender reveal" id="ppanel-lavender" role="tabpanel" aria-labelledby="ptab-lavender" data-price-panel="lavender" hidden>
         <div class="price-cat__grid">
-          <article class="price-card price-card--lavender tilt">
-            <div class="price-card__head">
+          <article class="price-card price-card--lavender pc-compact tilt">
+            <div class="pc-compact__top">
               <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-brain"></use></svg></span>
               <div>
                 <h4 class="font-display font-600 text-lg text-ink leading-tight">Индивидуальные занятия</h4>
                 <p class="text-sm price-card__kruzhok">Кружок «Нейроинтеллект»</p>
               </div>
             </div>
-            <p class="text-muted text-sm mb-4 min-h-[2.5rem]">Внимание, память, саморегуляция — база для речи и учёбы</p>
-            <div class="pkg-head"><span>Абонемент</span><span>Цена занятия</span><span>Стоимость</span></div>
-              <div class="pkg-row">
-                <span class="pkg-cnt">4 занятия</span>
-                <span class="pkg-price">4 200 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">4 700 ₽</span></span>
-                <span class="pkg-sum">16 800 ₽</span>
-              </div>
-              <div class="pkg-row">
-                <span class="pkg-cnt">8 занятий</span>
-                <span class="pkg-price">3 800 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">4 250 ₽</span></span>
-                <span class="pkg-sum">30 400 ₽</span>
-              </div>
-              <div class="pkg-row">
-                <span class="pkg-cnt">12 занятий</span>
-                <span class="pkg-price">3 200 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">3 750 ₽</span></span>
-                <span class="pkg-sum">38 400 ₽</span>
-              </div>
+            <p class="text-muted text-sm mb-4">Внимание, память, саморегуляция — база для речи и учёбы</p>
+            <div class="pc-compact__price"><span class="pc-big">3 200&nbsp;₽</span><span class="pc-per">— 4 200&nbsp;₽ / занятие по абонементу</span></div>
+            <ul class="pc-list">
+              <li><span class="pc-list__cnt">4 занятия</span><span class="pc-list__sum">16 800&nbsp;₽</span><span class="pc-badge">−11%</span></li>
+              <li><span class="pc-list__cnt">8 занятий</span><span class="pc-list__sum">30 400&nbsp;₽</span><span class="pc-badge">−11%</span></li>
+              <li><span class="pc-list__cnt">12 занятий</span><span class="pc-list__sum">38 400&nbsp;₽</span><span class="pc-badge">−15%</span></li>
+            </ul>
+            <details class="pc-details">
+              <summary><svg class="icon icon-sm" aria-hidden="true"><use href="#i-plus"></use></svg>Все цены</summary>
+              <div class="pkg-head"><span>Абонемент</span><span>Цена занятия</span><span>Стоимость</span></div>
+              <div class="pkg-row"><span class="pkg-cnt">4 занятия</span><span class="pkg-price">4 200 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">4 700 ₽</span></span><span class="pkg-sum">16 800 ₽</span></div>
+              <div class="pkg-row"><span class="pkg-cnt">8 занятий</span><span class="pkg-price">3 800 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">4 250 ₽</span></span><span class="pkg-sum">30 400 ₽</span></div>
+              <div class="pkg-row"><span class="pkg-cnt">12 занятий</span><span class="pkg-price">3 200 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">3 750 ₽</span></span><span class="pkg-sum">38 400 ₽</span></div>
+            </details>
             <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
           </article>
-          <article class="price-card price-card--lavender tilt">
-            <div class="price-card__head">
+          <article class="price-card price-card--lavender pc-compact tilt">
+            <div class="pc-compact__top">
               <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-users"></use></svg></span>
               <div>
                 <h4 class="font-display font-600 text-lg text-ink leading-tight">Занятия в мини-группе</h4>
                 <p class="text-sm price-card__kruzhok">Кружок «Нейроинтеллект в команде»</p>
               </div>
             </div>
-            <p class="text-muted text-sm mb-4 min-h-[2.5rem]">Нейроразвитие в компании сверстников</p>
-            <div class="pkg-head"><span>Абонемент</span><span>Цена занятия</span><span>Стоимость</span></div>
-              <div class="pkg-row">
-                <span class="pkg-cnt">4 занятия</span>
-                <span class="pkg-price">3 100 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">3 600 ₽</span></span>
-                <span class="pkg-sum">12 400 ₽</span>
-              </div>
-              <div class="pkg-row">
-                <span class="pkg-cnt">8 занятий</span>
-                <span class="pkg-price">2 700 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">3 200 ₽</span></span>
-                <span class="pkg-sum">21 600 ₽</span>
-              </div>
+            <p class="text-muted text-sm mb-4">Нейроразвитие в компании сверстников</p>
+            <div class="pc-compact__price"><span class="pc-big">2 700&nbsp;₽</span><span class="pc-per">— 3 100&nbsp;₽ / занятие по абонементу</span></div>
+            <ul class="pc-list">
+              <li><span class="pc-list__cnt">4 занятия</span><span class="pc-list__sum">12 400&nbsp;₽</span><span class="pc-badge">−14%</span></li>
+              <li><span class="pc-list__cnt">8 занятий</span><span class="pc-list__sum">21 600&nbsp;₽</span><span class="pc-badge">−16%</span></li>
+            </ul>
+            <details class="pc-details">
+              <summary><svg class="icon icon-sm" aria-hidden="true"><use href="#i-plus"></use></svg>Все цены</summary>
+              <div class="pkg-head"><span>Абонемент</span><span>Цена занятия</span><span>Стоимость</span></div>
+              <div class="pkg-row"><span class="pkg-cnt">4 занятия</span><span class="pkg-price">3 100 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">3 600 ₽</span></span><span class="pkg-sum">12 400 ₽</span></div>
+              <div class="pkg-row"><span class="pkg-cnt">8 занятий</span><span class="pkg-price">2 700 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">3 200 ₽</span></span><span class="pkg-sum">21 600 ₽</span></div>
+            </details>
             <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
           </article>
         </div>
       </div>
-      <div class="price-cat price-cat--beige reveal">
-        <div class="price-cat__label">
-          <span class="price-cat__dot" aria-hidden="true"><svg class="icon icon-sm"><use href="#i-cap"></use></svg></span>
-          <h3 class="font-display font-600 text-2xl text-ink">Подготовка к школе</h3>
-        </div>
+      <div class="price-panel price-cat--beige reveal" id="ppanel-beige" role="tabpanel" aria-labelledby="ptab-beige" data-price-panel="beige" hidden>
         <div class="price-cat__grid">
-          <article class="price-card price-card--beige tilt">
-            <div class="price-card__head">
+          <article class="price-card price-card--beige pc-compact tilt">
+            <div class="pc-compact__top">
               <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-cap"></use></svg></span>
               <div>
                 <h4 class="font-display font-600 text-lg text-ink leading-tight">Индивидуальные занятия</h4>
                 <p class="text-sm price-card__kruzhok">Кружок «Золотой стандарт»</p>
               </div>
             </div>
-            <p class="text-muted text-sm mb-4 min-h-[2.5rem]">Чтение, счёт, связная речь и усидчивость — уверенный старт в 1 классе</p>
-            <div class="pkg-head"><span>Абонемент</span><span>Цена занятия</span><span>Стоимость</span></div>
-              <div class="pkg-row">
-                <span class="pkg-cnt">8 занятий</span>
-                <span class="pkg-price">3 050 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">3 500 ₽</span></span>
-                <span class="pkg-sum">24 400 ₽</span>
-              </div>
-              <div class="pkg-row">
-                <span class="pkg-cnt">12 занятий</span>
-                <span class="pkg-price">2 800 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">3 300 ₽</span></span>
-                <span class="pkg-sum">33 600 ₽</span>
-              </div>
+            <p class="text-muted text-sm mb-4">Чтение, счёт, связная речь и усидчивость — уверенный старт в 1 классе</p>
+            <div class="pc-compact__price"><span class="pc-big">2 800&nbsp;₽</span><span class="pc-per">— 3 050&nbsp;₽ / занятие по абонементу</span></div>
+            <ul class="pc-list">
+              <li><span class="pc-list__cnt">8 занятий</span><span class="pc-list__sum">24 400&nbsp;₽</span><span class="pc-badge">−13%</span></li>
+              <li><span class="pc-list__cnt">12 занятий</span><span class="pc-list__sum">33 600&nbsp;₽</span><span class="pc-badge">−15%</span></li>
+            </ul>
+            <details class="pc-details">
+              <summary><svg class="icon icon-sm" aria-hidden="true"><use href="#i-plus"></use></svg>Все цены</summary>
+              <div class="pkg-head"><span>Абонемент</span><span>Цена занятия</span><span>Стоимость</span></div>
+              <div class="pkg-row"><span class="pkg-cnt">8 занятий</span><span class="pkg-price">3 050 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">3 500 ₽</span></span><span class="pkg-sum">24 400 ₽</span></div>
+              <div class="pkg-row"><span class="pkg-cnt">12 занятий</span><span class="pkg-price">2 800 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">3 300 ₽</span></span><span class="pkg-sum">33 600 ₽</span></div>
+            </details>
             <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
           </article>
-          <article class="price-card price-card--beige tilt">
-            <div class="price-card__head">
+          <article class="price-card price-card--beige pc-compact tilt">
+            <div class="pc-compact__top">
               <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-users"></use></svg></span>
               <div>
                 <h4 class="font-display font-600 text-lg text-ink leading-tight">Занятия в мини-группе (6–7 лет)</h4>
                 <p class="text-sm price-card__kruzhok">Кружок «Золотой стандарт в команде»</p>
               </div>
             </div>
-            <p class="text-muted text-sm mb-4 min-h-[2.5rem]">Подготовка к школе в малой группе</p>
-            <div class="pkg-head"><span>Абонемент</span><span>Цена занятия</span><span>Стоимость</span></div>
-              <div class="pkg-row">
-                <span class="pkg-cnt">8 занятий</span>
-                <span class="pkg-price">2 700 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">2 900 ₽</span></span>
-                <span class="pkg-sum">21 600 ₽</span>
-              </div>
+            <p class="text-muted text-sm mb-4">Подготовка к школе в малой группе</p>
+            <div class="pc-compact__price"><span class="pc-big">2 700&nbsp;₽</span><span class="pc-per">/ занятие по абонементу 8 занятий</span></div>
+            <ul class="pc-list">
+              <li><span class="pc-list__cnt">8 занятий</span><span class="pc-list__sum">21 600&nbsp;₽</span><span class="pc-badge">−7%</span></li>
+            </ul>
+            <details class="pc-details">
+              <summary><svg class="icon icon-sm" aria-hidden="true"><use href="#i-plus"></use></svg>Все цены</summary>
+              <div class="pkg-head"><span>Абонемент</span><span>Цена занятия</span><span>Стоимость</span></div>
+              <div class="pkg-row"><span class="pkg-cnt">8 занятий</span><span class="pkg-price">2 700 ₽<span class="pkg-per">/занятие</span><span class="line-through opacity-60 text-sm ml-1">2 900 ₽</span></span><span class="pkg-sum">21 600 ₽</span></div>
+            </details>
             <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
           </article>
         </div>
       </div>
-      <div class="price-cat price-cat--berry reveal">
-        <div class="price-cat__label">
-          <span class="price-cat__dot" aria-hidden="true"><svg class="icon icon-sm"><use href="#i-sparkle"></use></svg></span>
-          <h3 class="font-display font-600 text-2xl text-ink">Комплексное развитие</h3>
-        </div>
+      <div class="price-panel price-cat--berry reveal" id="ppanel-berry" role="tabpanel" aria-labelledby="ptab-berry" data-price-panel="berry" hidden>
         <div class="price-cat__grid">
-          <article class="price-card price-card--berry tilt">
-            <div class="price-card__head">
+          <article class="price-card price-card--berry pc-compact tilt">
+            <div class="pc-compact__top">
               <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-sparkle"></use></svg></span>
               <div>
                 <h4 class="font-display font-600 text-lg text-ink leading-tight">Комплексное развитие 2+</h4>
                 <p class="text-sm price-card__kruzhok">Кружок «Вектор открытий»</p>
               </div>
             </div>
-            <p class="text-muted text-sm mb-4 min-h-[2.5rem]">Гармоничное развитие для малышей от 2 лет</p>
-            <div class="pkg-head"><span>Абонемент</span><span>Цена занятия</span><span>Стоимость</span></div>
-              <div class="pkg-row">
-                <span class="pkg-cnt">4 занятия</span>
-                <span class="pkg-price">2 000 ₽<span class="pkg-per">/занятие</span></span>
-                <span class="pkg-sum">8 000 ₽</span>
-              </div>
-              <div class="pkg-row">
-                <span class="pkg-cnt">8 занятий</span>
-                <span class="pkg-price">1 800 ₽<span class="pkg-per">/занятие</span></span>
-                <span class="pkg-sum">14 400 ₽</span>
-              </div>
+            <p class="text-muted text-sm mb-4">Гармоничное развитие для малышей от 2 лет</p>
+            <div class="pc-compact__price"><span class="pc-big">1 800&nbsp;₽</span><span class="pc-per">— 2 000&nbsp;₽ / занятие по абонементу</span></div>
+            <ul class="pc-list">
+              <li><span class="pc-list__cnt">4 занятия</span><span class="pc-list__sum">8 000&nbsp;₽</span></li>
+              <li><span class="pc-list__cnt">8 занятий</span><span class="pc-list__sum">14 400&nbsp;₽</span><span class="pc-badge">выгоднее</span></li>
+            </ul>
+            <details class="pc-details">
+              <summary><svg class="icon icon-sm" aria-hidden="true"><use href="#i-plus"></use></svg>Все цены</summary>
+              <div class="pkg-head"><span>Абонемент</span><span>Цена занятия</span><span>Стоимость</span></div>
+              <div class="pkg-row"><span class="pkg-cnt">4 занятия</span><span class="pkg-price">2 000 ₽<span class="pkg-per">/занятие</span></span><span class="pkg-sum">8 000 ₽</span></div>
+              <div class="pkg-row"><span class="pkg-cnt">8 занятий</span><span class="pkg-price">1 800 ₽<span class="pkg-per">/занятие</span></span><span class="pkg-sum">14 400 ₽</span></div>
+            </details>
             <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
           </article>
         </div>
