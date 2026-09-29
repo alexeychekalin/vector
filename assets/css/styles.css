@@ -198,6 +198,21 @@ h1,h2,h3,h4,.font-display { font-family: 'Evolventa','Nunito',sans-serif; }
   flex: 0 0 auto;
   white-space: nowrap;
 }
+/* Адаптивная шапка: единый масштаб для всех десктопных ширин (контейнер 1200px),
+   чтобы логотип не наезжал на «Услуги», а телефон — на «Вопросы».
+   vw здесь = min(ширина окна, 1200px), т.к. контейнер capped */
+#siteHeader .header-row{ gap: clamp(12px, min(1.7vw, 1.7%), 26px); }
+.site-nav{ gap: clamp(10px, min(1.5vw, 1.5%), 20px); }
+.site-nav .nav-link{ font-size: clamp(0.76rem, 0.4rem + min(1.8vw, 1.8%), 0.95rem); }
+.header-phone{ font-size: clamp(0.76rem, 0.4rem + min(1.8vw, 1.8%), 0.95rem); white-space: nowrap; }
+/* Узкий десктоп (1024–1120px): контейнер 1200 не влезает целиком — уплотняем шапку */
+@media (min-width: 1024px) and (max-width: 1119px){
+  #siteHeader > .max-w-content{ padding-left: 1rem; padding-right: 1rem; }
+  #siteHeader .header-row{ gap: 12px; }
+  .site-nav{ gap: 9px; }
+  .site-nav .nav-link{ font-size: 0.76rem; }
+  .header-phone{ font-size: 0.76rem; }
+}
 #siteHeader nav[aria-label="Основная навигация"]{
   min-width: 0;
 }
