@@ -1,7 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /api/
-Disallow: /sotrudnik.html
-Disallow: /qr.html
 
 Sitemap: https://zolotoy-vektor.ru/sitemap.xml
