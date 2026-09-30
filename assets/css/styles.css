@@ -316,6 +316,21 @@ h1,h2,h3,h4,.font-display { font-family: 'Evolventa','Nunito',sans-serif; }
 /* Счётчики */
 .count{ font-variant-numeric: tabular-nums; }
 
+/* Hero: glass-карточки под фото (мобильные) — вертикально, без наложения друг на друга.
+   На sm+ карточки возвращаются в позицию absolute (Tailwind sm:-bottom-6). */
+@media (max-width: 639.98px){
+  .hero-photo{ padding-bottom: 0; }
+  .hero-safe-card{
+    top: calc(100% - 2.75rem); /* нижний край карточки ≈ низ фото */
+    bottom: auto;
+    max-width: calc(100% - 2rem);
+  }
+  .hero-rating-card{
+    top: calc(100% + 0.25rem); /* ниже «Безопасной среды», с зазором */
+    bottom: auto;
+  }
+}
+
 /* Footer links */
 .foot-link{ transition: color .2s; }
 .foot-link:hover{ color:#fff; }
