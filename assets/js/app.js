@@ -234,32 +234,49 @@
       btn.addEventListener('click', () => openModalById('service-' + btn.dataset.service, btn));
     });
 
+    /* ---------- Предзаполнение формы брони («Записаться») ---------- */
+    // Единая логика для кнопок в блоке услуг, в модалках специалистов/услуг.
+    // clearFirst=true — поле комментария очищается перед каждым нажатием,
+    // чтобы не засорять форму повторяющимися записями (кнопки в карточках услуг).
+    function prefillBooking(svc, roleLine, triggerBtn, clearFirst) {
+      const comment = document.getElementById('comment');
+      if (comment) {
+        const line = roleLine || `Хочу записаться на услугу: ${svc}.`;
+        if (clearFirst) {
+          comment.value = line;
+        } else if (!comment.value.trim().includes(line)) {
+          const existing = comment.value.trim();
+          comment.value = existing ? existing + '\n' + line : line;
+        }
+      }
+      // закрыть открытую модалку, если кнопка была внутри неё
+      const hostModal = triggerBtn && triggerBtn.closest('.pm-overlay');
+      if (hostModal && !hostModal.hidden) closePersonModal(hostModal);
+      const booking = document.getElementById('booking');
+      if (booking) booking.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
+      setTimeout(() => {
+        const name = document.getElementById('name');
+        if (name) name.focus({ preventScroll: true });
+      }, reduce ? 0 : 600);
+    }
+
+    // Кнопки «Записаться» в карточках блока «Наши услуги» (очищают комментарий)
+    document.querySelectorAll('.service-book').forEach((btn) => {
+      btn.addEventListener('click', () => prefillBooking(btn.dataset.serviceBook, '', btn, true));
+    });
+
     // «Записаться к этому специалисту» — предзаполняет форму брони и закрывает модалку
     personModals.forEach((modal) => {
       const bookBtn = modal.querySelector('.pm-book');
       if (!bookBtn) return;
       bookBtn.addEventListener('click', () => {
-        const comment = document.getElementById('comment');
-        if (comment) {
-          const full = bookBtn.dataset.personFull || '';
-          const role = bookBtn.dataset.personRole || '';
-          const svc = bookBtn.dataset.serviceBook || '';
-          const line = svc
-            ? `Хочу записаться на услугу: ${svc}.`
-            : `Хочу записаться к специалисту: ${full}${role ? ' (' + role + ')' : ''}.`;
-          const existing = comment.value.trim();
-          if (!existing.includes(line)) {
-            comment.value = existing ? existing + '\n' + line : line;
-          }
-        }
-        closePersonModal(modal);
-        const booking = document.getElementById('booking');
-        if (booking) booking.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
-        // фокус на имя после прокрутки (кратковременно ждём завершения smooth-scroll)
-        setTimeout(() => {
-          const name = document.getElementById('name');
-          if (name) name.focus({ preventScroll: true });
-        }, reduce ? 0 : 600);
+        const full = bookBtn.dataset.personFull || '';
+        const role = bookBtn.dataset.personRole || '';
+        const svc = bookBtn.dataset.serviceBook || '';
+        const line = svc
+          ? `Хочу записаться на услугу: ${svc}.`
+          : `Хочу записаться к специалисту: ${full}${role ? ' (' + role + ')' : ''}.`;
+        prefillBooking(svc, line, bookBtn, false);
       });
     });
     personModals.forEach((modal) => {
