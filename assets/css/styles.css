@@ -256,7 +256,9 @@ h1,h2,h3,h4,.font-display { font-family: 'Evolventa','Nunito',sans-serif; }
 /* Фирменные декор-элементы (звёзды, лист) */
 .deco{ z-index:0; pointer-events:none; user-select:none; }
 /* Маскот Ёжик Вектор */
-.hero-mascot{ z-index:1; pointer-events:none; user-select:none; }
+.hero-mascot{ z-index:3; pointer-events:none; user-select:none; }
+/* Glass-карточки hero — поверх маскота */
+.hero-safe-card, .hero-rating-card{ z-index:4; }
 @media (prefers-reduced-motion: reduce){ .deco{ animation:none; } }
 
 /* Фирменный паттерн фоном секций (деликатно) */
@@ -329,8 +331,8 @@ h1,h2,h3,h4,.font-display { font-family: 'Evolventa','Nunito',sans-serif; }
     top: calc(100% + 0.25rem); /* ниже «Безопасной среды», с зазором */
     bottom: auto;
   }
-  /* Маскот в левом нижнем углу не должен перекрывать glass-карточку */
-  .hero-mascot{ left: auto; right: -0.75rem; bottom: auto; top: calc(100% + 4.5rem); }
+  /* На мобильных маскот — под фото (в столбике карточек), чтобы не перекрывать текст */
+  .hero-mascot{ left: auto; right: -0.75rem; bottom: auto; top: calc(100% + 6.5rem); }
 }
 
 /* Footer links */
