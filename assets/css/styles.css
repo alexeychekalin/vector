@@ -917,3 +917,18 @@ h1,h2,h3,h4,.font-display { font-family: 'Evolventa','Nunito',sans-serif; }
   #siteHeader.header-compact .header-phone{ font-size: 0.85rem !important; }
   #siteHeader.header-compact .header-logo{ width: 150px !important; }
 }
+
+/* ---- Секция «Наши услуги»: подвал карточки (цена + кнопки) ---- */
+/* Страховка от сбитых стилей: если Tailwind CDN не загрузился или классы
+   перестали применяться, footer остаётся нормальной строкой flex-контейнера. */
+.svc-footer{ display:flex; align-items:center; justify-content:space-between; gap:.75rem; }
+.svc-price{ min-width:0; }
+.svc-actions{ display:flex; align-items:center; gap:.5rem; flex-shrink:0; }
+@media (max-width:639px){
+  .svc-footer{ flex-direction:column; align-items:stretch; }
+  .svc-actions{ justify-content:stretch; }
+  .svc-actions > .btn{ flex:1 1 auto; }
+}
+
+/* Маскот в заголовке секции услуг — крупнее и не давит на текст */
+.services-mascot{ margin-left:auto; }
