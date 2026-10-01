@@ -256,7 +256,9 @@ h1,h2,h3,h4,.font-display { font-family: 'Evolventa','Nunito',sans-serif; }
 /* Фирменные декор-элементы (звёзды, лист) */
 .deco{ z-index:0; pointer-events:none; user-select:none; }
 /* Маскот Ёжик Вектор */
-.hero-mascot{ z-index:3; pointer-events:none; user-select:none; }
+.hero-mascot{ z-index:4; pointer-events:none; user-select:none; }
+/* Glass-карточки hero — над маскотом и фото */
+.hero-safe-card, .hero-rating-card{ z-index:5; }
 @media (prefers-reduced-motion: reduce){ .deco{ animation:none; } }
 
 /* Фирменный паттерн фоном секций (деликатно) */
@@ -316,18 +318,21 @@ h1,h2,h3,h4,.font-display { font-family: 'Evolventa','Nunito',sans-serif; }
 /* Счётчики */
 .count{ font-variant-numeric: tabular-nums; }
 
-/* Hero: glass-карточки под фото (мобильные) — вертикально, без наложения друг на друга.
-   На sm+ карточки возвращаются в позицию absolute (Tailwind sm:-bottom-6). */
+/* Hero: glass-карточки на мобильных.
+   sm+ (Tailwind): рейтинг в правом верхнем углу, «Безопасная среда» снизу справа от маскота.
+   Мобильные (<640px): карточки складываются в колонку ПОД фото — без наложений. */
 @media (max-width: 639.98px){
   .hero-photo{ padding-bottom: 0; }
   .hero-safe-card{
-    top: calc(100% - 2.75rem); /* нижний край карточки ≈ низ фото */
+    top: calc(100% + 0.5rem); /* под фото */
     bottom: auto;
-    max-width: calc(100% - 2rem);
+    left: 1rem; right: 1rem;
+    max-width: none;
   }
   .hero-rating-card{
-    top: calc(100% + 0.25rem); /* ниже «Безопасной среды», с зазором */
+    top: calc(100% + 5.25rem); /* ниже «Безопасной среды», с зазором */
     bottom: auto;
+    left: auto; right: 1rem;
   }
 }
 
