@@ -924,21 +924,18 @@ h1,h2,h3,h4,.font-display { font-family: 'Evolventa','Nunito',sans-serif; }
 }
 
 /* ---- Секция «Наши услуги»: подвал карточки (цена + кнопки) ---- */
-/* Полностью собственные стили (без зависимости от Tailwind CDN):
-   на десктопе цена слева и кнопки справа в одну линию, на мобильных — колонкой. */
+/* Собственные стили (без зависимости от Tailwind CDN):
+   строка цены: сумма прижата к левому краю, подпись («за занятие» и т.п.) — к правому;
+   кнопки — отдельной строкой ниже, чтобы не наезжали на цену. */
 .svc-footer{
-  display:flex; flex-direction:row; align-items:center; justify-content:space-between;
-  gap:.75rem; padding-top:1rem; border-top:1px solid var(--cream,#F5EEEF);
+  display:flex; flex-direction:column; gap:.75rem;
+  padding-top:1rem; border-top:1px solid var(--cream,#F5EEEF);
 }
-.svc-price{ min-width:0; display:flex; flex-direction:column; align-items:flex-start; }
-.svc-price .svc-amount{ font-weight:600; line-height:1.2; white-space:nowrap; }
-.svc-price .svc-note{ line-height:1.4; }
-.svc-actions{ display:flex; align-items:center; gap:.5rem; flex-shrink:0; }
-@media (max-width:639px){
-  .svc-footer{ flex-direction:column; align-items:stretch; }
-  .svc-actions{ justify-content:stretch; }
-  .svc-actions > .btn{ flex:1 1 auto; }
-}
+.svc-price{ width:100%; display:flex; flex-direction:row; align-items:baseline; justify-content:space-between; gap:.75rem; }
+.svc-price .svc-amount{ font-weight:600; line-height:1.2; white-space:nowrap; margin-right:auto; }
+.svc-price .svc-note{ line-height:1.4; text-align:right; white-space:nowrap; flex-shrink:0; }
+.svc-actions{ display:flex; align-items:center; gap:.5rem; }
+.svc-actions > .btn{ flex:1 1 auto; }
 
 /* Маскот в заголовке секции услуг — крупный, прижат к правому краю */
 .services-mascot{ margin-left:auto; width:18rem; }
