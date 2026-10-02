@@ -319,21 +319,28 @@ h1,h2,h3,h4,.font-display { font-family: 'Evolventa','Nunito',sans-serif; }
 .count{ font-variant-numeric: tabular-nums; }
 
 /* Hero: glass-карточки на мобильных.
-   sm+ (Tailwind): рейтинг в правом верхнем углу, «Безопасная среда» снизу справа от маскота.
-   Мобильные (<640px): карточки складываются в колонку ПОД фото — без наложений. */
+   Десктоп (sm+): рейтинг в правом верхнем углу, «Безопасная среда» снизу слева.
+   Мобильные (<640px): обе карточки остаются НА фото, прижаты к левому краю
+   (как десктопная раскладка), не падают вниз и не ломают поток страницы. */
 @media (max-width: 639.98px){
-  .hero-photo{ padding-bottom: 0; }
-  .hero-safe-card{
-    top: calc(100% + 0.5rem); /* под фото */
-    bottom: auto;
-    left: 1rem; right: 1rem;
-    max-width: none;
-  }
+  .hero-photo{ padding-bottom: 2.75rem; } /* зазор под свисающую нижнюю карточку */
   .hero-rating-card{
-    top: calc(100% + 5.25rem); /* ниже «Безопасной среды», с зазором */
-    bottom: auto;
-    left: auto; right: 1rem;
+    top: -0.5rem;        /* чуть меньше вынос, чтобы не залезала в шапку/текст */
+    right: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    gap: 0.5rem;
   }
+  .hero-rating-card .icon-badge{ width: 2rem; height: 2rem; }
+  .hero-rating-card .rating-sub{ display: none; } /* «оценка родителей» только на десктопе */
+  .hero-safe-card{
+    bottom: -1.25rem;
+    left: 0.75rem; right: auto;
+    max-width: 14rem;
+    padding: 0.625rem 0.875rem;
+    gap: 0.625rem;
+  }
+  .hero-safe-card .icon-badge{ width: 2.25rem; height: 2.25rem; }
+  .hero-mascot{ bottom: 3.5rem; left: auto; right: 0.75rem; } /* маскот не под нижней карточкой */
 }
 
 /* Footer links */
