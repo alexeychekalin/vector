@@ -924,10 +924,15 @@ h1,h2,h3,h4,.font-display { font-family: 'Evolventa','Nunito',sans-serif; }
 }
 
 /* ---- Секция «Наши услуги»: подвал карточки (цена + кнопки) ---- */
-/* Страховка от сбитых стилей: если Tailwind CDN не загрузился или классы
-   перестали применяться, footer остаётся нормальной строкой flex-контейнера. */
-.svc-footer{ display:flex; align-items:center; justify-content:space-between; gap:.75rem; }
-.svc-price{ min-width:0; }
+/* Полностью собственные стили (без зависимости от Tailwind CDN):
+   на десктопе цена слева и кнопки справа в одну линию, на мобильных — колонкой. */
+.svc-footer{
+  display:flex; flex-direction:row; align-items:center; justify-content:space-between;
+  gap:.75rem; padding-top:1rem; border-top:1px solid var(--cream,#F5EEEF);
+}
+.svc-price{ min-width:0; display:flex; flex-direction:column; align-items:flex-start; }
+.svc-price .svc-amount{ font-weight:600; line-height:1.2; white-space:nowrap; }
+.svc-price .svc-note{ line-height:1.4; }
 .svc-actions{ display:flex; align-items:center; gap:.5rem; flex-shrink:0; }
 @media (max-width:639px){
   .svc-footer{ flex-direction:column; align-items:stretch; }
@@ -935,5 +940,6 @@ h1,h2,h3,h4,.font-display { font-family: 'Evolventa','Nunito',sans-serif; }
   .svc-actions > .btn{ flex:1 1 auto; }
 }
 
-/* Маскот в заголовке секции услуг — крупнее и не давит на текст */
-.services-mascot{ margin-left:auto; }
+/* Маскот в заголовке секции услуг — крупный, прижат к правому краю */
+.services-mascot{ margin-left:auto; width:18rem; }
+@media (min-width:1280px){ .services-mascot{ width:23rem; } }
