@@ -947,3 +947,7 @@ h1,h2,h3,h4,.font-display { font-family: 'Evolventa','Nunito',sans-serif; }
 /* Маскот в заголовке секции услуг — крупный, прижат к правому краю */
 .services-mascot{ margin-left:auto; width:18rem; }
 @media (min-width:1280px){ .services-mascot{ width:23rem; } }
+
+/* Hero: слоган под счётчиками */
+.hero-tagline{ margin-top:1.5rem; font-size:1.02rem; line-height:1.65; color:var(--ink, #2A2438); max-width:32rem; }
+@media (min-width:1024px){ .hero-tagline{ font-size:1.12rem; } }
