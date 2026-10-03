@@ -26,28 +26,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/@fontsource/evolventa@5.0.13/index.min.css" rel="stylesheet" />
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: { extend: {
-        colors: {
-          berry:'#973568','berry-dark':'#7A2B54','berry-deep':'#5C2040','berry-light':'#AC5D86',
-          sky:'#9B89C0','sky-soft':'#C3B8D9', lavender:'#9B89C0','lavender-soft':'#D7D0E6',
-          rose:'#D3A3C4','rose-soft':'#E5C8DC', pink:'#D3A3C4','pink-bright':'#F5ACCC',
-          sage:'#AABDA1','sage-soft':'#CCD7C7','sage-tint':'#EEF2EC',
-          beige:'#CEABB1','beige-soft':'#E2CDD0','beige-tint':'#F5EEEF',
-          indigo:'#4B4A7E',
-          gold:'#E0A97C','gold-2':'#FFD7A8','gold-hi':'#FFE7C9',
-          cream:'#F5EEEF', bg:'#FBF9F7', ink:'#34303F', muted:'#6E6980',
-        },
-        fontFamily:{ display:['Evolventa','Nunito','sans-serif'], body:['Nunito','sans-serif'] },
-        borderRadius:{ '2xl':'1.5rem','3xl':'2rem' },
-        maxWidth:{ card:'560px' },
-      } },
-    };
-  </script>
+  <!-- Статический Tailwind CSS (собран из build/tailwind.config.js, без рантайм-CDN) -->
+  <link rel="stylesheet" href="assets/vendor/tailwind-generated.css" />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <style>
     /* Плавающая кнопка записи */
