@@ -3,6 +3,22 @@
    Живой, насыщенный движением. Glassmorphism + gold accents.
    ========================================================= */
 
+/* ===== Фирменный шрифт Evolventa (локальные файлы, без внешних CDN) ===== */
+@font-face{ font-family:'Evolventa'; font-weight:400; font-style:normal; font-display:swap;
+  src:url('../fonts/evolventa/Evolventa-Regular.woff') format('woff'); }
+@font-face{ font-family:'Evolventa'; font-weight:400; font-style:italic; font-display:swap;
+  src:url('../fonts/evolventa/Evolventa-Oblique.woff') format('woff'); }
+@font-face{ font-family:'Evolventa'; font-weight:600; font-style:normal; font-display:swap;
+  src:url('../fonts/evolventa/Evolventa-Bold.woff') format('woff'); }
+@font-face{ font-family:'Evolventa'; font-weight:700; font-style:normal; font-display:swap;
+  src:url('../fonts/evolventa/Evolventa-Bold.woff') format('woff'); }
+@font-face{ font-family:'Evolventa'; font-weight:800; font-style:normal; font-display:swap;
+  src:url('../fonts/evolventa/Evolventa-Bold.woff') format('woff'); }
+@font-face{ font-family:'Evolventa'; font-weight:600; font-style:italic; font-display:swap;
+  src:url('../fonts/evolventa/Evolventa-BoldOblique.woff') format('woff'); }
+@font-face{ font-family:'Evolventa'; font-weight:700; font-style:italic; font-display:swap;
+  src:url('../fonts/evolventa/Evolventa-BoldOblique.woff') format('woff'); }
+
 :root {
   /* ===== Фирменная палитра «Золотой Вектор» 2026 (брендбук) ===== */
   /* Бордовый (основной) */
