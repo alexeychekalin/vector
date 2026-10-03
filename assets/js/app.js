@@ -201,6 +201,73 @@
     });
   }
 
+  /* ---------- Карусель фото в секции «О центре» ---------- */
+  const aboutCarousel = document.querySelector('.about-carousel');
+  if (aboutCarousel) {
+    const track = aboutCarousel.querySelector('.ac-track');
+    const slides = Array.from(aboutCarousel.querySelectorAll('.ac-slide'));
+    const prevBtn = document.getElementById('aboutPrev');
+    const nextBtn = document.getElementById('aboutNext');
+    const dotsWrap = document.getElementById('aboutDots');
+    let idx = 0, timer = null;
+
+    // без JS — горизонтальный скролл со snap
+    if (!track || !slides.length) {
+      aboutCarousel.classList.add('no-js');
+    } else {
+      const dots = slides.map((_, i) => {
+        const d = document.createElement('button');
+        d.type = 'button';
+        d.className = 'ac-dot' + (i === 0 ? ' is-active' : '');
+        d.setAttribute('role', 'tab');
+        d.setAttribute('aria-label', `Фото ${i + 1}`);
+        d.addEventListener('click', () => { go(i); restart(); });
+        dotsWrap.appendChild(d);
+        return d;
+      });
+
+      function go(i) {
+        idx = (i + slides.length) % slides.length;
+        track.style.transform = `translateX(-${idx * 100}%)`;
+        dots.forEach((d, j) => {
+          d.classList.toggle('is-active', j === idx);
+          d.setAttribute('aria-selected', j === idx ? 'true' : 'false');
+        });
+      }
+      function stop() { if (timer) { clearInterval(timer); timer = null; } }
+      function start() { if (!reduce && !timer) timer = setInterval(() => go(idx + 1), 5000); }
+      function restart() { stop(); start(); }
+
+      prevBtn.addEventListener('click', () => { go(idx - 1); restart(); });
+      nextBtn.addEventListener('click', () => { go(idx + 1); restart(); });
+      aboutCarousel.addEventListener('mouseenter', stop);
+      aboutCarousel.addEventListener('mouseleave', start);
+      aboutCarousel.addEventListener('focusin', stop);
+      aboutCarousel.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') { go(idx - 1); restart(); }
+        else if (e.key === 'ArrowRight') { go(idx + 1); restart(); }
+      });
+
+      // свайп на тач-устройствах
+      let x0 = null;
+      track.addEventListener('touchstart', (e) => { x0 = e.touches[0].clientX; stop(); }, { passive: true });
+      track.addEventListener('touchend', (e) => {
+        if (x0 === null) return;
+        const dx = e.changedTouches[0].clientX - x0;
+        if (Math.abs(dx) > 40) go(idx + (dx < 0 ? 1 : -1));
+        x0 = null; start();
+      }, { passive: true });
+
+      // пауза, когда карусель вне экрана
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver((entries) => {
+          entries.forEach((en) => en.isIntersecting ? start() : stop());
+        }, { threshold: 0.25 }).observe(aboutCarousel);
+      } else { start(); }
+      start();
+    }
+  }
+
   /* ---------- Модалки специалистов (карточки команды) ---------- */
   const personModals = document.querySelectorAll('.pm-overlay');
   if (personModals.length) {

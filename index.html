@@ -763,9 +763,18 @@
       <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
         <div class="reveal relative order-2 lg:order-1">
-          <div class="photo-frame aspect-[4/3]" data-parallax="-0.1">
-            <img src="assets/img/interior-2.jpg" width="1600" height="851"
-                 alt="Игровая зона центра «Золотой Вектор» в мягких тонах фирменной палитры" loading="lazy" />
+          <div class="about-carousel photo-frame aspect-[4/3]" data-parallax="-0.1" role="group" aria-roledescription="карусель" aria-label="Фотографии центра «Золотой Вектор»">
+            <div class="ac-track" id="aboutTrack">
+              <div class="ac-slide" role="group" aria-label="1 из 5"><img src="assets/img/about/about-1.webp" width="1200" height="900" alt="Игровая зона центра «Золотой Вектор» в мягких тонах фирменной палитры" loading="lazy" /></div>
+              <div class="ac-slide" role="group" aria-label="2 из 5"><img src="assets/img/about/about-2.webp" width="1200" height="900" alt="Кабинет для занятий с ребёнком" loading="lazy" /></div>
+              <div class="ac-slide" role="group" aria-label="3 из 5"><img src="assets/img/about/about-3.webp" width="1200" height="900" alt="Уголок с дидактическими материалами" loading="lazy" /></div>
+              <div class="ac-slide" role="group" aria-label="4 из 5"><img src="assets/img/about/about-4.webp" width="1200" height="900" alt="Пространство центра «Золотой Вектор»" loading="lazy" /></div>
+              <div class="ac-slide" role="group" aria-label="5 из 5"><img src="assets/img/about/about-5.webp" width="1200" height="900" alt="Зона ожидания и игр" loading="lazy" /></div>
+            </div>
+            <button type="button" class="ac-nav ac-prev" id="aboutPrev" aria-label="Предыдущее фото"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-caret-left"></use></svg></button>
+            <button type="button" class="ac-nav ac-next" id="aboutNext" aria-label="Следующее фото"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-caret-right"></use></svg></button>
+            <div class="ac-dots" id="aboutDots" role="tablist" aria-label="Выбор фотографии"></div>
+            <span class="room-count ac-badge" aria-hidden="true"><svg class="icon icon-sm"><use href="#i-images"></use></svg>5 фото</span>
           </div>
           <div class="hero-float-card absolute -top-5 -right-4 sm:-right-6 glass p-4 flex items-center gap-3">
             <span class="icon-badge bg-rose-soft text-berry" aria-hidden="true"><svg class="icon"><use href="#i-star"></use></svg></span>
