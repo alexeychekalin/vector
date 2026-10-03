@@ -180,7 +180,7 @@ $fields = [
     'phone' => $phone,
     'email' => $email,
     'source' => $source !== '' ? $source : 'website',
-    'note' => trim("Форма: {$formId}\n" . $comment . "\n" . http_build_query($trackingFields, '', '&', PHP_QUERY_RFC3986)),
+    'note' => ($comment !== '' ? $comment : 'не указан'),
 ];
 
 $url = 'https://zolotoyvektor.s20.online/api/1/lead/create?token=' . rawurlencode($token);
@@ -234,7 +234,7 @@ $telegramText = implode("\n", [
          'Телефон: ' . $phone,
          'Email: ' . ($email !== '' ? $email : 'не указан'),
          'Источник: ' . ($source !== '' ? $source : 'website'),
-         'Комментарий: ' . ($comment !== '' ? $comment : 'не указан'),
+         'Комментарий: ' . trim("Форма: {$formId}\n" . $comment . "\n" . http_build_query($trackingFields, '', '&', PHP_QUERY_RFC3986)),
          'Страница: ' . ($trackingFields['landing_page'] !== '' ? $trackingFields['landing_page'] : 'не указана'),
      ]);
 
