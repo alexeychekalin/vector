@@ -148,6 +148,7 @@
     let gallery = [];
     let current = 0;
     let lastFocused = null;
+    let onLbClose = null; // опц. колбэк при закрытии (карусель возобновляет автопрокрутку)
 
     // gallery — массив URL изображений
     function show(i) {
@@ -159,7 +160,20 @@
       lbCounter.textContent = multi ? `${current + 1} / ${gallery.length}` : '';
     }
     let galleryAlt = '';
-    function open(trigger) {
+    function open(trigger, startIndex, altText) {
+      // программный вызов: готовый массив URL (карусель «О центре» открывает полные оригиналы)
+      if (Array.isArray(trigger)) {
+        gallery = trigger.slice();
+        galleryAlt = altText || 'Фото';
+        current = startIndex || 0;
+        lastFocused = document.activeElement;
+        lightbox.hidden = false;
+        requestAnimationFrame(() => lightbox.classList.add('is-open'));
+        show(current);
+        document.body.style.overflow = 'hidden';
+        lbClose.focus();
+        return;
+      }
       // Если у триггера задан свой набор фото (data-gallery) — используем его (галерея одной зоны)
       const list = trigger.dataset.gallery;
       if (list) {
@@ -183,7 +197,13 @@
       if (reduce) done(); else lightbox.addEventListener('transitionend', done);
       document.body.style.overflow = '';
       if (lastFocused) lastFocused.focus();
+      if (onLbClose) { const cb = onLbClose; onLbClose = null; cb(); }
     }
+
+    window.lbOpen = function (list, startIndex, altText, onClose) {
+      onLbClose = typeof onClose === 'function' ? onClose : null;
+      open(list, startIndex, altText);
+    };
 
     document.querySelectorAll('.lightbox-trigger').forEach((t) => {
       t.addEventListener('click', () => open(t));
@@ -240,6 +260,27 @@
 
       prevBtn.addEventListener('click', () => { go(idx - 1); restart(); });
       nextBtn.addEventListener('click', () => { go(idx + 1); restart(); });
+
+      // клик по фото — открыть лайтбокс с ПОЛНЫМ оригиналом без кропа (вертикальным)
+      const fullList = slides.map((s) => s.querySelector('img').dataset.full).filter(Boolean);
+      if (fullList.length && typeof window.lbOpen === 'function') {
+        track.style.cursor = 'zoom-in';
+        slides.forEach((slide, i) => {
+          slide.setAttribute('role', 'button');
+          slide.tabIndex = 0;
+          slide.setAttribute('aria-label', 'Открыть фото целиком');
+          const openFull = (e) => {
+            e.stopPropagation();
+            stop();
+            const alt = slide.querySelector('img').alt;
+            window.lbOpen(fullList, i, alt, () => start());
+          };
+          slide.addEventListener('click', openFull);
+          slide.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openFull(e); }
+          });
+        });
+      }
       aboutCarousel.addEventListener('mouseenter', stop);
       aboutCarousel.addEventListener('mouseleave', start);
       aboutCarousel.addEventListener('focusin', stop);
