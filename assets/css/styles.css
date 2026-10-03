@@ -54,8 +54,14 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 96px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Единые вертикальные отступы секций (не зависит от загрузки Tailwind CDN) */
+section[id]{ padding-top:5rem; padding-bottom:5rem; }
+@media (min-width:1024px){ section[id]{ padding-top:7rem; padding-bottom:7rem; } }
+#hero{ padding-top:8.5rem; }
+@media (min-width:1024px){ #hero{ padding-top:10.5rem; } }
 
 body {
   margin: 0;
