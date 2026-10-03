@@ -551,6 +551,18 @@ h1,h2,h3,h4,.font-display { font-family: 'Evolventa','Nunito',sans-serif; }
 }
 @media (min-width:768px){ .diag-banner{ padding: 2.5rem; } }
 
+/* Сетка баннеров: иконка + текст в одну линию на всех экранах,
+   кнопка — отдельной строкой снизу на мобильных, справа на десктопе */
+.banner-grid{ display:grid; grid-template-columns:auto 1fr; gap:1.25rem; align-items:center; }
+.banner-grid > .btn{ grid-column: 1 / -1; justify-self:start; margin-top:.5rem; white-space:nowrap; }
+@media (min-width:768px){
+  .banner-grid{ grid-template-columns:auto 1fr auto; gap:1.5rem; }
+  .banner-grid > .btn{ grid-column:auto; justify-self:end; margin-top:0; }
+}
+
+/* Бургер — всегда у правого края шапки (на мобильных) */
+.menu-toggle{ margin-left:auto; }
+
 /* ===== Модульная сетка цен (стиль прайс-листа из брендбука) ===== */
 .price-cats{ display:flex; flex-direction:column; gap:1.75rem; }
 
