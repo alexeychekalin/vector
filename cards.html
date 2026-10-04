@@ -336,21 +336,53 @@ CARDS.forEach((c,i)=>{
 
 /* ===== PNG-экспорт: карточка сохраняется как есть (html-to-image) ===== */
 const EXPORT_SIZE=1080;
+
+/* Заморозка цветов: html-to-image сериализует inline-стили клона, но не умеет
+   вычислять color-mix()/var() — из-за этого в PNG пропадали градиентный фон
+   карточки и цветная плашка абонемента. Проходим по всем элементам клона
+   (он уже добавлен в DOM, computed-стили посчитаны браузером) и подменяем
+   спорные свойства на явные значения из getComputedStyle. */
+function flattenColors(root){
+  const props=['background-color','background-image','color','border-top-color','border-right-color','border-bottom-color','border-left-color','fill','stroke'];
+  [root,...root.querySelectorAll('*')].forEach(el=>{
+    if(el.tagName==='IMG'||el.tagName==='BR')return;
+    let cs;try{cs=getComputedStyle(el);}catch(e){return;}
+    props.forEach(p=>{
+      let v=cs.getPropertyValue(p);
+      if(!v||v==='none'||v==='transparent')return;
+      // color-mix может остаться unresolved в computed — тогда берём фолбэк
+      if(/color-mix|var\(/.test(v)){
+        v = p==='background-image' ? 'none' : (p==='background-color' ? 'rgba(0,0,0,0)' : '#000');
+        if(p==='background-color'&&el.classList.contains('price-note'))v='rgb(236,225,232)';
+      }
+      try{el.style.setProperty(p,v,'important');}catch(e){}
+    });
+    // для градиентного фона карточки computed уже содержит resolved rgb()-значения
+    if(el===root&&/gradient/.test(cs.backgroundImage)){
+      el.style.setProperty('background',cs.backgroundColor+' '+cs.backgroundImage,'important');
+    }
+  });
+}
+
 async function downloadCard(id){
   const node=document.getElementById('card-'+id);
   if(!node)return;
   if(typeof window.htmlToImage==='undefined'){alert('Библиотека экспорта ещё грузится, попробуйте через секунду.');return;}
   try{
-    // рендерим копию карточки фиксированного размера 1080x1080 вне страницы:
-    // без overflow-hidden/clamp — маскот, цена и весь текст попадают на PNG целиком
+    // Рендерим копию карточки фиксированного размера 1080x1080 вне страницы.
+    // ВАЖНО: html-to-image не умеет вычислять color-mix()/CSS-переменные для
+    // inline-стилей клона — фон градиента и плашка абонемента терялись в PNG.
+    // Поэтому перед съёмкой «замораживаем» все computed-цвета в явные rgb().
     const clone=node.cloneNode(true);
-    clone.style.cssText+=';width:'+EXPORT_SIZE+'px;height:'+EXPORT_SIZE+'px;overflow:visible;border-radius:0;box-shadow:none;background:#ffffff;';
+    clone.style.cssText+=';width:'+EXPORT_SIZE+'px;height:'+EXPORT_SIZE+'px;overflow:visible;border-radius:0;box-shadow:none;';
     clone.querySelectorAll('*').forEach(el=>{el.style.webkitLineClamp='unset';el.style.lineClamp='unset';});
     const stage=document.createElement('div');
-    stage.style.cssText='position:fixed;left:-99999px;top:0;width:'+EXPORT_SIZE+'px;height:'+EXPORT_SIZE+'px;overflow:visible;';
+    stage.style.cssText='position:fixed;left:-99999px;top:0;width:'+EXPORT_SIZE+'px;height:'+EXPORT_SIZE+'px;overflow:visible;pointer-events:none;';
     stage.appendChild(clone);
     document.body.appendChild(stage);
     if(document.fonts&&document.fonts.ready){try{await document.fonts.ready;}catch(e){}}
+    await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
+    flattenColors(clone); // computed-цвета -> явные значения (градиент фона, плашка цены)
     await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
     let url;
     try{
