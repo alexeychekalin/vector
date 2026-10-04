@@ -143,6 +143,10 @@ body{
   font-size:calc(9px + 1cqw);color:var(--accent-ink);font-weight:600;text-align:right;max-width:46%;
   background:color-mix(in srgb,var(--accent) 45%,#fff);border-radius:14px;padding:.6em .9em;
 }
+/* цены абонемента не разрываются по строкам («25 \n 200 ₽»): неразрывные пробелы + nowrap на строку */
+.price-note span{white-space:nowrap;}
+/* 3 строки абонемента (нейропсихология) — компактнее, чтобы влезали без переносов */
+.price-note.three-lines{font-size:calc(8px + .9cqw);padding:.5em .75em;}
 @supports not (background:color-mix(red,blue)){.price-note{background:var(--accent);}}
 
 /* категории */
@@ -172,6 +176,17 @@ body{
    title  — продающий заголовок (≤250 симв.)
    desc   — продающее описание  (≤1500 симв.)
 */
+const NBSP='\u00A0';
+
+/* Блок абонемента: каждая строка — отдельный nowrap-блок, пробелы внутри чисел неразрывные.
+   Числа («25 200 ₽») больше не разрываются пополам на узких колонках */
+function formatNote(note){
+  return note.split('\n').map(line=>{
+    const safe=line.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    return `<span>${safe.replace(/ /g,NBSP)}</span>`;
+  }).join('<br>');
+}
+
 const CARDS = [
 {id:'logo-vektor-rechi', mascot:'compass', cat:'c-logo', chip:'Логопедия', name:'Кружок «Вектор речи»',
  price:'от 2 900 ₽', note:'Абонемент 8 — 25 200 ₽\nАбонемент 12 — 34 800 ₽',
@@ -300,7 +315,7 @@ CARDS.forEach((c,i)=>{
           <span class="price-from">${c.name}</span>
           <span class="price-num">${c.price}</span>
         </div>
-        <div class="price-note">${c.note.replace(/\n/g,'<br>')}</div>
+        <div class="price-note${c.note.split('\n').length>2?' three-lines':''}">${formatNote(c.note)}</div>
       </div>
     </div>
     <div class="slot-meta">
