@@ -126,8 +126,9 @@ body{
 
 .card-desc{
   margin-top:calc(8px + 1.4cqw);position:relative;z-index:2;
-  font-size:calc(10px + 1.15cqw);line-height:1.5;color:var(--muted);
-  display:-webkit-box;-webkit-line-clamp:5;line-clamp:5;-webkit-box-orient:vertical;overflow:hidden;
+  /* без обрезки: шрифт уменьшается под объём текста, чтобы всё влезало в квадрат */
+  font-size:min(calc(10px + 1.15cqw), calc(6075cqw / max(var(--desc-len, 700), var(--desc-w, 950))));
+  line-height:1.5;color:var(--muted);
 }
 
 .card-price{
@@ -308,18 +309,40 @@ CARDS.forEach((c,i)=>{
         <button data-id="${c.id}">⬇ PNG</button>
       </span>
     </div>`;
+  const cardEl=slot.querySelector('.ad-card');
+  if(cardEl&&c.desc){
+    cardEl.style.setProperty('--desc-len',c.desc.length);
+    cardEl.style.setProperty('--desc-w',[...c.desc].reduce((s,ch)=>s+(ch===ch.toUpperCase()&&ch!==ch.toLowerCase()||/[0-9«»—№]/.test(ch)?1.35:1),0).toFixed(0));
+  }
   grid.appendChild(slot);
 });
 
 /* ===== PNG-экспорт: карточка сохраняется как есть (html-to-image) ===== */
+const EXPORT_SIZE=1080;
 async function downloadCard(id){
   const node=document.getElementById('card-'+id);
   if(!node)return;
   if(typeof window.htmlToImage==='undefined'){alert('Библиотека экспорта ещё грузится, попробуйте через секунду.');return;}
   try{
-    const blob=await htmlToImage.toPng(node,{pixelRatio:1080/node.offsetWidth,width:1080,height:1080,backgroundColor:null});
+    // рендерим копию карточки фиксированного размера 1080x1080 вне страницы:
+    // без overflow-hidden/clamp — маскот, цена и весь текст попадают на PNG целиком
+    const clone=node.cloneNode(true);
+    clone.style.cssText+=';width:'+EXPORT_SIZE+'px;height:'+EXPORT_SIZE+'px;overflow:visible;border-radius:0;box-shadow:none;background:#ffffff;';
+    clone.querySelectorAll('*').forEach(el=>{el.style.webkitLineClamp='unset';el.style.lineClamp='unset';});
+    const stage=document.createElement('div');
+    stage.style.cssText='position:fixed;left:-99999px;top:0;width:'+EXPORT_SIZE+'px;height:'+EXPORT_SIZE+'px;overflow:visible;';
+    stage.appendChild(clone);
+    document.body.appendChild(stage);
+    if(document.fonts&&document.fonts.ready){try{await document.fonts.ready;}catch(e){}}
+    await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
+    let url;
+    try{
+      url=await htmlToImage.toPng(clone,{width:EXPORT_SIZE,height:EXPORT_SIZE,pixelRatio:1,backgroundColor:'#ffffff',cacheBust:true});
+    }finally{
+      stage.remove();
+    }
     const a=document.createElement('a');
-    a.download=id+'.png';a.href=blob;a.click();
+    a.download=id+'.png';a.href=url;a.click();
   }catch(err){
     console.error('export failed:',err);
     alert('Не удалось сохранить карточку «'+id+'». Обновите страницу и попробуйте ещё раз.');
