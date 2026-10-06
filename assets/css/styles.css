@@ -681,20 +681,13 @@ h1,h2,h3,h4,.font-display { font-family: 'Evolventa','Nunito',sans-serif; }
   display:flex; align-items:center; gap:.5rem;
   padding:.5rem .7rem; border-radius:.75rem; background:var(--cat-tint);
 }
-.pc-list__cnt{ font-weight:600; color:var(--ink); font-size:.82rem; flex:1; min-width:52%; }
-.pc-list__sum{ font-family:'Evolventa','Nunito',sans-serif; font-weight:600; color:var(--ink); font-size:.9rem; text-align:right; line-height:1.5; white-space:normal; }
-/* Цена «без скидки» — приглушённая, с зачёркиванием */
-.pc-old{ color:var(--muted); text-decoration:line-through; font-weight:500; }
-/* Цена со скидкой — акцент категории */
-.pc-new{ color:var(--cat-accent, var(--cat-color)); }
-.pc-sep{ color:var(--muted); font-weight:400; margin:0 .15rem; }
-/* Сноска про скидку в день диагностики */
-.pc-note{
-  display:flex; align-items:flex-start; gap:.4rem;
-  margin-top:.6rem; font-size:.72rem; line-height:1.45; color:var(--muted);
+.pc-list__cnt{ font-weight:600; color:var(--ink); font-size:.82rem; flex:1; }
+.pc-list__sum{ font-family:'Evolventa','Nunito',sans-serif; font-weight:600; color:var(--ink); font-size:.9rem; }
+.pc-badge{
+  display:inline-block; padding:.15rem .5rem; border-radius:999px;
+  background: var(--cat-color); color:#fff;
+  font-size:.68rem; font-weight:700; letter-spacing:.02em; white-space:nowrap;
 }
-.pc-note svg{ flex-shrink:0; margin-top:.1rem; }
-@media (min-width:640px){ .pc-note{ font-size:.76rem; } }
 /* Таблица полных цен всегда открыта (без details/summary) */
 .pc-details{ margin-bottom:.25rem; }
 .pc-details__title{

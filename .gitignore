@@ -1,2 +1,5 @@
-# Build output
-build/build/node_modules/
+# Build artifacts and dependencies
+build/
+
+# Node.js dependency directories (if present at root or other locations)
+node_modules/
