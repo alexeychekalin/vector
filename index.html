@@ -340,37 +340,45 @@
         <h2 class="reveal-title font-display font-600 text-3xl sm:text-4xl lg:text-5xl text-ink leading-tight mb-4">
           Если вы узнали хотя бы один пункт — это повод действовать
         </h2>
-        <p class="text-lg text-muted">Каждая ситуация — не «перерастёт», а задача, которую логопеды и нейропсихологи решают системно. Нажмите на карточку, чтобы увидеть подходящее направление.</p>
+        <p class="text-lg text-muted">Ни одна из этих ситуаций не «перерастёт» сама. Каждая — решаемая задача, и для неё есть своё направление. Нажмите на карточку — покажем, какой специалист и методика работают с ней.</p>
       </div>
 
-      <div class="pain-grid stagger grid md:grid-cols-2 gap-5" role="list">
+      <div class="pain-grid stagger grid sm:grid-cols-2 lg:grid-cols-3 gap-5" role="list">
 
-        <button type="button" class="pain-card card p-6 text-left transition-transform hover:-translate-y-1" data-pain-target="#services" role="listitem">
-          <span class="icon-badge bg-rose-soft text-berry mb-4" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-chat"></use></svg></span>
-          <h3 class="font-display font-600 text-xl text-ink mb-2">Ребёнок молчит или говорит мало в 2–3 года</h3>
-          <p class="text-muted text-sm mb-3 flex-1">Нет фраз, слова повторяются с трудом, «свой язык» вместо речи.</p>
-          <span class="pain-more inline-flex items-center gap-2 text-berry font-600 text-sm">Как запускаем речь <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
+        <button type="button" class="pain-card" data-pain-target="#services" data-pain-service="Запуск речи у неговорящих" role="listitem">
+          <span class="pain-head"><span class="icon-badge bg-rose-soft text-berry" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-baby"></use></svg></span><h3>Молчит или говорит мало в 2–3 года</h3></span>
+          <p class="pain-desc">Нет фраз, отдельные слова появляются с трудом, «свой язык» вместо речи.</p>
+          <span class="pain-more inline-flex items-center gap-2 text-berry">Логопед: запуск речи <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
         </button>
 
-        <button type="button" class="pain-card card p-6 text-left transition-transform hover:-translate-y-1" data-pain-target="#services" role="listitem">
-          <span class="icon-badge bg-lavender text-berry-deep mb-4" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-mic"></use></svg></span>
-          <h3 class="font-display font-600 text-xl text-ink mb-2">Искажает звуки, «какает», шипит неправильно</h3>
-          <p class="text-muted text-sm mb-3 flex-1">Ребёнок понимает себя, но сверстники и воспитатели — нет; речь непонятна окружающим.</p>
-          <span class="pain-more inline-flex items-center gap-2 text-berry font-600 text-sm">Как ставим звуки <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
+        <button type="button" class="pain-card" data-pain-target="#services" data-pain-service="Занятие с логопедом" role="listitem">
+          <span class="pain-head"><span class="icon-badge bg-lavender text-berry-deep" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-mic"></use></svg></span><h3>Искажает звуки, «картавит», шипит неправильно</h3></span>
+          <p class="pain-desc">Ребёнок понимает себя, но окружающих речь непонятна; буква «Р» упорно не получается.</p>
+          <span class="pain-more inline-flex items-center gap-2 text-berry">Логопед: постановка звуков <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
         </button>
 
-        <button type="button" class="pain-card card p-6 text-left transition-transform hover:-translate-y-1" data-pain-target="#services" role="listitem">
-          <span class="icon-badge bg-sage-soft text-berry-deep mb-4" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-brain"></use></svg></span>
-          <h3 class="font-display font-600 text-xl text-ink mb-2">Быстро устаёт от занятий, не удерживает внимание</h3>
-          <p class="text-muted text-sm mb-3 flex-1">Не доводит задание до конца, отвлекается, отказывается «учиться».</p>
-          <span class="pain-more inline-flex items-center gap-2 text-berry font-600 text-sm">Как включаем мозг <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
+        <button type="button" class="pain-card" data-pain-target="#services" data-pain-service="Нейрокоррекция" role="listitem">
+          <span class="pain-head"><span class="icon-badge bg-sage-soft text-berry-deep" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-brain"></use></svg></span><h3>Быстро устаёт, не удерживает внимание</h3></span>
+          <p class="pain-desc">Не доводит задание до конца, отвлекается, отказывается заниматься через 10 минут.</p>
+          <span class="pain-more inline-flex items-center gap-2 text-berry">Нейропсихолог: включаем мозг <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
         </button>
 
-        <button type="button" class="pain-card card p-6 text-left transition-transform hover:-translate-y-1" data-pain-target="#services" role="listitem">
-          <span class="icon-badge bg-gold-2/60 text-berry-deep mb-4" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-cap"></use></svg></span>
-          <h3 class="font-display font-600 text-xl text-ink mb-2">Не готов к школе: путает буквы, сбивчиво пересказывает</h3>
-          <p class="text-muted text-sm mb-3 flex-1">Слабая связная речь и фонематический слух — прямые риски школьной неуспеваемости.</p>
-          <span class="pain-more inline-flex items-center gap-2 text-berry font-600 text-sm">Как готовим к школе <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
+        <button type="button" class="pain-card" data-pain-target="#services" data-pain-service="Занятие с дефектологом" role="listitem">
+          <span class="pain-head"><span class="icon-badge bg-sky-soft text-berry" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-puzzle"></use></svg></span><h3>Развитие идёт медленнее сверстников</h3></span>
+          <p class="pain-desc">Задержка речи и развития (ЗРР, ЗПРР), особенности сенсорной сферы — нужен особый маршрут.</p>
+          <span class="pain-more inline-flex items-center gap-2 text-berry">Дефектолог: особый маршрут <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
+        </button>
+
+        <button type="button" class="pain-card" data-pain-target="#services" data-pain-service="Занятие с логопедом" role="listitem">
+          <span class="pain-head"><span class="icon-badge bg-gold-2/60 text-berry-deep" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-cap"></use></svg></span><h3>Не готов к школе: путает буквы, сбивчиво пересказывает</h3></span>
+          <p class="pain-desc">Слабая связная речь и фонематический слух — прямые риски школьной неуспеваемости.</p>
+          <span class="pain-more inline-flex items-center gap-2 text-berry">Логопед + нейропсихолог: в школу уверенно <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
+        </button>
+
+        <button type="button" class="pain-card" data-pain-target="#services" data-pain-service="Логопедический массаж" role="listitem">
+          <span class="pain-head"><span class="icon-badge bg-rose-soft text-berry" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-hand-heart"></use></svg></span><h3>«Вялый» или напряжённый язык, текут слюни</h3></span>
+          <p class="pain-desc">Мышцы речевого аппарата слабые или в гипертонусе — звуки не получаются физически.</p>
+          <span class="pain-more inline-flex items-center gap-2 text-berry">Логомассаж: готовим аппарат <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
         </button>
 
       </div>

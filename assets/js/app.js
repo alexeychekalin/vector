@@ -591,18 +591,44 @@
   fit();
 })();
 
-/* ==================== «Знакомы ситуации?» — клик по карточке боли → к услугам ==================== */
+/* ==================== «Знакомы ситуации?» — клик по карточке боли → к нужной услуге ==================== */
 (function () {
   const cards = document.querySelectorAll('.pain-card[data-pain-target]');
   if (!cards.length) return;
+  const findServiceCard = (name) => {
+    if (!name) return null;
+    const wanted = name.trim().toLowerCase();
+    // 1) точное совпадение с кнопкой «Записаться» конкретной услуги
+    const bookBtn = Array.from(document.querySelectorAll('.service-book'))
+      .find((b) => (b.dataset.serviceBook || '').trim().toLowerCase() === wanted);
+    if (bookBtn) return bookBtn.closest('article') || null;
+    // 2) поиск по заголовку карточки услуги
+    const svcTitle = Array.from(document.querySelectorAll('#services article h3'))
+      .find((h) => h.textContent.trim().toLowerCase() === wanted);
+    if (svcTitle) return svcTitle.closest('article') || null;
+    // 3) частичное совпадение (например, «подготовка к школе»)
+    const partial = Array.from(document.querySelectorAll('#services article h3'))
+      .find((h) => h.textContent.toLowerCase().includes(wanted.slice(0, Math.min(wanted.length, 14))));
+    return partial ? (partial.closest('article') || null) : null;
+  };
+  let highlightTimer = null;
   cards.forEach((card) => {
     card.addEventListener('click', () => {
       cards.forEach((c) => c.classList.remove('is-active'));
       card.classList.add('is-active');
       const target = document.querySelector(card.dataset.painTarget);
-      if (target) {
-        const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        target.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+      if (!target) return;
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      target.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+      const svcCard = findServiceCard(card.dataset.painService);
+      if (svcCard) {
+        clearTimeout(highlightTimer);
+        document.querySelectorAll('.svc-highlight').forEach((el) => el.classList.remove('svc-highlight'));
+        // даём скроллу начаться, затем подсвечиваем нужную услугу
+        setTimeout(() => {
+          svcCard.classList.add('svc-highlight');
+          highlightTimer = setTimeout(() => svcCard.classList.remove('svc-highlight'), 3400);
+        }, reduce ? 0 : 500);
       }
     });
   });
