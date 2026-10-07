@@ -191,6 +191,7 @@
         </a>
 
         <nav class="site-nav hidden min-w-0 flex-1 items-center justify-center lg:flex" aria-label="Основная навигация">
+          <a href="#situations" class="nav-link font-600 text-ink hover:text-berry transition-colors">Ситуации</a>
           <a href="#services" class="nav-link font-600 text-ink hover:text-berry transition-colors">Услуги</a>
           <a href="#prices"   class="nav-link font-600 text-ink hover:text-berry transition-colors">Цены</a>
           <a href="#rooms"    class="nav-link font-600 text-ink hover:text-berry transition-colors">Зоны</a>
@@ -217,6 +218,7 @@
 
     <div id="mobileMenu" class="hidden-menu lg:hidden absolute inset-x-0 top-20 px-4">
       <nav class="mobile-nav glass p-6 flex flex-col gap-2" aria-label="Мобильная навигация">
+        <a href="#situations" class="mobile-link py-3 px-4 rounded-2xl font-600 text-ink hover:bg-white/60 transition-colors">Ситуации</a>
         <a href="#services" class="mobile-link py-3 px-4 rounded-2xl font-600 text-ink hover:bg-white/60 transition-colors">Услуги</a>
         <a href="#prices"   class="mobile-link py-3 px-4 rounded-2xl font-600 text-ink hover:bg-white/60 transition-colors">Цены</a>
         <a href="#rooms"    class="mobile-link py-3 px-4 rounded-2xl font-600 text-ink hover:bg-white/60 transition-colors">Зоны центра</a>
@@ -322,6 +324,63 @@
         </div>
 
       </div>
+    </div>
+  </section>
+
+  <!-- ==================== ЗНАКОМЫ СИТУАЦИИ? (боли) ==================== -->
+  <section id="situations" class="py-20 lg:py-28 relative overflow-hidden">
+    <div class="blob w-96 h-96 bg-rose top-10 -left-32 opacity-40 float-slow" data-parallax="0.1"></div>
+    <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8 relative">
+
+      <div class="mb-12 reveal text-center max-w-2xl mx-auto">
+        <span class="inline-flex items-center gap-2 py-2 px-4 rounded-full glass text-berry font-600 text-sm mb-4">
+          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-heart"></use></svg>
+          Знакомо?
+        </span>
+        <h2 class="reveal-title font-display font-600 text-3xl sm:text-4xl lg:text-5xl text-ink leading-tight mb-4">
+          Если вы узнали хотя бы один пункт — это повод действовать
+        </h2>
+        <p class="text-lg text-muted">Каждая ситуация — не «перерастёт», а задача, которую логопеды и нейропсихологи решают системно. Нажмите на карточку, чтобы увидеть подходящее направление.</p>
+      </div>
+
+      <div class="pain-grid stagger grid md:grid-cols-2 gap-5" role="list">
+
+        <button type="button" class="pain-card card p-6 text-left transition-transform hover:-translate-y-1" data-pain-target="#services" role="listitem">
+          <span class="icon-badge bg-rose-soft text-berry mb-4" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-chat"></use></svg></span>
+          <h3 class="font-display font-600 text-xl text-ink mb-2">Ребёнок молчит или говорит мало в 2–3 года</h3>
+          <p class="text-muted text-sm mb-3 flex-1">Нет фраз, слова повторяются с трудом, «свой язык» вместо речи.</p>
+          <span class="pain-more inline-flex items-center gap-2 text-berry font-600 text-sm">Как запускаем речь <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
+        </button>
+
+        <button type="button" class="pain-card card p-6 text-left transition-transform hover:-translate-y-1" data-pain-target="#services" role="listitem">
+          <span class="icon-badge bg-lavender text-berry-deep mb-4" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-mic"></use></svg></span>
+          <h3 class="font-display font-600 text-xl text-ink mb-2">Искажает звуки, «какает», шипит неправильно</h3>
+          <p class="text-muted text-sm mb-3 flex-1">Ребёнок понимает себя, но сверстники и воспитатели — нет; речь непонятна окружающим.</p>
+          <span class="pain-more inline-flex items-center gap-2 text-berry font-600 text-sm">Как ставим звуки <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
+        </button>
+
+        <button type="button" class="pain-card card p-6 text-left transition-transform hover:-translate-y-1" data-pain-target="#services" role="listitem">
+          <span class="icon-badge bg-sage-soft text-berry-deep mb-4" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-brain"></use></svg></span>
+          <h3 class="font-display font-600 text-xl text-ink mb-2">Быстро устаёт от занятий, не удерживает внимание</h3>
+          <p class="text-muted text-sm mb-3 flex-1">Не доводит задание до конца, отвлекается, отказывается «учиться».</p>
+          <span class="pain-more inline-flex items-center gap-2 text-berry font-600 text-sm">Как включаем мозг <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
+        </button>
+
+        <button type="button" class="pain-card card p-6 text-left transition-transform hover:-translate-y-1" data-pain-target="#services" role="listitem">
+          <span class="icon-badge bg-gold-2/60 text-berry-deep mb-4" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-cap"></use></svg></span>
+          <h3 class="font-display font-600 text-xl text-ink mb-2">Не готов к школе: путает буквы, сбивчиво пересказывает</h3>
+          <p class="text-muted text-sm mb-3 flex-1">Слабая связная речь и фонематический слух — прямые риски школьной неуспеваемости.</p>
+          <span class="pain-more inline-flex items-center gap-2 text-berry font-600 text-sm">Как готовим к школе <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
+        </button>
+
+      </div>
+
+      <div class="mt-10 reveal flex justify-center">
+        <a href="#process" class="btn btn-glass btn-lg magnetic">
+          Как проходит работа — 4 шага <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+        </a>
+      </div>
+
     </div>
   </section>
 
@@ -454,325 +513,6 @@
         </div>
       </div>
 
-    </div>
-  </section>
-
-  <!-- ==================== ЦЕНЫ ==================== -->
-  <section id="prices" class="py-20 lg:py-28 relative overflow-hidden has-pattern pattern-pink">
-    <div class="blob w-96 h-96 bg-sage -top-16 -left-28 opacity-30 float-slow" data-parallax="0.12"></div>
-    <div class="blob w-80 h-80 bg-rose bottom-10 -right-28 opacity-30 float-mid" data-parallax="0.1"></div>
-    <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8 relative">
-
-      <div class="max-w-2xl mb-14 reveal">
-        <span class="inline-flex items-center gap-2 py-2 px-4 rounded-full glass text-berry font-600 text-sm mb-4">
-          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-tag"></use></svg>
-          Цены
-        </span>
-        <h2 class="font-display font-600 text-3xl sm:text-4xl lg:text-5xl text-ink leading-tight mb-4">
-          Прозрачные цены на все направления
-        </h2>
-      </div>
-
-      <!-- Баннер диагностики -->
-      <div class="diag-banner reveal ring-gold mb-10">
-        <div class="blob w-56 h-56 bg-gold-2 -top-16 -right-10 opacity-25 float-slow"></div>
-        <div class="relative banner-grid items-center">
-          <span class="icon-badge icon-badge--lg bg-white/15 text-gold-2 shrink-0" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-gift"></use></svg></span>
-          <div>
-            <h3 class="font-display font-600 text-2xl text-white mb-1">Диагностика — от 3 000 ₽</h3>
-            <p class="text-rose-soft/90">Логопеда и дефектолога — 3 000 ₽, нейропсихолога — 5 000 ₽. Комплексная оценка речи и развития с планом занятий. При покупке абонемента в день диагностики — 5% скидка на каждый абонемент и сохранение скидки до конца срока коррекции.</p>
-          </div>
-          <a href="#booking" class="btn btn-gold btn-lg magnetic whitespace-nowrap justify-self-start md:justify-self-end">Записаться на диагностику</a>
-        </div>
-      </div>
-
-      <!-- Табы категорий -->
-      <div class="price-tabs reveal" role="tablist" aria-label="Категории услуг">
-        <button type="button" role="tab" id="ptab-sage" class="price-tab is-active" aria-selected="true" aria-controls="ppanel-sage" data-price-tab="sage">
-          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-mic"></use></svg>Логопедия<span class="price-tab__n">5</span>
-        </button>
-        <button type="button" role="tab" id="ptab-pink" class="price-tab" aria-selected="false" aria-controls="ppanel-pink" data-price-tab="pink" tabindex="-1">
-          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-puzzle"></use></svg>Дефектология<span class="price-tab__n">1</span>
-        </button>
-        <button type="button" role="tab" id="ptab-lavender" class="price-tab" aria-selected="false" aria-controls="ppanel-lavender" data-price-tab="lavender" tabindex="-1">
-          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-brain"></use></svg>Нейропсихология<span class="price-tab__n">2</span>
-        </button>
-        <button type="button" role="tab" id="ptab-beige" class="price-tab" aria-selected="false" aria-controls="ppanel-beige" data-price-tab="beige" tabindex="-1">
-          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-cap"></use></svg>Подготовка к школе<span class="price-tab__n">2</span>
-        </button>
-        <button type="button" role="tab" id="ptab-berry" class="price-tab" aria-selected="false" aria-controls="ppanel-berry" data-price-tab="berry" tabindex="-1">
-          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-sparkle"></use></svg>Комплексно<span class="price-tab__n">2</span>
-        </button>
-      </div>
-
-      <!-- Панели категорий: compact-карточки -->
-      <div class="price-panels">
-      <div class="price-panel price-cat--sage is-active reveal" id="ppanel-sage" role="tabpanel" aria-labelledby="ptab-sage" data-price-panel="sage">
-        <div class="price-cat__grid">
-          <article class="price-card price-card--sage pc-compact tilt">
-            <div class="pc-compact__top">
-              <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-mic"></use></svg></span>
-              <div>
-                <h4 class="font-display font-600 text-lg text-ink leading-tight">Занятия с логопедом</h4>
-                <p class="text-sm price-card__kruzhok">Кружок «Вектор речи»</p>
-              </div>
-            </div>
-            <p class="text-muted text-sm mb-4">Постановка и автоматизация звуков, развитие связной речи</p>
-            <div class="pc-compact__price"><span class="pc-big">от 2 945&nbsp;₽</span><span class="pc-per">за занятие по абонементу</span></div>
-            <table class="pc-table">
-              <thead><tr><th scope="col">Занятий</th><th scope="col">1 занятие</th><th scope="col">Абонемент</th></tr></thead>
-              <tbody>
-                <tr><td>8</td><td>3 350&nbsp;₽</td><td>26 800&nbsp;₽</td></tr>
-                <tr><td>12</td><td>3 100&nbsp;₽</td><td>37 200&nbsp;₽</td></tr>
-              </tbody>
-            </table>
-            <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
-          </article>
-          <article class="price-card price-card--sage pc-compact tilt">
-            <div class="pc-compact__top">
-              <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-crown"></use></svg></span>
-              <div>
-                <h4 class="font-display font-600 text-lg text-ink leading-tight">Миологопедические занятия</h4>
-                <p class="text-sm price-card__kruzhok">Кружок «Золотое сечение»</p>
-              </div>
-            </div>
-            <p class="text-muted text-sm mb-4">Миостимуляция и мягкие мануальные техники для коррекции звукопроизношения</p>
-            <div class="pc-compact__price"><span class="pc-big">от 2 945&nbsp;₽</span><span class="pc-per">за занятие по абонементу</span></div>
-            <table class="pc-table">
-              <thead><tr><th scope="col">Занятий</th><th scope="col">1 занятие</th><th scope="col">Абонемент</th></tr></thead>
-              <tbody>
-                <tr><td>8</td><td>3 350&nbsp;₽</td><td>26 800&nbsp;₽</td></tr>
-                <tr><td>12</td><td>3 100&nbsp;₽</td><td>37 200&nbsp;₽</td></tr>
-              </tbody>
-            </table>
-            <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
-          </article>
-          <article class="price-card price-card--sage pc-compact tilt">
-            <div class="pc-compact__top">
-              <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-baby"></use></svg></span>
-              <div>
-                <h4 class="font-display font-600 text-lg text-ink leading-tight">Запуск речи · индивидуально</h4>
-                <p class="text-sm price-card__kruzhok">Кружок «Лёгкий старт»</p>
-              </div>
-            </div>
-            <p class="text-muted text-sm mb-4">Первые слова у неговорящих детей — один на один с педагогом</p>
-            <div class="pc-compact__price"><span class="pc-big">от 3 135&nbsp;₽</span><span class="pc-per">за занятие по абонементу</span></div>
-            <table class="pc-table">
-              <thead><tr><th scope="col">Занятий</th><th scope="col">1 занятие</th><th scope="col">Абонемент</th></tr></thead>
-              <tbody>
-                <tr><td>8</td><td>3 600&nbsp;₽</td><td>28 800&nbsp;₽</td></tr>
-                <tr><td>12</td><td>3 300&nbsp;₽</td><td>39 600&nbsp;₽</td></tr>
-              </tbody>
-            </table>
-            <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
-          </article>
-          <article class="price-card price-card--sage pc-compact tilt">
-            <div class="pc-compact__top">
-              <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-users"></use></svg></span>
-              <div>
-                <h4 class="font-display font-600 text-lg text-ink leading-tight">Запуск речи · мини-группа</h4>
-                <p class="text-sm price-card__kruzhok">Кружок «Лёгкий старт в команде»</p>
-              </div>
-            </div>
-            <p class="text-muted text-sm mb-4">Запуск речи в компании сверстников</p>
-            <div class="pc-compact__price"><span class="pc-big">от 2 945&nbsp;₽</span><span class="pc-per">за занятие по абонементу</span></div>
-            <table class="pc-table">
-              <thead><tr><th scope="col">Занятий</th><th scope="col">1 занятие</th><th scope="col">Абонемент</th></tr></thead>
-              <tbody>
-                <tr><td>8</td><td>3 400&nbsp;₽</td><td>27 200&nbsp;₽</td></tr>
-                <tr><td>12</td><td>3 100&nbsp;₽</td><td>37 200&nbsp;₽</td></tr>
-              </tbody>
-            </table>
-            <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
-          </article>
-          <article class="price-card price-card--sage pc-compact tilt">
-            <div class="pc-compact__top">
-              <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-hand-heart"></use></svg></span>
-              <div>
-                <h4 class="font-display font-600 text-lg text-ink leading-tight">Логомассаж</h4>
-                <p class="text-sm price-card__kruzhok">Кружок «Нежный звук»</p>
-              </div>
-            </div>
-            <p class="text-muted text-sm mb-4">Подготовка мышц речевого аппарата при нарушениях тонуса</p>
-            <div class="pc-compact__price"><span class="pc-big">от 22 040&nbsp;₽</span><span class="pc-per">только по абонементу</span></div>
-            <table class="pc-table">
-              <thead><tr><th scope="col">Занятий</th><th scope="col">Абонемент</th></tr></thead>
-              <tbody>
-                <tr><td>10</td><td>23 200&nbsp;₽</td></tr>
-                <tr><td>15</td><td>31 600&nbsp;₽</td></tr>
-              </tbody>
-            </table>
-            <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
-          </article>
-        </div>
-      </div>
-      <div class="price-panel price-cat--pink reveal" id="ppanel-pink" role="tabpanel" aria-labelledby="ptab-pink" data-price-panel="pink" hidden>
-        <div class="price-cat__grid">
-          <article class="price-card price-card--pink pc-compact tilt">
-            <div class="pc-compact__top">
-              <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-puzzle"></use></svg></span>
-              <div>
-                <h4 class="font-display font-600 text-lg text-ink leading-tight">Занятия с дефектологом</h4>
-                <p class="text-sm price-card__kruzhok">Кружок «Вектор познания»</p>
-              </div>
-            </div>
-            <p class="text-muted text-sm mb-4">Работа с ЗРР, ЗПРР, РАС и другими особенностями развития</p>
-            <div class="pc-compact__price"><span class="pc-big">от 3 420&nbsp;₽</span><span class="pc-per">за занятие по абонементу</span></div>
-            <table class="pc-table">
-              <thead><tr><th scope="col">Занятий</th><th scope="col">1 занятие</th><th scope="col">Абонемент</th></tr></thead>
-              <tbody>
-                <tr><td>8</td><td>4 000&nbsp;₽</td><td>32 000&nbsp;₽</td></tr>
-                <tr><td>12</td><td>3 600&nbsp;₽</td><td>43 200&nbsp;₽</td></tr>
-              </tbody>
-            </table>
-            <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
-          </article>
-        </div>
-      </div>
-      <div class="price-panel price-cat--lavender reveal" id="ppanel-lavender" role="tabpanel" aria-labelledby="ptab-lavender" data-price-panel="lavender" hidden>
-        <div class="price-cat__grid">
-          <article class="price-card price-card--lavender pc-compact tilt">
-            <div class="pc-compact__top">
-              <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-brain"></use></svg></span>
-              <div>
-                <h4 class="font-display font-600 text-lg text-ink leading-tight">Индивидуальные занятия</h4>
-                <p class="text-sm price-card__kruzhok">Кружок «Нейроинтеллект»</p>
-              </div>
-            </div>
-            <p class="text-muted text-sm mb-4">Внимание, память, саморегуляция — база для речи и учёбы</p>
-            <div class="pc-compact__price"><span class="pc-big">от 3 230&nbsp;₽</span><span class="pc-per">за занятие по абонементу</span></div>
-            <table class="pc-table">
-              <thead><tr><th scope="col">Занятий</th><th scope="col">1 занятие</th><th scope="col">Абонемент</th></tr></thead>
-              <tbody>
-                <tr><td>4</td><td>4 450&nbsp;₽</td><td>17 800&nbsp;₽</td></tr>
-                <tr><td>8</td><td>4 000&nbsp;₽</td><td>32 000&nbsp;₽</td></tr>
-                <tr><td>12</td><td>3 400&nbsp;₽</td><td>40 800&nbsp;₽</td></tr>
-              </tbody>
-            </table>
-            <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
-          </article>
-          <article class="price-card price-card--lavender pc-compact tilt">
-            <div class="pc-compact__top">
-              <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-users"></use></svg></span>
-              <div>
-                <h4 class="font-display font-600 text-lg text-ink leading-tight">Занятия в мини-группе</h4>
-                <p class="text-sm price-card__kruzhok">Кружок «Нейроинтеллект в команде»</p>
-              </div>
-            </div>
-            <p class="text-muted text-sm mb-4">Нейроразвитие в компании сверстников</p>
-            <div class="pc-compact__price"><span class="pc-big">от 2 755&nbsp;₽</span><span class="pc-per">за занятие по абонементу</span></div>
-            <table class="pc-table">
-              <thead><tr><th scope="col">Занятий</th><th scope="col">1 занятие</th><th scope="col">Абонемент</th></tr></thead>
-              <tbody>
-                <tr><td>4</td><td>3 300&nbsp;₽</td><td>13 200&nbsp;₽</td></tr>
-                <tr><td>8</td><td>2 900&nbsp;₽</td><td>23 200&nbsp;₽</td></tr>
-              </tbody>
-            </table>
-            <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
-          </article>
-        </div>
-      </div>
-      <div class="price-panel price-cat--beige reveal" id="ppanel-beige" role="tabpanel" aria-labelledby="ptab-beige" data-price-panel="beige" hidden>
-        <div class="price-cat__grid">
-          <article class="price-card price-card--beige pc-compact tilt">
-            <div class="pc-compact__top">
-              <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-cap"></use></svg></span>
-              <div>
-                <h4 class="font-display font-600 text-lg text-ink leading-tight">Индивидуальные занятия</h4>
-                <p class="text-sm price-card__kruzhok">Кружок «Золотой стандарт»</p>
-              </div>
-            </div>
-            <p class="text-muted text-sm mb-4">Чтение, счёт, связная речь и усидчивость — уверенный старт в 1 классе</p>
-            <div class="pc-compact__price"><span class="pc-big">от 2 850&nbsp;₽</span><span class="pc-per">за занятие по абонементу</span></div>
-            <table class="pc-table">
-              <thead><tr><th scope="col">Занятий</th><th scope="col">1 занятие</th><th scope="col">Абонемент</th></tr></thead>
-              <tbody>
-                <tr><td>8</td><td>3 250&nbsp;₽</td><td>26 000&nbsp;₽</td></tr>
-                <tr><td>12</td><td>3 000&nbsp;₽</td><td>36 000&nbsp;₽</td></tr>
-              </tbody>
-            </table>
-            <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
-          </article>
-          <article class="price-card price-card--beige pc-compact tilt">
-            <div class="pc-compact__top">
-              <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-users"></use></svg></span>
-              <div>
-                <h4 class="font-display font-600 text-lg text-ink leading-tight">Занятия в мини-группе (6–7 лет)</h4>
-                <p class="text-sm price-card__kruzhok">Кружок «Золотой стандарт в команде»</p>
-              </div>
-            </div>
-            <p class="text-muted text-sm mb-4">Подготовка к школе в малой группе</p>
-            <div class="pc-compact__price"><span class="pc-big">от 2 565&nbsp;₽</span><span class="pc-per">за занятие по абонементу</span></div>
-            <table class="pc-table">
-              <thead><tr><th scope="col">Занятий</th><th scope="col">1 занятие</th><th scope="col">Абонемент</th></tr></thead>
-              <tbody>
-                <tr><td>8</td><td>2 700&nbsp;₽</td><td>21 600&nbsp;₽</td></tr>
-              </tbody>
-            </table>
-            <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
-          </article>
-        </div>
-      </div>
-      <div class="price-panel price-cat--berry reveal" id="ppanel-berry" role="tabpanel" aria-labelledby="ptab-berry" data-price-panel="berry" hidden>
-        <div class="price-cat__grid">
-          <article class="price-card price-card--berry pc-compact tilt">
-            <div class="pc-compact__top">
-              <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-sparkle"></use></svg></span>
-              <div>
-                <h4 class="font-display font-600 text-lg text-ink leading-tight">Комплексное развитие 2+</h4>
-                <p class="text-sm price-card__kruzhok">Кружок «Вектор открытий»</p>
-              </div>
-            </div>
-            <p class="text-muted text-sm mb-4">Гармоничное развитие для малышей от 2 лет</p>
-            <div class="pc-compact__price"><span class="pc-big">от 1 805&nbsp;₽</span><span class="pc-per">за занятие по абонементу</span></div>
-            <table class="pc-table">
-              <thead><tr><th scope="col">Занятий</th><th scope="col">1 занятие</th><th scope="col">Абонемент</th></tr></thead>
-              <tbody>
-                <tr><td>4</td><td>2 100&nbsp;₽</td><td>8 400&nbsp;₽</td></tr>
-                <tr><td>8</td><td>1 900&nbsp;₽</td><td>15 200&nbsp;₽</td></tr>
-              </tbody>
-            </table>
-            <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
-          </article>
-<article class="price-card price-card--diag pc-compact tilt">
-            <div class="pc-compact__top">
-              <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-list"></use></svg></span>
-              <div>
-                <h4 class="font-display font-600 text-lg text-ink leading-tight">Диагностика</h4>
-                <p class="text-sm price-card__kruzhok">Первичное обследование</p>
-              </div>
-            </div>
-            <p class="text-muted text-sm mb-4">Оценка речи и развития с понятным планом занятий. Нейродиагностика — расширенная оценка высших психических функций.</p>
-            <div class="pc-compact__price"><span class="pc-big">от 3 000&nbsp;₽</span><span class="pc-per">за обследование</span></div>
-            <ul class="pc-list">
-              <li><span class="pc-list__cnt">Логопед / дефектолог</span><span class="pc-list__sum">3 000&nbsp;₽</span></li>
-              <li><span class="pc-list__cnt">Нейропсихолог</span><span class="pc-list__sum">5 000&nbsp;₽</span></li>
-            </ul>
-            <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
-          </article>
-        </div>
-      </div>
-      </div>
-
-      <!-- Скидка при покупке абонемента в день диагностики -->
-      <p class="pc-discount-note reveal mt-6">
-        <svg class="icon icon-sm" aria-hidden="true"><use href="#i-clock"></use></svg>
-        Цены со скидкой действуют при покупке абонемента в день диагностики.
-      </p>
-
-      <!-- Пакет «1+1» -->
-      <div class="diag-banner ring-gold reveal mt-8 text-white">
-        <div class="blob w-56 h-56 bg-gold-2 -top-16 -right-10 opacity-25 float-slow"></div>
-        <div class="relative flex items-start sm:items-center gap-4 sm:gap-6">
-          <span class="icon-badge bg-white/15 text-gold-2 shrink-0" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-heart"></use></svg></span>
-          <div>
-            <h3 class="font-display font-600 text-xl sm:text-2xl mb-1">Пакет «1+1» — дополнительная скидка 7%</h3>
-            <p class="text-rose-soft/90 text-sm sm:text-base">Оформите два абонемента одновременно — например, логопеда и нейропсихолога, — и получите дополнительные 7% скидки на каждый из них.</p>
-          </div>
-        </div>
-      </div>
-
-      <p class="text-sm text-muted mt-8 reveal text-center">Цены указаны в рублях. Точную стоимость и удобный график уточняйте у администратора.</p>
     </div>
   </section>
 
@@ -1391,7 +1131,328 @@
     </div>
   </section>
 
-  <!-- ==================== ЗАПИСЬ / КОНТАКТЫ ==================== -->
+  
+
+  <!-- ==================== ЦЕНЫ ==================== -->
+  <section id="prices" class="py-20 lg:py-28 relative overflow-hidden has-pattern pattern-pink">
+    <div class="blob w-96 h-96 bg-sage -top-16 -left-28 opacity-30 float-slow" data-parallax="0.12"></div>
+    <div class="blob w-80 h-80 bg-rose bottom-10 -right-28 opacity-30 float-mid" data-parallax="0.1"></div>
+    <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8 relative">
+
+      <div class="max-w-2xl mb-14 reveal">
+        <span class="inline-flex items-center gap-2 py-2 px-4 rounded-full glass text-berry font-600 text-sm mb-4">
+          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-tag"></use></svg>
+          Цены
+        </span>
+        <h2 class="font-display font-600 text-3xl sm:text-4xl lg:text-5xl text-ink leading-tight mb-4">
+          Прозрачные цены на все направления
+        </h2>
+      </div>
+
+      <!-- Баннер диагностики -->
+      <div class="diag-banner reveal ring-gold mb-10">
+        <div class="blob w-56 h-56 bg-gold-2 -top-16 -right-10 opacity-25 float-slow"></div>
+        <div class="relative banner-grid items-center">
+          <span class="icon-badge icon-badge--lg bg-white/15 text-gold-2 shrink-0" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-gift"></use></svg></span>
+          <div>
+            <h3 class="font-display font-600 text-2xl text-white mb-1">Диагностика — от 3 000 ₽</h3>
+            <p class="text-rose-soft/90">Логопеда и дефектолога — 3 000 ₽, нейропсихолога — 5 000 ₽. Комплексная оценка речи и развития с планом занятий. При покупке абонемента в день диагностики — 5% скидка на каждый абонемент и сохранение скидки до конца срока коррекции.</p>
+          </div>
+          <a href="#booking" class="btn btn-gold btn-lg magnetic whitespace-nowrap justify-self-start md:justify-self-end">Записаться на диагностику</a>
+        </div>
+      </div>
+
+      <!-- Табы категорий -->
+      <div class="price-tabs reveal" role="tablist" aria-label="Категории услуг">
+        <button type="button" role="tab" id="ptab-sage" class="price-tab is-active" aria-selected="true" aria-controls="ppanel-sage" data-price-tab="sage">
+          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-mic"></use></svg>Логопедия<span class="price-tab__n">5</span>
+        </button>
+        <button type="button" role="tab" id="ptab-pink" class="price-tab" aria-selected="false" aria-controls="ppanel-pink" data-price-tab="pink" tabindex="-1">
+          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-puzzle"></use></svg>Дефектология<span class="price-tab__n">1</span>
+        </button>
+        <button type="button" role="tab" id="ptab-lavender" class="price-tab" aria-selected="false" aria-controls="ppanel-lavender" data-price-tab="lavender" tabindex="-1">
+          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-brain"></use></svg>Нейропсихология<span class="price-tab__n">2</span>
+        </button>
+        <button type="button" role="tab" id="ptab-beige" class="price-tab" aria-selected="false" aria-controls="ppanel-beige" data-price-tab="beige" tabindex="-1">
+          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-cap"></use></svg>Подготовка к школе<span class="price-tab__n">2</span>
+        </button>
+        <button type="button" role="tab" id="ptab-berry" class="price-tab" aria-selected="false" aria-controls="ppanel-berry" data-price-tab="berry" tabindex="-1">
+          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-sparkle"></use></svg>Комплексно<span class="price-tab__n">2</span>
+        </button>
+      </div>
+
+      <!-- Панели категорий: compact-карточки -->
+      <div class="price-panels">
+      <div class="price-panel price-cat--sage is-active reveal" id="ppanel-sage" role="tabpanel" aria-labelledby="ptab-sage" data-price-panel="sage">
+        <div class="price-cat__grid">
+          <article class="price-card price-card--sage pc-compact tilt">
+            <div class="pc-compact__top">
+              <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-mic"></use></svg></span>
+              <div>
+                <h4 class="font-display font-600 text-lg text-ink leading-tight">Занятия с логопедом</h4>
+                <p class="text-sm price-card__kruzhok">Кружок «Вектор речи»</p>
+              </div>
+            </div>
+            <p class="text-muted text-sm mb-4">Постановка и автоматизация звуков, развитие связной речи</p>
+            <div class="pc-compact__price"><span class="pc-big">от 2 945&nbsp;₽</span><span class="pc-per">за занятие по абонементу</span></div>
+            <table class="pc-table">
+              <thead><tr><th scope="col">Занятий</th><th scope="col">1 занятие</th><th scope="col">Абонемент</th></tr></thead>
+              <tbody>
+                <tr><td>8</td><td>3 350&nbsp;₽</td><td>26 800&nbsp;₽</td></tr>
+                <tr><td>12</td><td>3 100&nbsp;₽</td><td>37 200&nbsp;₽</td></tr>
+              </tbody>
+            </table>
+            <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
+          </article>
+          <article class="price-card price-card--sage pc-compact tilt">
+            <div class="pc-compact__top">
+              <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-crown"></use></svg></span>
+              <div>
+                <h4 class="font-display font-600 text-lg text-ink leading-tight">Миологопедические занятия</h4>
+                <p class="text-sm price-card__kruzhok">Кружок «Золотое сечение»</p>
+              </div>
+            </div>
+            <p class="text-muted text-sm mb-4">Миостимуляция и мягкие мануальные техники для коррекции звукопроизношения</p>
+            <div class="pc-compact__price"><span class="pc-big">от 2 945&nbsp;₽</span><span class="pc-per">за занятие по абонементу</span></div>
+            <table class="pc-table">
+              <thead><tr><th scope="col">Занятий</th><th scope="col">1 занятие</th><th scope="col">Абонемент</th></tr></thead>
+              <tbody>
+                <tr><td>8</td><td>3 350&nbsp;₽</td><td>26 800&nbsp;₽</td></tr>
+                <tr><td>12</td><td>3 100&nbsp;₽</td><td>37 200&nbsp;₽</td></tr>
+              </tbody>
+            </table>
+            <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
+          </article>
+          <article class="price-card price-card--sage pc-compact tilt">
+            <div class="pc-compact__top">
+              <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-baby"></use></svg></span>
+              <div>
+                <h4 class="font-display font-600 text-lg text-ink leading-tight">Запуск речи · индивидуально</h4>
+                <p class="text-sm price-card__kruzhok">Кружок «Лёгкий старт»</p>
+              </div>
+            </div>
+            <p class="text-muted text-sm mb-4">Первые слова у неговорящих детей — один на один с педагогом</p>
+            <div class="pc-compact__price"><span class="pc-big">от 3 135&nbsp;₽</span><span class="pc-per">за занятие по абонементу</span></div>
+            <table class="pc-table">
+              <thead><tr><th scope="col">Занятий</th><th scope="col">1 занятие</th><th scope="col">Абонемент</th></tr></thead>
+              <tbody>
+                <tr><td>8</td><td>3 600&nbsp;₽</td><td>28 800&nbsp;₽</td></tr>
+                <tr><td>12</td><td>3 300&nbsp;₽</td><td>39 600&nbsp;₽</td></tr>
+              </tbody>
+            </table>
+            <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
+          </article>
+          <article class="price-card price-card--sage pc-compact tilt">
+            <div class="pc-compact__top">
+              <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-users"></use></svg></span>
+              <div>
+                <h4 class="font-display font-600 text-lg text-ink leading-tight">Запуск речи · мини-группа</h4>
+                <p class="text-sm price-card__kruzhok">Кружок «Лёгкий старт в команде»</p>
+              </div>
+            </div>
+            <p class="text-muted text-sm mb-4">Запуск речи в компании сверстников</p>
+            <div class="pc-compact__price"><span class="pc-big">от 2 945&nbsp;₽</span><span class="pc-per">за занятие по абонементу</span></div>
+            <table class="pc-table">
+              <thead><tr><th scope="col">Занятий</th><th scope="col">1 занятие</th><th scope="col">Абонемент</th></tr></thead>
+              <tbody>
+                <tr><td>8</td><td>3 400&nbsp;₽</td><td>27 200&nbsp;₽</td></tr>
+                <tr><td>12</td><td>3 100&nbsp;₽</td><td>37 200&nbsp;₽</td></tr>
+              </tbody>
+            </table>
+            <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
+          </article>
+          <article class="price-card price-card--sage pc-compact tilt">
+            <div class="pc-compact__top">
+              <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-hand-heart"></use></svg></span>
+              <div>
+                <h4 class="font-display font-600 text-lg text-ink leading-tight">Логомассаж</h4>
+                <p class="text-sm price-card__kruzhok">Кружок «Нежный звук»</p>
+              </div>
+            </div>
+            <p class="text-muted text-sm mb-4">Подготовка мышц речевого аппарата при нарушениях тонуса</p>
+            <div class="pc-compact__price"><span class="pc-big">от 22 040&nbsp;₽</span><span class="pc-per">только по абонементу</span></div>
+            <table class="pc-table">
+              <thead><tr><th scope="col">Занятий</th><th scope="col">Абонемент</th></tr></thead>
+              <tbody>
+                <tr><td>10</td><td>23 200&nbsp;₽</td></tr>
+                <tr><td>15</td><td>31 600&nbsp;₽</td></tr>
+              </tbody>
+            </table>
+            <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
+          </article>
+        </div>
+      </div>
+      <div class="price-panel price-cat--pink reveal" id="ppanel-pink" role="tabpanel" aria-labelledby="ptab-pink" data-price-panel="pink" hidden>
+        <div class="price-cat__grid">
+          <article class="price-card price-card--pink pc-compact tilt">
+            <div class="pc-compact__top">
+              <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-puzzle"></use></svg></span>
+              <div>
+                <h4 class="font-display font-600 text-lg text-ink leading-tight">Занятия с дефектологом</h4>
+                <p class="text-sm price-card__kruzhok">Кружок «Вектор познания»</p>
+              </div>
+            </div>
+            <p class="text-muted text-sm mb-4">Работа с ЗРР, ЗПРР, РАС и другими особенностями развития</p>
+            <div class="pc-compact__price"><span class="pc-big">от 3 420&nbsp;₽</span><span class="pc-per">за занятие по абонементу</span></div>
+            <table class="pc-table">
+              <thead><tr><th scope="col">Занятий</th><th scope="col">1 занятие</th><th scope="col">Абонемент</th></tr></thead>
+              <tbody>
+                <tr><td>8</td><td>4 000&nbsp;₽</td><td>32 000&nbsp;₽</td></tr>
+                <tr><td>12</td><td>3 600&nbsp;₽</td><td>43 200&nbsp;₽</td></tr>
+              </tbody>
+            </table>
+            <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
+          </article>
+        </div>
+      </div>
+      <div class="price-panel price-cat--lavender reveal" id="ppanel-lavender" role="tabpanel" aria-labelledby="ptab-lavender" data-price-panel="lavender" hidden>
+        <div class="price-cat__grid">
+          <article class="price-card price-card--lavender pc-compact tilt">
+            <div class="pc-compact__top">
+              <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-brain"></use></svg></span>
+              <div>
+                <h4 class="font-display font-600 text-lg text-ink leading-tight">Индивидуальные занятия</h4>
+                <p class="text-sm price-card__kruzhok">Кружок «Нейроинтеллект»</p>
+              </div>
+            </div>
+            <p class="text-muted text-sm mb-4">Внимание, память, саморегуляция — база для речи и учёбы</p>
+            <div class="pc-compact__price"><span class="pc-big">от 3 230&nbsp;₽</span><span class="pc-per">за занятие по абонементу</span></div>
+            <table class="pc-table">
+              <thead><tr><th scope="col">Занятий</th><th scope="col">1 занятие</th><th scope="col">Абонемент</th></tr></thead>
+              <tbody>
+                <tr><td>4</td><td>4 450&nbsp;₽</td><td>17 800&nbsp;₽</td></tr>
+                <tr><td>8</td><td>4 000&nbsp;₽</td><td>32 000&nbsp;₽</td></tr>
+                <tr><td>12</td><td>3 400&nbsp;₽</td><td>40 800&nbsp;₽</td></tr>
+              </tbody>
+            </table>
+            <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
+          </article>
+          <article class="price-card price-card--lavender pc-compact tilt">
+            <div class="pc-compact__top">
+              <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-users"></use></svg></span>
+              <div>
+                <h4 class="font-display font-600 text-lg text-ink leading-tight">Занятия в мини-группе</h4>
+                <p class="text-sm price-card__kruzhok">Кружок «Нейроинтеллект в команде»</p>
+              </div>
+            </div>
+            <p class="text-muted text-sm mb-4">Нейроразвитие в компании сверстников</p>
+            <div class="pc-compact__price"><span class="pc-big">от 2 755&nbsp;₽</span><span class="pc-per">за занятие по абонементу</span></div>
+            <table class="pc-table">
+              <thead><tr><th scope="col">Занятий</th><th scope="col">1 занятие</th><th scope="col">Абонемент</th></tr></thead>
+              <tbody>
+                <tr><td>4</td><td>3 300&nbsp;₽</td><td>13 200&nbsp;₽</td></tr>
+                <tr><td>8</td><td>2 900&nbsp;₽</td><td>23 200&nbsp;₽</td></tr>
+              </tbody>
+            </table>
+            <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
+          </article>
+        </div>
+      </div>
+      <div class="price-panel price-cat--beige reveal" id="ppanel-beige" role="tabpanel" aria-labelledby="ptab-beige" data-price-panel="beige" hidden>
+        <div class="price-cat__grid">
+          <article class="price-card price-card--beige pc-compact tilt">
+            <div class="pc-compact__top">
+              <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-cap"></use></svg></span>
+              <div>
+                <h4 class="font-display font-600 text-lg text-ink leading-tight">Индивидуальные занятия</h4>
+                <p class="text-sm price-card__kruzhok">Кружок «Золотой стандарт»</p>
+              </div>
+            </div>
+            <p class="text-muted text-sm mb-4">Чтение, счёт, связная речь и усидчивость — уверенный старт в 1 классе</p>
+            <div class="pc-compact__price"><span class="pc-big">от 2 850&nbsp;₽</span><span class="pc-per">за занятие по абонементу</span></div>
+            <table class="pc-table">
+              <thead><tr><th scope="col">Занятий</th><th scope="col">1 занятие</th><th scope="col">Абонемент</th></tr></thead>
+              <tbody>
+                <tr><td>8</td><td>3 250&nbsp;₽</td><td>26 000&nbsp;₽</td></tr>
+                <tr><td>12</td><td>3 000&nbsp;₽</td><td>36 000&nbsp;₽</td></tr>
+              </tbody>
+            </table>
+            <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
+          </article>
+          <article class="price-card price-card--beige pc-compact tilt">
+            <div class="pc-compact__top">
+              <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-users"></use></svg></span>
+              <div>
+                <h4 class="font-display font-600 text-lg text-ink leading-tight">Занятия в мини-группе (6–7 лет)</h4>
+                <p class="text-sm price-card__kruzhok">Кружок «Золотой стандарт в команде»</p>
+              </div>
+            </div>
+            <p class="text-muted text-sm mb-4">Подготовка к школе в малой группе</p>
+            <div class="pc-compact__price"><span class="pc-big">от 2 565&nbsp;₽</span><span class="pc-per">за занятие по абонементу</span></div>
+            <table class="pc-table">
+              <thead><tr><th scope="col">Занятий</th><th scope="col">1 занятие</th><th scope="col">Абонемент</th></tr></thead>
+              <tbody>
+                <tr><td>8</td><td>2 700&nbsp;₽</td><td>21 600&nbsp;₽</td></tr>
+              </tbody>
+            </table>
+            <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
+          </article>
+        </div>
+      </div>
+      <div class="price-panel price-cat--berry reveal" id="ppanel-berry" role="tabpanel" aria-labelledby="ptab-berry" data-price-panel="berry" hidden>
+        <div class="price-cat__grid">
+          <article class="price-card price-card--berry pc-compact tilt">
+            <div class="pc-compact__top">
+              <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-sparkle"></use></svg></span>
+              <div>
+                <h4 class="font-display font-600 text-lg text-ink leading-tight">Комплексное развитие 2+</h4>
+                <p class="text-sm price-card__kruzhok">Кружок «Вектор открытий»</p>
+              </div>
+            </div>
+            <p class="text-muted text-sm mb-4">Гармоничное развитие для малышей от 2 лет</p>
+            <div class="pc-compact__price"><span class="pc-big">от 1 805&nbsp;₽</span><span class="pc-per">за занятие по абонементу</span></div>
+            <table class="pc-table">
+              <thead><tr><th scope="col">Занятий</th><th scope="col">1 занятие</th><th scope="col">Абонемент</th></tr></thead>
+              <tbody>
+                <tr><td>4</td><td>2 100&nbsp;₽</td><td>8 400&nbsp;₽</td></tr>
+                <tr><td>8</td><td>1 900&nbsp;₽</td><td>15 200&nbsp;₽</td></tr>
+              </tbody>
+            </table>
+            <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
+          </article>
+<article class="price-card price-card--diag pc-compact tilt">
+            <div class="pc-compact__top">
+              <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-list"></use></svg></span>
+              <div>
+                <h4 class="font-display font-600 text-lg text-ink leading-tight">Диагностика</h4>
+                <p class="text-sm price-card__kruzhok">Первичное обследование</p>
+              </div>
+            </div>
+            <p class="text-muted text-sm mb-4">Оценка речи и развития с понятным планом занятий. Нейродиагностика — расширенная оценка высших психических функций.</p>
+            <div class="pc-compact__price"><span class="pc-big">от 3 000&nbsp;₽</span><span class="pc-per">за обследование</span></div>
+            <ul class="pc-list">
+              <li><span class="pc-list__cnt">Логопед / дефектолог</span><span class="pc-list__sum">3 000&nbsp;₽</span></li>
+              <li><span class="pc-list__cnt">Нейропсихолог</span><span class="pc-list__sum">5 000&nbsp;₽</span></li>
+            </ul>
+            <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
+          </article>
+        </div>
+      </div>
+      </div>
+
+      <!-- Скидка при покупке абонемента в день диагностики -->
+      <p class="pc-discount-note reveal mt-6">
+        <svg class="icon icon-sm" aria-hidden="true"><use href="#i-clock"></use></svg>
+        Цены со скидкой действуют при покупке абонемента в день диагностики.
+      </p>
+
+      <!-- Пакет «1+1» -->
+      <div class="diag-banner ring-gold reveal mt-8 text-white">
+        <div class="blob w-56 h-56 bg-gold-2 -top-16 -right-10 opacity-25 float-slow"></div>
+        <div class="relative flex items-start sm:items-center gap-4 sm:gap-6">
+          <span class="icon-badge bg-white/15 text-gold-2 shrink-0" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-heart"></use></svg></span>
+          <div>
+            <h3 class="font-display font-600 text-xl sm:text-2xl mb-1">Пакет «1+1» — дополнительная скидка 7%</h3>
+            <p class="text-rose-soft/90 text-sm sm:text-base">Оформите два абонемента одновременно — например, логопеда и нейропсихолога, — и получите дополнительные 7% скидки на каждый из них.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-sm text-muted mt-8 reveal text-center">Цены указаны в рублях. Точную стоимость и удобный график уточняйте у администратора.</p>
+    </div>
+  </section>
+
+<!-- ==================== ЗАПИСЬ / КОНТАКТЫ ==================== -->
   <section id="booking" class="py-20 lg:py-28 relative overflow-hidden">
     <div class="blob w-96 h-96 bg-rose -bottom-20 -left-24 opacity-30 float-slow" data-parallax="0.1"></div>
     <div class="blob w-80 h-80 bg-lavender top-0 -right-28 opacity-30 float-mid" data-parallax="0.14"></div>

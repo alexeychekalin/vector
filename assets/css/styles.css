@@ -1102,3 +1102,12 @@ h1,h2,h3,h4,.font-display { font-family: 'Evolventa','Nunito',sans-serif; }
     scroll-snap-align:center;
   }
 }
+
+/* ==================== Блок «Знакомы ситуации?» (боли) ==================== */
+.pain-card { display: flex; flex-direction: column; cursor: pointer; border: 1px solid rgba(146, 96, 179, .14); }
+.pain-card:focus-visible { outline: 3px solid var(--berry); outline-offset: 3px; }
+.pain-card .pain-more { margin-top: auto; }
+.pain-card.is-active { border-color: var(--berry); box-shadow: 0 12px 32px rgba(146, 96, 179, .18); }
+@media (prefers-reduced-motion: reduce) {
+  .pain-card { transition: none; }
+}

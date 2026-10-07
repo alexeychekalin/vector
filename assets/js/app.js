@@ -590,3 +590,20 @@
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
   fit();
 })();
+
+/* ==================== «Знакомы ситуации?» — клик по карточке боли → к услугам ==================== */
+(function () {
+  const cards = document.querySelectorAll('.pain-card[data-pain-target]');
+  if (!cards.length) return;
+  cards.forEach((card) => {
+    card.addEventListener('click', () => {
+      cards.forEach((c) => c.classList.remove('is-active'));
+      card.classList.add('is-active');
+      const target = document.querySelector(card.dataset.painTarget);
+      if (target) {
+        const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        target.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+      }
+    });
+  });
+})();
