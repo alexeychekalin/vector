@@ -191,6 +191,7 @@
         </a>
 
         <nav class="site-nav hidden min-w-0 flex-1 items-center justify-center lg:flex" aria-label="Основная навигация">
+          <a href="#situations" class="nav-link font-600 text-ink hover:text-berry transition-colors">Ситуации</a>
           <a href="#services" class="nav-link font-600 text-ink hover:text-berry transition-colors">Услуги</a>
           <a href="#prices"   class="nav-link font-600 text-ink hover:text-berry transition-colors">Цены</a>
           <a href="#rooms"    class="nav-link font-600 text-ink hover:text-berry transition-colors">Зоны</a>
@@ -217,6 +218,7 @@
 
     <div id="mobileMenu" class="hidden-menu lg:hidden absolute inset-x-0 top-20 px-4">
       <nav class="mobile-nav glass p-6 flex flex-col gap-2" aria-label="Мобильная навигация">
+        <a href="#situations" class="mobile-link py-3 px-4 rounded-2xl font-600 text-ink hover:bg-white/60 transition-colors">Ситуации</a>
         <a href="#services" class="mobile-link py-3 px-4 rounded-2xl font-600 text-ink hover:bg-white/60 transition-colors">Услуги</a>
         <a href="#prices"   class="mobile-link py-3 px-4 rounded-2xl font-600 text-ink hover:bg-white/60 transition-colors">Цены</a>
         <a href="#rooms"    class="mobile-link py-3 px-4 rounded-2xl font-600 text-ink hover:bg-white/60 transition-colors">Зоны центра</a>
@@ -343,6 +345,108 @@
       <span class="flex items-center gap-3"><svg class="icon icon-sm text-gold"><use href="#i-sparkle"></use></svg> Забота о каждом ребёнке</span>
     </div>
   </div>
+
+
+  <!-- ==================== ЗНАКОМЫ СИТУАЦИИ? ==================== -->
+  <section id="situations" class="py-20 lg:py-28 relative overflow-hidden">
+    <div class="blob w-80 h-80 bg-lavender top-16 -left-28 opacity-25 float-mid" data-parallax="0.1"></div>
+    <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8 relative">
+
+      <div class="mb-12 reveal max-w-2xl">
+        <span class="inline-flex items-center gap-2 py-2 px-4 rounded-full glass text-berry font-600 text-sm mb-4">
+          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-heart"></use></svg>
+          Знакомы ситуации?
+        </span>
+        <h2 class="reveal-title font-display font-600 text-3xl sm:text-4xl lg:text-5xl text-ink leading-tight mb-4">
+          Если вы узнали своего ребёнка — мы знаем, что делать
+        </h2>
+        <p class="text-muted text-base sm:text-lg leading-relaxed">
+          Каждая карточка — частый запрос родителей, с которым к нам приходят. Нажмите на карточку — покажем, какой специалист и методика работают с этой ситуацией.
+        </p>
+      </div>
+
+      <div class="pain-groups grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-10">
+
+        <!-- Логопедия -->
+        <div class="pain-group reveal">
+          <h3 class="pain-group-title font-display font-600 text-xl text-ink mb-5">Логопедия</h3>
+          <div class="flex flex-col gap-5">
+            <button type="button" class="pain-card" data-pain-service="Запуск речи у неговорящих">
+              <span class="pain-head">
+                <span class="pain-icon"><svg class="icon icon-md text-berry-deep" aria-hidden="true"><use href="#i-mic"></use></svg></span>
+                <span class="pain-title font-display font-600 text-lg text-ink leading-snug">«Всё понимает, но молчит»</span>
+              </span>
+              <p class="pain-text text-muted text-sm sm:text-base leading-relaxed">Или говорит очень мало и неохотно для своего возраста.</p>
+            </button>
+            <button type="button" class="pain-card" data-pain-service="Занятие с логопедом">
+              <span class="pain-head">
+                <span class="pain-icon"><svg class="icon icon-md text-berry-deep" aria-hidden="true"><use href="#i-chat"></use></svg></span>
+                <span class="pain-title font-display font-600 text-lg text-ink leading-snug">«Каша во рту»</span>
+              </span>
+              <p class="pain-text text-muted text-sm sm:text-base leading-relaxed">Речь нечёткая, смазанная — ребёнка понимают только самые близкие.</p>
+            </button>
+            <button type="button" class="pain-card" data-pain-service="Постановка звуков">
+              <span class="pain-head">
+                <span class="pain-icon"><svg class="icon icon-md text-berry-deep" aria-hidden="true"><use href="#i-sparkle"></use></svg></span>
+                <span class="pain-title font-display font-600 text-lg text-ink leading-snug">Пропуск и замена звуков, перестановка слогов</span>
+              </span>
+              <p class="pain-text text-muted text-sm sm:text-base leading-relaxed">Картавость, шепелявость: «лыба» вместо «рыба», «весепед» вместо «велосипед».</p>
+            </button>
+          </div>
+        </div>
+
+        <!-- Нейропсихология -->
+        <div class="pain-group reveal">
+          <h3 class="pain-group-title font-display font-600 text-xl text-ink mb-5">Нейропсихология</h3>
+          <div class="flex flex-col gap-5">
+            <button type="button" class="pain-card" data-pain-service="Нейрокоррекция">
+              <span class="pain-head">
+                <span class="pain-icon"><svg class="icon icon-md text-berry-deep" aria-hidden="true"><use href="#i-brain"></use></svg></span>
+                <span class="pain-title font-display font-600 text-lg text-ink leading-snug">«Вечный двигатель» или крайняя медлительность</span>
+              </span>
+              <p class="pain-text text-muted text-sm sm:text-base leading-relaxed">Ребёнок ни секунды не сидит на месте, постоянно отвлекается, не может довести до конца ни одно дело — либо, наоборот, двигается и думает очень медленно, быстро уставая.</p>
+            </button>
+            <button type="button" class="pain-card" data-pain-service="Нейрокоррекция">
+              <span class="pain-head">
+                <span class="pain-icon"><svg class="icon icon-md text-berry-deep" aria-hidden="true"><use href="#i-shield"></use></svg></span>
+                <span class="pain-title font-display font-600 text-lg text-ink leading-snug">Трудности с самоконтролем</span>
+              </span>
+              <p class="pain-text text-muted text-sm sm:text-base leading-relaxed">Тяжело даются правила: не умеет ждать своей очереди, бурно реагирует на любые отказы, часто проявляет импульсивность или излишнюю эмоциональность.</p>
+            </button>
+            <button type="button" class="pain-card" data-pain-service="Нейрокоррекция">
+              <span class="pain-head">
+                <span class="pain-icon"><svg class="icon icon-md text-berry-deep" aria-hidden="true"><use href="#i-hand-heart"></use></svg></span>
+                <span class="pain-title font-display font-600 text-lg text-ink leading-snug">Проблемы с крупной и мелкой моторикой</span>
+              </span>
+              <p class="pain-text text-muted text-sm sm:text-base leading-relaxed">Часто спотыкается на ровном месте, роняет предметы, неуклюже бегает, с трудом учится завязывать шнурки или держать карандаш.</p>
+            </button>
+            <button type="button" class="pain-card" data-pain-service="Занятие с логопедом">
+              <span class="pain-head">
+                <span class="pain-icon"><svg class="icon icon-md text-berry-deep" aria-hidden="true"><use href="#i-cap"></use></svg></span>
+                <span class="pain-title font-display font-600 text-lg text-ink leading-snug">«Не хочет учиться»</span>
+              </span>
+              <p class="pain-text text-muted text-sm sm:text-base leading-relaxed">Буквы и цифры вызывают скуку или протест, а любые попытки позаниматься дома заканчиваются слезами и капризами.</p>
+            </button>
+            <button type="button" class="pain-card" data-pain-service="Нейрокоррекция">
+              <span class="pain-head">
+                <span class="pain-icon"><svg class="icon icon-md text-berry-deep" aria-hidden="true"><use href="#i-puzzle"></use></svg></span>
+                <span class="pain-title font-display font-600 text-lg text-ink leading-snug">Слабая память и внимание</span>
+              </span>
+              <p class="pain-text text-muted text-sm sm:text-base leading-relaxed">Долго учит даже короткие стихи, путает дни недели и времена года, не может запомнить зрительный образ букв.</p>
+            </button>
+            <button type="button" class="pain-card" data-pain-service="Нейрокоррекция">
+              <span class="pain-head">
+                <span class="pain-icon"><svg class="icon icon-md text-berry-deep" aria-hidden="true"><use href="#i-pin"></use></svg></span>
+                <span class="pain-title font-display font-600 text-lg text-ink leading-snug">Плохая координация и ориентация</span>
+              </span>
+              <p class="pain-text text-muted text-sm sm:text-base leading-relaxed">Путает «право» и «лево», с трудом ориентируется на листе бумаги, не может аккуратно обвести по контуру или заштриховать рисунок.</p>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
   <!-- ==================== УСЛУГИ ==================== -->
   <section id="services" class="py-20 lg:py-28 relative overflow-hidden has-pattern pattern-sage">

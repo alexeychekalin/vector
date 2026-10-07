@@ -590,3 +590,44 @@
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
   fit();
 })();
+
+/* ---- «Знакомы ситуации?» — клик по карточке ведёт к нужной услуге ---- */
+(function(){
+  const cards = document.querySelectorAll('.pain-card[data-pain-service]');
+  if (!cards.length) return;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function findServiceCard(name){
+    // 1) точное/частичное совпадение по data-атрибуту услуги
+    let el = Array.from(document.querySelectorAll('[data-service-book], .svc-card, [id^="svc-"]'))
+      .find(n => (n.getAttribute('data-service-book')||'').toLowerCase() === name.toLowerCase());
+    if (el) return el;
+    // 2) поиск по заголовкам h3/h4 в блоке услуг, затем вверх до карточки
+    const heads = document.querySelectorAll('#services h3, #services h4');
+    for (const h of heads){
+      if (h.textContent.toLowerCase().includes(name.toLowerCase())){
+        return h.closest('.card, article, .svc-card') || h.parentElement;
+      }
+    }
+    // 3) любое текстовое совпадение внутри карточки услуги
+    const any = Array.from(document.querySelectorAll('#services .card, #services article'))
+      .find(c => c.textContent.toLowerCase().includes(name.toLowerCase()));
+    return any || null;
+  }
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      const target = findServiceCard(card.dataset.painService);
+      const anchor = target || document.getElementById('services');
+      if (!anchor) return;
+      anchor.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block:'center' });
+      if (target){
+        target.classList.remove('svc-highlight');
+        // перезапуск анимации
+        void target.offsetWidth;
+        target.classList.add('svc-highlight');
+        setTimeout(() => target.classList.remove('svc-highlight'), 3600);
+      }
+    });
+  });
+})();

@@ -1102,3 +1102,65 @@ h1,h2,h3,h4,.font-display { font-family: 'Evolventa','Nunito',sans-serif; }
     scroll-snap-align:center;
   }
 }
+
+/* ==================== Блок «Знакомы ситуации?» ==================== */
+.pain-card{
+  display:flex;
+  flex-direction:column;
+  gap:.75rem;
+  width:100%;
+  text-align:left;
+  padding:1.4rem 1.5rem;
+  background:#fff;
+  border:1px solid rgba(146,96,179,.22);
+  border-radius:1.25rem;
+  box-shadow:0 6px 24px rgba(83,60,110,.06);
+  cursor:pointer;
+  transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.pain-card:hover{
+  transform:translateY(-3px);
+  border-color:rgba(146,96,179,.45);
+  box-shadow:0 12px 32px rgba(83,60,110,.12);
+}
+.pain-card:focus-visible{
+  outline:2px solid var(--berry-deep,#6E4A8E);
+  outline-offset:3px;
+}
+.pain-head{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+}
+.pain-icon{
+  flex:none;
+  width:2.75rem;
+  height:2.75rem;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:1rem;
+  background:rgba(146,96,179,.12);
+}
+.pain-group-title{
+  display:flex;
+  align-items:center;
+  gap:.6rem;
+}
+.pain-group-title::after{
+  content:"";
+  flex:1;
+  height:1px;
+  background:linear-gradient(90deg, rgba(146,96,179,.35), transparent);
+}
+/* подсветка целевой услуги после клика по карточке ситуации */
+@keyframes svc-pulse{
+  0%   { box-shadow:0 0 0 0 rgba(146,96,179,.45); }
+  70%  { box-shadow:0 0 0 14px rgba(146,96,179,0); }
+  100% { box-shadow:0 0 0 0 rgba(146,96,179,0); }
+}
+.svc-highlight{ animation:svc-pulse 1.6s ease 2; border-color:rgba(146,96,179,.5)!important; }
+@media (prefers-reduced-motion:reduce){
+  .pain-card, .pain-card:hover{ transform:none; transition:none; }
+  .svc-highlight{ animation:none; }
+}
