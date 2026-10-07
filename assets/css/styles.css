@@ -683,11 +683,12 @@ h1,h2,h3,h4,.font-display { font-family: 'Evolventa','Nunito',sans-serif; }
 }
 .pc-list__cnt{ font-weight:600; color:var(--ink); font-size:.82rem; flex:1; }
 .pc-list__sum{ font-family:'Evolventa','Nunito',sans-serif; font-weight:600; color:var(--ink); font-size:.9rem; }
-.pc-badge{
-  display:inline-block; padding:.15rem .5rem; border-radius:999px;
-  background: var(--cat-color); color:#fff;
-  font-size:.68rem; font-weight:700; letter-spacing:.02em; white-space:nowrap;
-}
+/* Новые цены: зачёркнутая старая цена, стрелка, акцентная новая цена, сноска о скидке */
+.pc-old{ color:var(--muted); text-decoration:line-through; font-weight:400; font-size:.78rem; white-space:nowrap; }
+.pc-sep{ color:var(--muted); margin:0 .15rem; }
+.pc-new{ color:var(--cat-accent, var(--cat-color)); font-weight:700; white-space:nowrap; }
+.pc-discount-note{ display:flex; align-items:center; justify-content:center; gap:.5rem; color:var(--muted); font-size:.9rem; text-align:center; }
+.pc-discount-note .icon{ color:var(--berry-deep); flex-shrink:0; }
 /* Таблица полных цен всегда открыта (без details/summary) */
 .pc-details{ margin-bottom:.25rem; }
 .pc-details__title{
@@ -949,7 +950,6 @@ h1,h2,h3,h4,.font-display { font-family: 'Evolventa','Nunito',sans-serif; }
 .price-cat--beige, .price-card--beige{ --cat-accent:#B25C86; }
 .price-cat--berry, .price-card--berry{ --cat-accent:#845553; }
 .price-card--diag{ --cat-accent:#C24E86; }
-.pc-badge{ background: var(--cat-accent, var(--cat-color)); }
 .price-card__kruzhok{ color: var(--cat-accent, var(--cat-color)); }
 .pc-big{ color: var(--cat-accent, var(--cat-color)); }
 .price-card .pkg-price{ color: var(--cat-accent, var(--cat-color)); }
