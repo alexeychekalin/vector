@@ -79,6 +79,11 @@
         },
         {
           "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Миологопедические занятия (кружок «Золотое сечение»)" },
+          "price": "3100", "priceCurrency": "RUB"
+        },
+        {
+          "@type": "Offer",
           "itemOffered": { "@type": "Service", "name": "Занятие с дефектологом (кружок «Вектор познания»)" },
           "price": "3600", "priceCurrency": "RUB"
         },
@@ -400,7 +405,7 @@
           <p class="text-muted mb-5 flex-1">Для малышей 2–4 лет и детей с задержкой. Пробуждаем интерес к общению и первые слова.</p>
           <div class="svc-footer">
             <div class="svc-price">
-              <span class="font-display font-600 text-xl text-berry svc-amount">от 3 100 ₽</span>
+              <span class="font-display font-600 text-xl text-berry svc-amount">от 3 300 ₽</span>
               <span class="text-sm text-muted svc-note">за занятие</span>
             </div>
             <div class="svc-actions">
@@ -448,8 +453,8 @@
           <p class="text-muted mb-5 flex-1">Мягкая подготовка мышц речевого аппарата — помогает при нарушениях тонуса и запуске звуков.</p>
           <div class="svc-footer">
             <div class="svc-price">
-              <span class="font-display font-600 text-xl text-berry svc-amount">от 2 107 ₽</span>
-              <span class="text-sm text-muted svc-note">за сеанс</span>
+              <span class="font-display font-600 text-xl text-berry svc-amount">от 23 200 ₽</span>
+              <span class="text-sm text-muted svc-note">абонемент 10 сеансов</span>
             </div>
             <div class="svc-actions">
               <button type="button" class="btn btn-ghost btn-sm service-more" data-service="logomassazh" aria-haspopup="dialog">Подробнее</button>
@@ -508,7 +513,7 @@
       <!-- Табы категорий -->
       <div class="price-tabs reveal" role="tablist" aria-label="Категории услуг">
         <button type="button" role="tab" id="ptab-sage" class="price-tab is-active" aria-selected="true" aria-controls="ppanel-sage" data-price-tab="sage">
-          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-mic"></use></svg>Логопедия<span class="price-tab__n">4</span>
+          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-mic"></use></svg>Логопедия<span class="price-tab__n">5</span>
         </button>
         <button type="button" role="tab" id="ptab-pink" class="price-tab" aria-selected="false" aria-controls="ppanel-pink" data-price-tab="pink" tabindex="-1">
           <svg class="icon icon-sm" aria-hidden="true"><use href="#i-puzzle"></use></svg>Дефектология<span class="price-tab__n">1</span>
@@ -538,10 +543,13 @@
             </div>
             <p class="text-muted text-sm mb-4">Постановка и автоматизация звуков, развитие связной речи</p>
             <div class="pc-compact__price"><span class="pc-big">от 3 100&nbsp;₽</span><span class="pc-per">за занятие по абонементу</span></div>
-            <ul class="pc-list">
-              <li><span class="pc-list__cnt">Абонемент 8 занятий</span><span class="pc-list__sum"><span class="pc-old">3 500 ₽</span><span class="pc-sep">→</span><span class="pc-new">3 350&nbsp;₽/зан.</span>&nbsp;(26 800&nbsp;₽)</span></li>
-              <li><span class="pc-list__cnt">Абонемент 12 занятий</span><span class="pc-list__sum"><span class="pc-old">3 500 ₽</span><span class="pc-sep">→</span><span class="pc-new">3 100&nbsp;₽/зан.</span>&nbsp;(37 200&nbsp;₽)</span></li>
-            </ul>
+            <table class="pc-table">
+              <thead><tr><th scope="col">Занятий</th><th scope="col">1 занятие</th><th scope="col">Абонемент</th></tr></thead>
+              <tbody>
+                <tr><td>8</td><td>3 350&nbsp;₽</td><td>26 800&nbsp;₽</td></tr>
+                <tr><td>12</td><td>3 100&nbsp;₽</td><td>37 200&nbsp;₽</td></tr>
+              </tbody>
+            </table>
             <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
           </article>
           <article class="price-card price-card--sage pc-compact tilt">
@@ -554,10 +562,13 @@
             </div>
             <p class="text-muted text-sm mb-4">Первые слова у неговорящих детей — один на один с педагогом</p>
             <div class="pc-compact__price"><span class="pc-big">от 3 300&nbsp;₽</span><span class="pc-per">за занятие по абонементу</span></div>
-            <ul class="pc-list">
-              <li><span class="pc-list__cnt">Абонемент 8 занятий</span><span class="pc-list__sum"><span class="pc-old">3 900 ₽</span><span class="pc-sep">→</span><span class="pc-new">3 600&nbsp;₽/зан.</span>&nbsp;(28 800&nbsp;₽)</span></li>
-              <li><span class="pc-list__cnt">Абонемент 12 занятий</span><span class="pc-list__sum"><span class="pc-old">3 900 ₽</span><span class="pc-sep">→</span><span class="pc-new">3 300&nbsp;₽/зан.</span>&nbsp;(39 600&nbsp;₽)</span></li>
-            </ul>
+            <table class="pc-table">
+              <thead><tr><th scope="col">Занятий</th><th scope="col">1 занятие</th><th scope="col">Абонемент</th></tr></thead>
+              <tbody>
+                <tr><td>8</td><td>3 600&nbsp;₽</td><td>28 800&nbsp;₽</td></tr>
+                <tr><td>12</td><td>3 300&nbsp;₽</td><td>39 600&nbsp;₽</td></tr>
+              </tbody>
+            </table>
             <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
           </article>
           <article class="price-card price-card--sage pc-compact tilt">
@@ -570,10 +581,13 @@
             </div>
             <p class="text-muted text-sm mb-4">Запуск речи в компании сверстников</p>
             <div class="pc-compact__price"><span class="pc-big">от 3 100&nbsp;₽</span><span class="pc-per">за занятие по абонементу</span></div>
-            <ul class="pc-list">
-              <li><span class="pc-list__cnt">Абонемент 8 занятий</span><span class="pc-list__sum"><span class="pc-old">3 900 ₽</span><span class="pc-sep">→</span><span class="pc-new">3 400&nbsp;₽/зан.</span>&nbsp;(27 200&nbsp;₽)</span></li>
-              <li><span class="pc-list__cnt">Абонемент 12 занятий</span><span class="pc-list__sum"><span class="pc-old">3 900 ₽</span><span class="pc-sep">→</span><span class="pc-new">3 100&nbsp;₽/зан.</span>&nbsp;(37 200&nbsp;₽)</span></li>
-            </ul>
+            <table class="pc-table">
+              <thead><tr><th scope="col">Занятий</th><th scope="col">1 занятие</th><th scope="col">Абонемент</th></tr></thead>
+              <tbody>
+                <tr><td>8</td><td>3 400&nbsp;₽</td><td>27 200&nbsp;₽</td></tr>
+                <tr><td>12</td><td>3 100&nbsp;₽</td><td>37 200&nbsp;₽</td></tr>
+              </tbody>
+            </table>
             <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
           </article>
           <article class="price-card price-card--sage pc-compact tilt">
@@ -585,11 +599,33 @@
               </div>
             </div>
             <p class="text-muted text-sm mb-4">Подготовка мышц речевого аппарата при нарушениях тонуса</p>
-            <div class="pc-compact__price"><span class="pc-big">от 2 000&nbsp;₽</span><span class="pc-per">за занятие · только по абонементу</span></div>
-            <ul class="pc-list">
-              <li><span class="pc-list__cnt">Абонемент 10 занятий</span><span class="pc-list__sum"><span class="pc-new">2 320&nbsp;₽/зан.</span>&nbsp;(23 200&nbsp;₽)</span></li>
-              <li><span class="pc-list__cnt">Абонемент 15 занятий</span><span class="pc-list__sum"><span class="pc-new">2 107&nbsp;₽/зан.</span>&nbsp;(31 600&nbsp;₽)</span></li>
-            </ul>
+            <div class="pc-compact__price"><span class="pc-big">от 23 200&nbsp;₽</span><span class="pc-per">только по абонементу</span></div>
+            <table class="pc-table">
+              <thead><tr><th scope="col">Занятий</th><th scope="col">Абонемент</th></tr></thead>
+              <tbody>
+                <tr><td>10</td><td>23 200&nbsp;₽</td></tr>
+                <tr><td>15</td><td>31 600&nbsp;₽</td></tr>
+              </tbody>
+            </table>
+            <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
+          </article>
+          <article class="price-card price-card--sage pc-compact tilt">
+            <div class="pc-compact__top">
+              <span class="price-card__ic" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-crown"></use></svg></span>
+              <div>
+                <h4 class="font-display font-600 text-lg text-ink leading-tight">Миологопедические занятия</h4>
+                <p class="text-sm price-card__kruzhok">Кружок «Золотое сечение»</p>
+              </div>
+            </div>
+            <p class="text-muted text-sm mb-4">Миостимуляция и мягкие мануальные техники для коррекции звукопроизношения</p>
+            <div class="pc-compact__price"><span class="pc-big">от 3 100&nbsp;₽</span><span class="pc-per">за занятие по абонементу</span></div>
+            <table class="pc-table">
+              <thead><tr><th scope="col">Занятий</th><th scope="col">1 занятие</th><th scope="col">Абонемент</th></tr></thead>
+              <tbody>
+                <tr><td>8</td><td>3 350&nbsp;₽</td><td>26 800&nbsp;₽</td></tr>
+                <tr><td>12</td><td>3 100&nbsp;₽</td><td>37 200&nbsp;₽</td></tr>
+              </tbody>
+            </table>
             <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
           </article>
         </div>
@@ -606,10 +642,13 @@
             </div>
             <p class="text-muted text-sm mb-4">Работа с ЗРР, ЗПРР, РАС и другими особенностями развития</p>
             <div class="pc-compact__price"><span class="pc-big">от 3 600&nbsp;₽</span><span class="pc-per">за занятие по абонементу</span></div>
-            <ul class="pc-list">
-              <li><span class="pc-list__cnt">Абонемент 8 занятий</span><span class="pc-list__sum"><span class="pc-old">4 400 ₽</span><span class="pc-sep">→</span><span class="pc-new">4 000&nbsp;₽/зан.</span>&nbsp;(32 000&nbsp;₽)</span></li>
-              <li><span class="pc-list__cnt">Абонемент 12 занятий</span><span class="pc-list__sum"><span class="pc-old">4 400 ₽</span><span class="pc-sep">→</span><span class="pc-new">3 600&nbsp;₽/зан.</span>&nbsp;(43 200&nbsp;₽)</span></li>
-            </ul>
+            <table class="pc-table">
+              <thead><tr><th scope="col">Занятий</th><th scope="col">1 занятие</th><th scope="col">Абонемент</th></tr></thead>
+              <tbody>
+                <tr><td>8</td><td>4 000&nbsp;₽</td><td>32 000&nbsp;₽</td></tr>
+                <tr><td>12</td><td>3 600&nbsp;₽</td><td>43 200&nbsp;₽</td></tr>
+              </tbody>
+            </table>
             <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
           </article>
         </div>
@@ -626,11 +665,14 @@
             </div>
             <p class="text-muted text-sm mb-4">Внимание, память, саморегуляция — база для речи и учёбы</p>
             <div class="pc-compact__price"><span class="pc-big">от 3 400&nbsp;₽</span><span class="pc-per">за занятие по абонементу</span></div>
-            <ul class="pc-list">
-              <li><span class="pc-list__cnt">Абонемент 4 занятия</span><span class="pc-list__sum"><span class="pc-old">4 700 ₽</span><span class="pc-sep">→</span><span class="pc-new">4 450&nbsp;₽/зан.</span>&nbsp;(17 800&nbsp;₽)</span></li>
-              <li><span class="pc-list__cnt">Абонемент 8 занятий</span><span class="pc-list__sum"><span class="pc-old">4 700 ₽</span><span class="pc-sep">→</span><span class="pc-new">4 000&nbsp;₽/зан.</span>&nbsp;(32 000&nbsp;₽)</span></li>
-              <li><span class="pc-list__cnt">Абонемент 12 занятий</span><span class="pc-list__sum"><span class="pc-old">4 700 ₽</span><span class="pc-sep">→</span><span class="pc-new">3 400&nbsp;₽/зан.</span>&nbsp;(40 800&nbsp;₽)</span></li>
-            </ul>
+            <table class="pc-table">
+              <thead><tr><th scope="col">Занятий</th><th scope="col">1 занятие</th><th scope="col">Абонемент</th></tr></thead>
+              <tbody>
+                <tr><td>4</td><td>4 450&nbsp;₽</td><td>17 800&nbsp;₽</td></tr>
+                <tr><td>8</td><td>4 000&nbsp;₽</td><td>32 000&nbsp;₽</td></tr>
+                <tr><td>12</td><td>3 400&nbsp;₽</td><td>40 800&nbsp;₽</td></tr>
+              </tbody>
+            </table>
             <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
           </article>
           <article class="price-card price-card--lavender pc-compact tilt">
@@ -643,10 +685,13 @@
             </div>
             <p class="text-muted text-sm mb-4">Нейроразвитие в компании сверстников</p>
             <div class="pc-compact__price"><span class="pc-big">от 2 900&nbsp;₽</span><span class="pc-per">за занятие по абонементу</span></div>
-            <ul class="pc-list">
-              <li><span class="pc-list__cnt">Абонемент 4 занятия</span><span class="pc-list__sum"><span class="pc-old">3 600 ₽</span><span class="pc-sep">→</span><span class="pc-new">3 300&nbsp;₽/зан.</span>&nbsp;(13 200&nbsp;₽)</span></li>
-              <li><span class="pc-list__cnt">Абонемент 8 занятий</span><span class="pc-list__sum"><span class="pc-old">3 600 ₽</span><span class="pc-sep">→</span><span class="pc-new">2 900&nbsp;₽/зан.</span>&nbsp;(23 200&nbsp;₽)</span></li>
-            </ul>
+            <table class="pc-table">
+              <thead><tr><th scope="col">Занятий</th><th scope="col">1 занятие</th><th scope="col">Абонемент</th></tr></thead>
+              <tbody>
+                <tr><td>4</td><td>3 300&nbsp;₽</td><td>13 200&nbsp;₽</td></tr>
+                <tr><td>8</td><td>2 900&nbsp;₽</td><td>23 200&nbsp;₽</td></tr>
+              </tbody>
+            </table>
             <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
           </article>
         </div>
@@ -663,10 +708,13 @@
             </div>
             <p class="text-muted text-sm mb-4">Чтение, счёт, связная речь и усидчивость — уверенный старт в 1 классе</p>
             <div class="pc-compact__price"><span class="pc-big">от 3 000&nbsp;₽</span><span class="pc-per">за занятие по абонементу</span></div>
-            <ul class="pc-list">
-              <li><span class="pc-list__cnt">Абонемент 8 занятий</span><span class="pc-list__sum"><span class="pc-old">3 500 ₽</span><span class="pc-sep">→</span><span class="pc-new">3 250&nbsp;₽/зан.</span>&nbsp;(26 000&nbsp;₽)</span></li>
-              <li><span class="pc-list__cnt">Абонемент 12 занятий</span><span class="pc-list__sum"><span class="pc-old">3 500 ₽</span><span class="pc-sep">→</span><span class="pc-new">3 000&nbsp;₽/зан.</span>&nbsp;(36 000&nbsp;₽)</span></li>
-            </ul>
+            <table class="pc-table">
+              <thead><tr><th scope="col">Занятий</th><th scope="col">1 занятие</th><th scope="col">Абонемент</th></tr></thead>
+              <tbody>
+                <tr><td>8</td><td>3 250&nbsp;₽</td><td>26 000&nbsp;₽</td></tr>
+                <tr><td>12</td><td>3 000&nbsp;₽</td><td>36 000&nbsp;₽</td></tr>
+              </tbody>
+            </table>
             <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
           </article>
           <article class="price-card price-card--beige pc-compact tilt">
@@ -679,9 +727,12 @@
             </div>
             <p class="text-muted text-sm mb-4">Подготовка к школе в малой группе</p>
             <div class="pc-compact__price"><span class="pc-big">2 700&nbsp;₽</span><span class="pc-per">за занятие по абонементу</span></div>
-            <ul class="pc-list">
-              <li><span class="pc-list__cnt">Абонемент 8 занятий</span><span class="pc-list__sum"><span class="pc-old">2 900 ₽</span><span class="pc-sep">→</span><span class="pc-new">2 700&nbsp;₽/зан.</span>&nbsp;(21 600&nbsp;₽)</span></li>
-            </ul>
+            <table class="pc-table">
+              <thead><tr><th scope="col">Занятий</th><th scope="col">1 занятие</th><th scope="col">Абонемент</th></tr></thead>
+              <tbody>
+                <tr><td>8</td><td>2 700&nbsp;₽</td><td>21 600&nbsp;₽</td></tr>
+              </tbody>
+            </table>
             <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
           </article>
         </div>
@@ -698,10 +749,13 @@
             </div>
             <p class="text-muted text-sm mb-4">Гармоничное развитие для малышей от 2 лет</p>
             <div class="pc-compact__price"><span class="pc-big">от 1 900&nbsp;₽</span><span class="pc-per">за занятие по абонементу</span></div>
-            <ul class="pc-list">
-              <li><span class="pc-list__cnt">Абонемент 4 занятия</span><span class="pc-list__sum"><span class="pc-new">2 100&nbsp;₽/зан.</span>&nbsp;(8 400&nbsp;₽)</span></li>
-              <li><span class="pc-list__cnt">Абонемент 8 занятий</span><span class="pc-list__sum"><span class="pc-old">2 100 ₽</span><span class="pc-sep">→</span><span class="pc-new">1 900&nbsp;₽/зан.</span>&nbsp;(15 200&nbsp;₽)</span></li>
-            </ul>
+            <table class="pc-table">
+              <thead><tr><th scope="col">Занятий</th><th scope="col">1 занятие</th><th scope="col">Абонемент</th></tr></thead>
+              <tbody>
+                <tr><td>4</td><td>2 100&nbsp;₽</td><td>8 400&nbsp;₽</td></tr>
+                <tr><td>8</td><td>1 900&nbsp;₽</td><td>15 200&nbsp;₽</td></tr>
+              </tbody>
+            </table>
             <a href="#booking" class="btn btn-glass magnetic-soft w-full mt-4">Записаться</a>
           </article>
 <article class="price-card price-card--diag pc-compact tilt">
@@ -1587,7 +1641,7 @@
         </div>
       </div>
       <div class="pm-cta">
-        <p class="pm-price-note"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-tag"></use></svg>по абонементу — от 3 100 ₽ за занятие</p>
+        <p class="pm-price-note"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-tag"></use></svg>абонементы: 8 зан. — 3 350 ₽/зан., 12 зан. — 3 100 ₽/зан.</p>
         <button type="button" class="btn btn-primary pm-book" data-service-book="Занятие с логопедом">
           <svg class="icon icon-sm" aria-hidden="true"><use href="#i-calendar"></use></svg>
           Записаться к логопеду
@@ -1628,7 +1682,7 @@
         </div>
       </div>
       <div class="pm-cta">
-        <p class="pm-price-note"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-tag"></use></svg>индивидуально — от 3 300 ₽ · мини-группа — от 3 100 ₽ за занятие</p>
+        <p class="pm-price-note"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-tag"></use></svg>индивидуально: от 3 300 ₽/зан. · мини-группа: от 3 100 ₽/зан.</p>
         <button type="button" class="btn btn-primary pm-book" data-service-book="Запуск речи у неговорящих">
           <svg class="icon icon-sm" aria-hidden="true"><use href="#i-calendar"></use></svg>
           Записаться на запуск речи
@@ -1669,7 +1723,7 @@
         </div>
       </div>
       <div class="pm-cta">
-        <p class="pm-price-note"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-tag"></use></svg>индивидуально — от 3 400 ₽ · мини-группа — от 2 900 ₽ за занятие</p>
+        <p class="pm-price-note"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-tag"></use></svg>индивидуально: от 3 400 ₽/зан. · мини-группа: от 2 900 ₽/зан.</p>
         <button type="button" class="btn btn-primary pm-book" data-service-book="Нейрокоррекция">
           <svg class="icon icon-sm" aria-hidden="true"><use href="#i-calendar"></use></svg>
           Записаться на нейрокоррекцию
@@ -1710,7 +1764,7 @@
         </div>
       </div>
       <div class="pm-cta">
-        <p class="pm-price-note"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-tag"></use></svg>по абонементу — от 3 600 ₽ за занятие</p>
+        <p class="pm-price-note"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-tag"></use></svg>абонементы: 8 зан. — 4 000 ₽/зан., 12 зан. — 3 600 ₽/зан.</p>
         <button type="button" class="btn btn-primary pm-book" data-service-book="Занятие с дефектологом">
           <svg class="icon icon-sm" aria-hidden="true"><use href="#i-calendar"></use></svg>
           Записаться к дефектологу
