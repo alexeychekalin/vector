@@ -1060,3 +1060,34 @@ h1,h2,h3,h4,.font-display { font-family: 'Evolventa','Nunito',sans-serif; }
 @media (prefers-reduced-motion: reduce){
   .about-carousel .ac-track{ transition:none; }
 }
+
+/* ==================== Зоны центра: одна линия без переноса ==================== */
+.rooms-grid{
+  display:flex;
+  flex-wrap:nowrap;
+  gap:24px;
+  align-items:stretch;
+}
+.rooms-grid > .card{
+  flex:1 1 0;
+  min-width:0;
+  margin:0;
+}
+/* планшеты/мобильные — горизонтальный свайп со snap */
+@media (max-width:1023px){
+  .rooms-grid{
+    gap:16px;
+    overflow-x:auto;
+    overscroll-behavior-x:contain;
+    scroll-snap-type:x mandatory;
+    scrollbar-width:none;
+    -webkit-overflow-scrolling:touch;
+    padding-bottom:8px;
+  }
+  .rooms-grid::-webkit-scrollbar{ display:none; }
+  .rooms-grid > .card{
+    flex:0 0 78%;
+    max-width:340px;
+    scroll-snap-align:center;
+  }
+}
