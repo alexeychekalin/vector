@@ -1031,6 +1031,16 @@ h1,h2,h3,h4,.font-display { font-family: 'Evolventa','Nunito',sans-serif; }
 .svc-price .svc-amount{ font-weight:600; line-height:1.2; white-space:nowrap; margin-right:auto; }
 .svc-price .svc-note{ line-height:1.4; text-align:right; white-space:nowrap; flex-shrink:0; }
 .svc-actions{ display:flex; align-items:center; gap:.5rem; }
+
+/* Заголовок карточки услуги: иконка и название на одном уровне */
+.svc-head{ display:flex; align-items:center; gap:1rem; margin-bottom:1.25rem; min-height:3.5rem; }
+.svc-head .icon-badge{ flex-shrink:0; }
+.svc-head h3{ line-height:1.25; }
+
+/* Цветные подложки бейжей услуг (собственные классы — без зависимости от Tailwind) */
+.bg-lavender-soft{ background-color:#D7D0E6; }
+.bg-pink-soft{ background-color:#F4C6DC; }
+.bg-gold-soft{ background-color:#FFE7C9; }
 .svc-actions > .btn{ flex:1 1 auto; }
 
 /* Маскот в заголовке секции услуг — крупный, прижат к правому краю */
