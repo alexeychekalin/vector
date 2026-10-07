@@ -193,10 +193,11 @@
         <nav class="site-nav hidden min-w-0 flex-1 items-center justify-center lg:flex" aria-label="Основная навигация">
           <a href="#situations" class="nav-link font-600 text-ink hover:text-berry transition-colors">Ситуации</a>
           <a href="#services" class="nav-link font-600 text-ink hover:text-berry transition-colors">Услуги</a>
-          <a href="#prices"   class="nav-link font-600 text-ink hover:text-berry transition-colors">Цены</a>
-          <a href="#rooms"    class="nav-link font-600 text-ink hover:text-berry transition-colors">Зоны</a>
-          <a href="#about"    class="nav-link font-600 text-ink hover:text-berry transition-colors">О центре</a>
+          <a href="#process"  class="nav-link font-600 text-ink hover:text-berry transition-colors">Шаги</a>
           <a href="#team"     class="nav-link font-600 text-ink hover:text-berry transition-colors">Специалисты</a>
+          <a href="#about"    class="nav-link font-600 text-ink hover:text-berry transition-colors">О центре</a>
+          <a href="#rooms"    class="nav-link font-600 text-ink hover:text-berry transition-colors">Зоны</a>
+          <a href="#prices"   class="nav-link font-600 text-ink hover:text-berry transition-colors">Цены</a>
           <a href="#reviews"  class="nav-link font-600 text-ink hover:text-berry transition-colors">Отзывы</a>
           <a href="#faq"      class="nav-link font-600 text-ink hover:text-berry transition-colors">Вопросы</a>
         </nav>
@@ -220,10 +221,11 @@
       <nav class="mobile-nav glass p-6 flex flex-col gap-2" aria-label="Мобильная навигация">
         <a href="#situations" class="mobile-link py-3 px-4 rounded-2xl font-600 text-ink hover:bg-white/60 transition-colors">Ситуации</a>
         <a href="#services" class="mobile-link py-3 px-4 rounded-2xl font-600 text-ink hover:bg-white/60 transition-colors">Услуги</a>
-        <a href="#prices"   class="mobile-link py-3 px-4 rounded-2xl font-600 text-ink hover:bg-white/60 transition-colors">Цены</a>
-        <a href="#rooms"    class="mobile-link py-3 px-4 rounded-2xl font-600 text-ink hover:bg-white/60 transition-colors">Зоны центра</a>
-        <a href="#about"    class="mobile-link py-3 px-4 rounded-2xl font-600 text-ink hover:bg-white/60 transition-colors">О центре</a>
+        <a href="#process"  class="mobile-link py-3 px-4 rounded-2xl font-600 text-ink hover:bg-white/60 transition-colors">Шаги</a>
         <a href="#team"     class="mobile-link py-3 px-4 rounded-2xl font-600 text-ink hover:bg-white/60 transition-colors">Специалисты</a>
+        <a href="#about"    class="mobile-link py-3 px-4 rounded-2xl font-600 text-ink hover:bg-white/60 transition-colors">О центре</a>
+        <a href="#rooms"    class="mobile-link py-3 px-4 rounded-2xl font-600 text-ink hover:bg-white/60 transition-colors">Зоны центра</a>
+        <a href="#prices"   class="mobile-link py-3 px-4 rounded-2xl font-600 text-ink hover:bg-white/60 transition-colors">Цены</a>
         <a href="#reviews"  class="mobile-link py-3 px-4 rounded-2xl font-600 text-ink hover:bg-white/60 transition-colors">Отзывы</a>
         <a href="#faq"      class="mobile-link py-3 px-4 rounded-2xl font-600 text-ink hover:bg-white/60 transition-colors">Вопросы</a>
         <a href="tel:+79050447917" class="mobile-link flex items-center gap-2 py-3 px-4 rounded-2xl font-600 text-berry hover:bg-white/60 transition-colors">
@@ -343,7 +345,7 @@
         <p class="text-lg text-muted">Ни одна из этих ситуаций не «перерастёт» сама. Каждая — решаемая задача, и для неё есть своё направление. Нажмите на карточку — покажем, какой специалист и методика работают с ней.</p>
       </div>
 
-      <div class="pain-grid stagger grid sm:grid-cols-2 lg:grid-cols-3 gap-5" role="list">
+      <div class="pain-grid stagger grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10" role="list">
 
         <button type="button" class="pain-card" data-pain-target="#services" data-pain-service="Запуск речи у неговорящих" role="listitem">
           <span class="pain-head"><span class="icon-badge bg-rose-soft text-berry" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-baby"></use></svg></span><h3>Молчит или говорит мало в 2–3 года</h3></span>
@@ -524,158 +526,6 @@
     </div>
   </section>
 
-  <!-- ==================== ЗОНЫ ЦЕНТРА ==================== -->
-  <section id="rooms" class="py-20 lg:py-28 relative overflow-hidden">
-    <div class="blob w-72 h-72 bg-rose -top-10 -right-24 opacity-30 float-slow" data-parallax="0.12"></div>
-    <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div class="max-w-2xl mb-14 reveal">
-        <span class="inline-flex items-center gap-2 py-2 px-4 rounded-full glass text-berry font-600 text-sm mb-4">
-          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-pin"></use></svg>
-          Зоны центра
-        </span>
-        <h2 class="font-display font-600 text-3xl sm:text-4xl lg:text-5xl text-ink leading-tight mb-4">
-          Отдельное пространство для каждого направления
-        </h2>
-        <p class="text-lg text-muted">
-          Мы оборудовали центр так, чтобы родителям и детям было комфортно. Нажмите на фото, чтобы рассмотреть ближе.
-        </p>
-      </div>
-
-      <div class="stagger rooms-grid">
-        <figure class="card tilt magnetic-soft overflow-hidden group">
-          <button class="lightbox-trigger block w-full text-left" data-full="assets/img/rooms/logoped-1.jpg" data-gallery="assets/img/rooms/logoped-1.jpg,assets/img/rooms/logoped-2.jpg,assets/img/rooms/logoped-3.jpg,assets/img/rooms/logoped-4.jpg" aria-label="Открыть фото: зона логопеда">
-            <span class="block aspect-[4/3] overflow-hidden relative">
-              <img src="assets/img/rooms/logoped-1.jpg" width="1200" height="798" alt="Кабинет логопеда центра «Золотой Вектор»" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-              <span class="room-count"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-images"></use></svg>4 фото</span>
-            </span>
-            <figcaption class="p-5">
-              <span class="flex items-center gap-2 font-display font-600 text-ink"><svg class="icon icon-sm text-berry" aria-hidden="true"><use href="#i-mic"></use></svg> Зона логопеда</span>
-              <span class="block text-sm text-muted mt-1">Индивидуальные занятия и постановка звуков</span>
-            </figcaption>
-          </button>
-        </figure>
-
-        <figure class="card tilt magnetic-soft overflow-hidden group">
-          <button class="lightbox-trigger block w-full text-left" data-full="assets/img/rooms/neuro-1.jpg" data-gallery="assets/img/rooms/neuro-1.jpg,assets/img/rooms/neuro-2.jpg,assets/img/rooms/neuro-3.jpg,assets/img/rooms/neuro-4.jpg" aria-label="Открыть фото: зона нейрокоррекции">
-            <span class="block aspect-[4/3] overflow-hidden relative">
-              <img src="assets/img/rooms/neuro-1.jpg" width="1200" height="900" alt="Зона нейрокоррекции центра «Золотой Вектор»" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-              <span class="room-count"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-images"></use></svg>4 фото</span>
-            </span>
-            <figcaption class="p-5">
-              <span class="flex items-center gap-2 font-display font-600 text-ink"><svg class="icon icon-sm text-berry" aria-hidden="true"><use href="#i-brain"></use></svg> Зона нейро</span>
-              <span class="block text-sm text-muted mt-1">Сенсомоторная коррекция и развитие мозга</span>
-            </figcaption>
-          </button>
-        </figure>
-
-        <figure class="card tilt magnetic-soft overflow-hidden group">
-          <button class="lightbox-trigger block w-full text-left" data-full="assets/img/rooms/logomassage-1.jpg" data-gallery="assets/img/rooms/logomassage-1.jpg,assets/img/rooms/logomassage-2.jpg,assets/img/rooms/logomassage-3.jpg,assets/img/rooms/logomassage-4.jpg" aria-label="Открыть фото: зона логопедического массажа">
-            <span class="block aspect-[4/3] overflow-hidden relative">
-              <img src="assets/img/rooms/logomassage-1.jpg" width="1200" height="900" alt="Зона логопедического массажа центра «Золотой Вектор»" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-              <span class="room-count"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-images"></use></svg>4 фото</span>
-            </span>
-            <figcaption class="p-5">
-              <span class="flex items-center gap-2 font-display font-600 text-ink"><svg class="icon icon-sm text-berry" aria-hidden="true"><use href="#i-hand-heart"></use></svg> Логомассаж</span>
-              <span class="block text-sm text-muted mt-1">Мягкая подготовка мышц речевого аппарата</span>
-            </figcaption>
-          </button>
-        </figure>
-
-        <figure class="card tilt magnetic-soft overflow-hidden group">
-          <button class="lightbox-trigger block w-full text-left" data-full="assets/img/rooms/sensory-1.jpg" data-gallery="assets/img/rooms/sensory-1.jpg,assets/img/rooms/sensory-2.jpg" aria-label="Открыть фото: сенсорная зона">
-            <span class="block aspect-[4/3] overflow-hidden relative">
-              <img src="assets/img/rooms/sensory-1.jpg" width="1200" height="900" alt="Сенсорная зона центра «Золотой Вектор»" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-              <span class="room-count"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-images"></use></svg>2 фото</span>
-            </span>
-            <figcaption class="p-5">
-              <span class="flex items-center gap-2 font-display font-600 text-ink"><svg class="icon icon-sm text-berry" aria-hidden="true"><use href="#i-puzzle"></use></svg> Сенсорная</span>
-              <span class="block text-sm text-muted mt-1">Развитие восприятия и снятие напряжения</span>
-            </figcaption>
-          </button>
-        </figure>
-
-        <figure class="card tilt magnetic-soft overflow-hidden group">
-          <button class="lightbox-trigger block w-full text-left" data-full="assets/img/rooms/wait-3.jpeg" data-gallery="assets/img/rooms/wait-1.jpeg,assets/img/rooms/wait-2.jpeg,assets/img/rooms/wait-3.jpeg" aria-label="Открыть фото: зона ожидания для родителей">
-            <span class="block aspect-[4/3] overflow-hidden relative">
-              <img src="assets/img/rooms/wait-3.jpeg" width="2560" height="1440" alt="Зона ожидания центра «Золотой Вектор»: мягкая мебель и кофе для родителей" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-              <span class="room-count"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-images"></use></svg>3 фото</span>
-            </span>
-            <figcaption class="p-5">
-              <span class="flex items-center gap-2 font-display font-600 text-ink"><svg class="icon icon-sm text-berry" aria-hidden="true"><use href="#i-heart"></use></svg> Зона ожидания</span>
-              <span class="block text-sm text-muted mt-1">Мягкая мебель, wi-fi, розетки и кофе</span>
-            </figcaption>
-          </button>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== О ЦЕНТРЕ ==================== -->
-  <section id="about" class="py-20 lg:py-28 relative overflow-hidden">
-    <img src="assets/brand/deco/star2-pink.png" alt="" aria-hidden="true" class="deco absolute w-16 top-16 right-12 opacity-70 float-mid" data-parallax="0.15" />
-    <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-
-        <div class="reveal relative order-2 lg:order-1">
-          <div class="about-carousel photo-frame aspect-[16/9]" data-parallax="-0.1" role="group" aria-roledescription="карусель" aria-label="Фотографии центра «Золотой Вектор»">
-            <div class="ac-track" id="aboutTrack">
-              <div class="ac-slide" role="group" aria-label="1 из 14"><img src="assets/img/about/about-1.webp" data-full="assets/img/about/full/about-1-full.webp" width="800" height="450" alt="Фотография центра «Золотой Вектор» — кабинет для занятий" loading="lazy" /></div>
-              <div class="ac-slide" role="group" aria-label="2 из 14"><img src="assets/img/about/about-2.webp" data-full="assets/img/about/full/about-2-full.webp" width="800" height="450" alt="Фотография центра «Золотой Вектор» — рабочее место специалиста" loading="lazy" /></div>
-              <div class="ac-slide" role="group" aria-label="3 из 14"><img src="assets/img/about/about-3.webp" data-full="assets/img/about/full/about-3-full.webp" width="800" height="450" alt="Фотография центра «Золотой Вектор» — дидактические материалы" loading="lazy" /></div>
-              <div class="ac-slide" role="group" aria-label="4 из 14"><img src="assets/img/about/about-4.webp" data-full="assets/img/about/full/about-4-full.webp" width="800" height="450" alt="Фотография центра «Золотой Вектор» — пространство для занятий" loading="lazy" /></div>
-              <div class="ac-slide" role="group" aria-label="5 из 14"><img src="assets/img/about/about-5.webp" data-full="assets/img/about/full/about-5-full.webp" width="800" height="450" alt="Фотография центра «Золотой Вектор» — игровая зона" loading="lazy" /></div>
-              <div class="ac-slide" role="group" aria-label="6 из 14"><img src="assets/img/about/about-6.webp" data-full="assets/img/about/full/about-6-full.webp" width="800" height="450" alt="Фотография центра «Золотой Вектор» — занятие с ребёнком" loading="lazy" /></div>
-              <div class="ac-slide" role="group" aria-label="7 из 14"><img src="assets/img/about/about-7.webp" data-full="assets/img/about/full/about-7-full.webp" width="800" height="450" alt="Фотография центра «Золотой Вектор» — сенсорное оборудование" loading="lazy" /></div>
-              <div class="ac-slide" role="group" aria-label="8 из 14"><img src="assets/img/about/about-8.webp" data-full="assets/img/about/full/about-8-full.webp" width="800" height="450" alt="Фотография центра «Золотой Вектор» — уголок развития" loading="lazy" /></div>
-              <div class="ac-slide" role="group" aria-label="9 из 14"><img src="assets/img/about/about-9.webp" data-full="assets/img/about/full/about-9-full.webp" width="800" height="450" alt="Фотография центра «Золотой Вектор» — зона нейрокоррекции" loading="lazy" /></div>
-              <div class="ac-slide" role="group" aria-label="10 из 14"><img src="assets/img/about/about-10.webp" data-full="assets/img/about/full/about-10-full.webp" width="800" height="450" alt="Фотография центра «Золотой Вектор» — материалы для логопедических занятий" loading="lazy" /></div>
-              <div class="ac-slide" role="group" aria-label="11 из 14"><img src="assets/img/about/about-11.webp" data-full="assets/img/about/full/about-11-full.webp" width="800" height="450" alt="Фотография центра «Золотой Вектор» — рабочее пространство" loading="lazy" /></div>
-              <div class="ac-slide" role="group" aria-label="12 из 14"><img src="assets/img/about/about-12.webp" data-full="assets/img/about/full/about-12-full.webp" width="800" height="450" alt="Фотография центра «Золотой Вектор» — детали интерьера" loading="lazy" /></div>
-              <div class="ac-slide" role="group" aria-label="13 из 14"><img src="assets/img/about/about-13.webp" data-full="assets/img/about/full/about-13-full.webp" width="800" height="450" alt="Фотография центра «Золотой Вектор» — зона ожидания" loading="lazy" /></div>
-              <div class="ac-slide" role="group" aria-label="14 из 14"><img src="assets/img/about/about-14.webp" data-full="assets/img/about/full/about-14-full.webp" width="800" height="450" alt="Фотография центра «Золотой Вектор» — общий вид пространства" loading="lazy" /></div>
-            </div>
-            <button type="button" class="ac-nav ac-prev" id="aboutPrev" aria-label="Предыдущее фото"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-caret-left"></use></svg></button>
-            <button type="button" class="ac-nav ac-next" id="aboutNext" aria-label="Следующее фото"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-caret-right"></use></svg></button>
-            <div class="ac-dots" id="aboutDots" role="tablist" aria-label="Выбор фотографии"></div>
-            <span class="room-count ac-badge" aria-hidden="true"><svg class="icon icon-sm"><use href="#i-images"></use></svg>14 фото</span>
-          </div>
-        </div>
-
-        <div class="reveal order-1 lg:order-2">
-          <span class="inline-flex items-center gap-2 py-2 px-4 rounded-full glass text-berry font-600 text-sm mb-4">
-            <svg class="icon icon-sm" aria-hidden="true"><use href="#i-pin"></use></svg>
-            О центре
-          </span>
-          <h2 class="font-display font-600 text-3xl sm:text-4xl text-ink leading-tight mb-5">
-            Место, в котором ребёнка принимают таким, какой он есть
-          </h2>
-          <p class="text-lg text-muted mb-6 leading-relaxed">
-            Мы верим, что каждый ребёнок достоин говорить - свободно, общаться с радостью, идти в будущее - уверенно.
-          </p>
-          <ul class="space-y-4">
-            <li class="flex items-start gap-3">
-              <svg class="icon text-berry mt-0.5" aria-hidden="true"><use href="#i-check"></use></svg>
-              <span class="text-ink"><span class="font-600">Уютные светлые кабинеты</span> — отдельное пространство для каждого занятия.</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="icon text-berry mt-0.5" aria-hidden="true"><use href="#i-check"></use></svg>
-              <span class="text-ink"><span class="font-600">Команда логопедов, нейропсихологов и дефектологов</span> — бережные профессионалы с заботой к развитию Ваших детей.</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="icon text-berry mt-0.5" aria-hidden="true"><use href="#i-check"></use></svg>
-              <span class="text-ink"><span class="font-600">Прозрачная динамика</span> — вы видите прогресс ребёнка, получаете обратную связь, открыто обсуждаете все волнующие моменты с педагогом.</span>
-            </li>
-          </ul>
-          <a href="#booking" class="btn btn-primary btn-lg magnetic mt-8">
-            <svg class="icon icon-sm" aria-hidden="true"><use href="#i-calendar"></use></svg>
-            Записаться на первый визит
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
   <!-- ==================== ЭТАПЫ ==================== -->
   <section id="process" class="py-20 lg:py-28 relative overflow-hidden has-pattern pattern-lavender">
     <div class="blob w-72 h-72 bg-rose -top-10 -left-20 opacity-30 float-slow" data-parallax="0.12"></div>
@@ -801,6 +651,158 @@
           </div>
         </article>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== О ЦЕНТРЕ ==================== -->
+  <section id="about" class="py-20 lg:py-28 relative overflow-hidden">
+    <img src="assets/brand/deco/star2-pink.png" alt="" aria-hidden="true" class="deco absolute w-16 top-16 right-12 opacity-70 float-mid" data-parallax="0.15" />
+    <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+        <div class="reveal relative order-2 lg:order-1">
+          <div class="about-carousel photo-frame aspect-[16/9]" data-parallax="-0.1" role="group" aria-roledescription="карусель" aria-label="Фотографии центра «Золотой Вектор»">
+            <div class="ac-track" id="aboutTrack">
+              <div class="ac-slide" role="group" aria-label="1 из 14"><img src="assets/img/about/about-1.webp" data-full="assets/img/about/full/about-1-full.webp" width="800" height="450" alt="Фотография центра «Золотой Вектор» — кабинет для занятий" loading="lazy" /></div>
+              <div class="ac-slide" role="group" aria-label="2 из 14"><img src="assets/img/about/about-2.webp" data-full="assets/img/about/full/about-2-full.webp" width="800" height="450" alt="Фотография центра «Золотой Вектор» — рабочее место специалиста" loading="lazy" /></div>
+              <div class="ac-slide" role="group" aria-label="3 из 14"><img src="assets/img/about/about-3.webp" data-full="assets/img/about/full/about-3-full.webp" width="800" height="450" alt="Фотография центра «Золотой Вектор» — дидактические материалы" loading="lazy" /></div>
+              <div class="ac-slide" role="group" aria-label="4 из 14"><img src="assets/img/about/about-4.webp" data-full="assets/img/about/full/about-4-full.webp" width="800" height="450" alt="Фотография центра «Золотой Вектор» — пространство для занятий" loading="lazy" /></div>
+              <div class="ac-slide" role="group" aria-label="5 из 14"><img src="assets/img/about/about-5.webp" data-full="assets/img/about/full/about-5-full.webp" width="800" height="450" alt="Фотография центра «Золотой Вектор» — игровая зона" loading="lazy" /></div>
+              <div class="ac-slide" role="group" aria-label="6 из 14"><img src="assets/img/about/about-6.webp" data-full="assets/img/about/full/about-6-full.webp" width="800" height="450" alt="Фотография центра «Золотой Вектор» — занятие с ребёнком" loading="lazy" /></div>
+              <div class="ac-slide" role="group" aria-label="7 из 14"><img src="assets/img/about/about-7.webp" data-full="assets/img/about/full/about-7-full.webp" width="800" height="450" alt="Фотография центра «Золотой Вектор» — сенсорное оборудование" loading="lazy" /></div>
+              <div class="ac-slide" role="group" aria-label="8 из 14"><img src="assets/img/about/about-8.webp" data-full="assets/img/about/full/about-8-full.webp" width="800" height="450" alt="Фотография центра «Золотой Вектор» — уголок развития" loading="lazy" /></div>
+              <div class="ac-slide" role="group" aria-label="9 из 14"><img src="assets/img/about/about-9.webp" data-full="assets/img/about/full/about-9-full.webp" width="800" height="450" alt="Фотография центра «Золотой Вектор» — зона нейрокоррекции" loading="lazy" /></div>
+              <div class="ac-slide" role="group" aria-label="10 из 14"><img src="assets/img/about/about-10.webp" data-full="assets/img/about/full/about-10-full.webp" width="800" height="450" alt="Фотография центра «Золотой Вектор» — материалы для логопедических занятий" loading="lazy" /></div>
+              <div class="ac-slide" role="group" aria-label="11 из 14"><img src="assets/img/about/about-11.webp" data-full="assets/img/about/full/about-11-full.webp" width="800" height="450" alt="Фотография центра «Золотой Вектор» — рабочее пространство" loading="lazy" /></div>
+              <div class="ac-slide" role="group" aria-label="12 из 14"><img src="assets/img/about/about-12.webp" data-full="assets/img/about/full/about-12-full.webp" width="800" height="450" alt="Фотография центра «Золотой Вектор» — детали интерьера" loading="lazy" /></div>
+              <div class="ac-slide" role="group" aria-label="13 из 14"><img src="assets/img/about/about-13.webp" data-full="assets/img/about/full/about-13-full.webp" width="800" height="450" alt="Фотография центра «Золотой Вектор» — зона ожидания" loading="lazy" /></div>
+              <div class="ac-slide" role="group" aria-label="14 из 14"><img src="assets/img/about/about-14.webp" data-full="assets/img/about/full/about-14-full.webp" width="800" height="450" alt="Фотография центра «Золотой Вектор» — общий вид пространства" loading="lazy" /></div>
+            </div>
+            <button type="button" class="ac-nav ac-prev" id="aboutPrev" aria-label="Предыдущее фото"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-caret-left"></use></svg></button>
+            <button type="button" class="ac-nav ac-next" id="aboutNext" aria-label="Следующее фото"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-caret-right"></use></svg></button>
+            <div class="ac-dots" id="aboutDots" role="tablist" aria-label="Выбор фотографии"></div>
+            <span class="room-count ac-badge" aria-hidden="true"><svg class="icon icon-sm"><use href="#i-images"></use></svg>14 фото</span>
+          </div>
+        </div>
+
+        <div class="reveal order-1 lg:order-2">
+          <span class="inline-flex items-center gap-2 py-2 px-4 rounded-full glass text-berry font-600 text-sm mb-4">
+            <svg class="icon icon-sm" aria-hidden="true"><use href="#i-pin"></use></svg>
+            О центре
+          </span>
+          <h2 class="font-display font-600 text-3xl sm:text-4xl text-ink leading-tight mb-5">
+            Место, в котором ребёнка принимают таким, какой он есть
+          </h2>
+          <p class="text-lg text-muted mb-6 leading-relaxed">
+            Мы верим, что каждый ребёнок достоин говорить - свободно, общаться с радостью, идти в будущее - уверенно.
+          </p>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <svg class="icon text-berry mt-0.5" aria-hidden="true"><use href="#i-check"></use></svg>
+              <span class="text-ink"><span class="font-600">Уютные светлые кабинеты</span> — отдельное пространство для каждого занятия.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="icon text-berry mt-0.5" aria-hidden="true"><use href="#i-check"></use></svg>
+              <span class="text-ink"><span class="font-600">Команда логопедов, нейропсихологов и дефектологов</span> — бережные профессионалы с заботой к развитию Ваших детей.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="icon text-berry mt-0.5" aria-hidden="true"><use href="#i-check"></use></svg>
+              <span class="text-ink"><span class="font-600">Прозрачная динамика</span> — вы видите прогресс ребёнка, получаете обратную связь, открыто обсуждаете все волнующие моменты с педагогом.</span>
+            </li>
+          </ul>
+          <a href="#booking" class="btn btn-primary btn-lg magnetic mt-8">
+            <svg class="icon icon-sm" aria-hidden="true"><use href="#i-calendar"></use></svg>
+            Записаться на первый визит
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ЗОНЫ ЦЕНТРА ==================== -->
+  <section id="rooms" class="py-20 lg:py-28 relative overflow-hidden">
+    <div class="blob w-72 h-72 bg-rose -top-10 -right-24 opacity-30 float-slow" data-parallax="0.12"></div>
+    <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="max-w-2xl mb-14 reveal">
+        <span class="inline-flex items-center gap-2 py-2 px-4 rounded-full glass text-berry font-600 text-sm mb-4">
+          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-pin"></use></svg>
+          Зоны центра
+        </span>
+        <h2 class="font-display font-600 text-3xl sm:text-4xl lg:text-5xl text-ink leading-tight mb-4">
+          Отдельное пространство для каждого направления
+        </h2>
+        <p class="text-lg text-muted">
+          Мы оборудовали центр так, чтобы родителям и детям было комфортно. Нажмите на фото, чтобы рассмотреть ближе.
+        </p>
+      </div>
+
+      <div class="stagger rooms-grid">
+        <figure class="card tilt magnetic-soft overflow-hidden group">
+          <button class="lightbox-trigger block w-full text-left" data-full="assets/img/rooms/logoped-1.jpg" data-gallery="assets/img/rooms/logoped-1.jpg,assets/img/rooms/logoped-2.jpg,assets/img/rooms/logoped-3.jpg,assets/img/rooms/logoped-4.jpg" aria-label="Открыть фото: зона логопеда">
+            <span class="block aspect-[4/3] overflow-hidden relative">
+              <img src="assets/img/rooms/logoped-1.jpg" width="1200" height="798" alt="Кабинет логопеда центра «Золотой Вектор»" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <span class="room-count"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-images"></use></svg>4 фото</span>
+            </span>
+            <figcaption class="p-5">
+              <span class="flex items-center gap-2 font-display font-600 text-ink"><svg class="icon icon-sm text-berry" aria-hidden="true"><use href="#i-mic"></use></svg> Зона логопеда</span>
+              <span class="block text-sm text-muted mt-1">Индивидуальные занятия и постановка звуков</span>
+            </figcaption>
+          </button>
+        </figure>
+
+        <figure class="card tilt magnetic-soft overflow-hidden group">
+          <button class="lightbox-trigger block w-full text-left" data-full="assets/img/rooms/neuro-1.jpg" data-gallery="assets/img/rooms/neuro-1.jpg,assets/img/rooms/neuro-2.jpg,assets/img/rooms/neuro-3.jpg,assets/img/rooms/neuro-4.jpg" aria-label="Открыть фото: зона нейрокоррекции">
+            <span class="block aspect-[4/3] overflow-hidden relative">
+              <img src="assets/img/rooms/neuro-1.jpg" width="1200" height="900" alt="Зона нейрокоррекции центра «Золотой Вектор»" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <span class="room-count"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-images"></use></svg>4 фото</span>
+            </span>
+            <figcaption class="p-5">
+              <span class="flex items-center gap-2 font-display font-600 text-ink"><svg class="icon icon-sm text-berry" aria-hidden="true"><use href="#i-brain"></use></svg> Зона нейро</span>
+              <span class="block text-sm text-muted mt-1">Сенсомоторная коррекция и развитие мозга</span>
+            </figcaption>
+          </button>
+        </figure>
+
+        <figure class="card tilt magnetic-soft overflow-hidden group">
+          <button class="lightbox-trigger block w-full text-left" data-full="assets/img/rooms/logomassage-1.jpg" data-gallery="assets/img/rooms/logomassage-1.jpg,assets/img/rooms/logomassage-2.jpg,assets/img/rooms/logomassage-3.jpg,assets/img/rooms/logomassage-4.jpg" aria-label="Открыть фото: зона логопедического массажа">
+            <span class="block aspect-[4/3] overflow-hidden relative">
+              <img src="assets/img/rooms/logomassage-1.jpg" width="1200" height="900" alt="Зона логопедического массажа центра «Золотой Вектор»" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <span class="room-count"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-images"></use></svg>4 фото</span>
+            </span>
+            <figcaption class="p-5">
+              <span class="flex items-center gap-2 font-display font-600 text-ink"><svg class="icon icon-sm text-berry" aria-hidden="true"><use href="#i-hand-heart"></use></svg> Логомассаж</span>
+              <span class="block text-sm text-muted mt-1">Мягкая подготовка мышц речевого аппарата</span>
+            </figcaption>
+          </button>
+        </figure>
+
+        <figure class="card tilt magnetic-soft overflow-hidden group">
+          <button class="lightbox-trigger block w-full text-left" data-full="assets/img/rooms/sensory-1.jpg" data-gallery="assets/img/rooms/sensory-1.jpg,assets/img/rooms/sensory-2.jpg" aria-label="Открыть фото: сенсорная зона">
+            <span class="block aspect-[4/3] overflow-hidden relative">
+              <img src="assets/img/rooms/sensory-1.jpg" width="1200" height="900" alt="Сенсорная зона центра «Золотой Вектор»" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <span class="room-count"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-images"></use></svg>2 фото</span>
+            </span>
+            <figcaption class="p-5">
+              <span class="flex items-center gap-2 font-display font-600 text-ink"><svg class="icon icon-sm text-berry" aria-hidden="true"><use href="#i-puzzle"></use></svg> Сенсорная</span>
+              <span class="block text-sm text-muted mt-1">Развитие восприятия и снятие напряжения</span>
+            </figcaption>
+          </button>
+        </figure>
+
+        <figure class="card tilt magnetic-soft overflow-hidden group">
+          <button class="lightbox-trigger block w-full text-left" data-full="assets/img/rooms/wait-3.jpeg" data-gallery="assets/img/rooms/wait-1.jpeg,assets/img/rooms/wait-2.jpeg,assets/img/rooms/wait-3.jpeg" aria-label="Открыть фото: зона ожидания для родителей">
+            <span class="block aspect-[4/3] overflow-hidden relative">
+              <img src="assets/img/rooms/wait-3.jpeg" width="2560" height="1440" alt="Зона ожидания центра «Золотой Вектор»: мягкая мебель и кофе для родителей" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <span class="room-count"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-images"></use></svg>3 фото</span>
+            </span>
+            <figcaption class="p-5">
+              <span class="flex items-center gap-2 font-display font-600 text-ink"><svg class="icon icon-sm text-berry" aria-hidden="true"><use href="#i-heart"></use></svg> Зона ожидания</span>
+              <span class="block text-sm text-muted mt-1">Мягкая мебель, wi-fi, розетки и кофе</span>
+            </figcaption>
+          </button>
+        </figure>
       </div>
     </div>
   </section>
