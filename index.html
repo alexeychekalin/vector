@@ -117,9 +117,9 @@
 
   <script>document.documentElement.classList.remove('no-js');</script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Nunito: локальные woff2 (preload ключевых начертаний, без Google Fonts) -->
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/nunito/Nunito-400-cyrillic.woff2" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/nunito/Nunito-700-cyrillic.woff2" />
   <!-- Статический Tailwind CSS (собран из build/tailwind.config.js, без рантайм-CDN) -->
   <link rel="stylesheet" href="assets/vendor/tailwind-generated.css" />
 
