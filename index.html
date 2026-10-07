@@ -817,11 +817,12 @@
           Отзывы родителей
         </span>
         <h2 class="font-display font-600 text-3xl sm:text-4xl lg:text-5xl text-ink leading-tight">Истории, ради которых мы работаем</h2>
-        <p class="text-lg text-muted mt-4">Ориганальные отзывы родителей наших учеников. Нажмите на любой, чтобы прочитать целиком.</p>
+        <p class="text-lg text-muted mt-4">Оригинальные отзывы родителей наших учеников. Наведите курсор, чтобы остановить ленту и прочитать отзыв.</p>
       </div>
 
       <div class="relative reveal">
-        <div id="reviewsGrid" class="reviews-masonry">
+        <div id="reviewsGrid" class="reviews-marquee" aria-label="Отзывы родителей — прокручивающаяся лента">
+        <div class="reviews-track">
         <article class="review-card card">
           <div class="review-card__stars text-gold" aria-label="Оценка 5 из 5"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"></use></svg></div>
           <p class="review-card__text">Замечательный новый центр в пешей доступности от метро. Очень приветливые сотрудники, светлый и просторный — видно, что создан с любовью. Были с дочкой на диагностике у Софьи Евгеньевны: к ребёнку быстро нашли подход, всё прошло в игровом формате. Дочка не хотела уходить! Выдали заключение с рекомендациями.</p>
@@ -1075,13 +1076,8 @@
             </div>
           </div>
         </article>
-        </div>
-        <div class="text-center mt-10">
-          <button id="reviewsToggle" class="btn btn-glass btn-lg magnetic" aria-expanded="false">
-            <span class="reviews-toggle-label" data-more="Показать ещё отзывы (17)">Показать ещё отзывы (17)</span>
-            <svg class="icon icon-sm reviews-toggle-caret" aria-hidden="true"><use href="#i-caret-down"></use></svg>
-          </button>
-        </div>
+        </div><!-- /.reviews-track -->
+        </div><!-- /.reviews-marquee -->
       </div>
     </div>
   </section>

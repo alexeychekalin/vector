@@ -121,20 +121,27 @@
     });
   });
 
-  /* ---------- Галерея отзывов: показать все ---------- */
+  /* ---------- Лента отзывов: бесшовная прокрутка ---------- */
   const reviewsGrid = document.getElementById('reviewsGrid');
-  const reviewsToggle = document.getElementById('reviewsToggle');
-  if (reviewsGrid && reviewsToggle) {
-    const label = reviewsToggle.querySelector('.reviews-toggle-label');
-    const caret = reviewsToggle.querySelector('.reviews-toggle-caret');
-    reviewsToggle.addEventListener('click', () => {
-      const expanded = reviewsGrid.classList.toggle('expanded');
-      reviewsToggle.setAttribute('aria-expanded', String(expanded));
-      if (label) label.textContent = expanded ? 'Свернуть отзывы' : (label.dataset.more || 'Показать ещё отзывы');
-      if (caret) caret.style.transform = expanded ? 'rotate(180deg)' : 'none';
-      if (hasGSAP && !reduce && window.ScrollTrigger) ScrollTrigger.refresh();
-      if (!expanded) document.getElementById('reviews').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
-    });
+  if (reviewsGrid) {
+    const track = reviewsGrid.querySelector('.reviews-track');
+    if (track) {
+      // Дублируем карточки для бесшовной петли; дублираты скрыты от AT и неинтерактивны
+      track.querySelectorAll('.review-card').forEach(card => {
+        const clone = card.cloneNode(true);
+        clone.classList.add('review-card--clone');
+        clone.setAttribute('aria-hidden', 'true');
+        clone.removeAttribute('tabindex');
+        track.appendChild(clone);
+      });
+      // Скорость ~ постоянная: длина цикла / фиксированное время
+      const setDuration = () => {
+        const w = track.scrollWidth / 2; // ширина оригинального комплекта
+        if (w > 0) track.style.animationDuration = Math.max(45, Math.round(w / 60)) + 's';
+      };
+      setDuration();
+      window.addEventListener('resize', setDuration, { passive: true });
+    }
   }
 
   /* ---------- Лайтбокс (отзывы + зоны) ---------- */

@@ -414,20 +414,35 @@ h1,h2,h3,h4,.font-display { font-family: 'Evolventa','Nunito',sans-serif; }
 .bio-caret{ transition: transform .35s ease; }
 @media (prefers-reduced-motion: reduce){ .bio-panel{ transition:none; } }
 
-/* ---- Отзывы: масонри-раскладка текстовых карточек ---- */
-.reviews-masonry{ columns: 1; column-gap: 1.25rem; }
-@media (min-width:640px){ .reviews-masonry{ columns: 2; } }
-@media (min-width:1024px){ .reviews-masonry{ columns: 3; } }
+/* ---- Отзывы: бесшовная прокручивающаяся лента (marquee) ---- */
+.reviews-marquee{
+  position: relative;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 7%, #000 93%, transparent 100%);
+          mask-image: linear-gradient(to right, transparent 0, #000 7%, #000 93%, transparent 100%);
+}
+.reviews-track{
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  animation: reviews-scroll 90s linear infinite;
+  will-change: transform;
+}
+.reviews-marquee:hover .reviews-track,
+.reviews-marquee:focus-within .reviews-track{ animation-play-state: paused; }
+@keyframes reviews-scroll{ from{ transform: translateX(0); } to{ transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce){
+  .reviews-track{ animation: none; }
+  .reviews-marquee{ overflow-x: auto; }
+}
 
 .review-card{
-  break-inside: avoid;
-  display: inline-block;      /* корректный разрыв колонок */
-  width: 100%;
+  flex: 0 0 min(88vw, 420px);
   padding: 1.5rem;
-  margin-bottom: 1.25rem;
+  align-self: stretch;        /* карточки одной высоты в ленте */
 }
-.review-extra{ display:none; }
-#reviewsGrid.expanded .review-extra{ display:inline-block; }
+.review-card--clone{ pointer-events: none; user-select: none; }
+.review-extra{ display:flex; }
 
 .review-card__stars{ display:flex; gap:2px; margin-bottom:.75rem; }
 .review-card__stars .icon{ width:1.05rem; height:1.05rem; }
