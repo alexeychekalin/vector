@@ -1058,14 +1058,7 @@ h1,h2,h3,h4,.font-display { font-family: 'Evolventa','Nunito',sans-serif; }
 }
 .ac-dot.is-active{ background:#fff; width:22px; }
 .ac-dot:focus-visible{ outline:2px solid var(--gold-2); outline-offset:2px; }
-/* Бейдж «14 фото»: приподнят — нижний край ровно на линии нижнего края карусели */
-.ac-badge{ top:auto; bottom:0; transform:translateY(50%); z-index:3; }
-@media (max-width:639px){
-  /* на мобильных бейдж свисает под карусель — поднимаем точки выше, чтобы он не наезжал на них */
-  .about-carousel .ac-dots{ bottom:2.1rem; }
-  /* увеличенный нижний отступ секции: бейдж не наезжает на кнопки/контент под каруселью */
-  #about .about-carousel{ margin-bottom:2.5rem; }
-}
+.ac-badge{ top:auto; bottom:.65rem; }
 .about-carousel.no-js .ac-track{ overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none; }
 .about-carousel.no-js .ac-track::-webkit-scrollbar{ display:none; }
 .about-carousel.no-js .ac-slide{ scroll-snap-align:start; }
