@@ -1044,12 +1044,17 @@ h1,h2,h3,h4,.font-display { font-family: 'Evolventa','Nunito',sans-serif; }
 @media (hover:none){ .ac-nav{ opacity:1; width:36px; height:36px; } }
 .ac-dots{
   position:absolute; bottom:.7rem; left:50%; transform:translateX(-50%);
-  display:flex; gap:.4rem; z-index:2;
+  display:flex; gap:.4rem; z-index:2; max-width:calc(100% - 6.5rem);
 }
 .ac-dot{
   width:9px; height:9px; border-radius:999px; border:none; cursor:pointer; padding:0;
   background: rgba(255,255,255,.55); box-shadow:0 1px 3px rgba(46,38,43,.25);
-  transition: background .25s, width .25s;
+  transition: background .25s, width .25s; flex:0 0 auto;
+}
+@media (max-width:639px){
+  /* 14 точек на узких экранах — компактнее */
+  .ac-dot{ width:7px; height:7px; }
+  .ac-dot.is-active{ width:16px; }
 }
 .ac-dot.is-active{ background:#fff; width:22px; }
 .ac-dot:focus-visible{ outline:2px solid var(--gold-2); outline-offset:2px; }
