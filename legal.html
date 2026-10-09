@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Сведения об образовательной организации — «Золотой вектор»</title>
+  <meta name="description" content="Обязательная для размещения информация об образовательной организации: основные сведения, документы, образование, руководство, материально-техническое обеспечение." />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" type="image/svg+xml" href="assets/brand/logo/circular.svg" />
+  <link rel="canonical" href="https://zolotoy-vektor.ru/legal.html" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/nunito/Nunito-400-cyrillic.woff2" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/nunito/Nunito-700-cyrillic.woff2" />
+  <link rel="stylesheet" href="assets/vendor/tailwind-generated.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <style>
+    /* Страница обязательной информации */
+    .legal-hero { padding: 150px 0 60px; background: linear-gradient(180deg, rgba(233,213,239,.35), transparent); }
+    .legal-nav { position: sticky; top: 72px; z-index: 20; }
+    .legal-nav ul { display: flex; flex-wrap: wrap; gap: .5rem; list-style: none; margin: 0; padding: 0; }
+    .legal-nav a { display: inline-block; padding: .45rem .9rem; border-radius: 999px; border: 1px solid rgba(146,96,179,.25); background: #fff; color: var(--ink, #2b2440); font-size: .85rem; text-decoration: none; transition: background .2s, border-color .2s; }
+    .legal-nav a:hover { background: #f3edf8; border-color: rgba(146,96,179,.5); }
+    .legal-section { scroll-margin-top: 160px; margin-bottom: 3.5rem; }
+    .legal-section > h2 { font-family: 'Evolventa', sans-serif; font-size: 1.45rem; margin: 0 0 1.25rem; padding-bottom: .5rem; border-bottom: 2px solid rgba(146,96,179,.35); display: inline-block; }
+    .legal-section h3 { font-family: 'Evolventa', sans-serif; font-size: 1.05rem; margin: 1.75rem 0 .75rem; color: var(--berry-deep, #5b3a7e); }
+    .legal-table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+    .legal-table th, .legal-table td { border: 1px solid rgba(43,36,64,.15); padding: .65rem .8rem; text-align: left; vertical-align: top; }
+    .legal-table th { background: rgba(233,213,239,.45); font-weight: 700; }
+    .legal-table td:first-child { font-weight: 600; white-space: normal; }
+    .legal-note { background: rgba(222,235,222,.5); border: 1px solid rgba(120,170,120,.35); border-radius: 12px; padding: .9rem 1.1rem; font-size: .9rem; margin: .75rem 0; }
+    .legal-dev { background: rgba(250,214,190,.35); border: 1px dashed rgba(190,140,90,.55); border-radius: 12px; padding: .9rem 1.1rem; font-size: .9rem; color: #6b5b45; margin: .75rem 0; }
+    .legal-doc { display: flex; align-items: center; gap: .8rem; flex-wrap: wrap; background: #fff; border: 1px solid rgba(146,96,179,.25); border-radius: 14px; padding: 1rem 1.2rem; margin: .75rem 0; }
+    .legal-doc .doc-name { font-weight: 700; font-size: .95rem; }
+    .legal-doc .doc-link { color: var(--berry-deep, #5b3a7e); font-weight: 700; font-size: .88rem; text-decoration: underline; }
+    .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 10px; }
+    .table-scroll .legal-table { min-width: 760px; }
+    .wide .legal-table { min-width: 1200px; font-size: .82rem; }
+    @media (max-width: 640px) { .legal-hero { padding-top: 120px; } .legal-nav { position: static; } }
+  </style>
+</head>
+<body class="bg-sky text-ink">
+
+  <!-- ШАПКА -->
+  <header class="site-header fixed top-0 inset-x-0 z-50">
+    <div class="mx-auto max-w-content px-5">
+      <div class="header-row flex items-center justify-between h-[72px]">
+        <a href="index.html" class="header-logo shrink-0" aria-label="«Золотой вектор» — на главную">
+          <img src="assets/brand/logo/horizontal-full-onecolor.svg" alt="Золотой вектор — центр детской речи и развития" class="h-[44px] w-auto" loading="eager" />
+        </a>
+        <a href="index.html#booking" class="btn-primary text-sm px-5 py-2.5 rounded-full whitespace-nowrap">Записаться</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ГЕРОЙ -->
+    <section class="legal-hero">
+      <div class="mx-auto max-w-content px-5">
+        <p class="text-xs uppercase tracking-[.2em] text-berry-deep mb-3 font-bold">ИП Фамилия И.О. · Официальная информация</p>
+        <h1 class="font-display text-4xl md:text-5xl leading-tight mb-4">Сведения об&nbsp;образовательной организации</h1>
+        <p class="text-lg text-muted max-w-2xl">Перечень информации, обязательной для размещения на официальном сайте образовательной организации в&nbsp;соответствии со&nbsp;статьёй 29&nbsp;Федерального закона №&nbsp;273-ФЗ «Об&nbsp;образовании в&nbsp;Российской Федерации».</p>
+      </div>
+    </section>
+
+    <!-- НАВИГАЦИЯ ПО ПОДРАЗДЕЛАМ -->
+    <nav class="legal-nav mx-auto max-w-content px-5 pb-6" aria-label="Подразделы">
+      <ul>
+        <li><a href="#basic">Основные сведения</a></li>
+        <li><a href="#structure">Структура и органы управления</a></li>
+        <li><a href="#docs">Документы</a></li>
+        <li><a href="#education">Образование</a></li>
+        <li><a href="#standards">Образовательные стандарты</a></li>
+        <li><a href="#leadership">Руководство</a></li>
+        <li><a href="#staff">Педагогический состав</a></li>
+        <li><a href="#material">Материально-техническое обеспечение</a></li>
+        <li><a href="#stipend">Стипендии и меры поддержки</a></li>
+        <li><a href="#paid">Платные образовательные услуги</a></li>
+        <li><a href="#finance">Финансово-хозяйственная деятельность</a></li>
+        <li><a href="#vacant">Вакантные места</a></li>
+        <li><a href="#intl">Международное сотрудничество</a></li>
+        <li><a href="#meals">Организация питания</a></li>
+      </ul>
+    </nav>
+
+    <div class="mx-auto max-w-content px-5 pb-20">
+
+      <!-- 1. ОСНОВНЫЕ СВЕДЕНИЯ -->
+      <section id="basic" class="legal-section">
+        <h2>1. Основные сведения</h2>
+        <div class="table-scroll">
+          <table class="legal-table">
+            <tbody>
+              <tr><th style="width:45%">Полное наименование образовательной организации</th><td>Индивидуальный предприниматель Фамилия Имя Отчество <!-- TODO: заменить на реальные ФИО --></td></tr>
+              <tr><th>Сокращённое наименование образовательной организации</th><td>ИП Фамилия И.О.</td></tr>
+              <tr><th>Дата создания образовательной организации</th><td><!-- TODO: указать дату регистрации ИП --></td></tr>
+              <tr><th>Адрес местонахождения образовательной организации</th><td>109316, г. Москва, Волгоградский проспект, д. 1, стр. 1</td></tr>
+              <tr><th>Филиалы образовательной организации</th><td>Отсутствуют</td></tr>
+              <tr><th>Представительства образовательной организации</th><td>Отсутствуют</td></tr>
+              <tr><th>Режим, график работы</th><td>Понедельник&nbsp;&mdash; воскресенье с&nbsp;09.00 до&nbsp;21.00</td></tr>
+              <tr><th>Контактные телефоны</th><td><a href="tel:+79050447917">+7&nbsp;905&nbsp;044-79-17</a></td></tr>
+              <tr><th>Адреса электронной почты</th><td><a href="mailto:email@yandex.ru">email@yandex.ru</a> <!-- TODO: заменить на реальный e-mail --></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Лицензия на осуществление образовательной деятельности</h3>
+        <p class="legal-note">Лицензия на осуществление образовательной деятельности отсутствует. Образовательная деятельность осуществляется в рамках использования права, предусмотренного частью&nbsp;1 статьи&nbsp;91 Федерального закона №&nbsp;273-ФЗ «Об&nbsp;образовании в&nbsp;Российской Федерации» (индивидуальным предпринимателям, осуществляющим образовательную деятельность непосредственно).</p>
+
+        <h3>Сведения об учредителях</h3>
+        <div class="table-scroll">
+          <table class="legal-table">
+            <thead><tr><th>Наименование учредителя</th><th>Сведения о юридическом адресе учредителя</th><th>Контактные телефоны</th><th>Адреса электронной почты</th><th>Адрес сайта учредителя в сети «Интернет»</th></tr></thead>
+            <tbody>
+              <tr><td>ИП Фамилия И.О.</td><td>109316, г. Москва, Волгоградский проспект, д.&nbsp;1, стр.&nbsp;1</td><td>+7&nbsp;905&nbsp;044-79-17</td><td>email@yandex.ru</td><td><a href="https://zolotoy-vektor.ru">zolotoy-vektor.ru</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Сведения о местах осуществления образовательной деятельности</h3>
+        <div class="table-scroll">
+          <table class="legal-table">
+            <tbody>
+              <tr><th style="width:55%">О местах осуществления образовательной деятельности при использовании сетевой формы реализации образовательных программ</th><td>Сетевая форма реализации образовательных программ не предусмотрена</td></tr>
+              <tr><th>О местах проведения практики</th><td>Проведение практики не предусмотрено</td></tr>
+              <tr><th>О местах проведения практической подготовки обучающихся</th><td>Проведение практической подготовки не предусмотрено</td></tr>
+              <tr><th>О местах проведения государственной итоговой аттестации</th><td>Проведение государственной итоговой аттестации не предусмотрено</td></tr>
+              <tr><th>О местах осуществления образовательной деятельности по дополнительным образовательным программам</th><td>г. Москва, Волгоградский проспект, д.&nbsp;1, стр.&nbsp;1 <!-- TODO: регион получения лицензии по прописке ИП --></td></tr>
+              <tr><th>О местах осуществления деятельности по основным программам профессионального обучения</th><td>Обучение по программам профессионального обучения не предусмотрено</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 2. СТРУКТУРА И ОРГАНЫ УПРАВЛЕНИЯ -->
+      <section id="structure" class="legal-section">
+        <h2>2. Структура и органы управления образовательной организацией</h2>
+        <p class="legal-dev">Раздел находится в разработке.</p>
+      </section>
+
+      <!-- 3. ДОКУМЕНТЫ -->
+      <section id="docs" class="legal-section">
+        <h2>3. Документы</h2>
+        <div class="legal-doc">
+          <span aria-hidden="true">📄</span>
+          <span class="doc-name">Дополнительная общеобразовательная общеразвивающая программа для несовершеннолетних детей «Программа логопедического сопровождения» (для детей с задержкой речевого развития и отсутствием активной речи)</span>
+          <!-- TODO: ссылка на файл программы (Яндекс.Диск или assets/docs/program.docx) -->
+          <a class="doc-link" href="#" rel="noopener">Скачать программу</a>
+        </div>
+        <div class="legal-doc">
+          <span aria-hidden="true">🖼️</span>
+          <span class="doc-name">Утверждённая программа с подписью и печатью</span>
+          <!-- TODO: вставить <img> скана утверждённой программы -->
+          <a class="doc-link" href="#">Просмотреть скан</a>
+        </div>
+      </section>
+
+      <!-- 4. ОБРАЗОВАНИЕ -->
+      <section id="education" class="legal-section">
+        <h2>4. Образование</h2>
+
+        <h3>Информация о реализуемых уровнях образования, о формах обучения, нормативных сроках обучения</h3>
+        <div class="table-scroll wide">
+          <table class="legal-table">
+            <thead><tr><th>Код, шифр</th><th>Наименование профессии, специальности, направления подготовки</th><th>Образовательная программа</th><th>Уровень образования</th><th>Форма обучения</th><th>Срок получения образования</th><th>Учебные предметы, курсы, дисциплины</th><th>Практики</th></tr></thead>
+            <tbody>
+              <tr>
+                <td>Не предусмотрен</td><td>Не предусмотрен</td>
+                <td>Дополнительная общеобразовательная программа&nbsp;&mdash; дополнительная общеразвивающая программа «Программа логопедического сопровождения»</td>
+                <td>Дополнительное образование</td>
+                <td>Дистанционная (с применением исключительно электронного обучения, дистанционных образовательных технологий)</td>
+                <td>4 недели</td>
+                <td>МОДУЛЬ 1. «РЕЧЕВАЯ БАЗА: ПОДГОТОВИТЕЛЬНЫЙ ЭТАП»; МОДУЛЬ 2. «ОТ ЗВУКА К СЛОВУ: ВЫЗЫВАНИЕ АКТИВНОЙ РЕЧИ»; МОДУЛЬ 3. «ПОНИМАНИЕ И ОБЩЕНИЕ: ИМПРЕССИВНАЯ И ЭКСПРЕССИВНАЯ РЕЧЬ»; МОДУЛЬ 4. «Я ГОВОРЮ: ЗАКРЕПЛЕНИЕ НАВЫКОВ И СОЦИАЛИЗАЦИЯ»; ИТОГОВАЯ АТТЕСТАЦИЯ</td>
+                <td>Отсутствует</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-scroll">
+          <table class="legal-table">
+            <tbody>
+              <tr><th style="width:60%">Документ, содержащий информацию о языках, на которых осуществляется образование (обучение)</th><td>Находится в разработке</td></tr>
+              <tr><th>Документ, содержащий информацию о численности обучающихся по реализуемым образовательным программам по источникам финансирования</th><td>Находится в разработке</td></tr>
+              <tr><th>Документ, содержащий информацию о результатах приёма</th><td>Находится в разработке</td></tr>
+              <tr><th>Документ, содержащий информацию о результатах перевода, восстановления и отчисления</th><td>Находится в разработке</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Информация об образовательной программе</h3>
+        <div class="table-scroll wide">
+          <table class="legal-table">
+            <thead><tr><th>Код, шифр</th><th>Наименование направления</th><th>Уровень образования</th><th>Образовательная программа, направленность</th><th>Форма обучения</th><th>Описание ООП</th><th>Учебный план</th><th>РПД</th><th>Календарный учебный график</th><th>Рабочие программы практик</th><th>Методические и иные документы</th></tr></thead>
+            <tbody>
+              <tr>
+                <td>&mdash;</td><td>&mdash;</td><td>Дополнительное образование</td>
+                <td>«Программа логопедического сопровождения», социально-гуманитарная направленность</td>
+                <td>Дистанционная с применением исключительно электронного обучения, дистанционных образовательных технологий</td>
+                <td><a class="doc-link" href="#">ООП (файл)</a></td>
+                <td><a class="doc-link" href="#">УП (файл)</a></td>
+                <td><a class="doc-link" href="#">РПД (файл)</a></td>
+                <td><a class="doc-link" href="#">КУГ (файл)</a></td>
+                <td>Не предусмотрены</td>
+                <td>Не предусмотрены</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Информация по адаптированным образовательным программам</h3>
+        <div class="table-scroll wide">
+          <table class="legal-table">
+            <thead><tr><th>Код, шифр</th><th>Наименование</th><th>Уровень образования</th><th>Образовательная программа</th><th>Форма обучения</th><th>Описание</th><th>УП</th><th>РПД</th><th>КУГ</th><th>Практики</th><th>Метод. документы</th></tr></thead>
+            <tbody><tr><td colspan="11">Адаптированные образовательные программы отсутствуют</td></tr></tbody>
+          </table>
+        </div>
+
+        <div class="table-scroll">
+          <table class="legal-table">
+            <tbody>
+              <tr><th style="width:60%">Информация о направлениях и результатах научной (научно-исследовательской) деятельности</th><td>Находится в разработке</td></tr>
+              <tr><th>Информация о трудоустройстве выпускников образовательных организаций за прошлый учебный год</th><td>Находится в разработке</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 5. ОБРАЗОВАТЕЛЬНЫЕ СТАНДАРТЫ -->
+      <section id="standards" class="legal-section">
+        <h2>5. Образовательные стандарты и требования</h2>
+        <p class="legal-dev">Раздел находится в разработке.</p>
+      </section>
+
+      <!-- 6. РУКОВОДСТВО -->
+      <section id="leadership" class="legal-section">
+        <h2>6. Руководство. Экспертно-консультационные и иные органы</h2>
+        <h3>Руководство</h3>
+        <div class="table-scroll">
+          <table class="legal-table">
+            <thead><tr><th>ФИО</th><th>Должность</th><th>Контактные телефоны</th><th>Адреса электронной почты</th></tr></thead>
+            <tbody>
+              <tr><td>Фамилия И.О. <!-- TODO --></td><td>Индивидуальный предприниматель</td><td><a href="tel:+79050447917">+7&nbsp;905&nbsp;044-79-17</a></td><td><a href="mailto:email@yandex.ru">email@yandex.ru</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>Информация о руководителях филиалов образовательной организации</h3>
+        <div class="table-scroll">
+          <table class="legal-table">
+            <thead><tr><th>Наименование филиала</th><th>ФИО</th><th>Должность</th><th>Контактные телефоны</th><th>Адреса электронной почты</th></tr></thead>
+            <tbody><tr><td>Филиалы отсутствуют</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 7. ПЕДАГОГИЧЕСКИЙ СОСТАВ -->
+      <section id="staff" class="legal-section">
+        <h2>7. Педагогический состав</h2>
+        <div class="table-scroll wide">
+          <table class="legal-table">
+            <thead><tr><th>ФИО</th><th>Должность</th><th>Перечень преподаваемых дисциплин</th><th>Уровень образования, квалификация</th><th>Учёная степень</th><th>Учёное звание</th><th>Повышение квалификации (за последние 3 года)</th><th>Профессиональная переподготовка</th><th>Опыт работы в профессиональной сфере</th><th>Образовательные программы</th></tr></thead>
+            <tbody><tr><td colspan="10">Находится в разработке</td></tr></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 8. МАТЕРИАЛЬНО-ТЕХНИЧЕСКОЕ ОБЕСПЕЧЕНИЕ -->
+      <section id="material" class="legal-section">
+        <h2>8. Материально-техническое обеспечение и оснащённость образовательного процесса. Доступная среда</h2>
+
+        <h3>Сведения об оборудованных учебных кабинетах</h3>
+        <div class="table-scroll">
+          <table class="legal-table">
+            <thead><tr><th>Адрес места нахождения</th><th>Наименование кабинета</th><th>Оснащённость</th><th>Приспособленность для инвалидов и лиц с ОВЗ</th></tr></thead>
+            <tbody><tr><td colspan="4">В организации созданы условия для функционирования электронной информационно-образовательной среды. Электронная образовательная среда обеспечивает освоение обучающимися образовательных программ в полном объёме независимо от места их нахождения.</td></tr></tbody>
+          </table>
+        </div>
+
+        <h3>Сведения об объектах для проведения практических занятий</h3>
+        <div class="table-scroll">
+          <table class="legal-table">
+            <thead><tr><th>Адрес</th><th>Наименование объекта</th><th>Оснащённость</th><th>Приспособленность для инвалидов и лиц с ОВЗ</th></tr></thead>
+            <tbody><tr><td colspan="4">Практические занятия не предусмотрены</td></tr></tbody>
+          </table>
+        </div>
+
+        <h3>Сведения о библиотеке</h3>
+        <div class="table-scroll">
+          <table class="legal-table">
+            <thead><tr><th>Наименование объекта</th><th>Адрес</th><th>Площадь</th><th>Количество мест</th><th>Приспособленность для инвалидов и лиц с ОВЗ</th></tr></thead>
+            <tbody><tr><td colspan="5">Электронная образовательная среда обеспечивает освоение обучающимися образовательных программ в полном объёме независимо от их места нахождения</td></tr></tbody>
+          </table>
+        </div>
+
+        <h3>Сведения об объектах спорта</h3>
+        <div class="table-scroll">
+          <table class="legal-table">
+            <thead><tr><th>Наименование объекта</th><th>Адрес</th><th>Площадь</th><th>Количество мест</th><th>Приспособленность для инвалидов и лиц с ОВЗ</th></tr></thead>
+            <tbody><tr><td>Отсутствуют</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr></tbody>
+          </table>
+        </div>
+
+        <h3>Информация об обеспечении беспрепятственного доступа в здания образовательной организации</h3>
+        <p class="legal-note">Отсутствует, обучение осуществляется исключительно с применением электронной информационно-образовательной среды.</p>
+
+        <div class="table-scroll">
+          <table class="legal-table">
+            <tbody>
+              <tr><th style="width:60%">Сведения о средствах обучения и воспитания</th><td>Находится в разработке</td></tr>
+              <tr><th>Информация о приспособленных средствах обучения и воспитания</th><td>Находится в разработке</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Сведения о доступе к информационным системам и информационно-телекоммуникационным сетям</h3>
+        <div class="table-scroll">
+          <table class="legal-table">
+            <tbody>
+              <tr><th style="width:60%">Сведения о доступе к информационным системам и ИТКС</th><td>Обучение осуществляется на платформе GetCourse по адресу: <a href="https://center.getcourse.ru" target="_blank" rel="noopener">https://center.getcourse.ru</a>, для каждого обучающегося формируется уникальный логин и пароль</td></tr>
+              <tr><th>Информация о доступе к приспособленным информационным системам и ИТКС</th><td>Обучение осуществляется на платформе GetCourse по адресу: <a href="https://center.getcourse.ru" target="_blank" rel="noopener">https://center.getcourse.ru</a>, для каждого обучающегося формируется уникальный логин и пароль</td></tr>
+              <tr><th>Наличие электронной информационно-телекоммуникационной среды</th><td>Обучение осуществляется на платформе GetCourse по адресу: <a href="https://center.getcourse.ru" target="_blank" rel="noopener">https://center.getcourse.ru</a></td></tr>
+              <tr><th>Об электронных образовательных ресурсах, к которым обеспечивается доступ обучающихся</th><td>Обучение осуществляется на платформе GetCourse по адресу: <a href="https://center.getcourse.ru" target="_blank" rel="noopener">https://center.getcourse.ru</a></td></tr>
+              <tr><th>О приспособленных электронных образовательных ресурсах</th><td>Обучение осуществляется на платформе GetCourse по адресу: <a href="https://center.getcourse.ru" target="_blank" rel="noopener">https://center.getcourse.ru</a></td></tr>
+              <tr><th>О специальных технических средствах обучения коллективного и индивидуального пользования</th><td>Платформа GetCourse осуществляет обеспечение образовательного процесса специальными техническими средствами обучения коллективного и индивидуального пользования</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Сведения об общежитии, интернате</h3>
+        <div class="table-scroll">
+          <table class="legal-table">
+            <tbody>
+              <tr><th style="width:60%">Количество общежитий/интернатов</th><td>0</td></tr>
+              <tr><th>Количество мест</th><td>0</td></tr>
+              <tr><th>Количество жилых помещений, приспособленных для использования инвалидами и лицами с ОВЗ</th><td>0</td></tr>
+              <tr><th>Наличие условий для беспрепятственного доступа в общежитие, интернат</th><td>Отсутствует общежитие/интернат</td></tr>
+              <tr><th>Плата за проживание в общежитии</th><td>Отсутствует общежитие/интернат</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 9–14. РАЗДЕЛЫ В РАЗРАБОТКЕ -->
+      <section id="stipend" class="legal-section"><h2>9. Стипендии и меры поддержки обучающихся</h2><p class="legal-dev">Раздел находится в разработке.</p></section>
+      <section id="paid" class="legal-section"><h2>10. Платные образовательные услуги</h2><p class="legal-dev">Раздел находится в разработке.</p></section>
+      <section id="finance" class="legal-section"><h2>11. Финансово-хозяйственная деятельность</h2><p class="legal-dev">Раздел находится в разработке.</p></section>
+      <section id="vacant" class="legal-section"><h2>12. Вакантные места для приёма (перевода) обучающихся</h2><p class="legal-dev">Раздел находится в разработке.</p></section>
+      <section id="intl" class="legal-section"><h2>13. Международное сотрудничество</h2><p class="legal-dev">Раздел находится в разработке.</p></section>
+      <section id="meals" class="legal-section"><h2>14. Организация питания в образовательной организации</h2><p class="legal-dev">Раздел находится в разработке.</p></section>
+
+    </div>
+  </main>
+
+  <!-- ФУТЕР -->
+  <footer class="bg-ink text-white/80 py-10">
+    <div class="mx-auto max-w-content px-5 flex flex-wrap items-center justify-between gap-4">
+      <a href="index.html" aria-label="Вернуться на главную">
+        <img src="assets/brand/logo/horizontal-full.svg" alt="Золотой вектор" class="h-9 w-auto brightness-0 invert" loading="lazy" />
+      </a>
+      <p class="text-sm">© 2026 ИП Фамилия И.О. · Центр «Золотой вектор» · <a href="svyaz.html" class="underline">Контакты</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
