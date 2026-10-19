@@ -46,7 +46,7 @@ body{font-family:'Nunito',system-ui,sans-serif;background:var(--bg);color:var(--
 
 /* Шапка плаката */
 .pl-head{display:flex;align-items:center;gap:18px;margin-bottom:34px}
-.pl-logo{width:64px;height:64px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-family:'Evolventa',sans-serif;font-weight:700;font-size:1.6rem;color:#fff;flex-shrink:0}
+.pl-logo{height:56px;width:auto;flex-shrink:0}
 .pl-brand{font-family:'Evolventa',sans-serif;font-size:1.35rem;font-weight:700;line-height:1.2}
 .pl-brand small{display:block;font-family:'Nunito',sans-serif;font-size:.82rem;font-weight:600;color:var(--muted);margin-top:2px}
 .pl-badge{margin-left:auto;padding:10px 22px;border-radius:999px;font-weight:800;font-size:.95rem;letter-spacing:.02em}
@@ -123,23 +123,24 @@ body{font-family:'Nunito',system-ui,sans-serif;background:var(--bg);color:var(--
 <script>
 const CARDS=[
  {
-  id:'friend', theme:'theme-sky', label:'Приведи друга',
-  badge:'Приведи друга', logoBg:'#5BA7CE', dot:'#5BA7CE',
+  id:'friend', theme:'theme-sky', label:'Программа «Свои люди»',
+  badge:'Свои люди', dot:'#5BA7CE',
   mascot:'heart.png',
-  title:'Приведите<span class="accent">друга!</span>',
-  percent:'20%', sub:'вам на следующий абонемент',
+  title:'Для тех, кто<br><span class="accent">рекомендует нас</span>',
+  percent:'20%', sub:'скидка вам на следующий абонемент',
   list:[
-   'Порекомендуйте нас маме, чьему ребёнку нужна помощь с речью',
-   'Если она купит абонемент — вы получаете скидку 20% на следующий абонемент',
-   'Ваш друг получит <b>15% на первый абонемент</b>'
+   'Вы уже знаете, как у нас занимаются и какой результат получают дети',
+   'Передайте эту карточку семье, которой нужна помощь с речью ребёнка',
+   'Когда они купят абонемент — <b>вы получите скидку 20%</b> на следующий абонемент',
+   'А ваши знакомые — <b>15% на первый абонемент</b>'
   ],
-  note:'Скидка не суммируется',
-  quote:'Спасибо, что доверяете нам самое дорогое. Для неё это будет знак заботы, а для вас — наша искренняя благодарность.',
-  foot:'Скажите администратору имя порекомендованного клиента при покупке абонемента.'
+  note:'Скидка не суммируется с другими акциями',
+  quote:'Мы ценим, что вы выбираете нас. Ваша рекомендация — это ваша семейная привилегия: занятия на особых условиях для вас и знак заботы для тех, кому вы её передали.',
+  foot:'При покупке абонемента скажите администратору, по чьей рекомендации вы к нам пришли.'
  },
  {
   id:'firstday', theme:'theme-lav', label:'Скидка 5% в первый день',
-  badge:'Выгода', logoBg:'#9260B3', dot:'#9260B3',
+  badge:'Выгода', dot:'#9260B3',
   mascot:'compass.png',
   title:'Начните сегодня —<br><span class="accent">платите меньше</span>',
   percent:'5%', sub:'скидка на весь срок коррекции',
@@ -152,7 +153,7 @@ const CARDS=[
  },
  {
   id:'oneplusone', theme:'theme-pink', label:'Пакет 1+1 — 7%',
-  badge:'Пакет 1+1', logoBg:'#D96AAE', dot:'#D96AAE',
+  badge:'Пакет 1+1', dot:'#D96AAE',
   mascot:'blocks.png',
   title:'Два абонемента —<br><span class="accent">выгоднее вместе</span>',
   percent:'7%', sub:'скидка при покупке двух абонементов',
@@ -165,7 +166,7 @@ const CARDS=[
  },
  {
   id:'telegram', theme:'theme-sage', label:'Telegram-канал',
-  badge:'Мы в Telegram', logoBg:'#4FA36B', dot:'#4FA36B',
+  badge:'Мы в Telegram', dot:'#4FA36B',
   mascot:'flying.png',
   title:'Полезное о речи детей —<br><span class="accent">каждую неделю</span>',
   qr:true, handle:'@zolotoy_vektor',
@@ -179,7 +180,7 @@ const CARDS=[
  },
  {
   id:'gift', theme:'theme-gold', label:'Подарок за отзыв',
-  badge:'Сюрприз', logoBg:'#C9A227', dot:'#C9A227',
+  badge:'Сюрприз', dot:'#C9A227',
   mascot:'resting.png',
   title:'Оставьте отзыв —<br><span class="accent">получите подарок</span>',
   emoji:'🎁',
@@ -211,7 +212,7 @@ CARDS.forEach(c=>{
     <img class="pl-mascot" src="assets/img/mascots/${c.mascot||'resting.png'}" alt="" style="top:170px;right:40px" onerror="this.style.display='none'">
     <div class="a4-inner">
       <div class="pl-head">
-        <div class="pl-logo" style="background:${c.logoBg}">ЗВ</div>
+        <img class="pl-logo" src="assets/brand/logo/horizontal-full.svg" alt="Золотой вектор — центр детской речи и развития">
         <div class="pl-brand">Золотой вектор<small>центр детской речи и развития</small></div>
         <div class="pl-badge" style="background:${c.dot}1e;color:${c.dot}">${c.badge}</div>
       </div>
