@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Меню-холдеры А4 — Золотой вектор</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="assets/brand/logo/circular.svg">
+<style>
+/* ===== Локальные шрифты (в едином стиле сайта) ===== */
+@font-face{font-family:'Evolventa';src:url('assets/fonts/evolventa/Evolventa-Regular.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Evolventa';src:url('assets/fonts/evolventa/Evolventa-Bold.woff') format('woff');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Nunito';src:url('assets/fonts/nunito/nunito-latin-400-normal.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Nunito';src:url('assets/fonts/nunito/nunito-latin-600-normal.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'Nunito';src:url('assets/fonts/nunito/nunito-latin-700-normal.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Nunito';src:url('assets/fonts/nunito/nunito-latin-800-normal.woff2') format('woff2');font-weight:800;font-style:normal;font-display:swap}
+
+:root{
+  --berry:#9260B3;--berry-deep:#6D3E95;--berry-light:#C9A8E0;
+  --sky:#AEDCEF;--lavender:#D3D1EA;--rose:#E8CDCB;--pink:#FAAFD3;--sage:#D3DBC8;--beige:#F5EFE6;
+  --gold:#C9A227;--gold-dark:#A17F1C;
+  --ink:#2B2440;--muted:#6E6980;
+  --bg:#FBF8F4;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Nunito',system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+
+/* Панель управления (не попадает в печать/PNG) */
+.control-bar{position:sticky;top:0;z-index:50;display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:center;padding:.9rem 1rem;background:rgba(251,248,244,.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(146,96,179,.18)}
+.control-bar h1{font-family:'Evolventa',sans-serif;font-size:1.15rem;margin-right:auto}
+.btn{display:inline-flex;align-items:center;gap:.4rem;padding:.55rem 1.1rem;border-radius:999px;border:1.5px solid var(--berry);background:#fff;color:var(--berry-deep);font-weight:700;font-size:.9rem;cursor:pointer;text-decoration:none;transition:.2s}
+.btn:hover{background:var(--berry);color:#fff}
+.btn-primary{background:var(--berry);color:#fff}
+.btn-primary:hover{background:var(--berry-deep)}
+
+/* Сетка превью */
+.holder-grid{display:flex;flex-direction:column;align-items:center;gap:2.5rem;padding:2rem 1rem 4rem}
+.holder-item{display:flex;flex-direction:column;align-items:center;gap:.8rem}
+.holder-label{font-weight:800;font-size:.95rem;color:var(--muted)}
+
+/* ===== Плакат А4 (портрет, 210×297) ===== */
+.a4{width:794px;height:1123px;background:#fff;border-radius:22px;overflow:hidden;position:relative;box-shadow:0 12px 40px rgba(43,36,64,.14);flex-shrink:0}
+@media (max-width:860px){.a4{transform:scale(calc((100vw - 2rem)/794));transform-origin:top left}.holder-item{height:calc(1123px*((100vw - 2rem)/794))}}
+
+.a4-inner{position:absolute;inset:0;display:flex;flex-direction:column;padding:56px 56px 44px}
+
+/* Шапка плаката */
+.pl-head{display:flex;align-items:center;gap:18px;margin-bottom:34px}
+.pl-logo{height:84px;width:auto;flex-shrink:0}
+.pl-brand{font-family:'Evolventa',sans-serif;font-size:1.35rem;font-weight:700;line-height:1.2}
+.pl-brand small{display:block;font-family:'Nunito',sans-serif;font-size:.82rem;font-weight:600;color:var(--muted);margin-top:2px}
+.pl-badge{margin-left:auto;padding:10px 22px;border-radius:999px;font-weight:800;font-size:.95rem;letter-spacing:.02em}
+
+/* Тело */
+.pl-body{flex:1;display:flex;flex-direction:column;justify-content:center;text-align:center;gap:22px}
+.pl-title{font-family:'Evolventa',sans-serif;font-weight:700;font-size:3.4rem;line-height:1.08;letter-spacing:-.01em}
+.pl-title .accent{color:var(--berry-deep)}
+.pl-percent{font-family:'Evolventa',sans-serif;font-weight:700;font-size:7.2rem;line-height:1;color:var(--berry-deep)}
+.pl-sub{font-size:1.5rem;line-height:1.45;color:var(--muted);max-width:560px;margin:0 auto}
+.pl-list{list-style:none;display:flex;flex-direction:column;gap:14px;max-width:600px;margin:6px auto 0;text-align:left}
+.pl-list li{display:flex;gap:12px;align-items:flex-start;font-size:1.22rem;line-height:1.4;font-weight:600}
+.pl-list li::before{content:'';flex-shrink:0;width:12px;height:12px;border-radius:50%;background:var(--dot,var(--berry));margin-top:9px}
+
+/* Декоративные пятна */
+.blob{position:absolute;border-radius:50%;filter:blur(2px);opacity:.55;pointer-events:none}
+
+/* Детский декор: облачка, звёздочки, точки */
+.pl-decor{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.deco-star{position:absolute;color:var(--gold);opacity:.7;font-size:1.6rem;line-height:1}
+.deco-dot{position:absolute;width:14px;height:14px;border-radius:50%;background:var(--dot,var(--berry));opacity:.3}
+.deco-cloud{position:absolute;background:#fff;border-radius:999px;box-shadow:0 0 0 1px rgba(146,96,179,.12);opacity:.9}
+.deco-cloud::before{content:'';position:absolute;width:60%;height:160%;left:18%;bottom:55%;background:inherit;border-radius:999px}
+
+/* Подвал плаката */
+.pl-foot{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:26px;border-top:2px solid rgba(146,96,179,.18);margin-top:30px}
+.pl-contacts{font-size:1.05rem;line-height:1.55;color:var(--muted);font-weight:600}
+.pl-contacts b{color:var(--ink)}
+.pl-site{font-family:'Evolventa',sans-serif;font-weight:700;font-size:1.15rem;color:var(--berry-deep)}
+.gold-line{position:absolute;left:0;right:0;bottom:0;height:8px;background:linear-gradient(90deg,var(--gold),#E4C86A)}
+
+/* Маскот */
+.pl-mascot{position:absolute;width:170px;opacity:.95;pointer-events:none;z-index:2}
+
+/* Плашка «не суммируется» и цитата-благодарность */
+.pl-note{display:inline-block;margin-top:14px;padding:8px 22px;border-radius:999px;background:rgba(232,205,203,.4);border:1.5px dashed var(--berry-light);font-weight:800;font-size:1.05rem;color:var(--berry-deep)}
+.pl-quote{max-width:620px;margin:10px auto 0;font-size:1.15rem;line-height:1.5;color:var(--muted);font-style:italic}
+
+/* QR */
+.qr-wrap{display:flex;flex-direction:column;align-items:center;gap:14px}
+.qr-frame{width:280px;height:280px;padding:16px;background:#fff;border:3px solid var(--berry);border-radius:26px;display:flex;align-items:center;justify-content:center}
+.qr-frame img{width:100%;height:100%;image-rendering:pixelated}
+.qr-handle{font-family:'Evolventa',sans-serif;font-weight:700;font-size:2rem;color:var(--berry-deep)}
+
+/* Цветовые темы по акциям */
+.theme-sky{--t-bg:linear-gradient(160deg,#FCE3F1 0%,#FDF0F7 100%)}
+.theme-lav{--t-bg:linear-gradient(160deg,#F1F0FB 0%,#FFFFFF 55%)}
+.theme-pink{--t-bg:linear-gradient(160deg,#FDF0F7 0%,#FFFFFF 55%)}
+.theme-sage{--t-bg:linear-gradient(160deg,#EEF2EA 0%,#FFFFFF 55%)}
+.theme-gold{--t-bg:linear-gradient(160deg,#FBF5E4 0%,#FFFFFF 55%)}
+.a4[class*=theme-] .a4-inner{background:var(--t-bg)}
+
+/* Печать: каждый плакат на своей странице */
+@media print{
+  .control-bar,.holder-label{display:none!important}
+  body{background:#fff}
+  .holder-grid{padding:0;gap:0}
+  .holder-item{height:auto!important}
+  .a4{transform:none!important;width:200mm;height:282mm;box-shadow:none;border-radius:0;page-break-after:always;margin:0 auto}
+}
+</style>
+</head>
+<body>
+
+<div class="control-bar">
+  <h1>Меню-холдеры · формат А4</h1>
+  <button class="btn btn-primary" onclick="window.print()">🖨 Печать всех</button>
+  <span style="font-size:.85rem;color:var(--muted)">PNG — под каждым плакатом</span>
+</div>
+
+<div class="holder-grid" id="grid"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.min.js"></script>
+<script>
+const CARDS=[
+ {
+  id:'friend', theme:'theme-sky', label:'Программа «Свои люди»',
+  badge:'Свои люди', dot:'#D96AAE',
+  mascot:'heart.png',
+  title:'Для тех, кто<br><span class="accent">рекомендует нас</span>',
+  percent:'20%', sub:'скидка вам на следующий абонемент',
+  list:[
+   'Вы уже знаете, как у нас занимаются и какой результат получают дети',
+   'Передайте эту карточку семье, которой нужна помощь с речью ребёнка',
+   'Когда они купят абонемент — <b>вы получите скидку 20%</b> на следующий абонемент',
+   'А ваши знакомые — <b>15% на первый абонемент</b>'
+  ],
+  note:'Скидка не суммируется с другими акциями',
+  quote:'Мы ценим, что вы выбираете нас. Ваша рекомендация — это ваша семейная привилегия: занятия на особых условиях для вас и знак заботы для тех, кому вы её передали.',
+  foot:'При покупке абонемента скажите администратору, по чьей рекомендации вы к нам пришли.'
+ },
+ {
+  id:'firstday', theme:'theme-lav', label:'Скидка 5% в первый день',
+  badge:'Выгода', dot:'#9260B3',
+  mascot:'compass.png',
+  title:'Начните сегодня —<br><span class="accent">платите меньше</span>',
+  percent:'5%', sub:'скидка на весь срок коррекции',
+  list:[
+   'Купите абонемент в первый день занятий с вашим специалистом',
+   'Скидка 5% действует на весь срок действия абонемента',
+   'Чем раньше начнёте — тем быстрее результат'
+  ],
+  foot:'Абонемент со скидкой оформляется в день начала коррекции.'
+ },
+ {
+  id:'oneplusone', theme:'theme-pink', label:'Пакет 1+1 — 7%',
+  badge:'Пакет 1+1', dot:'#D96AAE',
+  mascot:'blocks.png',
+  title:'Два абонемента —<br><span class="accent">выгоднее вместе</span>',
+  percent:'7%', sub:'скидка при покупке двух абонементов',
+  list:[
+   'Купите два абонемента одновременно — например, логопеда и нейропсихолога',
+   'Комплексный подход даёт более быстрый и устойчивый результат',
+   'Скидка 7% применяется к сумме покупки'
+  ],
+  foot:'Наиболее популярная комбинация: речь + развитие мозга.'
+ },
+ {
+  id:'telegram', theme:'theme-sage', label:'Telegram-канал',
+  badge:'Мы в Telegram', dot:'#4FA36B',
+  mascot:'flying.png',
+  title:'Полезное о речи детей —<br><span class="accent">каждую неделю</span>',
+  qr:true, handle:'@zolotoy_vektor',
+  sub:'Сканируйте QR-код и подписывайтесь',
+  list:[
+   'Приёмы, которые можно повторять дома',
+   'Разборы частых ошибок родителей',
+   'Новости центра и свободные окошки'
+  ],
+  foot:'Отсканируйте код камерой телефона — Telegram откроется сам.'
+ },
+ {
+  id:'gift', theme:'theme-gold', label:'Подарок за отзыв',
+  badge:'Сюрприз', dot:'#C9A227',
+  mascot:'resting.png',
+  title:'Оставьте отзыв —<br><span class="accent">получите подарок</span>',
+  emoji:'🎁',
+  sub:'Ваше мнение помогает другим родителям сделать выбор',
+  list:[
+   'Поделитесь впечатлениями о занятиях в Яндекс.Картах или 2ГИС',
+   'Покажите скриншот отзыва администратору',
+   'И заберите подарок для вашего ребёнка'
+  ],
+  foot:'Подарок получает каждый ребёнок после первого занятия и оставленного отзыва.'
+ }
+];
+
+const grid=document.getElementById('grid');
+CARDS.forEach(c=>{
+ const item=document.createElement('div');
+ item.className='holder-item';
+ item.innerHTML=`
+  <div class="a4 ${c.theme}" id="card-${c.id}">
+    <div class="blob" style="width:260px;height:260px;background:${c.dot}18;top:-70px;right:-70px"></div>
+    <div class="blob" style="width:180px;height:180px;background:${c.dot}14;bottom:120px;left:-60px"></div>
+    <div class="pl-decor" style="--dot:${c.dot}">
+      ${c.id==='friend'?'':`
+      <span class="deco-star" style="top:150px;left:44px">✦</span>
+      <span class="deco-star" style="top:300px;right:60px;font-size:1.1rem;opacity:.5">✦</span>
+      <span class="deco-dot" style="top:230px;right:120px"></span>
+      <span class="deco-dot" style="top:420px;left:70px;width:10px;height:10px"></span>
+      <span class="deco-cloud" style="bottom:230px;right:50px;width:90px;height:34px"></span>`}
+    </div>
+    <img class="pl-mascot" src="assets/img/mascots/${c.mascot||'resting.png'}" alt="" style="top:170px;right:40px" onerror="this.style.display='none'">
+    <div class="a4-inner">
+      <div class="pl-head">
+        <img class="pl-logo" src="assets/brand/logo/horizontal-full.svg" alt="Золотой вектор — центр детской речи и развития">
+        <div class="pl-badge" style="background:${c.dot}1e;color:${c.dot}">${c.badge}</div>
+      </div>
+      <div class="pl-body">
+        <div class="pl-title">${c.title}</div>
+        ${c.percent?`<div class="pl-percent">${c.percent}</div>`:''}
+        ${c.emoji?`<div style="font-size:6rem;line-height:1">${c.emoji}</div>`:''}
+        ${c.qr?`
+        <div class="qr-wrap">
+          <div class="qr-frame"><img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https%3A%2F%2Ft.me%2Fzolotoy_vektor&color=6D3E95&bgcolor=ffffff" alt="QR-код на Telegram-канал @zolotoy_vektor"></div>
+          <div class="qr-handle">${c.handle}</div>
+        </div>`:''}
+        <div class="pl-sub">${c.sub}</div>
+        <ul class="pl-list" style="--dot:${c.dot}">${c.list.map(li=>`<li>${li}</li>`).join('')}</ul>
+        ${c.note?`<div style="text-align:center"><span class="pl-note">${c.note}</span></div>`:''}
+        ${c.quote?`<div class="pl-quote">«${c.quote}»</div>`:''}
+        <div style="font-size:1.05rem;color:var(--muted);font-style:italic;margin-top:4px">${c.foot}</div>
+      </div>
+      <div class="pl-foot">
+        <div class="pl-contacts"><b>Москва, Волгоградский пр-т, 1с1</b> · м. Пролетарская · м. Крестьянская застава<br>Пн–Вс 9:00–21:00 · +7 905 044-79-17</div>
+        <div class="pl-site">zolotoy-vektor.ru</div>
+      </div>
+    </div>
+    <div class="gold-line"></div>
+  </div>
+  <div class="holder-label">${c.label}</div>
+  <button class="btn" onclick="downloadCard('${c.id}')">⬇ Скачать PNG</button>`;
+ grid.appendChild(item);
+});
+
+async function downloadCard(id){
+ const node=document.getElementById('card-'+id);
+ try{
+  const url=await htmlToImage.toPng(node,{width:794,height:1123,pixelRatio:1.66,backgroundColor:'#ffffff'});
+  const a=document.createElement('a');
+  a.href=url;a.download=`menu-holder-${id}-A4.png`;a.click();
+ }catch(e){alert('Не удалось сохранить PNG: '+e.message+'\nИспользуйте кнопку «Печать всех» → Сохранить как PDF')}
+}
+</script>
+</body>
+</html>
