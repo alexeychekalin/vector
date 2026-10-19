@@ -46,7 +46,7 @@ body{font-family:'Nunito',system-ui,sans-serif;background:var(--bg);color:var(--
 
 /* Шапка плаката */
 .pl-head{display:flex;align-items:center;gap:18px;margin-bottom:34px}
-.pl-logo{height:56px;width:auto;flex-shrink:0}
+.pl-logo{height:84px;width:auto;flex-shrink:0}
 .pl-brand{font-family:'Evolventa',sans-serif;font-size:1.35rem;font-weight:700;line-height:1.2}
 .pl-brand small{display:block;font-family:'Nunito',sans-serif;font-size:.82rem;font-weight:600;color:var(--muted);margin-top:2px}
 .pl-badge{margin-left:auto;padding:10px 22px;border-radius:999px;font-weight:800;font-size:.95rem;letter-spacing:.02em}
@@ -92,7 +92,7 @@ body{font-family:'Nunito',system-ui,sans-serif;background:var(--bg);color:var(--
 .qr-handle{font-family:'Evolventa',sans-serif;font-weight:700;font-size:2rem;color:var(--berry-deep)}
 
 /* Цветовые темы по акциям */
-.theme-sky{--t-bg:linear-gradient(160deg,#EFF9FE 0%,#FFFFFF 55%)}
+.theme-sky{--t-bg:linear-gradient(160deg,#FCE3F1 0%,#FDF0F7 100%)}
 .theme-lav{--t-bg:linear-gradient(160deg,#F1F0FB 0%,#FFFFFF 55%)}
 .theme-pink{--t-bg:linear-gradient(160deg,#FDF0F7 0%,#FFFFFF 55%)}
 .theme-sage{--t-bg:linear-gradient(160deg,#EEF2EA 0%,#FFFFFF 55%)}
@@ -124,7 +124,7 @@ body{font-family:'Nunito',system-ui,sans-serif;background:var(--bg);color:var(--
 const CARDS=[
  {
   id:'friend', theme:'theme-sky', label:'Программа «Свои люди»',
-  badge:'Свои люди', dot:'#5BA7CE',
+  badge:'Свои люди', dot:'#D96AAE',
   mascot:'heart.png',
   title:'Для тех, кто<br><span class="accent">рекомендует нас</span>',
   percent:'20%', sub:'скидка вам на следующий абонемент',
@@ -203,17 +203,17 @@ CARDS.forEach(c=>{
     <div class="blob" style="width:260px;height:260px;background:${c.dot}18;top:-70px;right:-70px"></div>
     <div class="blob" style="width:180px;height:180px;background:${c.dot}14;bottom:120px;left:-60px"></div>
     <div class="pl-decor" style="--dot:${c.dot}">
+      ${c.id==='friend'?'':`
       <span class="deco-star" style="top:150px;left:44px">✦</span>
       <span class="deco-star" style="top:300px;right:60px;font-size:1.1rem;opacity:.5">✦</span>
       <span class="deco-dot" style="top:230px;right:120px"></span>
       <span class="deco-dot" style="top:420px;left:70px;width:10px;height:10px"></span>
-      <span class="deco-cloud" style="bottom:230px;right:50px;width:90px;height:34px"></span>
+      <span class="deco-cloud" style="bottom:230px;right:50px;width:90px;height:34px"></span>`}
     </div>
     <img class="pl-mascot" src="assets/img/mascots/${c.mascot||'resting.png'}" alt="" style="top:170px;right:40px" onerror="this.style.display='none'">
     <div class="a4-inner">
       <div class="pl-head">
         <img class="pl-logo" src="assets/brand/logo/horizontal-full.svg" alt="Золотой вектор — центр детской речи и развития">
-        <div class="pl-brand">Золотой вектор<small>центр детской речи и развития</small></div>
         <div class="pl-badge" style="background:${c.dot}1e;color:${c.dot}">${c.badge}</div>
       </div>
       <div class="pl-body">
