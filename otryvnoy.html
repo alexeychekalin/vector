@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Отрывная карточка «Два в одном» — Золотой вектор</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/brand/logo/circular.svg" type="image/svg+xml">
+<style>
+/* ===== Базовые токены бренда (без внешних зависимостей) ===== */
+:root{
+  --berry:#973568; --berry-dark:#7A2B54; --berry-deep:#5C2040; --berry-light:#AC5D86;
+  --sky:#9B89C0; --sky-soft:#C3B8D9; --lavender-soft:#D7D0E6;
+  --rose:#D3A3C4; --rose-soft:#E5C8DC; --pink-bright:#F5ACCC;
+  --sage:#AABDA1; --sage-soft:#CCD7C7; --sage-tint:#EEF2EC;
+  --beige:#CEABB1; --beige-soft:#E2CDD0; --beige-tint:#F5EEEF;
+  --gold:#E0A97C; --gold-2:#FFD7A8; --gold-hi:#FFE7C9;
+  --cream:#F5EEEF; --bg:#FBF9F7; --ink:#34303F; --muted:#6E6980;
+}
+@font-face{font-family:'Evolventa';font-weight:400;font-style:normal;font-display:swap;src:url('assets/fonts/evolventa/Evolventa-Regular.woff') format('woff');}
+@font-face{font-family:'Evolventa';font-weight:600;font-style:normal;font-display:swap;src:url('assets/fonts/evolventa/Evolventa-Bold.woff') format('woff');}
+@font-face{font-family:'Evolventa';font-weight:700;font-style:normal;font-display:swap;src:url('assets/fonts/evolventa/Evolventa-Bold.woff') format('woff');}
+@font-face{font-family:'Evolventa';font-weight:800;font-style:normal;font-display:swap;src:url('assets/fonts/evolventa/Evolventa-Bold.woff') format('woff');}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Evolventa','Nunito',system-ui,sans-serif;
+  background:var(--bg); color:var(--ink);
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ===== Панель управления (не попадает в PNG / печать) ===== */
+.toolbar{
+  position:sticky;top:0;z-index:50;
+  background:rgba(52,48,63,.96);color:#fff;
+  padding:14px 20px;display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;
+  backdrop-filter:blur(8px);
+}
+.toolbar h1{font-size:.95rem;font-weight:600;margin-right:auto;}
+.toolbar button{
+  font:inherit;font-size:.82rem;border:none;border-radius:999px;cursor:pointer;
+  padding:8px 16px;background:var(--berry);color:#fff;transition:filter .15s;
+}
+.toolbar button:hover{filter:brightness(1.12);}
+.toolbar button.alt{background:rgba(255,255,255,.14);}
+.hint{font-size:.75rem;opacity:.7;width:100%;}
+
+/* ===== Интро ===== */
+.intro{max-width:1080px;margin:0 auto;padding:34px clamp(16px,4vw,40px) 6px;text-align:center;}
+.intro h2{font-size:clamp(1.3rem,3vw,1.9rem);font-weight:800;color:var(--berry-deep);letter-spacing:-.01em;}
+.intro p{margin-top:10px;color:var(--muted);font-size:.95rem;line-height:1.55;max-width:640px;margin-inline:auto;}
+.intro .scissors{font-size:1.6rem;}
+
+/* ===== Сцена с карточкой ===== */
+.stage-wrap{padding:26px clamp(12px,4vw,40px) 70px;display:flex;justify-content:center;}
+.stage{position:relative;width:min(100%,1080px);}
+
+/* Карточка: широкая (2.85:1) — как настоящий отрывной купон, чтобы текст не обрезался */
+.coupon{
+  position:relative;width:100%;aspect-ratio:2.85/1;
+  container-type:inline-size;
+}
+
+/* Общая «бумажная» подложка с мягкой тенью */
+.paper{
+  position:absolute;inset:0;border-radius:22px;
+  box-shadow:0 14px 40px rgba(52,48,63,.14);
+  pointer-events:none;
+}
+
+/* ===== Половины ===== */
+.half{
+  position:absolute;top:0;bottom:0;
+  display:flex;flex-direction:column;
+  padding:4.2cqw 4.6cqw;
+  overflow:hidden;
+}
+.mama{
+  left:0;width:58%;
+  border-radius:22px 0 0 22px;
+  background:linear-gradient(150deg,#ffffff 0%,var(--cream) 55%,var(--lavender-soft) 165%);
+  transition:transform .95s cubic-bezier(.22,.9,.3,1),opacity .95s ease;
+}
+.guest{
+  right:0;width:42%;
+  border-radius:0 22px 22px 0;
+  background:linear-gradient(150deg,var(--gold-hi) 0%,#FFF6EA 45%,var(--gold-2) 130%);
+  transition:transform .95s cubic-bezier(.3,.05,.55,.98),opacity .8s ease .1s;
+  transform-origin:left center;
+}
+/* Состояние «оторвана»: правая часть улетает, левая чуть оседает */
+.coupon.torn .guest{transform:translate(112%,-26%) rotate(-9deg);opacity:0;}
+.coupon.torn .mama{transform:translateY(1.5%);}
+
+/* ===== Линия отрыва (перфорация) ===== */
+.perf{
+  position:absolute;left:58%;top:0;bottom:0;width:0;z-index:5;pointer-events:none;
+}
+.perf::before{ /* вертикальная пунктирная линия */
+  content:"";position:absolute;left:-1px;top:2.6cqw;bottom:2.6cqw;width:2px;
+  background-image:repeating-linear-gradient(to bottom,var(--beige) 0 .9cqw,transparent .9cqw 2.1cqw);
+  opacity:.9;
+}
+.perf .sc{ /* ножницы у верхнего края линии */
+  position:absolute;left:-1.6cqw;top:-.4cqw;width:3.2cqw;height:3.2cqw;
+  color:var(--berry-light);
+}
+.perf .cut-hint{
+  position:absolute;left:2.4cqw;top:-.2cqw;white-space:nowrap;
+  font-size:1.35cqw;font-weight:600;color:var(--berry-light);letter-spacing:.04em;
+}
+
+/* ===== Типографика половин ===== */
+.chip{
+  align-self:flex-start;
+  font-size:1.7cqw;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  padding:.5em 1.15em;border-radius:999px;
+}
+.mama .chip{background:var(--sky-soft);color:var(--berry-deep);}
+.guest .chip{background:rgba(255,255,255,.75);color:#8a5a2a;box-shadow:inset 0 0 0 1px rgba(224,169,124,.5);}
+
+.brand-mini{display:flex;align-items:center;gap:.5em;font-size:1.6cqw;font-weight:600;color:var(--berry-deep);opacity:.85;}
+.brand-mini img{height:2.6em;width:auto;}
+
+.headline{
+  margin-top:2.6cqw;font-weight:800;line-height:1.16;letter-spacing:-.01em;
+  font-size:3.4cqw;color:var(--berry-deep);text-wrap:balance;
+}
+.guest .headline{color:#7A4A1E;}
+.headline em{font-style:normal;color:var(--berry);}
+.guest .headline em{color:#B06A20;}
+
+.body-text{
+  margin-top:2cqw;font-size:1.95cqw;line-height:1.5;color:var(--muted);
+}
+.guest .body-text{color:#6b5535;}
+.body-text strong{color:var(--ink);font-weight:700;}
+.guest .body-text strong{color:#4c3a20;}
+
+.big-offer{
+  display:flex;align-items:baseline;gap:1.2cqw;margin-top:2.4cqw;
+}
+.big-offer .num{font-size:6.4cqw;font-weight:800;color:var(--berry);line-height:1;}
+.guest .big-offer .num{color:#B06A20;}
+.big-offer .lbl{font-size:1.8cqw;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;}
+
+.spacer{margin-top:auto;}
+
+.footer-line{
+  display:flex;align-items:flex-end;justify-content:space-between;gap:2cqw;
+  font-size:1.55cqw;color:var(--muted);line-height:1.45;
+}
+.guest .footer-line{color:#7d6544;}
+.footer-line a{color:inherit;text-decoration:none;border-bottom:1px dashed currentColor;}
+
+/* Маскоты */
+.mascot{
+  position:absolute;z-index:1;pointer-events:none;
+  filter:drop-shadow(0 6px 14px rgba(52,48,63,.16));
+}
+.mama .mascot{right:1cqw;bottom:3cqw;width:13cqw;}
+.guest .mascot{right:1cqw;top:2.6cqw;width:10cqw;opacity:.95;}
+/* текст и кнопка не должны залезать под маскота */
+.mama .footer-line,.guest .footer-line{padding-right:16cqw;}
+.guest .footer-line{padding-right:12cqw;}
+.tear-btn{left:4.6cqw;right:auto;}
+
+/* Декоративные пятна */
+.blob{position:absolute;border-radius:50%;pointer-events:none;z-index:0;}
+.mama .blob.b1{right:-8%;top:-14%;width:34%;aspect-ratio:1;background:radial-gradient(circle at 40% 40%,rgba(155,137,192,.35),transparent 70%);}
+.guest .blob.b1{left:-10%;bottom:-16%;width:40%;aspect-ratio:1;background:radial-gradient(circle at 50% 50%,rgba(224,169,124,.4),transparent 70%);}
+.half > *{z-index:2;}
+.half .blob,.half .mascot{position:absolute;}
+.half .chip,.half .headline,.half .body-text,.half .big-offer,.half .spacer,.half .footer-line{position:relative;}
+.half .blob{z-index:0;}
+
+/* Золотая кромка снизу гостевой части */
+.guest::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:.7cqw;z-index:3;
+  background:linear-gradient(90deg,var(--gold),var(--gold-2),var(--gold));
+  border-radius:0 0 22px 22px;
+}
+
+/* Кнопка «оторвать» на гостевой половине */
+.tear-btn{
+  position:absolute;right:3.6cqw;bottom:3.4cqw;z-index:4;
+  font:inherit;font-size:1.8cqw;font-weight:700;
+  padding:.7em 1.5em;border-radius:999px;border:none;cursor:pointer;
+  background:var(--berry);color:#fff;
+  box-shadow:0 6px 16px rgba(151,53,104,.35);
+  transition:transform .15s,filter .15s;
+}
+.tear-btn:hover{filter:brightness(1.1);transform:translateY(-1px);}
+.coupon.torn .tear-btn{display:none;}
+
+/* Кнопка «приклеить обратно» (показывается через JS, когда карточка оторвана) */
+.revert{
+  display:block;margin:18px auto 0;
+  font:inherit;font-size:.85rem;border:none;border-radius:999px;cursor:pointer;
+  padding:9px 20px;background:var(--berry);color:#fff;transition:filter .15s;
+}
+.revert:hover{filter:brightness(1.12);}
+.revert[hidden]{display:none;}
+
+/* ===== Как это работает ===== */
+.steps{max-width:1080px;margin:0 auto;padding:10px clamp(16px,4vw,40px) 60px;}
+.steps h3{text-align:center;font-size:1.25rem;font-weight:800;color:var(--berry-deep);margin-bottom:22px;}
+.steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;}
+.step{
+  background:#fff;border:1px solid var(--beige-soft);border-radius:18px;
+  padding:20px 22px;box-shadow:0 6px 18px rgba(52,48,63,.06);
+}
+.step .n{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:34px;height:34px;border-radius:50%;font-weight:800;font-size:.95rem;
+  background:var(--berry);color:#fff;margin-bottom:12px;
+}
+.step:nth-child(2) .n{background:var(--gold);}
+.step:nth-child(3) .n{background:var(--sky);}
+.step b{display:block;font-size:1rem;color:var(--ink);margin-bottom:6px;}
+.step p{font-size:.88rem;line-height:1.5;color:var(--muted);}
+
+/* ===== Печать A4: 2 карточки на лист ===== */
+@media print{
+  @page{size:A4 landscape;margin:10mm;}
+  body{background:#fff;padding:0;}
+  .toolbar,.intro,.steps,.revert,.hint,.cut-hint,.tear-btn{display:none!important;}
+  .stage-wrap{padding:0;display:block;}
+  .stage{width:100%;max-width:none;}
+  .print-sheet{display:block!important;}
+  .coupon{break-inside:avoid;box-shadow:none;}
+  .paper{box-shadow:none;}
+  .coupon.torn .guest{transform:none;opacity:1;} /* при печати всегда целая */
+}
+.print-sheet{display:none;}
+.print-sheet .coupon{margin-bottom:14mm;}
+
+@media (max-width:640px){
+  .coupon{aspect-ratio:auto;height:auto;}
+  .half{position:relative;width:100%!important;left:auto!important;right:auto!important;border-radius:0;}
+  .mama{border-radius:22px 22px 0 0;}
+  .guest{border-radius:0 0 22px 22px;}
+  .perf{left:0!important;top:58%;bottom:auto;width:auto;height:0;right:0;}
+  .perf::before{left:2.6cqw;right:2.6cqw;top:-1px;bottom:auto;width:auto;height:2px;
+    background-image:repeating-linear-gradient(to right,var(--beige) 0 .9cqw,transparent .9cqw 2.1cqw);}
+  .perf .sc{left:.4cqw;top:-1.6cqw;}
+  .perf .cut-hint{left:5cqw;top:-.6cqw;}
+  .coupon{container-type:normal;}
+  .headline{font-size:1.05rem;}
+  .chip{font-size:.68rem;}
+  .body-text,.footer-line{font-size:.8rem;}
+  .brand-mini{font-size:.72rem;}
+  .big-offer .num{font-size:2rem;}
+  .big-offer .lbl{font-size:.7rem;}
+  .tear-btn{font-size:.8rem;right:16px;bottom:14px;}
+  .mascot{display:none;}
+  /* чтобы улетавшая часть не схлопнулась в ноль по высоте */
+  .coupon.torn .guest{min-height:240px;transform:translateY(115%) rotate(3deg);}
+}
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <h1>✂️ Отрывная карточка «Два в одном» — «Золотой вектор»</h1>
+  <button id="tearBtn" class="alt">✂ Оторвать правую часть</button>
+  <button id="glueBtn" class="alt">🩹 Приклеить обратно</button>
+  <button id="dlPng">⬇ Скачать PNG</button>
+  <button id="printBtn">🖨 Печать A4 (2 шт.)</button>
+  <span class="hint">Карточка-купон: мама отрывает правую часть и отдаёт подруге, левую кладёт в кошелёк. PNG сохраняет карточку целиком 1440×600 px.</span>
+</div>
+
+<div class="intro">
+  <h2><span class="scissors">✂</span> Тёплый приём — два в одном</h2>
+  <p>Одна карточка дарит выгоду сразу двоим: подруга получает скидку на первое занятие, а вы — скидку 20% на следующий месяц, как только она придёт. Никакой неловкости: просто линия отрыва.</p>
+</div>
+
+<div class="stage-wrap">
+  <div class="stage">
+    <div class="coupon" id="coupon">
+      <div class="paper"></div>
+
+      <!-- Левая часть — остаётся у мамы -->
+      <section class="half mama">
+        <div class="blob b1"></div>
+        <img class="mascot" src="assets/img/mascots/heart.png" alt="">
+        <span class="chip">остаётся у вас</span>
+        <h2 class="headline">Спасибо, что&nbsp;вы с&nbsp;нами!</h2>
+        <p class="body-text">Как только ваш друг воспользуется правой частью этой карты, мы с&nbsp;радостью подарим вам <strong>скидку 20% на&nbsp;следующий месяц занятий</strong>.</p>
+        <div class="spacer"></div>
+        <div class="footer-line">
+          <span>«Золотой вектор» · Волгоградский пр-т, 1с1</span>
+          <span>Положите в кошелёк или блокнот 📒</span>
+        </div>
+      </section>
+
+      <!-- Правая часть — отрывается и отдаётся другу -->
+      <section class="half guest">
+        <div class="blob b1"></div>
+        <img class="mascot" src="assets/img/mascots/butterfly.png" alt="">
+        <span class="chip">отрывается и достаётся другу</span>
+        <h2 class="headline">Тёплый приём для друга</h2>
+        <p class="body-text"><strong>Скидка 15% на&nbsp;первое занятие</strong> в центре «Золотой Вектор» по рекомендации наших друзей.</p>
+        <div class="spacer"></div>
+        <div class="footer-line">
+          <span>Запись: <a href="tel:+79050447917">+7 (905) 044-79-17</a></span>
+          <span>пн–сб 9:00–21:00</span>
+        </div>
+        <button class="tear-btn" id="tearOnCard" type="button">✂ Оторвать и отдать</button>
+      </section>
+
+      <!-- Линия отрыва -->
+      <div class="perf" aria-hidden="true">
+        <svg class="sc" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="64" cy="192" r="30"/><circle cx="192" cy="192" r="30"/>
+          <path d="M86 168 200 40"/><path d="M170 168 56 40"/>
+        </svg>
+        <span class="cut-hint">линия отрыва</span>
+      </div>
+    </div>
+    <button class="revert" id="revertLink" type="button" hidden>↺ Вернуть карточку целиком</button>
+  </div>
+</div>
+
+<!-- Лист для печати: 2 карточки на A4 (ландшафт) -->
+<div class="print-sheet" aria-hidden="true">
+  <div class="coupon">
+    <div class="paper"></div>
+    <section class="half mama">
+      <div class="blob b1"></div>
+      <span class="chip">остаётся у вас</span>
+      <h2 class="headline">Спасибо, что&nbsp;вы с&nbsp;нами!</h2>
+      <p class="body-text">Как только ваш друг воспользуется правой частью этой карты, мы с&nbsp;радостью подарим вам <strong>скидку 20% на&nbsp;следующий месяц занятий</strong>.</p>
+      <div class="spacer"></div>
+      <div class="footer-line">
+        <span>«Золотой вектор» · Волгоградский пр-т, 1с1</span>
+        <span>Положите в кошелёк или блокнот</span>
+      </div>
+    </section>
+    <section class="half guest">
+      <div class="blob b1"></div>
+      <span class="chip">отрывается и достаётся другу</span>
+      <h2 class="headline">Тёплый приём для друга</h2>
+      <p class="body-text"><strong>Скидка 15% на&nbsp;первое занятие</strong> в центре «Золотой Вектор» по рекомендации наших друзей.</p>
+      <div class="spacer"></div>
+      <div class="footer-line">
+        <span>Запись: +7 (905) 044-79-17</span>
+        <span>пн–сб 9:00–21:00</span>
+      </div>
+    </section>
+    <div class="perf"></div>
+  </div>
+  <div class="coupon">
+    <div class="paper"></div>
+    <section class="half mama">
+      <div class="blob b1"></div>
+      <span class="chip">остаётся у вас</span>
+      <h2 class="headline">Спасибо, что&nbsp;вы с&nbsp;нами!</h2>
+      <p class="body-text">Как только ваш друг воспользуется правой частью этой карты, мы с&nbsp;радостью подарим вам <strong>скидку 20% на&nbsp;следующий месяц занятий</strong>.</p>
+      <div class="spacer"></div>
+      <div class="footer-line">
+        <span>«Золотой вектор» · Волгоградский пр-т, 1с1</span>
+        <span>Положите в кошелёк или блокнот</span>
+      </div>
+    </section>
+    <section class="half guest">
+      <div class="blob b1"></div>
+      <span class="chip">отрывается и достаётся другу</span>
+      <h2 class="headline">Тёплый приём для друга</h2>
+      <p class="body-text"><strong>Скидка 15% на&nbsp;первое занятие</strong> в центре «Золотой Вектор» по рекомендации наших друзей.</p>
+      <div class="spacer"></div>
+      <div class="footer-line">
+        <span>Запись: +7 (905) 044-79-17</span>
+        <span>пн–сб 9:00–21:00</span>
+      </div>
+    </section>
+    <div class="perf"></div>
+  </div>
+</div>
+
+<!-- Как это работает -->
+<section class="steps">
+  <h3>Как это работает</h3>
+  <div class="steps-grid">
+    <div class="step"><span class="n">1</span><b>Оторвите</b><p>Мама отрывает правую часть по линии перфорации — одним движением, без ножниц.</p></div>
+    <div class="step"><span class="n">2</span><b>Отдайте другу</b><p>Правая часть переходит подруге: тёплый приём и −15% на первое занятие по рекомендации.</p></div>
+    <div class="step"><span class="n">3</span><b>Сохраните себе</b><p>Левую часть — в кошелёк или блокнот как напоминание. Друг пришёл? Центр дарит вам −20% на следующий месяц.</p></div>
+  </div>
+</section>
+
+<script>
+const coupon=document.getElementById('coupon');
+const tearBtn=document.getElementById('tearBtn');
+const glueBtn=document.getElementById('glueBtn');
+const revertLink=document.getElementById('revertLink');
+
+function setTorn(t){
+  coupon.classList.toggle('torn',t);
+  revertLink.hidden=!t;
+  tearBtn.textContent=t?'✂ Оторвана':'✂ Оторвать правую часть';
+}
+tearBtn.addEventListener('click',()=>setTorn(!coupon.classList.contains('torn')));
+glueBtn.addEventListener('click',()=>setTorn(false));
+document.getElementById('tearOnCard').addEventListener('click',()=>setTorn(true));
+revertLink.addEventListener('click',()=>setTorn(false));
+
+document.getElementById('printBtn').addEventListener('click',()=>window.print());
+
+/* ===== PNG-экспорт целой карточки 1440×600 ===== */
+const EXPORT_W=1440,EXPORT_H=600;
+function flattenColors(root){
+  const props=['background-color','background-image','color','border-top-color','border-right-color','border-bottom-color','border-left-color','fill','stroke'];
+  [root,...root.querySelectorAll('*')].forEach(el=>{
+    if(el.tagName==='IMG'||el.tagName==='BR')return;
+    let cs;try{cs=getComputedStyle(el);}catch(e){return;}
+    props.forEach(p=>{
+      let v=cs.getPropertyValue(p);
+      if(!v||v==='none'||v==='transparent')return;
+      if(/color-mix|var\(/.test(v)){
+        v=p==='background-image'?'none':(p==='background-color'?'rgba(0,0,0,0)':'#000');
+      }
+      try{el.style.setProperty(p,v,'important');}catch(e){}
+    });
+    if(el===root&&/gradient/.test(cs.backgroundImage)){
+      el.style.setProperty('background',cs.backgroundColor+' '+cs.backgroundImage,'important');
+    }
+  });
+}
+document.getElementById('dlPng').addEventListener('click',async()=>{
+  if(typeof window.htmlToImage==='undefined'){alert('Библиотека экспорта ещё грузится, попробуйте через секунду.');return;}
+  const wasTorn=coupon.classList.contains('torn');
+  setTorn(false);
+  try{
+    const clone=coupon.cloneNode(true);
+    clone.classList.remove('torn');
+    clone.style.cssText+=';width:'+EXPORT_W+'px;height:'+EXPORT_H+'px;aspect-ratio:auto;container-type:inline-size;position:relative;';
+    const tb=clone.querySelector('.tear-btn');if(tb)tb.remove();
+    const stage=document.createElement('div');
+    stage.style.cssText='position:fixed;left:-99999px;top:0;width:'+EXPORT_W+'px;height:'+EXPORT_H+'px;overflow:visible;pointer-events:none;';
+    stage.appendChild(clone);
+    document.body.appendChild(stage);
+    if(document.fonts&&document.fonts.ready){try{await document.fonts.ready;}catch(e){}}
+    await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
+    flattenColors(clone);
+    await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
+    const url=await htmlToImage.toPng(clone,{width:EXPORT_W,height:EXPORT_H,pixelRatio:1,backgroundColor:'#ffffff',cacheBust:true});
+    stage.remove();
+    const a=document.createElement('a');
+    a.download='otryvnaya-kartochka.png';a.href=url;a.click();
+  }catch(err){
+    console.error('export failed:',err);
+    alert('Не удалось сохранить карточку. Обновите страницу и попробуйте ещё раз.');
+  }finally{
+    setTorn(wasTorn);
+  }
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.min.js" defer></script>
+</body>
+</html>
