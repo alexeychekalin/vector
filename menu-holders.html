@@ -64,6 +64,13 @@ body{font-family:'Nunito',system-ui,sans-serif;background:var(--bg);color:var(--
 /* Декоративные пятна */
 .blob{position:absolute;border-radius:50%;filter:blur(2px);opacity:.55;pointer-events:none}
 
+/* Детский декор: облачка, звёздочки, точки */
+.pl-decor{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.deco-star{position:absolute;color:var(--gold);opacity:.7;font-size:1.6rem;line-height:1}
+.deco-dot{position:absolute;width:14px;height:14px;border-radius:50%;background:var(--dot,var(--berry));opacity:.3}
+.deco-cloud{position:absolute;background:#fff;border-radius:999px;box-shadow:0 0 0 1px rgba(146,96,179,.12);opacity:.9}
+.deco-cloud::before{content:'';position:absolute;width:60%;height:160%;left:18%;bottom:55%;background:inherit;border-radius:999px}
+
 /* Подвал плаката */
 .pl-foot{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:26px;border-top:2px solid rgba(146,96,179,.18);margin-top:30px}
 .pl-contacts{font-size:1.05rem;line-height:1.55;color:var(--muted);font-weight:600}
@@ -72,7 +79,11 @@ body{font-family:'Nunito',system-ui,sans-serif;background:var(--bg);color:var(--
 .gold-line{position:absolute;left:0;right:0;bottom:0;height:8px;background:linear-gradient(90deg,var(--gold),#E4C86A)}
 
 /* Маскот */
-.pl-mascot{position:absolute;width:150px;opacity:.9;pointer-events:none}
+.pl-mascot{position:absolute;width:170px;opacity:.95;pointer-events:none;z-index:2}
+
+/* Плашка «не суммируется» и цитата-благодарность */
+.pl-note{display:inline-block;margin-top:14px;padding:8px 22px;border-radius:999px;background:rgba(232,205,203,.4);border:1.5px dashed var(--berry-light);font-weight:800;font-size:1.05rem;color:var(--berry-deep)}
+.pl-quote{max-width:620px;margin:10px auto 0;font-size:1.15rem;line-height:1.5;color:var(--muted);font-style:italic}
 
 /* QR */
 .qr-wrap{display:flex;flex-direction:column;align-items:center;gap:14px}
@@ -112,20 +123,24 @@ body{font-family:'Nunito',system-ui,sans-serif;background:var(--bg);color:var(--
 <script>
 const CARDS=[
  {
-  id:'friend', theme:'theme-sky', label:'Приведи друга — 20%',
-  badge:'Акция', logoBg:'#5BA7CE', dot:'#5BA7CE',
+  id:'friend', theme:'theme-sky', label:'Приведи друга',
+  badge:'Приведи друга', logoBg:'#5BA7CE', dot:'#5BA7CE',
+  mascot:'heart.png',
   title:'Приведите<span class="accent">друга!</span>',
-  percent:'20%', sub:'скидка на абонемент',
+  percent:'20%', sub:'вам на следующий абонемент',
   list:[
-   'Порекомендуйте наш центр друзьям и знакомым',
-   'Если они купят абонемент — вы получаете скидку 20% на следующий абонемент',
-   'Скидка суммируется с пакетом «1+1»'
+   'Порекомендуйте нас маме, чьему ребёнку нужна помощь с речью',
+   'Если она купит абонемент — вы получаете скидку 20% на следующий абонемент',
+   'Ваш друг получит <b>15% на первый абонемент</b>'
   ],
+  note:'Скидка не суммируется',
+  quote:'Спасибо, что доверяете нам самое дорогое. Для неё это будет знак заботы, а для вас — наша искренняя благодарность.',
   foot:'Скажите администратору имя порекомендованного клиента при покупке абонемента.'
  },
  {
   id:'firstday', theme:'theme-lav', label:'Скидка 5% в первый день',
   badge:'Выгода', logoBg:'#9260B3', dot:'#9260B3',
+  mascot:'compass.png',
   title:'Начните сегодня —<br><span class="accent">платите меньше</span>',
   percent:'5%', sub:'скидка на весь срок коррекции',
   list:[
@@ -138,6 +153,7 @@ const CARDS=[
  {
   id:'oneplusone', theme:'theme-pink', label:'Пакет 1+1 — 7%',
   badge:'Пакет 1+1', logoBg:'#D96AAE', dot:'#D96AAE',
+  mascot:'blocks.png',
   title:'Два абонемента —<br><span class="accent">выгоднее вместе</span>',
   percent:'7%', sub:'скидка при покупке двух абонементов',
   list:[
@@ -150,6 +166,7 @@ const CARDS=[
  {
   id:'telegram', theme:'theme-sage', label:'Telegram-канал',
   badge:'Мы в Telegram', logoBg:'#4FA36B', dot:'#4FA36B',
+  mascot:'flying.png',
   title:'Полезное о речи детей —<br><span class="accent">каждую неделю</span>',
   qr:true, handle:'@zolotoy_vektor',
   sub:'Сканируйте QR-код и подписывайтесь',
@@ -163,6 +180,7 @@ const CARDS=[
  {
   id:'gift', theme:'theme-gold', label:'Подарок за отзыв',
   badge:'Сюрприз', logoBg:'#C9A227', dot:'#C9A227',
+  mascot:'resting.png',
   title:'Оставьте отзыв —<br><span class="accent">получите подарок</span>',
   emoji:'🎁',
   sub:'Ваше мнение помогает другим родителям сделать выбор',
@@ -181,9 +199,16 @@ CARDS.forEach(c=>{
  item.className='holder-item';
  item.innerHTML=`
   <div class="a4 ${c.theme}" id="card-${c.id}">
-    <div class="blob" style="width:260px;height:260px;background:${c.dot}22;top:-70px;right:-70px"></div>
-    <div class="blob" style="width:180px;height:180px;background:${c.dot}18;bottom:120px;left:-60px"></div>
-    <img class="pl-mascot" src="assets/img/mascots/hedgehog-resting.svg" alt="" style="bottom:150px;right:36px" onerror="this.style.display='none'">
+    <div class="blob" style="width:260px;height:260px;background:${c.dot}18;top:-70px;right:-70px"></div>
+    <div class="blob" style="width:180px;height:180px;background:${c.dot}14;bottom:120px;left:-60px"></div>
+    <div class="pl-decor" style="--dot:${c.dot}">
+      <span class="deco-star" style="top:150px;left:44px">✦</span>
+      <span class="deco-star" style="top:300px;right:60px;font-size:1.1rem;opacity:.5">✦</span>
+      <span class="deco-dot" style="top:230px;right:120px"></span>
+      <span class="deco-dot" style="top:420px;left:70px;width:10px;height:10px"></span>
+      <span class="deco-cloud" style="bottom:230px;right:50px;width:90px;height:34px"></span>
+    </div>
+    <img class="pl-mascot" src="assets/img/mascots/${c.mascot||'resting.png'}" alt="" style="top:170px;right:40px" onerror="this.style.display='none'">
     <div class="a4-inner">
       <div class="pl-head">
         <div class="pl-logo" style="background:${c.logoBg}">ЗВ</div>
@@ -201,10 +226,12 @@ CARDS.forEach(c=>{
         </div>`:''}
         <div class="pl-sub">${c.sub}</div>
         <ul class="pl-list" style="--dot:${c.dot}">${c.list.map(li=>`<li>${li}</li>`).join('')}</ul>
+        ${c.note?`<div style="text-align:center"><span class="pl-note">${c.note}</span></div>`:''}
+        ${c.quote?`<div class="pl-quote">«${c.quote}»</div>`:''}
         <div style="font-size:1.05rem;color:var(--muted);font-style:italic;margin-top:4px">${c.foot}</div>
       </div>
       <div class="pl-foot">
-        <div class="pl-contacts"><b>Москва, Волгоградский пр-т, 1с1</b> · м. Текстильщики<br>Пн–Вс 9:00–21:00 · +7 905 044-79-17</div>
+        <div class="pl-contacts"><b>Москва, Волгоградский пр-т, 1с1</b> · м. Пролетарская · м. Крестьянская застава<br>Пн–Вс 9:00–21:00 · +7 905 044-79-17</div>
         <div class="pl-site">zolotoy-vektor.ru</div>
       </div>
     </div>
