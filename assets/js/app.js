@@ -121,20 +121,27 @@
     });
   });
 
-  /* ---------- Галерея отзывов: показать все ---------- */
+  /* ---------- Лента отзывов: бесшовная прокрутка ---------- */
   const reviewsGrid = document.getElementById('reviewsGrid');
-  const reviewsToggle = document.getElementById('reviewsToggle');
-  if (reviewsGrid && reviewsToggle) {
-    const label = reviewsToggle.querySelector('.reviews-toggle-label');
-    const caret = reviewsToggle.querySelector('.reviews-toggle-caret');
-    reviewsToggle.addEventListener('click', () => {
-      const expanded = reviewsGrid.classList.toggle('expanded');
-      reviewsToggle.setAttribute('aria-expanded', String(expanded));
-      if (label) label.textContent = expanded ? 'Свернуть отзывы' : (label.dataset.more || 'Показать ещё отзывы');
-      if (caret) caret.style.transform = expanded ? 'rotate(180deg)' : 'none';
-      if (hasGSAP && !reduce && window.ScrollTrigger) ScrollTrigger.refresh();
-      if (!expanded) document.getElementById('reviews').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
-    });
+  if (reviewsGrid) {
+    const track = reviewsGrid.querySelector('.reviews-track');
+    if (track) {
+      // Дублируем карточки для бесшовной петли; дублираты скрыты от AT и неинтерактивны
+      track.querySelectorAll('.review-card').forEach(card => {
+        const clone = card.cloneNode(true);
+        clone.classList.add('review-card--clone');
+        clone.setAttribute('aria-hidden', 'true');
+        clone.removeAttribute('tabindex');
+        track.appendChild(clone);
+      });
+      // Скорость ~ постоянная: длина цикла / фиксированное время
+      const setDuration = () => {
+        const w = track.scrollWidth / 2; // ширина оригинального комплекта
+        if (w > 0) track.style.animationDuration = Math.max(45, Math.round(w / 60)) + 's';
+      };
+      setDuration();
+      window.addEventListener('resize', setDuration, { passive: true });
+    }
   }
 
   /* ---------- Лайтбокс (отзывы + зоны) ---------- */
@@ -589,4 +596,47 @@
   window.addEventListener('load', fit);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
   fit();
+})();
+
+/* ==================== «Знакомы ситуации?» — клик по карточке боли → к нужной услуге ==================== */
+(function () {
+  const cards = document.querySelectorAll('.pain-card[data-pain-target]');
+  if (!cards.length) return;
+  const findServiceCard = (name) => {
+    if (!name) return null;
+    const wanted = name.trim().toLowerCase();
+    // 1) точное совпадение с кнопкой «Записаться» конкретной услуги
+    const bookBtn = Array.from(document.querySelectorAll('.service-book'))
+      .find((b) => (b.dataset.serviceBook || '').trim().toLowerCase() === wanted);
+    if (bookBtn) return bookBtn.closest('article') || null;
+    // 2) поиск по заголовку карточки услуги
+    const svcTitle = Array.from(document.querySelectorAll('#services article h3'))
+      .find((h) => h.textContent.trim().toLowerCase() === wanted);
+    if (svcTitle) return svcTitle.closest('article') || null;
+    // 3) частичное совпадение (например, «подготовка к школе»)
+    const partial = Array.from(document.querySelectorAll('#services article h3'))
+      .find((h) => h.textContent.toLowerCase().includes(wanted.slice(0, Math.min(wanted.length, 14))));
+    return partial ? (partial.closest('article') || null) : null;
+  };
+  let highlightTimer = null;
+  cards.forEach((card) => {
+    card.addEventListener('click', () => {
+      cards.forEach((c) => c.classList.remove('is-active'));
+      card.classList.add('is-active');
+      const target = document.querySelector(card.dataset.painTarget);
+      if (!target) return;
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      target.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+      const svcCard = findServiceCard(card.dataset.painService);
+      if (svcCard) {
+        clearTimeout(highlightTimer);
+        document.querySelectorAll('.svc-highlight').forEach((el) => el.classList.remove('svc-highlight'));
+        // даём скроллу начаться, затем подсвечиваем нужную услугу
+        setTimeout(() => {
+          svcCard.classList.add('svc-highlight');
+          highlightTimer = setTimeout(() => svcCard.classList.remove('svc-highlight'), 3400);
+        }, reduce ? 0 : 500);
+      }
+    });
+  });
 })();
